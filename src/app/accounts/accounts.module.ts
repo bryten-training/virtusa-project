@@ -13,19 +13,20 @@ import { HttpClientModule } from '@angular/common/http';
 
  
 @NgModule({
-  declarations: [SignUpComponent, LoginComponent],
+  declarations: [
+    LoginComponent,
+    SignUpComponent
+  ],
   imports: [
     CommonModule,
     AccountsRoutingModule,
+    MaterialModule,
     ReactiveFormsModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  exports: [SignUpComponent, LoginComponent]
+  exports: [
+    LoginComponent,
+    SignUpComponent
+  ]
 })
 export class AccountsModule { }
