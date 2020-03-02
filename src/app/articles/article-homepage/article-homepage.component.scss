@@ -1,0 +1,29 @@
+$primary: #0b2161;
+
+.navbar {
+  background-color: $primary;
+  color: white;
+}
+
+.filler {
+  flex: 1 1 auto;
+}
+.gap {
+  margin-right: 10px;
+}
+
+#desc {
+  background-color: #f2f2f2;
+  height: 20%;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
