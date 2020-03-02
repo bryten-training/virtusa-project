@@ -12,8 +12,8 @@ export class AccountsService {
 
   constructor(private http: HttpClient) { }
 
-  checkUser(): Observable<User>{
-    return of();
+  checkUser(user: string, pass: string){
+    return this.http.get(`/userdata?username=${user}&password=${pass}`);
   }
 
 

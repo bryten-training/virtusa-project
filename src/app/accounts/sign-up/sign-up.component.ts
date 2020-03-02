@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { AccountsService } from '../accounts.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -16,12 +17,14 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor() { }
+  constructor(private accountsSrv: AccountsService) { }
 
   userTypes = ["admin", "content provider", "default"];
 
   onSubmit() {
-    console.log(this.signupForm.value);
+    this.accountsSrv.checkUser(this.signupForm.value.username, this.signupForm.value.password).subscribe(response =>{
+      console.log(response);
+    });
     
   }
 }

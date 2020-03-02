@@ -19,13 +19,9 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     AccountsRoutingModule,
     MaterialModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
     ReactiveFormsModule,
     HttpClientModule,
+    MaterialModule,
   ],
   exports: [SignUpComponent]
 })
