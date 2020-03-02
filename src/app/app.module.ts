@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
+import { AccountsModule } from './accounts/accounts.module';
 
 import { ArticlesModule } from './articles/articles.module';
 import {MatInputModule} from '@angular/material/input'
@@ -26,14 +27,14 @@ import { VideoModule } from './video/video.module';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule, 
+    MaterialModule,
+    AccountsModule
     ArticlesModule,
     MaterialModule,
     ReactiveFormsModule,
     AccountsModule,
     AssessmentModule,
     VideoModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
