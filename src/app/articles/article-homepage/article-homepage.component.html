@@ -1,40 +1,32 @@
 <mat-toolbar class="navbar">
-  <span class="gap">Blog Homepage</span>
+  <span class="gap hover">Blog Homepage</span>
   <span class="filler"></span>
-  <mat-icon aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-  <span class="gap">Home</span>
-  <span class="gap">Browse</span>
-  <span class="gap">Explore</span>
+  <mat-icon aria-hidden="false" aria-label="Home icon">home</mat-icon>
+  <span class="gap hover">Home</span>
+  <mat-icon aria-hidden="false" aria-label="Search icon">search</mat-icon>
+  <span class="gap hover">Browse</span>
+  <span class="gap hover">Explore</span>
 </mat-toolbar>
 <!-- change the styling of the desc div to centre the text in it -->
 
 <div id="desc">
-  <p>JavaScript related blog articles</p>
+  <h1>JavaScript related blog articles</h1>
 </div>
 
 <div>
-  <p>This is the blog article content area</p>
-  <mat-card class="example-card">
+  <mat-card class="example-card" *ngFor="let article of dummy_articles">
     <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <div
+        mat-card-avatar
+        class="example-header-image"
+        style="background-image: url({{ article.image }});"
+      ></div>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+      <mat-card-subtitle>{{ article.publish_date | date }}</mat-card-subtitle>
     </mat-card-header>
-    <img
-      mat-card-image
-      src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-      alt="Photo of a Shiba Inu"
-    />
+    <img mat-card-image src="{{ article.image }}" alt="Photo of a Shiba Inu" />
     <mat-card-content>
-      <p>
-        The Shiba Inu is the smallest of the six original and distinct spitz
-        breeds of dog from Japan. A small, agile dog that copes very well with
-        mountainous terrain, the Shiba Inu was originally bred for hunting.
-      </p>
+      <p>{{ article.content }}</p>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
 </div>
