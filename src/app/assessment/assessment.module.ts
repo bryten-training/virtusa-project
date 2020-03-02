@@ -7,7 +7,7 @@ import { MaterialModule } from '../material/material.module';
   declarations: [AssessmentComponent],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule 
   ]
 })
 export class AssessmentModule { }

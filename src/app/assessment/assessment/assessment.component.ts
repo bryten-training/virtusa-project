@@ -10,6 +10,6 @@ export class AssessmentComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
+  } 
 
 }
