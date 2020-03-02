@@ -1,0 +1,16 @@
+installing JSON Server:
+
+- npm install -g json-server
+
+Starting JSOn Server:
+
+- json-server --watch ./DB/db.json
+
+ROUTES:
+
+http://localhost:3000/Articles  
+http://localhost:3000/Links      
+http://localhost:3000/Accounts   
+http://localhost:3000/Flash Cards
+http://localhost:3000/assessment 
+http://localhost:3000/video    

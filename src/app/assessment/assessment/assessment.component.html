@@ -1,0 +1,72 @@
+<mat-card class="cards">Angular</mat-card>
+<mat-card class="cards">NodeJS</mat-card>
+<mat-card class="cards">Javascript</mat-card>
+<mat-card class="cards">TBD</mat-card>
+<mat-card class="cards">TBD</mat-card>
+
+<form [formGroup]="assesmentForm" (ngSubmit)="submitForm()">
+    <mat-card>
+        <mat-card-title id="example-radio-group-label"> 1: What is Angular?
+        </mat-card-title>
+        <mat-radio-group class="example-radio-group" formControlName="firstQuestion">
+
+            <mat-radio-button class="example-radio-button" type="radio" value="SPA">
+                SPA</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="MPA">
+                MPA</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="VPA">
+                VPA</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="RPA">
+                RPA</mat-radio-button>
+
+        </mat-radio-group>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title id="example-radio-group-label"> 2: What is the decorator used for configuring your
+            module
+            class?
+        </mat-card-title>
+
+        <mat-radio-group class="example-radio-group" formControlName="secondQuestion">
+
+            <mat-radio-button class="example-radio-button" type="radio" value="NGMODULE">@NgModule
+            </mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="NGAPP"> @NgApp
+            </mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="BOTH">Both</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="ABOVE">None of above
+            </mat-radio-button>
+
+        </mat-radio-group>
+    </mat-card>
+
+    <mat-card>
+        <mat-card-title id="example-radio-group-label">3: Which character is used for chaining multiple
+            pipes?
+        </mat-card-title>
+        <mat-radio-group class="example-radio-group" formControlName="thirdQuestion">
+
+            <mat-radio-button class="example-radio-button" type="radio" value="ngmad"> |</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="MPA">
+                :</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="VPA">
+                Both</mat-radio-button>
+
+            <mat-radio-button class="example-radio-button" type="radio" value="NONE">None of above
+            </mat-radio-button>
+
+        </mat-radio-group>
+    </mat-card>
+    <!-- <button [disabled]="assesmentForm.invalid " type="submit">submit</button> -->
+    <button type="submit" mat-raised-button color="primary">submit</button>
+
+</form>

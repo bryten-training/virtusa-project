@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "info-portal"
+  "defaultProject": "info-portal",
+  "cli": {
+    "analytics": false
+  }
 }
