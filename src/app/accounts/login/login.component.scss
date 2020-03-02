@@ -1,0 +1,50 @@
+mat-card.login-card {
+  margin: 20px;
+  text-align: center;
+  max-width: 500px;
+}
+
+mat-card-header {
+  margin-bottom: 10px;
+  justify-content: center;
+}
+
+.wrapper, .field, form {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+mat-card-title {
+  display: flex;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+}
+
+mat-form-field {
+  align-items: center;
+  display: flex;
+}
+
+.invalid {
+  color: red;
+}
+
+.invalid-msg {
+  color: red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.valid-msg {
+  color: green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
