@@ -1,0 +1,35 @@
+<mat-toolbar class="navbar">
+  <span class="gap hover">Blog Homepage</span>
+  <span class="filler"></span>
+  <mat-icon aria-hidden="false" aria-label="Home icon">home</mat-icon>
+  <span class="gap hover">Home</span>
+  <mat-icon aria-hidden="false" aria-label="Search icon">search</mat-icon>
+  <span class="gap hover">Browse</span>
+  <span class="gap hover">Explore</span>
+</mat-toolbar>
+<!-- change the styling of the desc div to centre the text in it -->
+
+<div id="desc">
+  <h1>JavaScript related blog articles</h1>
+</div>
+
+<div>
+  <mat-card
+    class="example-card hover-card"
+    *ngFor="let article of dummy_articles"
+  >
+    <mat-card-header>
+      <div
+        mat-card-avatar
+        class="example-header-image"
+        style="background-image: url({{ article.image }});"
+      ></div>
+      <mat-card-title>{{ article.title }}</mat-card-title>
+      <mat-card-subtitle>{{ article.publish_date | date }}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="{{ article.image }}" alt="Photo of a Shiba Inu" />
+    <mat-card-content>
+      <p>{{ article.content }}</p>
+    </mat-card-content>
+  </mat-card>
+</div>
