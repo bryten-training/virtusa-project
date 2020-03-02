@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input'
 import { ReactiveFormsModule} from "@angular/forms";
 import {AccountsModule} from "./accounts/accounts.module"
 import { AssessmentModule } from './assessment/assessment.module';
+import { ReactiveFormsModule } from '@angular/forms';
 import { VideoModule } from './video/video.module';
 
 
