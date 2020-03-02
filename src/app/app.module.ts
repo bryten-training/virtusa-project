@@ -8,6 +8,8 @@ import { MaterialModule } from './material/material.module';
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule} from "@angular/forms";
 import {AccountsModule} from "./accounts/accounts.module"
+import { AssessmentModule } from './assessment/assessment.module';
+import { VideoModule } from './video/video.module';
 
 @NgModule({
   declarations: [
@@ -19,8 +21,11 @@ import {AccountsModule} from "./accounts/accounts.module"
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
+
     ReactiveFormsModule,
-    AccountsModule
+    AccountsModule,
+    AssessmentModule,
+    VideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
