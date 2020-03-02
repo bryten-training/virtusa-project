@@ -19,7 +19,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
     MatRadioModule,
     MatCardModule,
   ],
@@ -32,7 +32,7 @@ import { MatRadioModule } from '@angular/material/radio';
     MatRadioModule,
     MatListModule,
     MatCardModule,
-    MatInputModule
+    MatInputModule,
     MatCardModule
   ]
 })

@@ -15,9 +15,9 @@ import { VideoComponent } from './video/video/video.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'accounts', loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule) }
+  { path: 'accounts', loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule) },
   { path: 'home/articles', component: ArticlescommentsComponent}, 
-  { path: 'home/articles/display', component: ArticlecommentsdisplayComponent}
+  { path: 'home/articles/display', component: ArticlecommentsdisplayComponent},
   { path: 'assessment', component: AssessmentComponent },
   { path: 'video', component: VideoComponent }
 ];

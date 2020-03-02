@@ -19,7 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     CommonModule,
     AccountsRoutingModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
     MatInputModule,
     MatButtonModule,
     MatSelectModule,
