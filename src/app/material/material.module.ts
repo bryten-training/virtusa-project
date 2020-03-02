@@ -7,6 +7,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [],
@@ -19,6 +20,8 @@ import { MatInputModule } from '@angular/material/input';
     MatListModule,
     MatCardModule,
     MatInputModule
+    MatRadioModule,
+    MatCardModule,
   ],
   exports: [
     LayoutModule,
@@ -26,9 +29,11 @@ import { MatInputModule } from '@angular/material/input';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatRadioModule,
     MatListModule,
     MatCardModule,
     MatInputModule
+    MatCardModule
   ]
 })
 export class MaterialModule { }
