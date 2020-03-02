@@ -1,0 +1,14 @@
+.article-card {
+  margin: 0 auto;
+  max-width: 800px;
+
+  .article-title {
+      margin: 40px 0;
+      font-size: 3rem;
+      line-height: 3rem;
+  }
+  .article-header-image {
+    background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+    background-size: cover;
+  }
+}
