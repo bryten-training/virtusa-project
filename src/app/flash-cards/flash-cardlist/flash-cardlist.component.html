@@ -1,1 +1,32 @@
-<p>flash-cardlist works!</p>
+<!-- <div class=button *ngIf="!login; else logout">
+    <button (click)='login=!login' [routerLink]="['/']">Login</button>
+</div>
+<ng-template #logout>
+    <button  [routerLink]="['/add']">Add a new flashcard</button>
+    <button  (click)='login=!login' [routerLink]="['/']">Logout</button>
+  </ng-template> -->
+<div *ngFor='let card of flashcardlist' data-aos="flip-left">
+  <li class=center>
+    <span [hidden]="card.front">
+      <br/>
+      <br/>
+      <br/>
+      question:  {{card.id}} <br/>
+        {{card.question}}<br/>
+        <button (click)='card.front=!card.front'>Answer</button>
+    </span>
+
+    <span [hidden]="!card.front">
+        <br/>
+      <br/>
+      <br/>
+      Q:{{card.question}}<br/>
+      answer<br/>
+      {{card.ans}}<br/>
+      <button (click)='card.front=!card.front'>back to the question</button>
+    </span>
+</li>
+<br/>
+<br/>
+<br/>
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FlashCardsService, Flashcard} from '../flash-cards.service';
 
 @Component({
   selector: 'app-flash-card',
@@ -6,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./flash-card.component.scss']
 })
 export class FlashCardComponent implements OnInit {
+  flashcard: Flashcard;
+  constructor(private CardSvc: FlashCardsService) {
+  this.CardSvc.getFlashcard().subscribe(flashcard => {this.flashcard = flashcard;
 
-  constructor() { }
-
+  });
+  console.log(this.flashcard);
+}
   ngOnInit(): void {
   }
 

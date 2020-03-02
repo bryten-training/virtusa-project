@@ -18,12 +18,13 @@
       ]
     }
   ],
-  "flashcard": [
+  "flashcards": [
     {
       "id": 1,
       "question": "what is diretive",
       "ans": " ",
-      "body": "content"
+      "body": "content",
+      "pass": "false"
     },
     {
       "id": 2,

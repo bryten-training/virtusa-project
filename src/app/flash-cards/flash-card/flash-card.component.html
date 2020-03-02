@@ -1,1 +1,24 @@
-<p>flash-card works!</p>
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>card</mat-card-title>
+  </mat-card-header>
+  <mat-card-content class=center>
+  <span [hidden]="flashcard.front">
+    <p>question {{flashcard.id}}</p>
+    <p> {{flashcard.question}}</p>
+  </span>
+  <span [hidden]="!flashcard.front">
+      <br/>
+    <br/>
+    <br/>
+    Q:{{flashcard.question}}<br/>
+    answer<br/>
+    {{flashcard.ans}}<br/>
+  </span>
+    <mat-card-actions>
+      <button class= check (click)='flashcard.front=!flashcard.front'>Check Ans</button>
+    </mat-card-actions>
+  </mat-card-content>
+
+</mat-card>
