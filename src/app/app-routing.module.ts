@@ -10,18 +10,19 @@ import { ArticlecommentsdisplayComponent } from './articles/articlecommentsdispl
 
 import { AssessmentComponent } from './assessment/assessment/assessment.component';
 import { VideoComponent } from './video/video/video.component';
+import { SignUpComponent } from './accounts/sign-up/sign-up.component';
 
-import { HomeComponent } from "./home/home.component";
 
 const routes: Routes = [
-  { path: "", redirectTo: "home", pathMatch: "full" },
+  { path: "", redirectTo: "logIn", pathMatch: "full" },
   { path: "home", component: HomeComponent },
+  { path: 'logIn', component: LoginComponent },
+  { path: 'signUp', component: SignUpComponent },
   {
     path: "articles",
     loadChildren: () =>
       import("./articles/articles.module").then(m => m.ArticlesModule)
   },
-  { path: 'accounts', loadChildren: () => import('./accounts/accounts.module').then(m => m.AccountsModule) },
   { path: 'home/articles', component: ArticlescommentsComponent },
   { path: 'home/articles/display', component: ArticlecommentsdisplayComponent },
   { path: 'assessment', component: AssessmentComponent },
@@ -32,4 +33,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }

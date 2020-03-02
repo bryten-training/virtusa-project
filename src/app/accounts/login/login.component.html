@@ -70,11 +70,13 @@
       <i class="material-icons">
         check &nbsp;&nbsp;
       </i>
-      Submitted successfully!
+      Logging in...
     </span>
 
     <mat-card-actions>
       <button mat-raised-button color='primary' (click)="onLogIn()">Log in</button>
     </mat-card-actions>
+
+    <div>Don't have account? <a [routerLink]="['/signUp']">Register</a></div>
   </div>
 </mat-card>
