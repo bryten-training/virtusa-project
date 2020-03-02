@@ -1,5 +1,5 @@
 # InfoPortal
-# 3/2/2020..4
+# 3/2/2020..6
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
 
