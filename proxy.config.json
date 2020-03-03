@@ -1,7 +1,17 @@
 {
-	"/userdata":{
-		"target": "http://localhost:3000",
-		"secure": false,
-		"logLevel": "debug"
-	}
+    "/articles/*": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/flashcard": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "logLevel": "debug"
+    },
+    "/userdata": {
+        "target": "http://localhost:3000",
+        "secure": false,
+        "logLevel": "debug"
+    }
 }

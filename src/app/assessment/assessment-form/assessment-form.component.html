@@ -1,0 +1,18 @@
+<div id="theangular" class="form">
+    <form [formGroup]="assesmentForm" (ngSubmit)="submitForm()">
+        <mat-card *ngFor="let c of courseData">
+            <mat-card-title id="example-radio-group-label">
+                {{c['q']}}
+            </mat-card-title>
+            <mat-radio-group class="example-radio-group" formControlName="firstQuestion">
+
+                <mat-radio-button *ngFor="let op of c.options" class="example-radio-button" type="radio" value={{op.optAns}}>
+                    {{op.opt}}</mat-radio-button>
+
+            </mat-radio-group>
+        </mat-card>
+        <!-- <button [disabled]="assesmentForm.invalid " type="submit">submit</button> -->
+        <button type="button" mat-raised-button color="danger">close</button>
+        <button type="submit" mat-raised-button color="primary">submit</button>
+    </form>
+</div>

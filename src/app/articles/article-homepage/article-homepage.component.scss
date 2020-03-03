@@ -28,10 +28,7 @@ $primary: #0b2161;
 
 .example-container {
   .nav-content {
-    margin-top: 5%;
-    //border: 1px solid #555;
     width: 15vw;
-    height: 25%;
   }
 
   .sidenav {
@@ -56,13 +53,35 @@ $primary: #0b2161;
 
   .main-content {
     margin-left: 10%;
+    .grid-container {
+      margin: 2em;
+      height: 50vh;
+      //width: 75vw;
+      display: grid;
+      grid-template-columns: auto auto;
+      grid-gap: 1em;
+      padding: 1em;
+
+      & > div {
+        background-color: #bdbdbd;
+        text-align: center;
+        padding: 1em 0;
+        border-radius: 0.5em;
+        //font-size: 30px;
+      }
+
+      .item1 {
+        grid-row-start: 1;
+        grid-row-end: 3;
+      }
+    }
   }
 }
 
 .search {
   height: 5%;
   text-align: center;
-  margin-top: 2%;
+  margin: 2% 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -115,6 +134,18 @@ $primary: #0b2161;
 .example-header-image {
   // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
+}
+
+.subject-card {
+  width: 20vw;
+  height: 50vh;
+  margin: 1em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media screen and (max-width: 450px) {
