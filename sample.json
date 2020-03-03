@@ -11,11 +11,19 @@
         {
           "id": 1,
           "question": "what is diretive",
-          "ans": " ",
+          "ans": "Test ",
           "body": "content",
           "pass": "false"
         }
       ]
+    }
+  ],
+  "flashcard": [
+    {
+      "id": 1,
+      "question": "what is diretive",
+      "ans": "Testone",
+      "body": "content"
     },
     {
       "id": 2,
@@ -35,13 +43,10 @@
       ]
     },
     {
-      "username": "qqqq",
-      "password": "qqweer",
-      "firstName": "cdcd",
-      "lastName": "vb",
-      "email": "rahim@gmail.com",
-      "userType": "admin",
-      "id": 3
+      "question": "",
+      "id": 3,
+      "ans": "Test4",
+      "body": "content"
     },
     {
       "id": 4

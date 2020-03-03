@@ -11,19 +11,19 @@ export class AccountsService {
   userObs: Observable<User> = null;
   observ: Observer<User>;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getAllUsers(): Observable<[User]> {
     return this.http.get<[User]>(`/Accounts`);
   }
 
-  getUser(user:string, pass:string):Observable<User>{
+  getUser(user: string, pass: string): Observable<User> {
     return this.http.get<User>(`/Accounts?username=${user}&password=${pass}`);
   }
 
-  register(user){
+  register(user) {
     console.log(user);
-    
+
     return this.http.post(`http://localhost:3000/Accounts`, user);
   }
 
