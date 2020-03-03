@@ -9,6 +9,7 @@ import { MatCardModule } from "@angular/material/card";
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -25,6 +26,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
+    MatMenuModule,
   ],
   exports: [
     LayoutModule,
@@ -40,6 +42,7 @@ import { MatSelectModule } from '@angular/material/select';
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
+    MatMenuModule,
   ]
 })
-export class MaterialModule {}
+export class MaterialModule { }
