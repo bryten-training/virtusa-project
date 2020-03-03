@@ -1,20 +1,21 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { ArticleComponent } from './article/article.component';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { ArticleComponent } from "./article/article.component";
 import { ArticleHomepageComponent } from "./article-homepage/article-homepage.component";
+import { SubjectBlogpageComponent } from "./article-homepage/subject-blogpage/subject-blogpage.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Angular', pathMatch: 'full' },
   {
-    path: ':type',
-    component: ArticleHomepageComponent,
+    path: "",
+    component: ArticleHomepageComponent
   },
-  { path: ':type/:id', component: ArticleComponent },
-  { path: '**', redirectTo: 'Angular' }
+  { path: ":type", component: SubjectBlogpageComponent },
+  { path: ":type/:id", component: ArticleComponent },
+  { path: "**", redirectTo: "" }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ArticlesRoutingModule { }
+export class ArticlesRoutingModule {}

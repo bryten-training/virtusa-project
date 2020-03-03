@@ -8,8 +8,12 @@
   <span class="gap hover">Explore</span>
 </mat-toolbar>
 
-<div *ngIf="showSubjectGrid">
-  <mat-card class="subject-card" *ngFor="let subject of subjects">
+<div id="subjectDiv">
+  <mat-card
+    class="subject-card"
+    *ngFor="let subject of subjects"
+    [routerLink]="[subject.name]"
+  >
     <mat-card-content>
       <h1>{{ subject.name }}</h1>
       <img
@@ -18,68 +22,7 @@
         alt="{{ subject.name }} logo"
       />
     </mat-card-content>
+    <!-- <app-subject-blogpage [headerTitle]="subject.name"></app-subject-blogpage> -->
   </mat-card>
 </div>
 <!-- change the styling of the desc div to centre the text in it -->
-
-<div *ngIf="!showSubjectGrid">
-  <div id="desc">
-    <h1>JavaScript related blog articles</h1>
-  </div>
-
-  <div class="search">
-    <label>Search</label><input type="text" placeholder="search" />
-    <!-- <mat-icon aria-hidden="false" aria-label="Search icon" class="search-icon">
-      search
-    </mat-icon> -->
-  </div>
-
-  <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class="nav-content">
-      <div class="sidenav">
-        <a href="#">Fundamentals</a>
-        <a href="#">Data Structures</a>
-        <a href="#">Deployment</a>
-        <a href="#">Advanced</a>
-      </div>
-    </mat-drawer>
-    <mat-drawer-content>
-      <div class="main-content">
-        <div class="grid-container">
-          <div class="item1">1</div>
-          <div class="item2">2</div>
-          <div class="item3">3</div>
-        </div>
-
-        <div
-          *ngFor="let article of dummy_articles; let i = index"
-          class="example-card hover-card"
-        >
-          <mat-card *ngIf="i <= 2">
-            <mat-card-header>
-              <div
-                mat-card-avatar
-                class="example-header-image"
-                style="background-image: url({{ article.image }})"
-              ></div>
-              <mat-card-title>{{ article.title }}</mat-card-title>
-              <mat-card-subtitle>{{
-                article.publish_date | date
-              }}</mat-card-subtitle>
-            </mat-card-header>
-            <img
-              mat-card-image
-              src="{{ article.image }}"
-              alt="Photo of a Shiba Inu"
-            />
-            <mat-card-content>
-              <p>{{ article.content }}</p>
-            </mat-card-content>
-          </mat-card>
-        </div>
-
-        <div></div>
-      </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
-</div>

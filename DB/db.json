@@ -24,122 +24,176 @@
       "assessmentURL": "/assessment/java/1"
     }
   ],
-  "Links": [
+  "links": [
     {}
   ],
-  "Accounts": [
-    {}
+  "accounts": [
+    {
+      "username": "rahimmechtemel",
+      "password": "testing2",
+      "firstName": "Abderrahim",
+      "lastName": "Mechteml",
+      "email": "rahim@gmail.com",
+      "userType": "content provider",
+      "id": 1
+    },
+    {
+      "username": "tiung12",
+      "password": "pass",
+      "firstName": "Tiung",
+      "lastName": "VO",
+      "email": "rahimmechtemel@gmail.com",
+      "userType": "content provider",
+      "id": 2
+    },
+    {
+      "username": "rahim",
+      "password": "pass",
+      "firstName": "rayray",
+      "lastName": "manuel",
+      "email": "rahimmechteml@gmail.com",
+      "userType": "content provider",
+      "id": 3
+    },
+    {
+      "username": "tiung12",
+      "password": "pass",
+      "firstName": "Tiung",
+      "lastName": "VO",
+      "email": "rahimmechtemel@gmail.com",
+      "userType": "content provider",
+      "id": 12
+    },
+    {
+      "username": "rahim",
+      "password": "wefwewe",
+      "firstName": "sfgdfgfg",
+      "lastName": "sdfsd",
+      "email": "sdgdsfg@gg.com",
+      "userType": "content provider",
+      "id": 4
+    },
+    {
+      "username": "rahimmechtemel",
+      "password": "afssd",
+      "firstName": "sdssdf",
+      "lastName": "sdvsdfvs",
+      "email": "sdfsdfdf@sdfs.ciom",
+      "userType": "content provider",
+      "id": 5
+    }
   ],
-  "Flash Cards": [
+  "flashCards": [
     {}
   ],
   "assessment": [
     {
       "courseName": "Angular",
-      "courseID": 1,
+      "icon": "assets/img/angular.jpg",
+      "courseId": 0,
       "courseData": [
         {
-          "q1": " What is Angular?",
+          "q": " What is Angular?",
           "options": [
             {
-              "o1": "SPA",
-              "o1Ans": true
+              "opt": "SPA",
+              "optAns": true
             },
             {
-              "o2": "MPA",
-              "o1Ans": false
+              "opt": "MPA",
+              "optAns": false
             },
             {
-              "o3": "Both",
-              "o1Ans": false
+              "opt": "Both",
+              "optAns": false
             },
             {
-              "o4": "None",
-              "o1Ans": false
+              "opt": "None",
+              "optAns": false
             }
           ]
         },
         {
-          "q2": "What decorator is used for configuring your module class",
+          "q": "What decorator is used for configuring your module class",
           "options": [
             {
-              "o1": "@NgModule",
-              "o1Ans": true
+              "opt": "@NgModule",
+              "optAns": true
             },
             {
-              "o2": "@NgApp",
-              "o1Ans": false
+              "opt": "@NgApp",
+              "optAns": false
             },
             {
-              "o3": "Both",
-              "o1Ans": false
+              "opt": "Both",
+              "optAns": false
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q3": "Which character is used for chaining multiple pipes?",
+          "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
-              "o1": "|",
-              "o1Ans": true
+              "opt": "|",
+              "optAns": true
             },
             {
-              "o2": ":",
-              "o1Ans": false
+              "opt": ":",
+              "optAns": false
             },
             {
-              "o3": "Both",
-              "o1Ans": false
+              "opt": "Both",
+              "optAns": false
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q4": "Router is part of which of the following module?",
+          "q": "Router is part of which of the following module?",
           "options": [
             {
-              "o1": "@angular/core",
-              "o1Ans": false
+              "opt": "@angular/core",
+              "optAns": false
             },
             {
-              "o2": "@angular/router",
-              "o1Ans": true
+              "opt": "@angular/router",
+              "optAns": true
             },
             {
-              "o3": "Both",
-              "o1Ans": false
+              "opt": "Both",
+              "optAns": false
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q5": "RxJS can be used for?",
+          "q": "RxJS can be used for?",
           "options": [
             {
-              "o1": " Browser",
-              "o1Ans": false
+              "opt": " Browser",
+              "optAns": false
             },
             {
-              "o2": "Server Side",
-              "o1Ans": false
+              "opt": "Server Side",
+              "optAns": false
             },
             {
-              "o3": "Both",
-              "o1Ans": true
+              "opt": "Both",
+              "optAns": true
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         }
@@ -147,110 +201,111 @@
     },
     {
       "courseName": "JavaScript",
-      "courseID": 2,
+      "icon": "assets/img/js.jpg",
+      "courseId": 1,
       "courseData": [
         {
-          "q1": "Which built-in method combines the text of two strings and returns a new string?",
+          "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
-              "o1": "append()",
-              "o1Ans": false
+              "opt": "append()",
+              "optAns": false
             },
             {
-              "o2": "concat()",
-              "o1Ans": true
+              "opt": "concat()",
+              "optAns": true
             },
             {
-              "o3": "attach()",
-              "o1Ans": false
+              "opt": "attach()",
+              "optAns": false
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q2": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
+          "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
-              "o1": "pop()",
-              "o1Ans": false
+              "opt": "pop()",
+              "optAns": false
             },
             {
-              "o2": "join()",
-              "o1Ans": false
+              "opt": "join()",
+              "optAns": false
             },
             {
-              "o3": "map()",
-              "o1Ans": false
+              "opt": "map()",
+              "optAns": false
             },
             {
-              "o4": "push()",
-              "o1Ans": true
+              "opt": "push()",
+              "optAns": true
             }
           ]
         },
         {
-          "q3": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
+          "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
-              "o1": "alertbox(“GeeksforGeeks”);",
-              "o1Ans": false
+              "opt": "alertbox(“GeeksforGeeks”);",
+              "optAns": false
             },
             {
-              "o2": "alert(“GeeksforGeeks”);",
-              "o1Ans": true
+              "opt": "alert(“GeeksforGeeks”);",
+              "optAns": true
             },
             {
-              "o3": "msgbox(“GeeksforGeeks”);",
-              "o1Ans": false
+              "opt": "msgbox(“GeeksforGeeks”);",
+              "optAns": false
             },
             {
-              "o4": "msg(“GeeksforGeeks”);",
-              "o1Ans": false
+              "opt": "msg(“GeeksforGeeks”);",
+              "optAns": false
             }
           ]
-        }
-            {
-          "q4": "How do you declare a JavaScript variable?",
+        },
+          {
+          "q": "How do you declare a JavaScript variable?",
           "options": [
             {
-              "o1": "variable carName;",
-              "o1Ans": false
+              "opt": "variable carName;",
+              "optAns": false
             },
             {
-              "o2": "var carName;  ",
-              "o1Ans": true
+              "opt": "var carName;  ",
+              "optAns": true
             },
             {
-              "o3": "v carName;",
-              "o1Ans": false
+              "opt": "v carName;",
+              "optAns": false
             },
             {
-              "o4": "None",
-              "o1Ans": false
+              "opt": "None",
+              "optAns": false
             }
           ]
         },
         {
-          "q5": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
+          "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
-              "o1": "reverse()",
-              "o1Ans": false
+              "opt": "reverse()",
+              "optAns": false
             },
             {
-              "o2": "shift()",
-              "o1Ans": false
+              "opt": "shift()",
+              "optAns": false
             },
             {
-              "o3": "slice()",
-              "o1Ans": true
+              "opt": "slice()",
+              "optAns": true
             },
             {
-              "o4": "some()",
-              "o1Ans": false
+              "opt": "some()",
+              "optAns": false
             }
           ]
         }
@@ -258,110 +313,111 @@
     },
     {
       "courseName": "NodeJs",
-      "courseID": 3,
+      "icon": "assets/img/nodejs.jpg",
+      "courseId": 2,
       "courseData": [
         {
-          "q1": "In Nodejs what is use of underscore variable in REPL session?",
+          "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
-              "o1": "to store the result",
-              "o1Ans": false
+              "opt": "to store the result",
+              "optAns": false
             },
             {
-              "o2": "to get the last command used",
-              "o1Ans": false
+              "opt": "to get the last command used",
+              "optAns": false
             },
             {
-              "o3": "to get the last result",
-              "o1Ans": true
+              "opt": "to get the last result",
+              "optAns": true
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q2": "How can we check the current version of NPM?",
+          "q": "How can we check the current version of NPM?",
           "options": [
             {
-              "o1": "npm --ver",
-              "o1Ans": false
+              "opt": "npm --ver",
+              "optAns": false
             },
             {
-              "o2": "npm help",
-              "o1Ans": false
+              "opt": "npm help",
+              "optAns": false
             },
             {
-              "o3": "npm --version",
-              "o1Ans": true
+              "opt": "npm --version",
+              "optAns": true
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q3": "What is the advantage of using node.js?",
+          "q": "What is the advantage of using node.js?",
           "options": [
             {
-              "o1": "It provides an easy way to build scalable network programs",
-              "o1Ans": false
+              "opt": "It provides an easy way to build scalable network programs",
+              "optAns": false
             },
             {
-              "o2": "Generally fast",
-              "o1Ans": false
+              "opt": "Generally fast",
+              "optAns": false
             },
             {
-              "o3": "Great concurrency",
-              "o1Ans": false
+              "opt": "Great concurrency",
+              "optAns": false
             },
             {
-              "o4": "All of these",
-              "o1Ans": true
+              "opt": "All of these",
+              "optAns": true
             }
           ]
         },
         {
-          "q4": "Which of the following tool automates various tasks of Node.js application?",
+          "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
-              "o1": "Express.js",
-              "o1Ans": false
+              "opt": "Express.js",
+              "optAns": false
             },
             {
-              "o2": "GruntJS",
-              "o1Ans": true
+              "opt": "GruntJS",
+              "optAns": true
             },
             {
-              "o3": "NPM",
-              "o1Ans": false
+              "opt": "NPM",
+              "optAns": false
             },
             {
-              "o4": "None of the above",
-              "o1Ans": false
+              "opt": "None of the above",
+              "optAns": false
             }
           ]
         },
         {
-          "q5": "Which of the following provides in-built events.",
+          "q": "Which of the following provides in-built events.",
           "options": [
             {
-              "o1": "callback",
-              "o1Ans": false
+              "opt": "callback",
+              "optAns": false
             },
             {
-              "o2": "throw",
-              "o1Ans": false
+              "opt": "throw",
+              "optAns": false
             },
             {
-              "o3": "handler",
-              "o1Ans": false
+              "opt": "handler",
+              "optAns": false
             },
             {
-              "o4": "events",
-              "o1Ans": true
+              "opt": "events",
+              "optAns": true
             }
           ]
         }
@@ -371,7 +427,8 @@
   "video": [
     {
       "courseName": "Angular",
-      "courseId": 1,
+      "courseId": 0,
+      "logo": "assets/img/angular.jpg",
       "videoData": [
         {
           "id": 1,
@@ -402,7 +459,8 @@
     },
     {
       "courseName": "JavaScript",
-      "courseId": 2,
+      "courseId": 1,
+      "logo": "assets/img/js.jpg",
       "videoData": [
         {
           "id": 1,
@@ -412,19 +470,19 @@
         {
           "id": 2,
           "title": "DOM",
-          "url": "https://www.youtube.com/embed/_GxpmQ54aqg"
+          "url": "https://www.youtube.com/embed/_Gxpmq4aqg"
         },
         {
           "id": 3,
           "title": "Functions",
           "url": "https://www.youtube.com/embed/eL0RGZ0GddE"
         },
-        {
+          {
           "id": 4,
           "title": "Arrays",
           "url": "https://www.youtube.com/embed/SrT8-9I4WnE"
         },
-        {
+          {
           "id": 5,
           "title": "Objects",
           "url": "https://www.youtube.com/embed/s0IdE51JE80"
@@ -433,7 +491,8 @@
     },
     {
       "courseName": "NodeJs",
-      "courseId": 3,
+      "courseId": 2,
+      "logo": "assets/img/nodejs.jpg",
       "videoData": [
         {
           "id": 1,
