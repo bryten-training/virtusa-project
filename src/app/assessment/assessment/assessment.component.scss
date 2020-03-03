@@ -1,0 +1,41 @@
+.example-radio-group {
+    display: flex;
+    flex-direction: column;
+    // margin: 15px 0;  
+  }
+  
+  .example-radio-button {
+    margin: 5px;
+  }
+  
+  *{
+    display: block;
+    margin: 0;
+  }
+  mat-card{
+    margin: 10px;
+    padding: 0;
+    border: 1px solid black;
+  }
+  mat-card-title{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 4px 4px 0 0;
+    width: 97.3%;
+  }
+  mat-radio-group{
+    padding: 5px 10px;
+  }
+
+  .cards {
+    display: inline-block;
+    flex-wrap: wrap;
+    padding: 50px;
+    margin: 20px;
+    width: 10%;
+    text-align: center;
+    cursor: pointer;
+    height: 5%;
+    background-color: aliceblue;
+    font-weight: bold;
+}

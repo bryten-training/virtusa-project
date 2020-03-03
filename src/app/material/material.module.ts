@@ -7,6 +7,10 @@ import { MatIconModule } from "@angular/material/icon";
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
 import { MatSliderModule } from "@angular/material/slider";
+import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSelectModule } from '@angular/material/select';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [],
@@ -18,7 +22,11 @@ import { MatSliderModule } from "@angular/material/slider";
     MatIconModule,
     MatListModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    MatInputModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatMenuModule
   ],
   exports: [
     LayoutModule,
@@ -26,9 +34,13 @@ import { MatSliderModule } from "@angular/material/slider";
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
+    MatRadioModule,
     MatListModule,
     MatCardModule,
-    MatSliderModule
+    MatSliderModule,
+    MatInputModule,
+    MatSelectModule,
+    MatMenuModule
   ]
 })
-export class MaterialModule {}
+export class MaterialModule { }

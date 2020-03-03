@@ -6,19 +6,30 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { ArticlesModule } from "./articles/articles.module";
+import { HomeComponent } from './home/home.component';
+import { ReactiveFormsModule } from "@angular/forms";
+import { AccountsModule } from "./accounts/accounts.module"
 
-import { HomeComponent } from "./home/home.component";
+import { AssessmentModule } from './assessment/assessment.module';
+import { VideoModule } from './video/video.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ArticlesModule
+    ArticlesModule,
+    AccountsModule,
+    ReactiveFormsModule,
+    AssessmentModule,
+    VideoModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
