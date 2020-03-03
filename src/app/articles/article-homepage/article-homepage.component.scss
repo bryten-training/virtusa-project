@@ -26,6 +26,36 @@ $primary: #0b2161;
   cursor: pointer;
 }
 
+.search {
+  height: 5%;
+  text-align: center;
+  margin-top: 2%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > label {
+    font-style: italic;
+    font-weight: bold;
+    margin: 1%;
+  }
+
+  & > input {
+    width: 25vw;
+    height: 5vh;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+}
+
+.search-icon {
+  background-color: #d8d8d8;
+  cursor: pointer;
+}
+
 // .example-card {
 //   width: 30vw;
 //   height: 20vh;
