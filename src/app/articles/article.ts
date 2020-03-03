@@ -1,12 +1,13 @@
 export interface Article {
     id: number,
+    subject: string,
     title: string,
-    picture: string,
+    image: string,
     author: {
         name: string,
         avatar: string
     },
-    publishingTime: Date,
+    publish_date: Date,
     content: string,
     timeToRead: number,
     likes: number,
@@ -15,7 +16,7 @@ export interface Article {
             id: number,
             author: string,
             comment: string,
-            time: Date
+            datetime: Date
         }
     ],
     assessmentURL: string
