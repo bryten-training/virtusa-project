@@ -32,21 +32,17 @@ export class SignUpComponent {
     })
   }
 
-  userTypes = ["admin", "content provider", "default"];
+  userTypes = ["content provider", "default"];
 
   onSubmit() {
     this.lastId += 1;
     this.user = this.signupForm.value;
-    this.user["id"] = this.lastId;
-    console.log(this.user);
-    
-   this.accountsSrv.register(this.signupForm.value).pipe(first())
+    this.user["id"] = this.lastId; 
+       
+   this.accountsSrv.register(this.signupForm.value)
    .subscribe(
-       data => {
+       _ => {
            this.router.navigate(['/logIn']);
-       },
-       error => {
-         alert("User already exists");
        }
    );
     
