@@ -20,6 +20,7 @@ export class ArticleComponent implements OnInit {
       this.prevType = param.type;
       this.articlesService.get("articles", { params: { subject: param.type, id: param.id } }).subscribe((data: Article[]) => {
         this.article = data[0];
+        this.articlesService.setArticle(this.article);
         console.log(this.article);
         this.markdownContent = atob(this.article.content);
         console.log(this.markdownContent)
