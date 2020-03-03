@@ -10,7 +10,8 @@ import { MatIconModule } from "@angular/material/icon";
 import { ArticleHomepageComponent } from "./article-homepage/article-homepage.component";
 import { ArticlescommentsComponent } from './articlescomments/articlescomments.component';
 import { MatInputModule } from '@angular/material/input';
-import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component'
+import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component';
+import { AddArticleComponent } from './add-article/add-article.component'
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articl
     ArticleHomepageComponent,
     ArticlescommentsComponent,
     ArticlecommentsdisplayComponent,
-    ArticleComponent
+    ArticleComponent,
+    AddArticleComponent
   ],
   imports: [
     CommonModule,
