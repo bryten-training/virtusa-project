@@ -12,7 +12,6 @@ import { User } from '../user.model';
 })
 export class SignUpComponent {
 
-  router: Router;
   lastId = 0;
   user: User = new User();
 
@@ -25,7 +24,7 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private accountsSrv: AccountsService) { 
+  constructor(private accountsSrv: AccountsService, private router:Router) { 
     this.accountsSrv.getAllUsers().subscribe(res=>{
       this.lastId = res.length-1; 
       console.log(res);
@@ -44,7 +43,7 @@ export class SignUpComponent {
    this.accountsSrv.register(this.signupForm.value).pipe(first())
    .subscribe(
        data => {
-           this.router.navigate(['/assessment']);
+           this.router.navigate(['/logIn']);
        },
        error => {
          alert("User already exists");

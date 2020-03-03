@@ -54,6 +54,15 @@
       "email": "rahim@gmail.com",
       "userType": "default",
       "id": 6
+    },
+    {
+      "username": "dfsdsf",
+      "password": "sdfds",
+      "firstName": "eer",
+      "lastName": "dfergfv",
+      "email": "rahim@gmail.com",
+      "userType": "admin",
+      "id": 5
     }
   ],
   "flashcard": [

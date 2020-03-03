@@ -1,41 +1,43 @@
-<form class="back" [formGroup]="signupForm">
-  <!-- USERNAME -->
-  <mat-form-field class="example-full-width">
-    <mat-label>User name</mat-label>
-    <input matInput placeholder="username" formControlName="username">
-  </mat-form-field>
-  <br>
-  <!-- PASSWORD -->
-  <mat-form-field class="example-full-width">
-    <mat-label>password</mat-label>
-    <input matInput type="password" formControlName="password">
-  </mat-form-field>
-  <br>
-  <!-- EMAIL -->
-  <mat-form-field class="example-full-width">
-    <mat-label>Email</mat-label>
-    <input matInput placeholder="Email" formControlName="email">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>first name</mat-label>
-    <input matInput placeholder="First Name" formControlName="firstName">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>last name</mat-label>
-    <input matInput placeholder="Last Name" formControlName="lastName">
-  </mat-form-field>
-  <br>
-  <mat-form-field class="example-full-width">
-    <mat-label>User types</mat-label>
-    <mat-select formControlName="userType">
-      <mat-option *ngFor="let type of userTypes" [value]="type">
-        {{type}}
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
-  <br>
-  <button [disabled]="!signupForm.valid" mat-raised-button color="accent" (click)="onSubmit()">Submit</button>
+<mat-card-content>
+  <form class="back" [formGroup]="signupForm">
+    <!-- USERNAME -->
+    <mat-form-field class="example-full-width">
+      <mat-label>User name</mat-label>
+      <input matInput placeholder="username" formControlName="username">
+    </mat-form-field>
+    <br>
+    <!-- PASSWORD -->
+    <mat-form-field class="example-full-width">
+      <mat-label>password</mat-label>
+      <input matInput type="password" formControlName="password">
+    </mat-form-field>
+    <br>
+    <!-- EMAIL -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" formControlName="email">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>first name</mat-label>
+      <input matInput placeholder="First Name" formControlName="firstName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>last name</mat-label>
+      <input matInput placeholder="Last Name" formControlName="lastName">
+    </mat-form-field>
+    <br>
+    <mat-form-field class="example-full-width">
+      <mat-label>User types</mat-label>
+      <mat-select formControlName="userType">
+        <mat-option *ngFor="let type of userTypes" [value]="type">
+          {{type}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <button [disabled]="!signupForm.valid" mat-raised-button color="accent" (click)="onSubmit()">Submit</button>
 
-</form>
+  </form>
+</mat-card-content>
