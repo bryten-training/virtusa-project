@@ -10,9 +10,17 @@ export class AccountsService {
 
   constructor(private http: HttpClient) { }
 
-  checkUser(): Observable<User> {
-    return of();
+  getAllUsers(): Observable<[User]>{
+    return this.http.get<[User]>(`/userdata`);
   }
+
+  checkUser(user: string, pass: string){
+    return this.http.get(`/userdata?username=${user}&password=${pass}`);
+  }
+
+  register(user: User) {
+    return this.http.post(`/userdata`, user);
+}
 
 
 

@@ -16,6 +16,53 @@
           "pass": "false"
         }
       ]
+    },
+    {
+      "id": 2,
+      "username": "rahim",
+      "password": "yoyo",
+      "type": "admin",
+      "email": "rahim",
+      "passList": [],
+      "flashcard": [
+        {
+          "id": 1,
+          "question": "what is diretive",
+          "ans": " ",
+          "body": "content",
+          "pass": "false"
+        }
+      ]
+    },
+    {
+      "username": "qqqq",
+      "password": "qqweer",
+      "firstName": "cdcd",
+      "lastName": "vb",
+      "email": "rahim@gmail.com",
+      "userType": "admin",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "username": "Bayonne",
+      "password": "fvgbhbg",
+      "firstName": "qards",
+      "lastName": "sards",
+      "email": "rahim@gmail.com",
+      "userType": "default",
+      "id": 6
+    },
+    {
+      "username": "dfsdsf",
+      "password": "sdfds",
+      "firstName": "eer",
+      "lastName": "dfergfv",
+      "email": "rahim@gmail.com",
+      "userType": "admin",
+      "id": 5
     }
   ],
   "flashcard": [
@@ -30,30 +77,6 @@
       "question": "what is Angular",
       "ans": "SPA",
       "body": "content"
-    },
-    {
-      "question": "",
-      "id": 3,
-      "ans": "SPA",
-      "body": "content"
-    },
-    {
-      "question": "sample question",
-      "ans": "sample answer",
-      "id": 4
-    },
-    {
-      "question": "question",
-      "ans": "answer",
-      "id": 5
-    },
-    {
-      "question": "a",
-      "ans": "a",
-      "id": 6
-    },
-    {
-      "id": 7
     }
   ]
 }
