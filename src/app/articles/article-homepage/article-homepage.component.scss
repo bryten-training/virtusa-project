@@ -26,6 +26,39 @@ $primary: #0b2161;
   cursor: pointer;
 }
 
+.example-container {
+  .nav-content {
+    margin-top: 5%;
+    //border: 1px solid #555;
+    width: 15vw;
+    height: 25%;
+  }
+
+  .sidenav {
+    height: 100%;
+    //position: fixed;
+    z-index: 1;
+    background-color: $primary;
+    overflow-x: hidden;
+
+    & > a {
+      //padding: 6px 8px 6px 16px;
+      margin: 2em 1em;
+      text-decoration: none;
+      font-size: 1rem;
+      color: #eff5fb;
+      display: block;
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .main-content {
+    margin-left: 10%;
+  }
+}
+
 .search {
   height: 5%;
   text-align: center;
@@ -82,4 +115,10 @@ $primary: #0b2161;
 .example-header-image {
   // background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
   background-size: cover;
+}
+
+@media screen and (max-width: 450px) {
+  .sidenav a {
+    font-size: 0.5rem;
+  }
 }
