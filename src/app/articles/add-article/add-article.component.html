@@ -1,6 +1,41 @@
-<form class="add-article-form">
+<form [formGroup]="articleForm" class="add-article-form" (ngSubmit)="submit()">
+    <mat-label>Hi, {{user.firstName}}</mat-label>
     <mat-form-field class="full-width">
-        <mat-label>Write your article here (Markdown Supported!)</mat-label>
-        <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+        <mat-label>Subject*</mat-label>
+        <mat-select formControlName="subject">
+            <mat-option *ngFor="let subject of subjects" [value]="subject">
+                {{subject}}
+            </mat-option>
+        </mat-select>
     </mat-form-field>
+
+    <mat-form-field class="full-width">
+        <mat-label>Title*</mat-label>
+        <input matInput placeholder="Ex. Learning..." formControlName="title">
+    </mat-form-field>
+    <mat-form-field class="full-width" style="display: flex;">
+        <mat-label>Image*</mat-label>
+        <br>
+        <input class="full-width" placeholder="Upload a cover" formControlName="imageURL" type="file" accept="image/*"
+            (change)="onUploadChange($event)">
+        <input matInput formControlName="image" style="display: none;">
+    </mat-form-field>
+    <!-- <h4>Basic native select</h4> -->
+    <mat-form-field class="full-width">
+        <mat-label>Time to read* (1 to 100, in minutes)</mat-label>
+        <input matInput placeholder="Estimate time to read this article..." formControlName="timeToRead" type="number">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Tags*</mat-label>
+        <input matInput placeholder="Add some tags, use ',' as delimiter" formControlName="tags">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+        <mat-label>Write your article here* (Markdown Supported!)</mat-label>
+        <textarea matInput placeholder="Ex. Learning..." cdkTextareaAutosize #autosize="cdkTextareaAutosize"
+            cdkAutosizeMinRows="10" cdkAutosizeMaxRows="30"     name="add-article-textarea"
+            formControlName="mdText"></textarea>
+    </mat-form-field>
+    <mat-card-actions>
+        <button mat-raised-button color='primary' type="submit" class="full-width">Submit</button>
+    </mat-card-actions>
 </form>

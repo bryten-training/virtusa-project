@@ -4,13 +4,10 @@ import { ArticleComponent } from './article/article.component';
 import { ArticleHomepageComponent } from "./article-homepage/article-homepage.component";
 
 const routes: Routes = [
-  { path: '', redirectTo: 'Angular', pathMatch: 'full' },
-  {
-    path: ':type',
-    component: ArticleHomepageComponent,
-  },
+  { path: '', component: ArticleHomepageComponent },
+  { path: ':type', component: ArticleHomepageComponent },
   { path: ':type/:id', component: ArticleComponent },
-  { path: '**', redirectTo: 'Angular' }
+  { path: '**', redirectTo: '' }
 ];
 
 @NgModule({

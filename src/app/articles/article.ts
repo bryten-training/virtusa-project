@@ -1,6 +1,8 @@
+import { Subject } from './subject';
+
 export interface Article {
     id: number,
-    subject: string,
+    subject: Subject,
     title: string,
     image: string,
     author: {
@@ -10,14 +12,14 @@ export interface Article {
     publish_date: Date,
     content: string,
     timeToRead: number,
+    tags: string[],
     likes: number,
-    comments: [
-        {
-            id: number,
-            author: string,
-            comment: string,
-            datetime: Date
-        }
-    ],
+    comments: {
+        id: number,
+        author: string,
+        comment: string,
+        datetime: Date
+    }[]
+    ,
     assessmentURL: string
 }

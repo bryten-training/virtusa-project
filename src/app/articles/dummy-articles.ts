@@ -1,11 +1,12 @@
 import { Article } from "./article";
+import { Subject } from './subject';
 
 // Add author and tags
 
 export const ARTICLES: Article[] = [
   {
     id: 1,
-    subject: "JavaScript",
+    subject: Subject.Angular,
     publish_date: new Date(),
     title: "Shiba facts",
     content:
@@ -25,11 +26,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 2,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 2",
     content:
@@ -49,11 +51,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 3,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 3",
     content:
@@ -74,11 +77,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 4,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 4",
     content:
@@ -99,11 +103,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 5,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 5",
     content:
@@ -124,11 +129,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 6,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 6",
     content:
@@ -149,11 +155,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 7,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 7",
     content:
@@ -174,11 +181,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 8,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 8",
     content:
@@ -198,11 +206,12 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   },
   {
     id: 9,
-    subject: "JavaScript",
+    subject: Subject.JavaScript,
     publish_date: new Date(),
     title: "Lorem 9",
     content:
@@ -223,6 +232,7 @@ export const ARTICLES: Article[] = [
       }
     ],
     timeToRead: 6,
+    tags: ["JavaScript", "Shiba"],
     assessmentURL: ""
   }
 ];

@@ -1,12 +1,13 @@
 <button mat-fab color="primary" class="fab-button" [routerLink]="['/artcls',prevType]">
     <mat-icon>arrow_back</mat-icon>
 </button>
+<app-add-article></app-add-article>
 <mat-card class="article-card" *ngIf="article">
     <mat-card-title class="article-title">{{article.title}}</mat-card-title>
     <mat-card-header>
         <img mat-card-avatar [src]="article.author.avatar">
         <mat-card-title>{{article.author.name}}</mat-card-title>
-        <mat-card-subtitle>{{article.publish_date}} · {{article.timeToRead}} min read</mat-card-subtitle>
+        <mat-card-subtitle>{{article.publish_date | date: 'MMM dd, yyyy'}} · {{article.timeToRead}} min read</mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="article.image" alt="Cover Photo">
     <mat-card-content>
