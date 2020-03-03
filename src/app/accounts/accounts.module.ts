@@ -1,22 +1,27 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-import { AccountsRoutingModule } from './accounts-routing.module';
-import { MaterialModule } from '../material/material.module';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AccountsRoutingModule } from './accounts-routing.module';
+import { LoginComponent } from './login/login.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
-
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
-  declarations: [SignUpComponent],
+  declarations: [
+    LoginComponent,
+    SignUpComponent
+  ],
   imports: [
     CommonModule,
     AccountsRoutingModule,
     MaterialModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    HttpClientModule
   ],
-  exports: [SignUpComponent]
+  exports: [
+    LoginComponent,
+    SignUpComponent
+  ]
 })
 export class AccountsModule { }
