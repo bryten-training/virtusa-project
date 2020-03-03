@@ -17,6 +17,7 @@ import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { AccountsService } from './accounts/accounts.service';
 
 
 @NgModule({
@@ -46,7 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     AssessmentModule,
     VideoModule
   ],
-  providers: [],
+  providers: [AccountsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
