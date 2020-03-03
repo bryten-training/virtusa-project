@@ -13,7 +13,6 @@ export class AssessmentComponent implements OnInit {
     alert(JSON.stringify(requestData))
   }
 
-
   assesmentForm = new FormGroup({
     firstQuestion: new FormControl(''),
     secondQuestion: new FormControl(''),
