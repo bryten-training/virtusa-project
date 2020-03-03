@@ -1,6 +1,9 @@
 import { Component } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { AccountsService } from '../accounts.service';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,6 +11,11 @@ import { AccountsService } from '../accounts.service';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
+
+  router: Router;
+  lastId = 0;
+  user: User = new User();
+
   signupForm = new FormGroup({
     username: new FormControl("", [Validators.required]),
     password: new FormControl("", [Validators.required]),
@@ -17,14 +25,31 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private accountsSrv: AccountsService) { }
+  constructor(private accountsSrv: AccountsService) { 
+    this.accountsSrv.getAllUsers().subscribe(res=>{
+      this.lastId = res.length-1; 
+      console.log(res);
+      
+    })
+  }
 
   userTypes = ["admin", "content provider", "default"];
 
   onSubmit() {
-    this.accountsSrv.checkUser(this.signupForm.value.username, this.signupForm.value.password).subscribe(response =>{
-      console.log(response);
-    });
+    this.lastId += 1;
+    this.user = this.signupForm.value;
+    this.user["id"] = this.lastId;
+    console.log(this.user);
+    
+   this.accountsSrv.register(this.signupForm.value).pipe(first())
+   .subscribe(
+       data => {
+           this.router.navigate(['/assessment']);
+       },
+       error => {
+         alert("User already exists");
+       }
+   );
     
   }
 }

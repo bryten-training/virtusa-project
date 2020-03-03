@@ -33,6 +33,27 @@
           "pass": "false"
         }
       ]
+    },
+    {
+      "username": "qqqq",
+      "password": "qqweer",
+      "firstName": "cdcd",
+      "lastName": "vb",
+      "email": "rahim@gmail.com",
+      "userType": "admin",
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "username": "Bayonne",
+      "password": "fvgbhbg",
+      "firstName": "qards",
+      "lastName": "sards",
+      "email": "rahim@gmail.com",
+      "userType": "default",
+      "id": 6
     }
   ],
   "flashcard": [
