@@ -28,8 +28,10 @@ export class SignUpComponent {
     this.accountsSrv.getAllUsers().subscribe(res=>{
       this.lastId = res.length-1; 
       console.log(res);
-      
-    })
+    });
+    console.log("User: "+this.accountsSrv.loggedInUser);
+    
+
   }
 
   userTypes = ["content provider", "default"];
@@ -39,12 +41,12 @@ export class SignUpComponent {
     this.user = this.signupForm.value;
     this.user["id"] = this.lastId; 
        
-   this.accountsSrv.register(this.signupForm.value)
-   .subscribe(
-       _ => {
-           this.router.navigate(['/logIn']);
-       }
-   );
+   this.accountsSrv.register(this.signupForm.value).subscribe(
+    error=>{
+      console.log(error);
+      
+    }
+   )
     
   }
 }

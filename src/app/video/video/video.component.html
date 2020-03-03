@@ -1,7 +1,7 @@
 <!-- Skills display -->
 <mat-card *ngFor="let x of videoList; index as i" (click)="onClick(x.courseId)">
     <mat-card-title [(title)]="x.courseName">{{x.courseName}}</mat-card-title>
-    <img src="{{x.icon}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
+    <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
 </mat-card>
 
 <mat-card>

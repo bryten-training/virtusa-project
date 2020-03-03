@@ -1,28 +1,6 @@
 {
   "articles": [
-    {
-      "id": 1,
-      "subject": "Angular",
-      "title": "Effective Java for Android (cheatsheet).",
-      "image": "assets/phone.png",
-      "author": {
-        "name": "Author",
-        "avatar": "assets/avatar.jpeg"
-      },
-      "publish_date": "Mar 2, 2020",
-      "content": "W0VmZmVjdGl2ZSBKYXZhXShodHRwczovL3d3dy5hbWF6b24uY28udWsvRWZmZWN0aXZlLUphdmEtU2Vjb25kLUpvc2h1YS1CbG9jaC9kcC8wMzIxMzU2NjgzKSBpcyBjb25zaWRlcmVkIGJ5IG1hbnksIG9uZQpvZiB0aGUgbW9zdCBpbXBvcnRhbnQgYm9va3MgZm9yIHdyaXRpbmcgSmF2YSBjb2RlIHRoYXQgaXMgKiptYWludGFpbmFibGUqKiBpbiB0aGUgbG9uZyBydW4gYW5kICoqZWZmaWNpZW50KiogYXQgdGhlIHNhbWUKdGltZS4gQW5kcm9pZCBpcyB1c2luZyBKYXZhIGFuZCB0aGF0IG1lYW5zIHRoYXQgYWxsIG9mIHRoZSBhZHZpY2UgZ2l2ZW4gaW4gdGhlIGJvb2sgbXVzdCBiZSBhcHBsaWNhYmxlLCByaWdodD8gTm90CmV4YWN0bHkuIFNvbWUgcGVvcGxlIGNvbnNpZGVyIHRoYXQgbW9zdCBvZiB0aGUgYWR2aWNlIGdpdmVuIGJ5IHRoZSBib29rIGFyZSBub3QgYXBwbGljYWJsZSBpbiB0aGUgQW5kcm9pZCBkZXZlbG9wbWVudAp3b3JsZC4gSW4gbXkgb3BpbmlvbiwgdGhpcyBpcyBub3QgdGhlIGNhc2UuIEkgYmVsaWV2ZSB0aGF0IHRoZXJlIGFyZSBwYXJ0cyBvZiB0aGUgYm9vayB0aGF0IGFyZSBub3QgYXBwbGljYWJsZSwgZWl0aGVyCmJlY2F1c2Ugbm90IGFsbCBKYXZhIGZlYXR1cmVzIGFyZSBvcHRpbWl6ZWQgdG8gYmUgdXNlZCB3aXRoIEFuZHJvaWQgKGUuZy4gZW51bXMsIHNlcmlhbGl6YXRpb24sIGV0Yykgb3IgZHVlIHRvIHRoZQpsaW1pdGF0aW9ucyB0aGF0IGEgbW9iaWxlIGRldmljZSBoYXMgKGUuZy4gRGFsdmlrL0FSVCBiZWhhdmVzIGRpZmZlcmVudGx5IHRoYW4gYSBkZXNrdG9wIEpWTSkgLiBOZXZlcnRoZWxlc3MsIG1vc3Qgb2YKdGhlIHBhcmFkaWdtcyBpbiB0aGUgYm9vayBjYW4gYmUgdXNlZCB3aXRoIGxpdHRsZSB0byBubyBtb2RpZmljYXRpb24gYW5kIGNhbiBjb250cmlidXRlIHRvIGEgaGVhbHRoaWVyLCBjbGVhbmVyIGFuZCBtb3JlCm1haW50YWluYWJsZSBjb2RlIGJhc2UuCgpUaGlzIHBvc3QgaXMgYW4gYXR0ZW1wdCB0byBjb25jZW50cmF0ZSB3aGF0IEkgY29uc2lkZXIgdGhlIG1vc3QgaW1wb3J0YW50IGl0ZW1zIGZyb20gdGhlIGJvb2sgd2hlbiBkZXZlbG9waW5nIGFuIEFuZHJvaWQKYXBwLiBGb3IgdGhvc2Ugd2hvIHJlYWQgdGhlIGJvb2ssIHRoaXMgcG9zdCBtaWdodCBhY3QgYXMgYSByZW1pbmRlciBvZiB0aGUgaXRlbXMvcHJpbmNpcGxlcyB0aGF0IGFyZSBtZW50aW9uZWQuIEZvcgp0aG9zZSB3aG8gZGlkbuKAmXQgcmVhZCBpdCAoeWV0KSwgaXQgY2FuIGJlIHVzZWQgdG8gZ2l2ZSB0aGVtIGEgdGFzdGUgb2Ygd2hhdCB0aGUgYm9vayBvZmZlcnMuCgojIyBGb3JjZSBub24taW5zdGFudGlhYmlsaXR5CgpJZiB5b3UgZG8gbm90IHdhbnQgYW4gb2JqZWN0IHRvIGJlIGNyZWF0ZWQgdXNpbmcgdGhlIG5ldyBrZXl3b3JkLCBlbmZvcmNlIGl0IHVzaW5nIGEgKipwcml2YXRlIGNvbnN0cnVjdG9yKiouIEVzcGVjaWFsbHkKdXNlZnVsIGZvciB1dGlsaXR5IGNsYXNzZXMgdGhhdCBjb250YWluIG9ubHkgc3RhdGljIGZ1bmN0aW9ucy4KCmBgYGphdmEKY2xhc3MgTW92aWVVdGlscyB7CiAgICBwcml2YXRlIE1vdmllVXRpbHMoKSB7fQogICAgc3RhdGljIFN0cmluZyB0aXRsZUFuZFllYXIoTW92aWUgbW92aWUpIHsKICAgICAgICBbLi4uXQogICAgfQp9CmBgYAoKIyMgU3RhdGljIEZhY3RvcmllcwoKSW5zdGVhZCBvZiB1c2luZyB0aGUgbmV3IGtleXdvcmQgYW5kIHRoZSBjb25zdHJ1Y3RvciB1c2UgYSAqKnN0YXRpYyBmYWN0b3J5IG1ldGhvZCoqIChhbmQgYSBwcml2YXRlIGNvbnN0cnVjdG9yKS4gVGhlc2UgZmFjdG9yeSBtZXRob2RzIGFyZSAqKm5hbWVkKiosIGFyZSBub3QgcmVxdWlyZWQgdG8gcmV0dXJuIGEgKipuZXcgaW5zdGFuY2UqKiBvZiB0aGUgb2JqZWN0IGVhY2ggdGltZSBhbmQgY2FuIHJldHVybiBhICoqZGlmZmVyZW50IHN1YnR5cGUqKiBkZXBlbmRpbmcgb24gd2hhdCdzIG5lZWRlZC4KCmBgYGphdmEKY2xhc3MgTW92aWUgewogICAgWy4uLl0KICAgIHB1YmxpYyBzdGF0aWMgTW92aWUgY3JlYXRlKFN0cmluZyB0aXRsZSkgewogICAgICAgIHJldHVybiBuZXcgTW92aWUodGl0bGUpOwogICAgfQp9CmBgYAoKKipbVXBkYXRlXSBBIHVzZWZ1bCB0aXAgYnkgb3VyIHJlYWRlcioqIFtAc3RzZGVtYTI4XShodHRwczovL21lZGl1bS5jb20vQHN0c2RlbWEyOCk6IFVzaW5nIHN0YXRpYyBmYWN0b3JpZXMgY2FuIG1ha2UgdGVzdGluZyBkaWZmaWN1bHQuIElmIHRoYXQncyB0aGUgY2FzZSwgY29uc2lkZXIgdXNpbmcgbm9uLXN0YXRpYyBmYWN0b3JpZXMgdGhhdCB5b3UgY2FuIG1vY2sgZHVyaW5nIHRlc3RpbmcgKG9yIGEgZmFjdG9yeSBpbnRlcmZhY2UgdGhhdCBhIGZha2UgY2FuIGltcGxlbWVudCku",
-      "timeToRead": 8,
-      "likes": 500,
-      "comments": [
-        {
-          "id": 1,
-          "author": "Someone",
-          "comment": "very effective",
-          "datetime": "Mar 2, 2020"
-        }
-      ],
-      "assessmentURL": "/assessment/java/1"
-    }
+    {}
   ],
   "links": [
     {}
@@ -89,139 +67,26 @@
   "assessment": [
     {
       "courseName": "Angular",
-      "icon": "assets/img/angular.jpg",
-      "courseId": 0,
+      "courseID": 1,
       "courseData": [
         {
-          "q": " What is Angular?",
+          "q1": "Question 1",
           "options": [
             {
-              "opt": "SPA",
-              "optAns": true
+              "o1": "option1",
+              "o1Ans": true
             },
             {
-              "opt": "MPA",
-              "optAns": false
+              "o2": "option2",
+              "o1Ans": false
             },
             {
-              "opt": "Both",
-              "optAns": false
+              "o3": "option3",
+              "o1Ans": false
             },
             {
-              "opt": "None",
-              "optAns": false
-            }
-          ]
-        },
-        {
-          "q": "What decorator is used for configuring your module class",
-          "options": [
-            {
-              "opt": "@NgModule",
-              "optAns": true
-            },
-            {
-              "opt": "@NgApp",
-              "optAns": false
-            },
-            {
-              "opt": "Both",
-              "optAns": false
-            },
-            {
-              "opt": "None of the above",
-              "optAns": false
-            }
-          ]
-        },
-        {
-          "q": "Which character is used for chaining multiple pipes?",
-          "options": [
-            {
-              "opt": "|",
-              "optAns": true
-            },
-            {
-              "opt": ":",
-              "optAns": false
-            },
-            {
-              "opt": "Both",
-              "optAns": false
-            },
-            {
-              "opt": "None of the above",
-              "optAns": false
-            }
-          ]
-        },
-        {
-          "q": "Router is part of which of the following module?",
-          "options": [
-            {
-              "opt": "@angular/core",
-              "optAns": false
-            },
-            {
-              "opt": "@angular/router",
-              "optAns": true
-            },
-            {
-              "opt": "Both",
-              "optAns": false
-            },
-            {
-              "opt": "None of the above",
-              "optAns": false
-            }
-          ]
-        },
-        {
-          "q": "RxJS can be used for?",
-          "options": [
-            {
-              "opt": " Browser",
-              "optAns": false
-            },
-            {
-              "opt": "Server Side",
-              "optAns": false
-            },
-            {
-              "opt": "Both",
-              "optAns": true
-            },
-            {
-              "opt": "None of the above",
-              "optAns": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "courseName": "JavaScript",
-      "icon": "assets/img/js.jpg",
-      "courseId": 1,
-      "courseData": [
-        {
-          "q": "Which built-in method combines the text of two strings and returns a new string?",
-          "options": [
-            {
-              "opt": "append()",
-              "optAns": false
-            },
-            {
-              "opt": "concat()",
-              "optAns": true
-            },
-            {
-              "opt": "attach()",
-              "optAns": false
-            },
-            {
-              "opt": "None of the above",
-              "optAns": false
+              "o4": "option4",
+              "o1Ans": false
             }
           ]
         },
