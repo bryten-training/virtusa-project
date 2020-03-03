@@ -15,10 +15,12 @@ import { AccountsModule } from "./accounts/accounts.module"
 
 import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -41,7 +43,6 @@ import { VideoModule } from './video/video.module';
       },
     }),
     ReactiveFormsModule,
-    AccountsModule,
     AssessmentModule,
     VideoModule
   ],

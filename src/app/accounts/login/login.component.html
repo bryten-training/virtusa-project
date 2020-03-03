@@ -1,5 +1,5 @@
-<mat-card class="login-card">
-  <div class="wrapper">
+<div class="wrapper">
+  <mat-card class="login-card">
     <mat-card-header>
       <mat-card-title>
         <i class="material-icons">
@@ -70,11 +70,13 @@
       <i class="material-icons">
         check &nbsp;&nbsp;
       </i>
-      Submitted successfully!
+      Logging in...
     </span>
 
     <mat-card-actions>
       <button mat-raised-button color='primary' (click)="onLogIn()">Log in</button>
     </mat-card-actions>
-  </div>
-</mat-card>
+
+    <div>Don't have account? <a [routerLink]="['/signUp']">Register</a></div>
+  </mat-card>
+</div>
