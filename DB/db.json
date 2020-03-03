@@ -1,11 +1,11 @@
 {
-  "Articles": [
+  "articles": [
     {}
   ],
-  "Links": [
+  "links": [
     {}
   ],
-  "Accounts": [
+  "accounts": [
     {
       "username": "rahimmechtemel",
       "password": "testing2",
@@ -61,7 +61,7 @@
       "id": 5
     }
   ],
-  "Flash Cards": [
+  "flashCards": [
     {}
   ],
   "assessment": [

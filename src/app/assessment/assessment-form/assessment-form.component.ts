@@ -13,9 +13,7 @@ export class AssessmentFormComponent implements OnInit {
   @Input() courseData: AssessmentQuestions;
 
   assesmentForm = new FormGroup({
-    firstQuestion: new FormControl(''),
-    secondQuestion: new FormControl(''),
-    thirdQuestion: new FormControl('')
+    question: new FormControl(''),
   });
 
   submitForm() {
