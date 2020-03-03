@@ -14,6 +14,9 @@ import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { AccountsService } from './accounts/services/accounts.service';
+import { AuthGuardService } from './accounts/services/auth-guard.service';
+import { AlreadyAuthService } from './accounts/services/already-auth.service';
 
 
 @NgModule({
@@ -29,7 +32,7 @@ import { FooterComponent } from './footer/footer.component';
     AssessmentModule,
     VideoModule
   ],
-  providers: [],
+  providers: [AccountsService, AuthGuardService, AlreadyAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

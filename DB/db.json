@@ -1,256 +1,311 @@
 {
-    "Articles": [
-        {}
-    ],
-    
-    "Links": [
-        {}
-    ],
-    
-    "Accounts": [
-        {}
-    ],
-    
-    "Flash Cards": [
-        {}
-    ],
-
-    "assessment": [
-        {
-            "courseName": "Angular",
-            "courseID": 1,
-            "courseData": [
-                {
-                    "q1": "Question 1",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": true
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                },
-                {
-                    "q2": "Question 2",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": true
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                },
-                {
-                    "q3": "Question 3",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": false
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": true
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "courseName": "JavaScript",
-            "courseID": 2,
-            "courseData": [
-                {
-                    "q1": "Question 1",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": true
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                },
-                {
-                    "q2": "Question 2",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": false
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": true
-                        }
-                    ]
-                },
-                {
-                    "q3": "Question 3",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": false
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": true
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "courseName": "NodeJs",
-            "courseID": 3,
-            "courseData": [
-                {
-                    "q1": "Question 1",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": true
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                },
-                {
-                    "q2": "Question 2",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": false
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": true
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                },
-                {
-                    "q3": "Question 3",
-                    "options": [
-                        {
-                            "o1": "option1", "o1Ans": true
-                        },
-                        {
-                            "o2": "option2", "o1Ans": false
-                        },
-                        {
-                            "o3": "option3", "o1Ans": false
-                        },
-                        {
-                            "o4": "option4", "o1Ans": false
-                        }
-                    ]
-                }
-            ]
-        }
-    ],
-    "video": [
-        {
-            "courseName": "Angular",
-            "courseId": 1,
-            "videoData": [
-                {
-                    "id": 1,
-                    "title": "Introduction",
-                    "url": "https://youtu.be/0eWrpsCLMJQ"
-                },
-                {
-                    "id": 2,
-                    "title": "Components",
-                    "url": "https://youtu.be/16rQyEQtpyQ"
-                },
-                {
-                    "id": 3,
-                    "title": "Interpolation",
-                    "url": "https://youtu.be/2a6OfacW_-I"
-                }
-            ]
-        },
-        {
-            "courseName": "JavaScript",
-            "courseId": 2,
-            "videoData": [
-                {
-                    "id": 1,
-                    "title": "Introduction",
-                    "url": "https://youtu.be/0eWrpsCLMJQ"
-                },
-                {
-                    "id": 2,
-                    "title": "Components",
-                    "url": "https://youtu.be/16rQyEQtpyQ"
-                },
-                {
-                    "id": 3,
-                    "title": "Interpolation",
-                    "url": "https://youtu.be/2a6OfacW_-I"
-                }
-            ]
-        },
-        {
-            "courseName": "NodeJs",
-            "courseId": 3,
-            "videoData": [
-                {
-                    "id": 1,
-                    "title": "Introduction",
-                    "url": "https://youtu.be/0eWrpsCLMJQ"
-                },
-                {
-                    "id": 2,
-                    "title": "Components",
-                    "url": "https://youtu.be/16rQyEQtpyQ"
-                },
-                {
-                    "id": 3,
-                    "title": "Interpolation",
-                    "url": "https://youtu.be/2a6OfacW_-I"
-                }
-            ]
-        }
-    ]
+	"Articles": [
+		{}
+	],
+	"Links": [
+		{}
+	],
+	"Accounts": [
+		{
+			"firstName": "Trung",
+			"lastName": "Vo",
+			"userName": "trungvo",
+			"email": "vtt@gmail.com",
+			"passWord": "cGFzcw==",
+			"id": 1
+		},
+		{
+			"firstName": "Rahim",
+			"lastName": "Mechtemel",
+			"userName": "rahim",
+			"email": "rahim@gmail.com",
+			"passWord": "cGFzcw==",
+			"id": 2
+		},
+		{
+			"firstName": "Anish",
+			"lastName": "Ray",
+			"userName": "anishray",
+			"email": "anish@gmail.com",
+			"passWord": "cGFzcw==",
+			"id": 3
+		}
+	],
+	"flashCards": [
+		{}
+	],
+	"assessment": [
+		{
+			"courseName": "Angular",
+			"courseID": 1,
+			"courseData": [
+				{
+					"q1": "Question 1",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": true
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				},
+				{
+					"q2": "Question 2",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": true
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				},
+				{
+					"q3": "Question 3",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": false
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": true
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				}
+			]
+		},
+		{
+			"courseName": "JavaScript",
+			"courseID": 2,
+			"courseData": [
+				{
+					"q1": "Question 1",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": true
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				},
+				{
+					"q2": "Question 2",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": false
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": true
+						}
+					]
+				},
+				{
+					"q3": "Question 3",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": false
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": true
+						}
+					]
+				}
+			]
+		},
+		{
+			"courseName": "NodeJs",
+			"courseID": 3,
+			"courseData": [
+				{
+					"q1": "Question 1",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": true
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				},
+				{
+					"q2": "Question 2",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": false
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": true
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				},
+				{
+					"q3": "Question 3",
+					"options": [
+						{
+							"o1": "option1",
+							"o1Ans": true
+						},
+						{
+							"o2": "option2",
+							"o1Ans": false
+						},
+						{
+							"o3": "option3",
+							"o1Ans": false
+						},
+						{
+							"o4": "option4",
+							"o1Ans": false
+						}
+					]
+				}
+			]
+		}
+	],
+	"video": [
+		{
+			"courseName": "Angular",
+			"courseId": 1,
+			"videoData": [
+				{
+					"id": 1,
+					"title": "Introduction",
+					"url": "https://youtu.be/0eWrpsCLMJQ"
+				},
+				{
+					"id": 2,
+					"title": "Components",
+					"url": "https://youtu.be/16rQyEQtpyQ"
+				},
+				{
+					"id": 3,
+					"title": "Interpolation",
+					"url": "https://youtu.be/2a6OfacW_-I"
+				}
+			]
+		},
+		{
+			"courseName": "JavaScript",
+			"courseId": 2,
+			"videoData": [
+				{
+					"id": 1,
+					"title": "Introduction",
+					"url": "https://youtu.be/0eWrpsCLMJQ"
+				},
+				{
+					"id": 2,
+					"title": "Components",
+					"url": "https://youtu.be/16rQyEQtpyQ"
+				},
+				{
+					"id": 3,
+					"title": "Interpolation",
+					"url": "https://youtu.be/2a6OfacW_-I"
+				}
+			]
+		},
+		{
+			"courseName": "NodeJs",
+			"courseId": 3,
+			"videoData": [
+				{
+					"id": 1,
+					"title": "Introduction",
+					"url": "https://youtu.be/0eWrpsCLMJQ"
+				},
+				{
+					"id": 2,
+					"title": "Components",
+					"url": "https://youtu.be/16rQyEQtpyQ"
+				},
+				{
+					"id": 3,
+					"title": "Interpolation",
+					"url": "https://youtu.be/2a6OfacW_-I"
+				}
+			]
+		}
+	]
 }

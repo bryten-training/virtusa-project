@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AccountsService } from '../services/accounts.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +14,7 @@ export class LoginComponent implements OnInit {
   isPassWordValid: boolean;
   hasErrors: boolean;
 
-  constructor() { }
+  constructor(private accountsService: AccountsService) { }
 
   ngOnInit(): void {
     this.instantiateMyForm();
@@ -49,6 +50,7 @@ export class LoginComponent implements OnInit {
 
     if (this.myForm.valid) {
       this.hasErrors = false;
+      this.accountsService.logIn(this.myForm.value);
     } else {
       this.hasErrors = true;
     }

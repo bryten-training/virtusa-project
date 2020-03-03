@@ -1,13 +1,15 @@
 <mat-toolbar color="primary">
   <img class="logo" src="assets/img/logo.png" />
 
-  <button mat-button [matMenuTriggerFor]="belowMenu" [routerLink]="['/home']" routerLinkActive='active'>
-    <span [style.font-weight]="'lighter'">Home</span>
-  </button>
-  <mat-menu #belowMenu="matMenu" yPosition="below">
-    <button mat-menu-item>Item 1</button>
-    <button mat-menu-item>Item 2</button>
-  </mat-menu>
+  <div *ngIf="isAuthenticated">
+    <button mat-button [matMenuTriggerFor]="belowMenu" [routerLink]="['/home']" routerLinkActive='active'>
+      <span [style.font-weight]="'lighter'">Home</span>
+    </button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>Item 1</button>
+      <button mat-menu-item>Item 2</button>
+    </mat-menu>
+  </div>
 
   <button mat-button [matMenuTriggerFor]="belowMenu" [routerLink]="['/articles']" routerLinkActive='active'>
     <span [style.font-weight]="'lighter'">Articles</span>
@@ -42,8 +44,24 @@
   </mat-menu>
 
   <div class="user_info">
-    <small><a [routerLink]="['/logIn']" [style.font-weight]="'lighter'">Log In</a> /
-      <a [routerLink]="['/signUp']" [style.font-weight]="'lighter'">Register</a>
-    </small>
+    <!-- If user is NOT authenticated, show login/sign up links -->
+    <ng-container *ngIf="!isAuthenticated">
+      <small><a [routerLink]="['/logIn']" [style.font-weight]="'lighter'">Log In</a> /
+        <a [routerLink]="['/signUp']" [style.font-weight]="'lighter'">Register</a>
+      </small>
+    </ng-container>
+
+    <!-- If user is authenticated, show user info -->
+    <ng-container *ngIf="isAuthenticated">
+      <small class="user_profile_name">
+        <i class="material-icons">
+          account_circle &nbsp;
+        </i>
+        <a [routerLink]="['/home']" [style.font-weight]="'lighter'">
+          {{ currentUserName }}
+        </a> &nbsp; | &nbsp;
+        <a [style.font-weight]="'lighter'" (click)="onLogOut()">Log out</a>
+      </small>
+    </ng-container>
   </div>
 </mat-toolbar>

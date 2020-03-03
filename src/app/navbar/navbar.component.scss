@@ -23,3 +23,9 @@ img.logo {
   font-weight: 1000;
   background-color: $minor_primary_color;
 }
+
+.user_profile_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

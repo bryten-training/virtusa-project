@@ -6,6 +6,8 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from '../material/material.module';
+import { AccountsService } from './services/accounts.service';
+import { AuthGuardService } from './services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,7 @@ import { MaterialModule } from '../material/material.module';
   exports: [
     LoginComponent,
     SignUpComponent
-  ]
+  ],
+  providers: []
 })
 export class AccountsModule { }

@@ -1,5 +1,5 @@
 .wrapper {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
 }
 
@@ -7,7 +7,7 @@ mat-card.login-card {
   margin: auto;
   text-align: center;
   max-width: 500px;
-  top: 50vh;
+  top: 50%;
   transform: translate(0, -50%);
 }
 
