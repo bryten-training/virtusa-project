@@ -9,6 +9,12 @@ import { Article } from "../article";
 })
 export class ArticleHomepageComponent implements OnInit {
   dummy_articles: Article[] = ARTICLES;
+  showSubjectGrid: boolean = true;
+  subjects = [
+    { name: "Angular", imagePath: "/assets/img/angular.jpg" },
+    { name: "JavaScript", imagePath: "/assets/img/js.jpg" },
+    { name: "NodeJS", imagePath: "/assets/img/nodejs.jpg" }
+  ];
 
   constructor() {}
 

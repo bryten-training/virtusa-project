@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { AccountsService } from '../accounts.service';
+import { Router } from '@angular/router';
+import { first } from 'rxjs/operators';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,6 +11,10 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
+
+  lastId = 0;
+  user: User = new User();
+
   signupForm = new FormGroup({
     username: new FormControl("", [Validators.required]),
     password: new FormControl("", [Validators.required]),
@@ -16,12 +24,27 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor() { }
+  constructor(private accountsSrv: AccountsService, private router:Router) { 
+    this.accountsSrv.getAllUsers().subscribe(res=>{
+      this.lastId = res.length-1; 
+      console.log(res);
+      
+    })
+  }
 
-  userTypes = ["admin", "content provider", "default"];
+  userTypes = ["content provider", "default"];
 
   onSubmit() {
-    console.log(this.signupForm.value);
+    this.lastId += 1;
+    this.user = this.signupForm.value;
+    this.user["id"] = this.lastId; 
+       
+   this.accountsSrv.register(this.signupForm.value)
+   .subscribe(
+       _ => {
+           this.router.navigate(['/logIn']);
+       }
+   );
     
   }
 }

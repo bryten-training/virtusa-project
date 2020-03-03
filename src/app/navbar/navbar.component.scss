@@ -1,0 +1,29 @@
+@import '../../styles.scss';
+
+img.logo {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user_info {
+  margin-left: auto;
+}
+
+.user_info a {
+  text-decoration: none;
+  color: white;
+}
+
+.user_info a:hover {
+  text-decoration: underline;
+}
+
+.active {
+  font-weight: 1000;
+  background-color: $minor_primary_color;
+}
+
+button{
+  margin: auto 10px;
+}

@@ -7,16 +7,21 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { ArticlesModule } from "./articles/articles.module";
 import { HomeComponent } from './home/home.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { SecurityContext } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
 import { AccountsModule } from "./accounts/accounts.module";
 import { FlashCardsModule } from "./flash-cards/flash-cards.module";
 import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -25,6 +30,21 @@ import { VideoModule } from './video/video.module';
     ArticlesModule,
     AccountsModule,
     FlashCardsModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE,
+      loader: HttpClient, // optional, only if you use [src] attribute
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          breaks: false,
+          pedantic: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
     ReactiveFormsModule,
     AssessmentModule,
     VideoModule
