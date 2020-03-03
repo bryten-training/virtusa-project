@@ -7,10 +7,11 @@ import { MaterialModule } from '../../app/material/material.module';
 import { FlashCardsRoutingModule } from './flash-cards-routing.module';
 import { FlashCardlistComponent } from './flash-cardlist/flash-cardlist.component';
 import { FlashCardComponent } from './flash-card/flash-card.component';
+import { AddcardComponent } from './addcard/addcard.component';
 
 
 @NgModule({
-  declarations: [FlashCardlistComponent, FlashCardComponent],
+  declarations: [FlashCardlistComponent, FlashCardComponent, AddcardComponent],
   imports: [
     CommonModule,
     FlashCardsRoutingModule,

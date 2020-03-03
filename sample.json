@@ -24,24 +24,36 @@
       "question": "what is diretive",
       "ans": " ",
       "body": "content",
-      "pass": "false"
+      "pass": false,
+      "front": false,
+      "show": false
     },
     {
       "id": 2,
       "question": "what is Angular",
       "ans": "SPA",
-      "body": "content"
+      "body": "content",
+      "pass": false,
+      "front": false,
+      "show": false
     },
     {
       "question": "",
       "id": 3,
       "ans": "SPA",
-      "body": "content"
+      "body": "content",
+      "pass": false,
+      "front": false,
+      "show": false
     },
     {
       "question": "sample question",
       "ans": "sample answer",
-      "id": 4
+      "id": 4,
+      "body": "content",
+      "pass": false,
+      "front": false,
+      "show": false
     },
     {
       "question": "question",
@@ -55,6 +67,21 @@
     },
     {
       "id": 7
+    },
+    {
+      "pass": false,
+      "front": false,
+      "question": "s",
+      "ans": "a",
+      "id": 8
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "ans": "d",
+      "question": "we",
+      "id": 9
     }
   ]
 }

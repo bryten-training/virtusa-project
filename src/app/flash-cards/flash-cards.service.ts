@@ -26,9 +26,20 @@ export class FlashCardsService {
   addCard(flashcard: Flashcard): Observable <any> {
     const cardCache = this.cardCache[flashcard.id];
 
-    return this.http.post<Flashcard>(`/flashcards/`, flashcard).pipe(
+    return this.http.post<Flashcard>(`http://localhost:3000/flashcards/`, flashcard).pipe(
       tap(_ => this.cardCache[flashcard.id]),
     );
+  }
+  pass(flashcard: Flashcard): Observable<any> {
+    const cardCache = this.cardCache[flashcard.id];
+    console.log(flashcard);
+    const obs = this.http.put(`http://localhost:3000/flashcards/${flashcard.id}`, flashcard).pipe(
+      tap(val => {
+        console.log(val);
+        this.cardCache[flashcard.id] = flashcard;
+      })
+    );
+    return obs;
   }
 }
 
@@ -38,6 +49,14 @@ export class Flashcard {
   ans: string;
   body: string;
   front: boolean;
+  pass: boolean;
+  show: boolean;
+
+  constructor() {
+    this.pass = false;
+    this.front = false;
+    this.show = false;
+  }
 }
 export class User {
   id: number;

@@ -2,11 +2,16 @@
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
     <mat-card-title>card</mat-card-title>
+    <button  [routerLink]="['/add']">Add a new flashcard</button>
   </mat-card-header>
   <mat-card-content class=center>
   <span [hidden]="flashcard.front">
     <p>question {{flashcard.id}}</p>
     <p> {{flashcard.question}}</p>
+    <mat-card-actions>
+        <button class= check (click)='flashcard.front=!flashcard.front'>Check Ans</button>
+
+      </mat-card-actions>
   </span>
   <span [hidden]="!flashcard.front">
       <br/>
@@ -15,10 +20,12 @@
     Q:{{flashcard.question}}<br/>
     answer<br/>
     {{flashcard.ans}}<br/>
-  </span>
     <mat-card-actions>
-      <button class= check (click)='flashcard.front=!flashcard.front'>Check Ans</button>
-    </mat-card-actions>
+        <button (click)='flashcard.front=!flashcard.front'>back to the question</button>
+        <mat-checkbox [checked]="flashcard.pass===false||flashcard.pass===true" (change)="passcard()">{{flashcard.pass}}</mat-checkbox>
+        <button (click)=addcard()>test</button>
+      </mat-card-actions>
+  </span>
   </mat-card-content>
 
 </mat-card>

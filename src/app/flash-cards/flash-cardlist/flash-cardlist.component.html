@@ -3,14 +3,16 @@
 </div>
 <ng-template #logout>
     <button  [routerLink]="['/add']">Add a new flashcard</button>
-    <button  (click)='login=!login' [routerLink]="['/']">Logout</button>
-  </ng-template> -->
-<div *ngFor='let card of flashcardlist' data-aos="flip-left">
+    <button  (click)='login=!login' [routerLink]="['/card']">Logout</button>
+</ng-template> -->
+<!-- <div *ngFor='let card of flashcardlist' data-aos="flip-left"> -->
+<!-- <span [hidden]= "!card.show"> -->
   <li class=center>
-    <span [hidden]="card.front">
+    <span [hidden]="card.front" >
       <br/>
       <br/>
       <br/>
+      {{card}}
       question:  {{card.id}} <br/>
         {{card.question}}<br/>
         <button (click)='card.front=!card.front'>Answer</button>
@@ -25,8 +27,11 @@
       {{card.ans}}<br/>
       <button (click)='card.front=!card.front'>back to the question</button>
     </span>
+
 </li>
+<button (click)=' nextcard()'>next</button>
+<!-- </span> -->
 <br/>
 <br/>
 <br/>
-</div>
+<!-- </div> -->
