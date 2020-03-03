@@ -24,13 +24,66 @@
       "assessmentURL": "/assessment/java/1"
     }
   ],
-  "Links": [
+  "links": [
     {}
   ],
-  "Accounts": [
-    {}
+  "accounts": [
+    {
+      "username": "rahimmechtemel",
+      "password": "testing2",
+      "firstName": "Abderrahim",
+      "lastName": "Mechteml",
+      "email": "rahim@gmail.com",
+      "userType": "content provider",
+      "id": 1
+    },
+    {
+      "username": "tiung12",
+      "password": "pass",
+      "firstName": "Tiung",
+      "lastName": "VO",
+      "email": "rahimmechtemel@gmail.com",
+      "userType": "content provider",
+      "id": 2
+    },
+    {
+      "username": "rahim",
+      "password": "pass",
+      "firstName": "rayray",
+      "lastName": "manuel",
+      "email": "rahimmechteml@gmail.com",
+      "userType": "content provider",
+      "id": 3
+    },
+    {
+      "username": "tiung12",
+      "password": "pass",
+      "firstName": "Tiung",
+      "lastName": "VO",
+      "email": "rahimmechtemel@gmail.com",
+      "userType": "content provider",
+      "id": 12
+    },
+    {
+      "username": "rahim",
+      "password": "wefwewe",
+      "firstName": "sfgdfgfg",
+      "lastName": "sdfsd",
+      "email": "sdgdsfg@gg.com",
+      "userType": "content provider",
+      "id": 4
+    },
+    {
+      "username": "rahimmechtemel",
+      "password": "afssd",
+      "firstName": "sdssdf",
+      "lastName": "sdvsdfvs",
+      "email": "sdfsdfdf@sdfs.ciom",
+      "userType": "content provider",
+      "id": 5
+    }
   ],
-  "Flash Cards": [
+  "flashCards": [
     {}
   ],
   "assessment": [
