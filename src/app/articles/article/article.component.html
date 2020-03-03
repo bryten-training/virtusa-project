@@ -1,0 +1,29 @@
+<button mat-fab color="primary" class="fab-button" [routerLink]="['/artcls',prevType]">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+<mat-card class="article-card" *ngIf="article">
+    <mat-card-title class="article-title">{{article.title}}</mat-card-title>
+    <mat-card-header>
+        <img mat-card-avatar [src]="article.author.avatar">
+        <mat-card-title>{{article.author.name}}</mat-card-title>
+        <mat-card-subtitle>{{article.publish_date}} · {{article.timeToRead}} min read</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="article.image" alt="Cover Photo">
+    <mat-card-content>
+        <markdown [data]="markdownContent"></markdown>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon" *ngIf="liked"
+            (click)="like()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        <button mat-icon-button aria-label="Example icon-button with a heart icon" *ngIf="!liked" (click)="like()">
+            <mat-icon>favorite</mat-icon>
+        </button>
+        {{article.likes}}
+        <button mat-button>SHARE</button>
+        <!-- <button mat-button>LIKE</button> -->
+        <app-articlecommentsdisplay></app-articlecommentsdisplay>
+        <app-articlescomments></app-articlescomments>
+    </mat-card-actions>
+</mat-card>

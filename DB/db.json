@@ -7,31 +7,61 @@
 	],
 	"Accounts": [
 		{
-			"firstName": "Trung",
-			"lastName": "Vo",
-			"userName": "trungvo",
-			"email": "vtt@gmail.com",
-			"passWord": "cGFzcw==",
+			"username": "rahimmechtemel",
+			"password": "cGFzcw==",
+			"firstName": "Abderrahim",
+			"lastName": "Mechteml",
+			"email": "rahim@gmail.com",
+			"userType": "content provider",
 			"id": 1
 		},
 		{
-			"firstName": "Rahim",
-			"lastName": "Mechtemel",
-			"userName": "rahim",
-			"email": "rahim@gmail.com",
-			"passWord": "cGFzcw==",
+			"username": "tiung12",
+			"password": "cGFzcw==",
+			"firstName": "Tiung",
+			"lastName": "VO",
+			"email": "rahimmechtemel@gmail.com",
+			"userType": "content provider",
 			"id": 2
 		},
 		{
-			"firstName": "Anish",
-			"lastName": "Ray",
-			"userName": "anishray",
-			"email": "anish@gmail.com",
-			"passWord": "cGFzcw==",
+			"username": "rahim",
+			"password": "cGFzcw==",
+			"firstName": "rayray",
+			"lastName": "manuel",
+			"email": "rahimmechteml@gmail.com",
+			"userType": "content provider",
 			"id": 3
+		},
+		{
+			"username": "tiung12",
+			"password": "cGFzcw==",
+			"firstName": "Tiung",
+			"lastName": "VO",
+			"email": "rahimmechtemel@gmail.com",
+			"userType": "content provider",
+			"id": 12
+		},
+		{
+			"username": "rahim",
+			"password": "cGFzcw==",
+			"firstName": "sfgdfgfg",
+			"lastName": "sdfsd",
+			"email": "sdgdsfg@gg.com",
+			"userType": "content provider",
+			"id": 4
+		},
+		{
+			"username": "rahimmechtemel",
+			"password": "cGFzcw==",
+			"firstName": "sdssdf",
+			"lastName": "sdvsdfvs",
+			"email": "sdfsdfdf@sdfs.ciom",
+			"userType": "content provider",
+			"id": 5
 		}
 	],
-	"flashCards": [
+	"Flash Cards": [
 		{}
 	],
 	"assessment": [
@@ -61,113 +91,86 @@
 					]
 				},
 				{
-					"q2": "Question 2",
+					"q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": true
+							"opt": "pop()",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "join()",
+							"optAns": false
 						},
 						{
-							"o3": "option3",
-							"o1Ans": false
+							"opt": "map()",
+							"optAns": false
 						},
 						{
-							"o4": "option4",
-							"o1Ans": false
+							"opt": "push()",
+							"optAns": true
 						}
 					]
 				},
 				{
-					"q3": "Question 3",
+					"q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": false
+							"opt": "alertbox(“GeeksforGeeks”);",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "alert(“GeeksforGeeks”);",
+							"optAns": true
 						},
 						{
-							"o3": "option3",
-							"o1Ans": true
+							"opt": "msgbox(“GeeksforGeeks”);",
+							"optAns": false
 						},
 						{
-							"o4": "option4",
-							"o1Ans": false
-						}
-					]
-				}
-			]
-		},
-		{
-			"courseName": "JavaScript",
-			"courseID": 2,
-			"courseData": [
-				{
-					"q1": "Question 1",
-					"options": [
-						{
-							"o1": "option1",
-							"o1Ans": true
-						},
-						{
-							"o2": "option2",
-							"o1Ans": false
-						},
-						{
-							"o3": "option3",
-							"o1Ans": false
-						},
-						{
-							"o4": "option4",
-							"o1Ans": false
+							"opt": "msg(“GeeksforGeeks”);",
+							"optAns": false
 						}
 					]
 				},
 				{
-					"q2": "Question 2",
+					"q": "How do you declare a JavaScript variable?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": false
+							"opt": "variable carName;",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "var carName;  ",
+							"optAns": true
 						},
 						{
-							"o3": "option3",
-							"o1Ans": false
+							"opt": "v carName;",
+							"optAns": false
 						},
 						{
-							"o4": "option4",
-							"o1Ans": true
+							"opt": "None",
+							"optAns": false
 						}
 					]
 				},
 				{
-					"q3": "Question 3",
+					"q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": false
+							"opt": "reverse()",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "shift()",
+							"optAns": false
 						},
 						{
-							"o3": "option3",
-							"o1Ans": false
+							"opt": "slice()",
+							"optAns": true
 						},
 						{
-							"o4": "option4",
-							"o1Ans": true
+							"opt": "some()",
+							"optAns": false
 						}
 					]
 				}
@@ -175,68 +178,111 @@
 		},
 		{
 			"courseName": "NodeJs",
-			"courseID": 3,
+			"icon": "assets/img/nodejs.jpg",
+			"courseId": 2,
 			"courseData": [
 				{
-					"q1": "Question 1",
+					"q": "In Nodejs what is use of underscore variable in REPL session?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": true
+							"opt": "to store the result",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "to get the last command used",
+							"optAns": false
 						},
 						{
-							"o3": "option3",
-							"o1Ans": false
+							"opt": "to get the last result",
+							"optAns": true
 						},
 						{
-							"o4": "option4",
-							"o1Ans": false
+							"opt": "None of the above",
+							"optAns": false
 						}
 					]
 				},
 				{
-					"q2": "Question 2",
+					"q": "How can we check the current version of NPM?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": false
+							"opt": "npm --ver",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "npm help",
+							"optAns": false
 						},
 						{
-							"o3": "option3",
-							"o1Ans": true
+							"opt": "npm --version",
+							"optAns": true
 						},
 						{
-							"o4": "option4",
-							"o1Ans": false
+							"opt": "None of the above",
+							"optAns": false
 						}
 					]
 				},
 				{
-					"q3": "Question 3",
+					"q": "What is the advantage of using node.js?",
 					"options": [
 						{
-							"o1": "option1",
-							"o1Ans": true
+							"opt": "It provides an easy way to build scalable network programs",
+							"optAns": false
 						},
 						{
-							"o2": "option2",
-							"o1Ans": false
+							"opt": "Generally fast",
+							"optAns": false
 						},
 						{
-							"o3": "option3",
-							"o1Ans": false
+							"opt": "Great concurrency",
+							"optAns": false
 						},
 						{
-							"o4": "option4",
-							"o1Ans": false
+							"opt": "All of these",
+							"optAns": true
+						}
+					]
+				},
+				{
+					"q": "Which of the following tool automates various tasks of Node.js application?",
+					"options": [
+						{
+							"opt": "Express.js",
+							"optAns": false
+						},
+						{
+							"opt": "GruntJS",
+							"optAns": true
+						},
+						{
+							"opt": "NPM",
+							"optAns": false
+						},
+						{
+							"opt": "None of the above",
+							"optAns": false
+						}
+					]
+				},
+				{
+					"q": "Which of the following provides in-built events.",
+					"options": [
+						{
+							"opt": "callback",
+							"optAns": false
+						},
+						{
+							"opt": "throw",
+							"optAns": false
+						},
+						{
+							"opt": "handler",
+							"optAns": false
+						},
+						{
+							"opt": "events",
+							"optAns": true
 						}
 					]
 				}
@@ -246,64 +292,97 @@
 	"video": [
 		{
 			"courseName": "Angular",
-			"courseId": 1,
+			"courseId": 0,
+			"logo": "assets/img/angular.jpg",
 			"videoData": [
 				{
 					"id": 1,
 					"title": "Introduction",
-					"url": "https://youtu.be/0eWrpsCLMJQ"
+					"url": "https://www.youtube.com/embed/0eWrpsCLMJQ"
 				},
 				{
 					"id": 2,
 					"title": "Components",
-					"url": "https://youtu.be/16rQyEQtpyQ"
+					"url": "https://www.youtube.com/embed/16rQyEQtpyQ"
 				},
 				{
 					"id": 3,
-					"title": "Interpolation",
-					"url": "https://youtu.be/2a6OfacW_-I"
+					"title": "Two-way Binding",
+					"url": "https://www.youtube.com/embed/DOWwWsbG1Sw"
+				},
+				{
+					"id": 4,
+					"title": "Services",
+					"url": "https://www.youtube.com/embed/pwuGBvOPFYI"
+				},
+				{
+					"id": 5,
+					"title": "Routing and Navigation",
+					"url": "https://www.youtube.com/embed/Nehk4tBxD4o"
 				}
 			]
 		},
 		{
 			"courseName": "JavaScript",
-			"courseId": 2,
+			"courseId": 1,
+			"logo": "assets/img/js.jpg",
 			"videoData": [
 				{
 					"id": 1,
 					"title": "Introduction",
-					"url": "https://youtu.be/0eWrpsCLMJQ"
+					"url": "https://www.youtube.com/embed/uDwSnnhl1Ng"
 				},
 				{
 					"id": 2,
-					"title": "Components",
-					"url": "https://youtu.be/16rQyEQtpyQ"
+					"title": "DOM",
+					"url": "https://www.youtube.com/embed/_Gxpmq4aqg"
 				},
 				{
 					"id": 3,
-					"title": "Interpolation",
-					"url": "https://youtu.be/2a6OfacW_-I"
+					"title": "Functions",
+					"url": "https://www.youtube.com/embed/eL0RGZ0GddE"
+				},
+				{
+					"id": 4,
+					"title": "Arrays",
+					"url": "https://www.youtube.com/embed/SrT8-9I4WnE"
+				},
+				{
+					"id": 5,
+					"title": "Objects",
+					"url": "https://www.youtube.com/embed/s0IdE51JE80"
 				}
 			]
 		},
 		{
 			"courseName": "NodeJs",
-			"courseId": 3,
+			"courseId": 2,
+			"logo": "assets/img/nodejs.jpg",
 			"videoData": [
 				{
 					"id": 1,
 					"title": "Introduction",
-					"url": "https://youtu.be/0eWrpsCLMJQ"
+					"url": "https://www.youtube.com/embed/w-7RQ46RgxU"
 				},
 				{
 					"id": 2,
-					"title": "Components",
-					"url": "https://youtu.be/16rQyEQtpyQ"
+					"title": "Installing Node js",
+					"url": "https://www.youtube.com/embed/1US-P13yKVs"
 				},
 				{
 					"id": 3,
-					"title": "Interpolation",
-					"url": "https://youtu.be/2a6OfacW_-I"
+					"title": "Function Expressions",
+					"url": "https://www.youtube.com/embed/lK42xIMcA0Y"
+				},
+				{
+					"id": 4,
+					"title": "The node Event Emitter",
+					"url": "https://www.youtube.com/embed/NtrnaTKqFPQ"
+				},
+				{
+					"id": 5,
+					"title": "Creating and removing Directories",
+					"url": "https://www.youtube.com/embed/Ejgd-la6nSY"
 				}
 			]
 		}

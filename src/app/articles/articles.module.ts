@@ -1,25 +1,36 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ArticleComponent } from './article/article.component';
+import { ArticlesRoutingModule } from "./articles-routing.module";
+import { MaterialModule } from '../material/material.module';
+import { MatCardModule } from "@angular/material/card";
+import { MarkdownModule } from 'ngx-markdown';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
-import { MatCardModule } from "@angular/material/card";
 import { ArticleHomepageComponent } from "./article-homepage/article-homepage.component";
-import { ArticlesRoutingModule } from "./articles-routing.module";
 import { ArticlescommentsComponent } from './articlescomments/articlescomments.component';
-import { MaterialModule } from '../material/material.module';
-import {MatInputModule} from '@angular/material/input';
-import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component'
+import { MatInputModule } from '@angular/material/input';
+import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component';
+import { SubjectBlogpageComponent } from './article-homepage/subject-blogpage/subject-blogpage.component'
+
 
 @NgModule({
-  declarations: [ArticleHomepageComponent, ArticlescommentsComponent, ArticlecommentsdisplayComponent],
+  declarations: [
+    ArticleHomepageComponent,
+    ArticlescommentsComponent,
+    ArticlecommentsdisplayComponent,
+    ArticleComponent,
+    SubjectBlogpageComponent
+  ],
   imports: [
-     CommonModule,
+    CommonModule,
+    MaterialModule,
     ArticlesRoutingModule,
-    MatToolbarModule,
     MatCardModule,
-    MatIconModule,   
-    MaterialModule, 
-    MatInputModule
+    MatToolbarModule,
+    MatIconModule,
+    MatInputModule,
+    MarkdownModule.forChild()
   ]
 })
 export class ArticlesModule { }

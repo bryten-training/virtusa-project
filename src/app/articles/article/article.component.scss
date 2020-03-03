@@ -1,0 +1,20 @@
+.article-card {
+  margin: 0 auto;
+  max-width: 800px;
+
+  .article-title {
+      margin: 40px 0;
+      font-size: 3rem;
+      line-height: 3rem;
+  }
+  .article-header-image {
+    background-size: cover;
+  }
+}
+
+.fab-button {
+    position: fixed;
+    z-index: 99;
+    left: 30px;
+    top: 30px;
+}

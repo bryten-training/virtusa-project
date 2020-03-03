@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
+import { RegisterService } from '../register.service';
+import { Router } from '@angular/router';
+import { User } from '../user.model';
 
 @Component({
   selector: 'app-sign-up',
@@ -7,6 +10,10 @@ import { Validators, FormGroup, FormControl } from '@angular/forms';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
+
+  lastId = 0;
+  user: User = new User();
+
   signupForm = new FormGroup({
     username: new FormControl("", [Validators.required]),
     password: new FormControl("", [Validators.required]),
@@ -16,12 +23,29 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor() { }
+  constructor(private registerService: RegisterService, private router: Router) {
+    this.registerService.getAllUsers().subscribe(res => {
+      this.lastId = res.length - 1;
+      console.log(res);
+    });
+    console.log("User: " + this.registerService.loggedInUser);
 
-  userTypes = ["admin", "content provider", "default"];
+
+  }
+
+  userTypes = ["content provider", "default"];
 
   onSubmit() {
-    console.log(this.signupForm.value);
-    
+    this.lastId += 1;
+    this.user = this.signupForm.value;
+    this.user["id"] = this.lastId;
+
+    this.registerService.register(this.signupForm.value).subscribe(
+      error => {
+        console.log(error);
+
+      }
+    )
+
   }
 }

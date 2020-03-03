@@ -1,3 +1,5 @@
+@import '../../../styles.scss';
+
 mat-card {
     display: inline-block;
     flex-wrap: wrap;
@@ -5,8 +7,21 @@ mat-card {
     margin: 20px;
     width: 10%;
     text-align: center;
-    cursor: pointer;
-    height: 5%;
-    background-color: aliceblue;
+    height: auto;
+    background-color: white;
     font-weight: bold;
+    &:hover {
+        @include hover;
+    }
+}
+
+.mat-list-base .mat-list-item {
+    height: auto;
+    display: inline-block;
+    width: auto;
+    margin-right: 20px;
+}
+
+hr {
+    margin: 10px 0 30px 0;
 }

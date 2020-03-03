@@ -7,29 +7,22 @@
   <span class="gap hover">Browse</span>
   <span class="gap hover">Explore</span>
 </mat-toolbar>
-<!-- change the styling of the desc div to centre the text in it -->
 
-<div id="desc">
-  <h1>JavaScript related blog articles</h1>
-</div>
-
-<div>
+<div id="subjectDiv">
   <mat-card
-    class="example-card hover-card"
-    *ngFor="let article of dummy_articles"
+    class="subject-card"
+    *ngFor="let subject of subjects"
+    [routerLink]="[subject.name]"
   >
-    <mat-card-header>
-      <div
-        mat-card-avatar
-        class="example-header-image"
-        style="background-image: url({{ article.image }});"
-      ></div>
-      <mat-card-title>{{ article.title }}</mat-card-title>
-      <mat-card-subtitle>{{ article.publish_date | date }}</mat-card-subtitle>
-    </mat-card-header>
-    <img mat-card-image src="{{ article.image }}" alt="Photo of a Shiba Inu" />
     <mat-card-content>
-      <p>{{ article.content }}</p>
+      <h1>{{ subject.name }}</h1>
+      <img
+        mat-card-image
+        src="{{ subject.imagePath }}"
+        alt="{{ subject.name }} logo"
+      />
     </mat-card-content>
+    <!-- <app-subject-blogpage [headerTitle]="subject.name"></app-subject-blogpage> -->
   </mat-card>
 </div>
+<!-- change the styling of the desc div to centre the text in it -->
