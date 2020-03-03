@@ -8,10 +8,11 @@ import { MaterialModule } from "./material/material.module";
 import { ArticlesModule } from "./articles/articles.module";
 import { HomeComponent } from './home/home.component';
 import { ReactiveFormsModule } from "@angular/forms";
-import { AccountsModule } from "./accounts/accounts.module"
-
+import { AccountsModule } from "./accounts/accounts.module";
+import { FlashCardsModule } from "./flash-cards/flash-cards.module";
 import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
+
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { VideoModule } from './video/video.module';
     MaterialModule,
     ArticlesModule,
     AccountsModule,
+    FlashCardsModule,
     ReactiveFormsModule,
     AssessmentModule,
     VideoModule
