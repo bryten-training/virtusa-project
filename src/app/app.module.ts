@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "./material/material.module";
 import { ArticlesModule } from "./articles/articles.module";
 import { HomeComponent } from './home/home.component';
+import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
+import { SecurityContext } from '@angular/core';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { ReactiveFormsModule } from "@angular/forms";
 import { AccountsModule } from "./accounts/accounts.module"
 
@@ -25,7 +28,21 @@ import { AccountsService } from './accounts/accounts.service';
     BrowserAnimationsModule,
     MaterialModule,
     ArticlesModule,
-    AccountsModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({
+      sanitize: SecurityContext.NONE,
+      loader: HttpClient, // optional, only if you use [src] attribute
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          gfm: true,
+          breaks: false,
+          pedantic: false,
+          smartLists: true,
+          smartypants: false,
+        },
+      },
+    }),
     ReactiveFormsModule,
     AssessmentModule,
     VideoModule

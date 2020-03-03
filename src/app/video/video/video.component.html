@@ -1,5 +1,28 @@
-<mat-card>Angular</mat-card>
-<mat-card>NodeJS</mat-card>
-<mat-card>Javascript</mat-card>
-<mat-card>TBD</mat-card>
-<mat-card>TBD</mat-card>
+<!-- Skills display -->
+<mat-card *ngFor="let x of videoList; index as i" (click)="onClick(x.courseId)">
+    <mat-card-title [(title)]="x.courseName">{{x.courseName}}</mat-card-title>
+    <img src="{{x.icon}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
+</mat-card>
+
+<mat-card>
+    <mat-card-title>Upload</mat-card-title>
+    <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
+    <!-- <mat-card-actions>
+        <input type="file"/>
+    </mat-card-actions> -->
+</mat-card> 
+
+<!-- Videos Display -->
+<mat-list>
+    <mat-list-item *ngFor="let x of videoList; index as i"> 
+        <div id="{{x.courseId}}" *ngIf="displayArr[x.courseId]">
+            <hr>
+            <div class="mat-list-item" *ngFor="let video of x.videoData; index as j">
+                <iframe width="250" [src]="safeUrl(video.url)" 
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>
+                <h2>{{video.title}}</h2>
+            </div>
+        </div>
+    </mat-list-item>
+</mat-list>
+
