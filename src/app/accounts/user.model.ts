@@ -1,11 +1,8 @@
 export class User {
-
-    firsName: string;
+    firstName: string;
     lastName: string;
     userName: string;
-    passWord: string;
     email: string;
+    passWord: string;
     type: string;
-
-
 }
