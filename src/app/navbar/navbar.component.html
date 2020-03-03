@@ -1,28 +1,29 @@
 <mat-toolbar color="primary">
   <img class="logo" src="assets/img/logo.png" />
 
-  <button mat-button  [routerLink]="['/home']" routerLinkActive='active'>
+  <button mat-button [routerLink]="['/home']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Home</span>
   </button>
 
-  <button mat-button  [routerLink]="['/articles']" routerLinkActive='active'>
+  <button mat-button [routerLink]="['/artcls']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button  [routerLink]="['/assessment']" routerLinkActive='active'>
+  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
   </button>
 
-  <button mat-button >
+  <button mat-button>
     <span [style.font-weight]="'lighter'">Flash Cards</span>
   </button>
 
-  <button mat-button  [routerLink]="['/video']" routerLinkActive='active'>
+  <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
   </button>
 
   <div class="user_info">
-    <small><a [routerLink]="['/logIn']" [style.font-weight]="'lighter'">Log In</a> /
+    <small
+      ><a [routerLink]="['/logIn']" [style.font-weight]="'lighter'">Log In</a> /
       <a [routerLink]="['/signUp']" [style.font-weight]="'lighter'">Register</a>
     </small>
   </div>
