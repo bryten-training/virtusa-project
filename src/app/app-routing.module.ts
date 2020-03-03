@@ -26,7 +26,8 @@ const routes: Routes = [
   { path: 'home/articles', component: ArticlescommentsComponent },
   { path: 'home/articles/display', component: ArticlecommentsdisplayComponent },
   { path: 'assessment', component: AssessmentComponent },
-  { path: 'video', component: VideoComponent }
+  { path: 'video', component: VideoComponent },
+  { path: 'sign-up', component: SignUpComponent }
 ];
 
 @NgModule({
