@@ -3,7 +3,7 @@
     {
       "id": 1,
       "subject": "Angular",
-      "title": "Effective Java for Android (cheatsheet).",
+      "title": "Effective Java for Android (cheatisheet).",
       "image": "assets/phone.png",
       "author": {
         "name": "Author",
@@ -330,9 +330,9 @@
     },
     {
       "userName": "a",
-      "passWord": "a",
-      "firstName": "Abderrahim",
-      "lastName": "Mechteml",
+      "passWord": "YQ==",
+      "firstName": "a",
+      "lastName": "a",
       "email": "a@a.com",
       "userType": "content provider",
       "id": 6
@@ -453,14 +453,6 @@
       "question": " What is the use of isNaN function?",
       "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
       "id": 14
-    },
-    {
-      "pass": true,
-      "front": true,
-      "show": false,
-      "question": " Between JavaScript and an ASP script, which is faster?",
-      "ans": "JavaScript is faster. JavaScript is a client-side language and thus it does not need the assistance of the web server to execute. On the other hand, ASP is a server-side language and hence is always slower than JavaScript. Javascript now is also a server side language (nodejs).",
-      "id": 15
     }
   ],
   "assessment": [

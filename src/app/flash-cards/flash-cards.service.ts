@@ -26,6 +26,7 @@ export class FlashcardsService {
   // getLoginFlashcards(): Observable <User> {
   //   return this.http.get<User> (` /userdata`);
   // }
+
   addCard(flashcard: Flashcard): Observable<any> {
     const cardCache = this.cardCache[flashcard.id];
 
