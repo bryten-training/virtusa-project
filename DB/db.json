@@ -190,7 +190,41 @@
     }
   ],
   "flashCards": [
-    {}
+    {
+      "id": 1,
+      "question": "what is diretive",
+      "ans": " ssssss",
+      "body": "content",
+      "pass": true,
+      "front": true,
+      "show": true
+    },
+    {
+      "id": 2,
+      "question": "what is Angular",
+      "ans": "SPA",
+      "body": "content",
+      "pass": true,
+      "front": true,
+      "show": false
+    },
+    {
+      "question": "Question",
+      "ans": "Answer",
+      "body": "content",
+      "pass": false,
+      "front": false,
+      "show": false,
+      "id": 3
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "A",
+      "ans": "A",
+      "id": 4
+    }
   ],
   "assessment": [
     {
