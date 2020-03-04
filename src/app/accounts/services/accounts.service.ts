@@ -26,10 +26,12 @@ export class AccountsService implements OnInit {
     private http: HttpClient,
     private router: Router
   ) {
+    this.accountsServiceSubj = this.getBehaviorSubject();
     this.loadAllUsers().subscribe(users => {
       this.allUsers = users;
       // console.log(this.allUsers)
     })
+    this.isAuthenticated();
   }
 
   ngOnInit() {
@@ -193,7 +195,7 @@ export class AccountsService implements OnInit {
       isAuthenticated: true
     }
     this.authUser = { ...auth };
-
+    console.log('inside accounts service...' + this.authUser);
     this.accountsServiceSubj.next(this.authUser);
   }
 
