@@ -19,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
 
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
   imports: [

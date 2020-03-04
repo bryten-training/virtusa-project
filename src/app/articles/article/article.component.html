@@ -13,17 +13,25 @@
         <markdown [data]="markdownContent"></markdown>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon" *ngIf="liked"
+
+        <!--****** Yuxuan This is your code for hearts, 
+        We will use it later**** -->
+
+
+        <!-- <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon" *ngIf="liked"
             (click)="like()">
             <mat-icon>favorite</mat-icon>
         </button>
         <button mat-icon-button aria-label="Example icon-button with a heart icon" *ngIf="!liked" (click)="like()">
             <mat-icon>favorite</mat-icon>
         </button>
-        {{article.likes}}
-        <button mat-button>SHARE</button>
+        {{article.likes}} -->
+
+
+        <!-- <button mat-button>SHARE</button> -->
         <!-- <button mat-button>LIKE</button> -->
-        <app-articlecommentsdisplay></app-articlecommentsdisplay>
         <app-articlescomments></app-articlescomments>
+        <app-articlecommentsdisplay></app-articlecommentsdisplay>
+        
     </mat-card-actions>
 </mat-card>

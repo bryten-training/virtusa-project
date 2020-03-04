@@ -19,6 +19,30 @@
           "author": "Someone",
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
+        },
+        {
+          "id": 2,
+          "author": "Mike",
+          "comment": "Thank You! The article was really amazing",
+          "datetime": "2020-03-04T02:47:19.617Z"
+        },
+        {
+          "id": 2,
+          "author": "Mike",
+          "comment": "Puneet",
+          "datetime": "2020-03-04T02:49:14.272Z"
+        },
+        {
+          "id": 2,
+          "author": "Mike",
+          "comment": "Thank You so much for this article! I really loved reading it",
+          "datetime": "2020-03-04T03:02:21.430Z"
+        },
+        {
+          "id": 2,
+          "author": "Mike",
+          "comment": "Yes this was amazing",
+          "datetime": "2020-03-04T03:12:52.613Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"

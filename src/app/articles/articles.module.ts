@@ -12,6 +12,7 @@ import { ArticlescommentsComponent } from './articlescomments/articlescomments.c
 import { MatInputModule } from '@angular/material/input';
 import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component';
 import { AddArticleComponent } from './add-article/add-article.component'
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { AddArticleComponent } from './add-article/add-article.component'
     MatToolbarModule,
     MatIconModule,
     MatInputModule,
-    MarkdownModule.forChild()
+    MarkdownModule.forChild(), 
+    FormsModule
   ]
 })
 export class ArticlesModule { }
