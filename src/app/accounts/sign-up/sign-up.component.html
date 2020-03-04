@@ -33,7 +33,6 @@
         </div>
 
         <!-- EMAIL -->
-        <mat-error *ngIf="wasEmailUsed">User with same email exists</mat-error>
         <div class="field">
           <i class="material-icons">
             email &nbsp; &nbsp;
@@ -78,10 +77,6 @@
             </mat-select>
           </mat-form-field>
         </div>
-<<<<<<< HEAD
-        
-        <button  mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
-=======
 
         <!-- For message after hitting log in button -->
         <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
@@ -94,18 +89,13 @@
           {{ message }}
         </span>
 
-        <button [disabled]="!signupForm.valid" mat-raised-button color="primary"
+        <button  mat-raised-button color="primary"
                 (click)="onRegister()">Register
         </button>
->>>>>>> master
 
       </form>
     </mat-card-content>
 
-<<<<<<< HEAD
-    <div>Ready? <a [routerLink]="['/logIn']">Login</a></div>
-=======
     <div>Already have an account? <a [routerLink]="['/logIn']">Login</a></div>
   </mat-card>
 </div>
->>>>>>> master

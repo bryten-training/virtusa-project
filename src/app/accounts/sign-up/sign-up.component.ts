@@ -2,18 +2,17 @@ import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { User } from '../models/user.model';
 import { AccountsService } from '../services/accounts.service';
-import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  styleUrls: ['./sign-up.component.scss'],
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit {
   userTypes: string[] = ["content provider", "default"];
   hasErrors: boolean;
   message: string;
-  user: User;
+
 
   signupForm = new FormGroup({
     userName: new FormControl("", [Validators.required]),
@@ -24,30 +23,31 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private accountsSrv: AccountsService, private router: Router) {}
+  constructor(private accountsService: AccountsService) {
+  }
 
-  wasEmailUsed: boolean = false;
-  onSubmit() {
-    this.wasEmailUsed = false;
+  ngOnInit() {
+    this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
+      // console.log(userInfo);
+      this.hasErrors = userInfo.error_msg ? true : false;
+      this.message = userInfo.error_msg ? userInfo.error_msg : userInfo.success_msg;
+    })
+  }
+
+  styleMessage() {
+    if (this.hasErrors) {
+      return {
+        "color": '#ff0000'
+      }
+    }
+    return {
+      "color": '#008000'
+    }
+  }
+
+  onRegister() {
     if (this.signupForm.valid) {
-      this.user = this.signupForm.value;
-      // check for dublicates
-      this.accountsSrv.getUser(this.user.email).subscribe(data => {
-        if (!data[0]) {
-          this.accountsSrv.register(this.signupForm.value).pipe(first())
-            .subscribe(
-              data => {
-                console.log(data);
-
-                this.router.navigate(['/logIn']);
-              }
-            )
-        }else{
-          this.wasEmailUsed = true;
-        }
-
-      })
-
+      this.accountsService.register(this.signupForm.value);
     }
   }
 }
