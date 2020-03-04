@@ -47,7 +47,12 @@ export class FlashcardsService {
     );
     return obs;
   }
+  deleteBook(flashcard: Flashcard): Observable<any> {
+    return this.http.delete(`http://localhost:3000/flashcards/${flashcard.id}`).pipe(
+      tap(_ => delete this.cardCache[flashcard.id]));
+  }
 }
+
 
 export class Flashcard {
   id: number;

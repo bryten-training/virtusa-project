@@ -26,6 +26,7 @@ export class AddcardComponent implements OnInit {
   }
   add_Card() {
     this.card.body  = '',
+    this.card.pass  = false,
     this.card.ans = this.dataForm.value.ans,
     this.card.question = this.dataForm.value.question,
     this.cardSvc.addCard(this.card).subscribe(_ => {

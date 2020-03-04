@@ -28,9 +28,11 @@ setlist(list) {
     this.CardSvc.getFlashcards().subscribe(list => {
       console.log(list);
       this.setlist(list);
-      list[0].show = true;
+
       console.log(' ' + this.flashcardlist[this.index]);
       this.flashcard = this.flashcardlist[this.index];
+      this.flashcard.front = false;
+
     });
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       // print out user info
@@ -48,7 +50,7 @@ setlist(list) {
     this.flashcard.pass = !this.flashcard.pass;
     // this.CardSvc.getFlashcard().pipe(tap(e => this.flashcard.pass));
     this.CardSvc.pass(this.flashcard).subscribe(_ => {
-      this.router.navigate(['/cards']);
+      this.router.navigate(['card/cards']);
   });
 }
 
@@ -62,15 +64,28 @@ setlist(list) {
 
 
   });
-
+}
+  deletecard(flashcard: Flashcard) {
+    this.CardSvc.deleteBook(flashcard).subscribe(_ => {
+        this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
+        console.log(this.flashcardlist[0].id);
+        console.log(flashcard.id);
+        // this.router.navigate(['card/cards']);
+        window.location.reload();
+    });
   }
+
   leftArrow() {
-   if (this.index > 0) {
-      this.index--;
+    this.index--;
+    if (this.index < 0) {
+      this.index = this.flashcardlist.length;
        }
-    // while (this.flashcardlist[this.index].pass === false && this.index > 0) {
-    //   this.index--;
-    // }
+    while (this.flashcardlist[this.index].pass === true) {
+      this.index--;
+      if (this.index < 0) {
+        this.index = this.flashcardlist.length;
+         }
+    }
 
   }
   rightArrow() {

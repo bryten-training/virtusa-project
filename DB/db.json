@@ -200,93 +200,22 @@
   ],
   "flashCards": [
     {
-      "id": 1,
-      "question": "what is diretive",
-      "ans": " ssssss",
-      "body": "content",
-      "pass": true,
-      "front": true,
-      "show": true
-    },
-    {
-      "id": 2,
-      "question": "what is Angular",
-      "ans": "SPA",
-      "body": "content",
-      "pass": true,
-      "front": true,
-      "show": false
-    },
-    {
-      "question": "Question",
-      "ans": "Answer",
-      "body": "content",
-      "pass": true,
-      "front": true,
-      "show": false,
-      "id": 3
-    },
-    {
-      "pass": true,
-      "front": true,
-      "show": false,
-      "question": "A",
-      "ans": "A",
-      "id": 4
-    },
-    {
-      "pass": true,
-      "front": true,
-      "show": false,
-      "question": "ss",
-      "ans": "sa",
-      "id": 5
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": "TestQ",
-      "ans": "testA",
-      "id": 6
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": "what. is your name \n1",
-      "ans": "a\ns\nf\ng\nj\n",
-      "id": 7
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "id": 8
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "id": 9
-    },
-    {
-      "pass": false,
-      "front": true,
-      "show": false,
-      "body": "",
-      "ans": "sad",
-      "question": "sdasd",
-      "id": 10
-    },
-    {
       "pass": false,
       "front": false,
       "show": false,
       "body": "",
-      "ans": "fgjk",
-      "question": "gfgh",
-      "id": 11
+      "ans": "sada",
+      "question": "sda",
+      "id": 1
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "body": "",
+      "ans": "afassa",
+      "question": "dasdasda",
+      "id": 2
     }
   ],
   "assessment": [

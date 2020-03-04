@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService] },
   { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService] },
   { path: "crdlist/:id", component: FlashCardlistComponent },
-   { path: 'cards', component: FlashCardlistComponent },
+   { path: 'card/cards', component: FlashCardlistComponent },
   {
     path: 'artcls',
     loadChildren: () =>
