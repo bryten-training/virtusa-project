@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from "../../accounts/models/user.model";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { of, throwError } from 'rxjs';
+import { throwError } from 'rxjs';
 
 @Component({
   selector: 'app-add-article',
@@ -24,6 +24,7 @@ export class AddArticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.user = this.articlesService.getCurrentUser();
   }
   mdText: string;
   user: User = {
