@@ -144,8 +144,8 @@
   ],
   "accounts": [
     {
-      "username": "rahimmechtemel",
-      "password": "testing2",
+      "userName": "rahimmechtemel",
+      "passWord": "cGFzcw==",
       "firstName": "Abderrahim",
       "lastName": "Mechteml",
       "email": "rahim@gmail.com",
@@ -153,47 +153,38 @@
       "id": 1
     },
     {
-      "username": "tiung12",
-      "password": "pass",
-      "firstName": "Tiung",
-      "lastName": "VO",
-      "email": "rahimmechtemel@gmail.com",
-      "userType": "content provider",
+      "userName": "trungvo",
+      "passWord": "cGFzcw==",
+      "firstName": "Trung",
+      "lastName": "Vo",
+      "email": "vtt311096@gmail.com",
+      "userType": "default",
       "id": 2
     },
     {
-      "username": "rahim",
-      "password": "pass",
-      "firstName": "rayray",
-      "lastName": "manuel",
-      "email": "rahimmechteml@gmail.com",
-      "userType": "content provider",
+      "userName": "aikochu",
+      "passWord": "cGFzcw==",
+      "firstName": "Phuong",
+      "lastName": "Chu",
+      "email": "aiko@gmail.com",
+      "userType": "default",
       "id": 3
     },
     {
-      "username": "tiung12",
-      "password": "pass",
-      "firstName": "Tiung",
-      "lastName": "VO",
-      "email": "rahimmechtemel@gmail.com",
-      "userType": "content provider",
-      "id": 12
-    },
-    {
-      "username": "rahim",
-      "password": "wefwewe",
-      "firstName": "sfgdfgfg",
-      "lastName": "sdfsd",
-      "email": "sdgdsfg@gg.com",
+      "userName": "quangvo",
+      "passWord": "cGFzcw==",
+      "firstName": "Quang",
+      "lastName": "Vo",
+      "email": "quang@gmail.com",
       "userType": "content provider",
       "id": 4
     },
     {
-      "username": "rahimmechtemel",
-      "password": "afssd",
-      "firstName": "sdssdf",
-      "lastName": "sdvsdfvs",
-      "email": "sdfsdfdf@sdfs.ciom",
+      "userName": "anjila",
+      "passWord": "cGFzcw==",
+      "firstName": "Anjila",
+      "lastName": "Swakito",
+      "email": "anjila@gmail.com",
       "userType": "content provider",
       "id": 5
     }
@@ -382,7 +373,7 @@
             }
           ]
         },
-          {
+        {
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
@@ -592,12 +583,12 @@
           "title": "Functions",
           "url": "https://www.youtube.com/embed/eL0RGZ0GddE"
         },
-          {
+        {
           "id": 4,
           "title": "Arrays",
           "url": "https://www.youtube.com/embed/SrT8-9I4WnE"
         },
-          {
+        {
           "id": 5,
           "title": "Objects",
           "url": "https://www.youtube.com/embed/s0IdE51JE80"

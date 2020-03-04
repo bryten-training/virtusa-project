@@ -11,6 +11,6 @@ ROUTES:
 http://localhost:3000/Articles  
 http://localhost:3000/Links      
 http://localhost:3000/Accounts   
-http://localhost:3000/Flash Cards
+http://localhost:3000/flashCards
 http://localhost:3000/assessment 
 http://localhost:3000/video    
