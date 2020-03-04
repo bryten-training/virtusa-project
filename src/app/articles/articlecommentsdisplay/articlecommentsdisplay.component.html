@@ -24,12 +24,64 @@
           <mat-icon>favorite {{e.likes}}</mat-icon>  
       </button>
       <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()">
+        
+        <div *ngIf="apple; else pun">
           <mat-icon>favorite</mat-icon>
+        </div>
+          <ng-template #pun>
+            <mat-icon>check_circle_outline</mat-icon>
+        </ng-template>
+
+      
       </button>
       <!-- {{article.likes}} -->
   </mat-card-actions>
 
+
 </mat-card>
+
+<!-- Puneet code if the user is loggedIn -->
+
+
+<!-- <mat-card *ngIf="apple">
+  <mat-icon>favorite</mat-icon>
+
+</mat-card> -->
+
+
+
+<!-- Logged In -->
+<!-- 
+<mat-card class="example-card" *ngFor="let e of article.comments">
+
+  <mat-card-header  >
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title></mat-card-title> 
+    <mat-card-subtitle>{{e.datetime | date:'medium'}}</mat-card-subtitle>
+    <div class="sharethis-inline-share-buttons"></div>
+  </mat-card-header>
+  
+  <mat-card-content>
+    <p style="margin-top: 5px;">
+      {{e.comment}}
+    </p>
+  </mat-card-content>
+
+  <mat-card-actions style="width: 100%;">
+   <button mat-icon-button color="warn" aria-label="Example" *ngIf="liked"
+          (click)="like()">
+          <mat-icon>favorite {{e.likes}}</mat-icon>  
+      </button>
+      <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()">
+          <mat-icon>favorite</mat-icon>
+      </button>
+      {{article.likes}}
+  </mat-card-actions>
+
+
+</mat-card> -->
+
+
 
 
 

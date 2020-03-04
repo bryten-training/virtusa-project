@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../service/articles.service';
 import { Article } from '../model/article';
 
+
 @Component({
   selector: 'app-articlecommentsdisplay',
   templateUrl: './articlecommentsdisplay.component.html',
@@ -9,9 +10,13 @@ import { Article } from '../model/article';
 })
 export class ArticlecommentsdisplayComponent implements OnInit {
 
+  apple=false
+
   constructor(
-    private articlesService: ArticlesService
+    private articlesService: ArticlesService,
   ) { }
+
+
 
   ngOnInit(): void {
     this.articlesService.articleSubject.subscribe((article: Article) => {

@@ -65,7 +65,7 @@ export class AddArticleComponent implements OnInit {
           duration: this.snackBarTimeOut
         });
         setTimeout(() => {
-          this.router.navigateByUrl(`/artcls/${this.articleForm.value.subject}/${num + 1}`);
+          this.router.navigateByUrl(`/articles/${this.articleForm.value.subject}/${num + 1}`);
         }, this.snackBarTimeOut)
       }, err => {
         console.error(`Got an error: ${err}`);
