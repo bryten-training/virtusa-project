@@ -20,6 +20,7 @@ import { FooterComponent } from './footer/footer.component';
 import { AccountsService } from './accounts/accounts.service';
 
 
+
 @NgModule({
   declarations: [AppComponent, HomeComponent, NavbarComponent, FooterComponent],
   imports: [

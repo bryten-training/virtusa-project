@@ -8,12 +8,11 @@ import { Observable, BehaviorSubject } from 'rxjs';
 })
 export class ArticlesService {
 
-  constructor(
-    private http: HttpClient
-  ) {
+  articleSubject: BehaviorSubject<Article>;
+
+  constructor(private http: HttpClient) {
     this.articleSubject = new BehaviorSubject(null);
   }
-  articleSubject: BehaviorSubject<Article>;
 
   get(url: string, options?): Observable<any> {
     return this.http.get<Article[]>(url, options);
