@@ -381,7 +381,7 @@
       "question": "What is Angular and Why Angular?",
       "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
       "body": "content",
-      "pass": true,
+      "pass": false,
       "front": true,
       "show": true
     },
@@ -510,13 +510,36 @@
       "id": 16
     },
     {
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
-      "body": "",
-      "ans": "document.getElementById(\"myText\").style.fontSize = \"20?;    or   document.getElementById(\"myText\").className = \"anyclass\";",
-      "question": "How can the style/class of an element be changed?",
-      "id": 17
+      "question": "What is package.json?",
+      "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
+      "id": 11
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is JavaScript?",
+      "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
+      "id": 12
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What are JavaScript Data Types?",
+      "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
+      "id": 13
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What is the use of isNaN function?",
+      "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
+      "id": 14
     }
   ],
   "assessment": [
