@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VideoService, Video, VideoDisplay } from '../video.service';
 import { HttpClient } from '@angular/common/http';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-video',
@@ -10,10 +11,10 @@ import { HttpClient } from '@angular/common/http';
 export class VideoComponent implements OnInit {
   
   constructor(private videoSvc: VideoService, private httpClient: HttpClient) { }
+  
   ngOnInit(): void {
     this.videoSvc.getVideoList().subscribe(response => {
-      this.videoList = response
-      this.videoDataForAngular = this.videoList[0]
+      this.videoList = response;
     },
     error => {
       alert("Sorry. There was a problem getting data.")
@@ -22,11 +23,18 @@ export class VideoComponent implements OnInit {
   
   videoList: Video[] = [];
   videoData: VideoDisplay[] = [];
-  title: string ;
   displayArr: boolean[] = [];
-  fileData: File = null;
-  videoDataArray
-  videoDataForAngular
+  selectedFile: File;
+  videoDataForPost;
+  theName;
+  theCourse;
+  selectedCourse;
+ 
+  
+  uploadForm = new FormGroup ({
+    theName: new FormControl('', Validators.required),
+    theCourse: new FormControl('', Validators.required)
+  })
   
   //show videos
   onClick(courseId: number) {
@@ -40,55 +48,44 @@ export class VideoComponent implements OnInit {
     }
   }
 
-  selectedFile: File
-
   onFileChanged(event) {
     this.selectedFile = event.target.files[0]
     console.log(this.selectedFile)
   }
 
   onUpload() {
-    // upload code goes here
-    // const uploadData = new FormData();
-    // uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
-    
-    // let test = new VideoDisplay;
-    // test.id = this.videoData.length;
-    // test.title = this.selectedFile.name;
-    // test.url = "";
-
-    // console.log("before" +JSON.stringify(this.videoList[0]));
-    // this.videoDataArray = this.videoList[0].videoData;
-    // this.videoDataArray.push(test);
-    // console.log("after" +JSON.stringify(this.videoDataArray));
-    
-    // this.httpClient.put(`/api/video/0`, this.videoDataArray).subscribe((data) => {
-    //   console.log("after::", data);
-    // })
-
+    this.selectedCourse = this.uploadForm.controls.theCourse.value;
+    console.log("selectedCourse "+this.selectedCourse);
+    if(this.selectedCourse == 0) {
+      this.videoDataForPost = this.videoList[0]
+      console.log(this.videoDataForPost)
+    } else if(this.selectedCourse == 1) {
+      this.videoDataForPost = this.videoList[1]
+    } else if (this.selectedCourse == 2) {
+      this.videoDataForPost = this.videoList[2]
+    }
+    console.log(event);
     const uploadData = new FormData();
     uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
 
-    let videoData = this.videoDataForAngular.videoData;
+    let videoData = this.videoDataForPost.videoData;
     let len = videoData.length;
     console.log("videoData length before " +len)
     console.log("videoData "+videoData)
 
     let newItem = new VideoDisplay;
-    newItem.id = videoData.length
-    newItem.title = this.selectedFile.name
-    newItem.url = "http://test"
+    newItem.id = videoData.length + 1;
+    newItem.title = this.selectedFile.name;
+    newItem.url = "http://test";
 
     console.log("newItem "+newItem)
-    videoData.push(newItem)
-    len = videoData.length
+    videoData.push(newItem);
+    len = videoData.length;
     console.log("videoData length after " +len)
-
-    this.videoList[0] = this.videoDataForAngular
 
     console.log("videoList " +this.videoList)
 
-    this.httpClient.put(`/api/video/0`, this.videoDataForAngular).subscribe((data) => {
+    this.httpClient.put(`/api/video/${this.selectedCourse}`, this.videoDataForPost).subscribe((data) => {
       console.log("after::", data);
     })
 
