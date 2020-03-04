@@ -6,12 +6,13 @@ import { AccountsService } from '../services/accounts.service';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
-  styleUrls: ['./sign-up.component.scss']
+  styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit {
   userTypes: string[] = ["content provider", "default"];
   hasErrors: boolean;
   message: string;
+
 
   signupForm = new FormGroup({
     userName: new FormControl("", [Validators.required]),
@@ -45,6 +46,8 @@ export class SignUpComponent implements OnInit {
   }
 
   onRegister() {
-    this.accountsService.register(this.signupForm.value);
+    if (this.signupForm.valid) {
+      this.accountsService.register(this.signupForm.value);
+    }
   }
 }

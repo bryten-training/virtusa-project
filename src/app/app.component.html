@@ -1,5 +1,7 @@
 <app-navbar></app-navbar>
 <br>
-<router-outlet></router-outlet>
-<br><br><br><br>
+<main [@routerTransition]="getState(o)">
+    <router-outlet #o="outlet"></router-outlet>
+</main>
+<br><br><br>
 <app-footer></app-footer>
