@@ -1,0 +1,34 @@
+.example-card {
+  max-width: 400px;
+}
+mat-card-title{
+  background-color:purple;
+  padding: 8px;
+  border-radius: 4px 4px 0 0;
+  // width: 97.3%;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+mat-card-header{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+}
+mat-card-actions{
+  justify-content: center;
+  text-align: center;
+}
+mat-card-content{
+  justify-content: center;
+  text-align: center;
+
+}
+.main-div{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
