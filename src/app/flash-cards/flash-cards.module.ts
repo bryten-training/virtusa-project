@@ -6,6 +6,7 @@ import { FlashCardComponent } from './flash-card/flash-card.component';
 import { FlashCardlistComponent } from './flash-cardlist/flash-cardlist.component';
 import { MaterialModule } from '../material/material.module';
 import { AddcardComponent } from './addcard/addcard.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { AddcardComponent } from './addcard/addcard.component';
     CommonModule,
     FlashCardsRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
   ],
 })

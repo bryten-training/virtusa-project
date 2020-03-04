@@ -27,11 +27,14 @@ export class FlashcardsService {
   //   return this.http.get<User> (` /userdata`);
   // }
   addCard(flashcard: Flashcard): Observable <any> {
-    const cardCache = this.cardCache[flashcard.id];
-
-    return this.http.post<Flashcard>(`http://localhost:3000/flashcards/`, flashcard).pipe(
-      tap(_ => this.cardCache[flashcard.id]),
-    );
+    // const cardCache = this.cardCache[flashcard.id];
+    // console.log("flash card :    "+flashcard.id);
+    //  console.log("a:   " + this.cardCache[flashcard.id]);
+    return this.http.post<Flashcard>(`http://localhost:3000/flashcards/`, flashcard);
+    // .pipe(
+    // tap(card => flashcard
+    //     ),
+    // );
   }
   pass(flashcard: Flashcard): Observable<any> {
     const cardCache = this.cardCache[flashcard.id];
