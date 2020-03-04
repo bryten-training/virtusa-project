@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
-import { AccountsService } from '../accounts.service';
-import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
-import { User } from '../user.model';
+import { User } from '../models/user.model';
+import { AccountsService } from '../services/accounts.service';
+import { Router} from '@angular/router'
 
 @Component({
   selector: 'app-sign-up',
@@ -11,13 +10,14 @@ import { User } from '../user.model';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
-
-  lastId = 0;
-  user: User = new User();
+  userTypes: string[] = ["content provider", "default"];
+  hasErrors: boolean;
+  message: string;
+  user: User;
 
   signupForm = new FormGroup({
-    username: new FormControl("", [Validators.required]),
-    password: new FormControl("", [Validators.required]),
+    userName: new FormControl("", [Validators.required]),
+    passWord: new FormControl("", [Validators.required]),
     firstName: new FormControl("", [Validators.required]),
     lastName: new FormControl("", [Validators.required]),
     email: new FormControl("", [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
@@ -27,7 +27,6 @@ export class SignUpComponent {
   constructor(private accountsSrv: AccountsService, private router: Router) {}
 
   wasEmailUsed: boolean = false;
-  userTypes = ["admin", "content provider", "default"];
   onSubmit() {
     this.wasEmailUsed = false;
     if (this.signupForm.valid) {

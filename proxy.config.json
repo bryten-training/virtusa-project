@@ -1,5 +1,15 @@
 {
-	"/Accounts":{
+	"/flashCards": {
+		"target": "http://localhost:3000",
+		"secure": false,
+		"logLevel": "debug"
+	},
+	"/accounts": {
+		"target": "http://localhost:3000",
+		"secure": false,
+		"logLevel": "debug"
+	},
+	"/cardslist": {
 		"target": "http://localhost:3000",
 		"secure": false,
 		"logLevel": "debug"

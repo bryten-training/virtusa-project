@@ -12,45 +12,63 @@
       <form class="form" [formGroup]="signupForm">
         <!-- USERNAME -->
         <div class="field">
+          <i class="material-icons">
+            account_circle &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>User name</mat-label>
-            <input matInput placeholder="username" formControlName="username">
+            <input matInput placeholder="Enter username" formControlName="userName">
           </mat-form-field>
         </div>
-        
+
         <!-- PASSWORD -->
         <div class="field">
+          <i class="material-icons">
+            lock &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>password</mat-label>
-            <input matInput type="password" formControlName="password">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" placeholder="Enter password" formControlName="passWord">
           </mat-form-field>
         </div>
 
         <!-- EMAIL -->
         <mat-error *ngIf="wasEmailUsed">User with same email exists</mat-error>
         <div class="field">
+          <i class="material-icons">
+            email &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
             <input matInput placeholder="Email" formControlName="email">
             <mat-error>Invalid input</mat-error>
           </mat-form-field>
         </div>
-        
+
         <div class="field">
+          <i class="material-icons">
+            account_circle &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>first name</mat-label>
-            <input matInput placeholder="First Name" formControlName="firstName">
+            <mat-label>First name</mat-label>
+            <input matInput placeholder="Enter First Name" formControlName="firstName">
           </mat-form-field>
         </div>
-        
+
         <div class="field">
+          <i class="material-icons">
+            account_circle &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>last name</mat-label>
-            <input matInput placeholder="Last Name" formControlName="lastName">
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder="Enter Last Name" formControlName="lastName">
           </mat-form-field>
         </div>
-        
+
         <div class="field">
+          <i class="material-icons">
+            account_circle &nbsp; &nbsp;
+          </i>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>User types</mat-label>
             <mat-select formControlName="userType">
@@ -60,10 +78,34 @@
             </mat-select>
           </mat-form-field>
         </div>
+<<<<<<< HEAD
         
         <button  mat-raised-button color="primary" (click)="onSubmit()">Submit</button>
+=======
+
+        <!-- For message after hitting log in button -->
+        <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
+          <i class="material-icons" *ngIf="hasErrors">
+            close &nbsp;&nbsp;
+          </i>
+          <i class="material-icons" *ngIf="hasErrors === false">
+            check &nbsp;&nbsp;
+          </i>
+          {{ message }}
+        </span>
+
+        <button [disabled]="!signupForm.valid" mat-raised-button color="primary"
+                (click)="onRegister()">Register
+        </button>
+>>>>>>> master
 
       </form>
     </mat-card-content>
 
+<<<<<<< HEAD
     <div>Ready? <a [routerLink]="['/logIn']">Login</a></div>
+=======
+    <div>Already have an account? <a [routerLink]="['/logIn']">Login</a></div>
+  </mat-card>
+</div>
+>>>>>>> master
