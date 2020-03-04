@@ -6,7 +6,6 @@ import { AssessmentComponent } from './assessment/assessment/assessment.componen
 import { VideoComponent } from './video/video/video.component';
 import { SignUpComponent } from './accounts/sign-up/sign-up.component';
 import { FlashCardComponent } from './flash-cards/flash-card/flash-card.component';
-import { FlashCardlistComponent } from './flash-cards/flash-cardlist/flash-cardlist.component';
 import { AuthGuardService } from './accounts/services/auth-guard.service';
 import { AlreadyAuthService } from './accounts/services/already-auth.service';
 import { LoginComponent } from './accounts/login/login.component';
