@@ -1,8 +1,21 @@
-<p>add new card</p>
+<!-- <mat-card-header> -->
+<!-- <p>add new card</p>
   <div>
     <textarea rows="2" cols="50" [(ngModel)]="card.question" placeholder="enter the question"></textarea>
   </div>
   <div>
     <textarea rows="5" cols="50" [(ngModel)]="card.ans" placeholder="enter the ans"></textarea>
-  </div>
-  <div><button (click)="add_Card()">save</button></div>
+  </div> -->
+  <!-- <div><button (click)="add_Card()">save</button></div> -->
+  <mat-form-field appearance="fill">
+    <mat-label>enter the question</mat-label>
+    <textarea rows="2" cols="50" matInput [(ngModel)]="card.question" placeholder="enter the question"></textarea>
+  </mat-form-field>
+    <br/>
+    <mat-form-field appearance="fill">
+    <mat-label>enter the ans</mat-label>
+    <textarea rows="5" cols="50" matInput [(ngModel)]="card.ans" placeholder="enter the ans"></textarea>
+    <mat-card-actions>
+         <button (click)="add_Card()">save</button>
+    </mat-card-actions>
+  </mat-form-field>
