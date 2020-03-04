@@ -19,4 +19,8 @@ export class SubjectBlogpageComponent implements OnInit {
       this.headerTitle = param.type;
     });
   }
+
+  addArticle() {
+    console.log("In add articles method");
+  }
 }

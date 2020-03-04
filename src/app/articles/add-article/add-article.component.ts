@@ -4,7 +4,7 @@ import { Article } from '../model/article';
 import { count, flatMap, catchError } from "rxjs/operators";
 import { Subject } from '../model/subject';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { User } from "../../accounts/user.model";
+import { User } from "../../accounts/models/user.model";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { of, throwError } from 'rxjs';
@@ -26,10 +26,10 @@ export class AddArticleComponent implements OnInit {
   ngOnInit(): void {
   }
   mdText: string;
-  user = {
+  user: User = {
     id: 1,
-    username: "username",
-    password: "123",
+    userName: "username",
+    passWord: "123",
     email: "123@qq.com",
     firstName: "Eason",
     lastName: "Liu",
