@@ -1,6 +1,7 @@
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Component, OnInit, Input } from '@angular/core';
-import { AssessmentQuestions } from '../assessment.service';
+import { Component, OnInit } from '@angular/core';
+import { AssessmentService , AssessmentQuestions, Assessment } from '../assessment.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,21 +11,55 @@ import { AssessmentQuestions } from '../assessment.service';
 })
 export class AssessmentFormComponent implements OnInit {
 
-  @Input() courseData: AssessmentQuestions;
+  // @Input() courseData: AssessmentQuestions;
+  courseNm: Assessment;
+  courseData: AssessmentQuestions[];
+  courseNameStr: string;
+  usrAns: boolean[];
+  score: number = 0;
 
   assesmentForm = new FormGroup({
-    question: new FormControl(''),
+    first: new FormControl(''),
+    second: new FormControl(''),
+    third: new FormControl(''),
+    fourth: new FormControl(''),
+    fifth: new FormControl(''),
   });
+
+  ans = ['first', 'second', 'third', 'fourth', 'fifth'];
+
+  constructor(private Svc: AssessmentService,
+              private router: Router) { }
+
+  ngOnInit(): void {
+    this.router.routerState.root.queryParams.subscribe(params => {
+      this.courseNameStr = params.course;
+      this.Svc.getCourse(this.courseNameStr).subscribe(coursD => {
+        this.courseData = coursD[0].courseData;
+        this.courseNm = coursD[0];
+
+        // console.log(this.assesmentForm.value);
+        // console.log(this.ans);
+        // this.userAns = [];
+        // this.courseData.forEach(answer => {
+        //   this.userAns.push(false);
+        // });
+      });
+    });
+  }
+
+  navBack() {
+    this.router.navigate(['assessment']);
+  }
 
   submitForm() {
     const requestData = this.assesmentForm.value;
-    alert(JSON.stringify(requestData));
+    // console.log(JSON.stringify(requestData));
+    // this.userAns.forEach( val => {
+    //   if (val === true) {
+    //     this.score += 1;
+    //   }
+    // });
   }
-
-  constructor() { }
-
-  ngOnInit(): void {
-    // console.log(this.courseData[0].options[0].opt);
-  }
-
+  
 }

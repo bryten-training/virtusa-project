@@ -1,15 +1,16 @@
 <form [formGroup]='dataForm'>
-  <mat-form-field appearance="fill" >
-    <mat-label>enter the question</mat-label>
-    <textarea styles="margin 0 auto" rows="2" cols="50" matInput formControlName='question' placeholder="enter the question"></textarea>
-        <br/>
+  <mat-form-field appearance="fill">
+    <mat-label>Enter the question</mat-label>
+    <textarea styles="margin 0 auto" rows="2" cols="50" matInput formControlName='question'
+      placeholder="enter the question"></textarea>
+    <br />
   </mat-form-field>
-    <br/>
-    <mat-form-field appearance="fill">
-    <mat-label>enter the ans</mat-label>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Enter the ans</mat-label>
     <textarea rows="5" cols="50" matInput formControlName="ans" placeholder="enter the ans"></textarea>
     <mat-card-actions>
-         <button  [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
+      <button [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
     </mat-card-actions>
   </mat-form-field>
 </form>

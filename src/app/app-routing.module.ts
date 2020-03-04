@@ -11,6 +11,7 @@ import { AlreadyAuthService } from './accounts/services/already-auth.service';
 import { LoginComponent } from './accounts/login/login.component';
 import { AddcardComponent } from './flash-cards/addcard/addcard.component';
 import { FlashCardlistComponent } from './flash-cards/flash-cardlist/flash-cardlist.component';
+import { AssessmentFormComponent } from "./assessment/assessment-form/assessment-form.component";
 
 const routes: Routes = [
 
@@ -27,6 +28,7 @@ const routes: Routes = [
       import("./articles/articles.module").then(m => m.ArticlesModule)
   },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
+  { path: "course", component: AssessmentFormComponent },
   { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' }},
   { path: 'card', component: FlashCardComponent, data: { state: 'card' }},
   { path: 'video', component: VideoComponent, data: { state: 'video' } }
