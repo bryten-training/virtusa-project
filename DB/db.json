@@ -230,7 +230,7 @@
     {
       "courseName": "Angular",
       "icon": "assets/img/angular.jpg",
-      "courseId": 0,
+      "id": 0,
       "courseData": [
         {
           "q": " What is Angular?",
@@ -342,7 +342,7 @@
     {
       "courseName": "JavaScript",
       "icon": "assets/img/js.jpg",
-      "courseId": 1,
+      "id": 1,
       "courseData": [
         {
           "q": "Which built-in method combines the text of two strings and returns a new string?",
@@ -454,7 +454,7 @@
     {
       "courseName": "NodeJs",
       "icon": "assets/img/nodejs.jpg",
-      "courseId": 2,
+      "id": 2,
       "courseData": [
         {
           "q": "In Nodejs what is use of underscore variable in REPL session?",
@@ -567,7 +567,7 @@
   "video": [
     {
       "courseName": "Angular",
-      "courseId": 0,
+      "id": 0,
       "logo": "assets/img/angular.jpg",
       "videoData": [
         {
@@ -599,7 +599,7 @@
     },
     {
       "courseName": "JavaScript",
-      "courseId": 1,
+      "id": 1,
       "logo": "assets/img/js.jpg",
       "videoData": [
         {
@@ -631,7 +631,7 @@
     },
     {
       "courseName": "NodeJs",
-      "courseId": 2,
+      "id": 2,
       "logo": "assets/img/nodejs.jpg",
       "videoData": [
         {
