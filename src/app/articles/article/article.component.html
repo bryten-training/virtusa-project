@@ -1,4 +1,4 @@
-<button mat-fab color="primary" class="fab-button" [routerLink]="['/artcls',prevType]">
+<button mat-fab color="primary" class="fab-button" [routerLink]="['/articles',prevType]">
     <mat-icon>arrow_back</mat-icon>
 </button>
 <mat-card class="article-card" *ngIf="article">
@@ -6,7 +6,8 @@
     <mat-card-header>
         <img mat-card-avatar [src]="article.author.avatar">
         <mat-card-title>{{article.author.name}}</mat-card-title>
-        <mat-card-subtitle>{{article.publish_date}} · {{article.timeToRead}} min read</mat-card-subtitle>
+        <mat-card-subtitle>{{article.publish_date | date: 'MMM dd, yyyy'}} · {{article.timeToRead}} min read
+        </mat-card-subtitle>
     </mat-card-header>
     <img mat-card-image [src]="article.image" alt="Cover Photo">
     <mat-card-content>
@@ -22,8 +23,9 @@
         </button>
         {{article.likes}}
         <button mat-button>SHARE</button>
-        <!-- <button mat-button>LIKE</button> -->
-        <app-articlecommentsdisplay></app-articlecommentsdisplay>
-        <app-articlescomments></app-articlescomments>
     </mat-card-actions>
+    <button mat-raised-button color='primary' class="full-width assessmentButton" [routerLink]="['/assessment']">Go To
+        Assessment</button>
+    <app-articlescomments></app-articlescomments>
+    <app-articlecommentsdisplay></app-articlecommentsdisplay>
 </mat-card>

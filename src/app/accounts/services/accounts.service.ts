@@ -57,7 +57,7 @@ export class AccountsService implements OnInit {
   }
 
   loadAllUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${API_URL}/Accounts`);
+    return this.http.get<User[]>(`api/accounts`);
   }
 
   logIn(user: User) {
@@ -140,7 +140,7 @@ export class AccountsService implements OnInit {
     } else {
       // hash password
       user.passWord = window.btoa(user.passWord);
-      this.http.post<User>(`${API_URL}/accounts`, user).pipe(
+      this.http.post<User>(`api/accounts`, user).pipe(
         tap(() => {
           this.loadAllUsers().subscribe(users => {
             this.allUsers = users;

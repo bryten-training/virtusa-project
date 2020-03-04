@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardsService, Flashcard } from '../flash-cards.service';
+import { Router } from '@angular/router';
+import { AccountsService } from 'src/app/accounts/services/accounts.service';
+import { User } from 'src/app/accounts/models/user.model';
+import { Auth } from 'src/app/accounts/models/auth.model';
 
 
 @Component({
@@ -8,35 +12,72 @@ import { FlashcardsService, Flashcard } from '../flash-cards.service';
   styleUrls: ['./flash-cardlist.component.scss']
 })
 export class FlashCardlistComponent implements OnInit {
-  flashcard = false;
-  flashcardlist: Flashcard[] = [
-    { id: 1, question: 'What is Angular?', ans: 'Angular is an open-source front-end web framework. It is one of the most popular JavaScript frameworks that is mainly maintained by Google. It provides a platform for easy development of web-based applications and empowers the front end developers in curating cross-platform applications. It integrates powerful features like declarative templates, an end to end tooling, dependency injection and various other best practices that smoothens the development path.' },
+  index = 0;
+  currentUser: User;
+  flashcard: Flashcard;
+  flashcardlist = [new Flashcard()];
+  constructor(private CardSvc: FlashcardsService, private accountsService: AccountsService, private router: Router) {
+  this.CardSvc.getFlashcard().subscribe(flashcard => {this.flashcard = flashcard; });
 
-    { id: 2, question: 'What are the advantages of using Angular?', ans: 'It supports two-way data-binding It follows MVC pattern architecture' },
-    { id: 3, question: 'What is Angular mainly used for?', ans: 'Test' },
-    { id: 4, question: 'What are templates in Angular?', ans: 'test' },
-  ];
-  index: number = 0;
-  constructor(private CardSvc: FlashcardsService) { }
-
+}
+setlist(list) {
+  console.log('in setlist');
+  this.flashcardlist = list;
+}
   ngOnInit(): void {
-    // this.CardSvc.getFlashcards().subscribe(list => {
-    //   this.flashcardlist = list;
-    //   console.log(list);
-    // });
+    this.CardSvc.getFlashcards().subscribe(list => {
+      console.log(list);
+      this.setlist(list);
+      list[0].show = true;
+      console.log(' ' + this.flashcardlist[this.index]);
+      this.flashcard = this.flashcardlist[this.index];
+    });
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // print out user info
+      console.log('HOME COMP: ' + JSON.stringify(auth.currentUser, null, 2));
+
+      // set currentUser for your component (if needed)
+      this.currentUser = auth.currentUser;
+    });
+
 
   }
 
-  leftArrow() {
+  passcard() {
+    this.flashcard = this.flashcardlist[this.index];
+    this.flashcard.pass = !this.flashcard.pass;
+    // this.CardSvc.getFlashcard().pipe(tap(e => this.flashcard.pass));
+    this.CardSvc.pass(this.flashcard).subscribe(_ => {
+      this.router.navigate(['/cards']);
+  });
+}
 
-    if (this.index > 0) {
-      this.index--;
+  reset() {
+    this.flashcardlist.forEach(card => {card.pass = false; card.front = false; });
     }
-  }
 
+  addcard() {
+    this.CardSvc.pass(this.flashcard).subscribe(_ => {
+      this.router.navigate(['/']);
+
+
+  });
+
+  }
+  leftArrow() {
+   if (this.index > 0) {
+      this.index--;
+       }
+    // while (this.flashcardlist[this.index].pass === false && this.index > 0) {
+    //   this.index--;
+    // }
+
+  }
   rightArrow() {
+
     if (this.index < this.flashcardlist.length - 1) {
       this.index++;
     }
   }
 }
+
