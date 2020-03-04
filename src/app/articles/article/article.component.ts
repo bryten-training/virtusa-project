@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ArticlesService } from '../service/articles.service';
 import { Article } from '../model/article';
 import { ActivatedRoute, Router } from '@angular/router';
+import { debounceTime } from 'rxjs/operators';
+import { fromEvent } from 'rxjs';
 
 @Component({
   selector: 'app-article',
@@ -15,6 +17,7 @@ export class ArticleComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router
   ) { }
+  @ViewChild("likeBtn", { static: true }) likeBtn: ElementRef;
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {
@@ -31,6 +34,11 @@ export class ArticleComponent implements OnInit {
           this.markdownContent = decodeURIComponent(escape(atob(this.article.content)));
           console.log(this.markdownContent)
         })
+    });
+    fromEvent(this.likeBtn.nativeElement, 'click').pipe(
+      debounceTime(3000)
+    ).subscribe(() => {
+      this.like();
     })
   }
   markdownContent = "";
