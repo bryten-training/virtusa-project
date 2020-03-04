@@ -7,8 +7,13 @@
 <mat-card>
     <mat-card-title>Upload</mat-card-title>
     <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
-    <input type="file" #fileInput accept="image/*" (change)="onFileChanged($event)"/>
-    <button mat-button (click)="onUpload()">Submit</button>
+    <form [formGroup]="uploadForm">
+        <input type="file" formControlName="theName" accept="video/*" (change)="onFileChanged($event)"/>
+        <select formControlName="theCourse">
+            <option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</option>
+        </select>
+        <button mat-button [disabled]="uploadForm.invalid" (click)="onUpload()">Submit</button>
+    </form>
 </mat-card>
 
 <!-- Videos Display -->

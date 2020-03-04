@@ -13,11 +13,6 @@ export class VideoService {
         return this.httpClient.get<Video[]>
         (`/api/video/`)
     }
-
-    getVideoData(): Observable<VideoDisplay[]> {
-        return this.httpClient.get<VideoDisplay[]>
-        ("/api/video/")
-    }
 }
 
 export class Video {
