@@ -9,17 +9,26 @@ export class AssessmentService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getVideoList(): Observable<Assessment[]> {
-        return this.httpClient.get<Assessment[]>('http://localhost:3000/assessment');
+  getAssessmentList(): Observable<Assessment[]> {
+        return this.httpClient.get<Assessment[]>('api/assessment');
     }
+
+  getCourse(courseNm): Observable<Assessment> {
+      return this.httpClient.get<Assessment>('api/assessment?courseName=' + courseNm);
+  }
 }
+
+
+
 export class Assessment {
   courseName: string;
-  courseId: number;
-  courseData: object[];
+  id: number;
+  courseData: AssessmentQuestions[];
   icon: string;
 }
+
 export class AssessmentQuestions {
+  id: number;
   q: string;
   options: Options[];
 }
