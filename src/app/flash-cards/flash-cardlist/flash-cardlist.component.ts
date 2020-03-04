@@ -34,6 +34,7 @@ setlist(list) {
       this.flashcard.front = false;
 
     });
+
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       // print out user info
       console.log('HOME COMP: ' + JSON.stringify(auth.currentUser, null, 2));
@@ -55,9 +56,13 @@ setlist(list) {
 }
 
   reset() {
-    this.flashcardlist.forEach(card => {card.pass = false; card.front = false; });
-    }
 
+    this.flashcardlist.forEach(card => {card.pass = false, card.front = false,
+      this.CardSvc.pass(card).subscribe(_ => {
+       this.flashcard = card;
+      });
+    });
+  }
   addcard() {
     this.CardSvc.pass(this.flashcard).subscribe(_ => {
       this.router.navigate(['/']);
@@ -76,16 +81,18 @@ setlist(list) {
   }
 
   leftArrow() {
-    this.index--;
     if (this.index < 0) {
       this.index = this.flashcardlist.length;
+       } else {
+        this.index--;
        }
-    while (this.flashcardlist[this.index].pass === true) {
-      this.index--;
-      if (this.index < 0) {
-        this.index = this.flashcardlist.length;
-         }
-    }
+    // while (this.flashcardlist[this.index].pass === true) {
+    //   if (this.index < 0) {
+    //     this.index = this.flashcardlist.length;
+    //      } else {
+    //       this.index--;
+    //      }
+    // }
 
   }
   rightArrow() {

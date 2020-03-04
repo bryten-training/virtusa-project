@@ -1,8 +1,8 @@
-<div [hidden]="currentUser===undefined">
+<!-- <div [hidden]="currentUser===undefined">
 <mat-card-actions>
 <button mat-button  [routerLink]="['/addcard']">Add a new flashcard</button>
 </mat-card-actions>
-</div>
+</div> -->
 <div class="main-div" style="height:auto">
     <mat-card class="example-card">
         <mat-card-header>
@@ -30,7 +30,9 @@
 </mat-card-actions>
 <br/>
 <mat-card-actions>
+    <div [hidden]="currentUser===undefined">
     <button mat-button (click)=reset()>Reset</button>
     <button mat-button (click)="deletecard(flashcardlist[index])">DELETE</button>
+    </div>
 
 </mat-card-actions>
