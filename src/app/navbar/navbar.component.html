@@ -9,14 +9,26 @@
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
+  <button mat-button [routerLink]="['/assessment']"  routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
   </button>
 
-  <button mat-button [routerLink]="['/cards']" routerLinkActive="active">
 
-    <span [style.font-weight]="'lighter'">Flash Cards</span>
-  </button>
+
+  <button mat-button [matMenuTriggerFor]="cardMenu" routerLinkActive="active">
+      <span [style.font-weight]="'lighter'">Flash Cards</span>
+        <mat-menu #cardMenu="matMenu" yPosition="above">
+        <button mat-menu-item [routerLink]="['/cards']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Flash Cards</span>
+        </button>
+        <div  [hidden]="currentUser===undefined">
+        <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Add Card</span>
+        </button>
+      </div>
+      </mat-menu>
+    </button>
+
 
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
