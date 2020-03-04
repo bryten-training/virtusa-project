@@ -24,29 +24,31 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private accountsSrv: AccountsService, private router:Router) { 
-    this.accountsSrv.getAllUsers().subscribe(res=>{
-      this.lastId = res.length-1; 
-      console.log(res);
-    });
-    console.log("User: "+this.accountsSrv.loggedInUser);
-    
+  constructor(private accountsSrv: AccountsService, private router: Router) {}
 
-  }
-
-  userTypes = ["content provider", "default"];
-
+  wasEmailUsed: boolean = false;
+  userTypes = ["admin", "content provider", "default"];
   onSubmit() {
-    this.lastId += 1;
-    this.user = this.signupForm.value;
-    this.user["id"] = this.lastId; 
-       
-   this.accountsSrv.register(this.signupForm.value).subscribe(
-    error=>{
-      console.log(error);
-      
+    this.wasEmailUsed = false;
+    if (this.signupForm.valid) {
+      this.user = this.signupForm.value;
+      // check for dublicates
+      this.accountsSrv.getUser(this.user.email).subscribe(data => {
+        if (!data[0]) {
+          this.accountsSrv.register(this.signupForm.value).pipe(first())
+            .subscribe(
+              data => {
+                console.log(data);
+
+                this.router.navigate(['/logIn']);
+              }
+            )
+        }else{
+          this.wasEmailUsed = true;
+        }
+
+      })
+
     }
-   )
-    
   }
 }

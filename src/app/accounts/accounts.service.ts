@@ -17,13 +17,13 @@ export class AccountsService {
     return this.http.get<[User]>(`/Accounts`);
   }
 
-  getUser(user:string, pass:string):Observable<User>{
-    return this.http.get<User>(`/Accounts?username=${user}&password=${pass}`);
+  getUser(email:string):Observable<[User]>{
+    return this.http.get<[User]>(`/Accounts?email=${email}`);
   }
 
   register(user){
-    console.log(user);
-    
+    //  hashing password
+    user["password"] = window.btoa(user["password"]);
     return this.http.post(`http://localhost:3000/Accounts`, user);
   }
 
