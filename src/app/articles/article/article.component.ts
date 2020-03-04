@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ArticlesService } from '../articles.service';
-import { Article } from '../article';
-import { ActivatedRoute } from '@angular/router';
+import { ArticlesService } from '../service/articles.service';
+import { Article } from '../model/article';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-article',
@@ -12,16 +12,22 @@ export class ArticleComponent implements OnInit {
 
   constructor(
     private articlesService: ArticlesService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {
       this.prevType = param.type;
       this.articlesService.get("articles", { params: { subject: param.type, id: param.id } }).subscribe((data: Article[]) => {
+        if (data == undefined || !Array.isArray(data) || data.length == 0) { // not valid route, redirect to Article Homepage
+          this.router.navigateByUrl("artcls");
+          return;
+        }
         this.article = data[0];
+        this.articlesService.setArticle(this.article);
         console.log(this.article);
-        this.markdownContent = atob(this.article.content);
+        this.markdownContent = decodeURIComponent(escape(atob(this.article.content)));
         console.log(this.markdownContent)
       })
     })
