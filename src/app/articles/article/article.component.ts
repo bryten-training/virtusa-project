@@ -19,17 +19,18 @@ export class ArticleComponent implements OnInit {
   ngOnInit(): void {
     this.route.params.subscribe(param => {
       this.prevType = param.type;
-      this.articlesService.get("articles", { params: { subject: param.type, id: param.id } }).subscribe((data: Article[]) => {
-        if (data == undefined || !Array.isArray(data) || data.length == 0) { // not valid route, redirect to Article Homepage
-          this.router.navigateByUrl("artcls");
-          return;
-        }
-        this.article = data[0];
-        this.articlesService.setArticle(this.article);
-        console.log(this.article);
-        this.markdownContent = decodeURIComponent(escape(atob(this.article.content)));
-        console.log(this.markdownContent)
-      })
+      this.articlesService.get("api/articles", { params: { subject: param.type, id: param.id } })
+        .subscribe((data: Article[]) => {
+          if (data == undefined || !Array.isArray(data) || data.length == 0) { // not valid route, redirect to Article Homepage
+            this.router.navigateByUrl("artcls");
+            return;
+          }
+          this.article = data[0];
+          this.articlesService.setArticle(this.article);
+          console.log(this.article);
+          this.markdownContent = decodeURIComponent(escape(atob(this.article.content)));
+          console.log(this.markdownContent)
+        })
     })
   }
   markdownContent = "";
