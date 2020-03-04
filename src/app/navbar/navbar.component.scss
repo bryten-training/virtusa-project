@@ -24,6 +24,12 @@ img.logo {
   background-color: $minor_primary_color;
 }
 
-button{
-  margin: auto 10px;
+.user_profile_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-out-btn {
+  cursor: pointer;
 }

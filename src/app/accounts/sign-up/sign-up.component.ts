@@ -1,52 +1,50 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
-import { AccountsService } from '../accounts.service';
-import { Router } from '@angular/router';
-import { first } from 'rxjs/operators';
-import { User } from '../user.model';
+import { User } from '../models/user.model';
+import { AccountsService } from '../services/accounts.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent {
-
-  lastId = 0;
-  user: User = new User();
+export class SignUpComponent implements OnInit {
+  userTypes: string[] = ["content provider", "default"];
+  hasErrors: boolean;
+  message: string;
 
   signupForm = new FormGroup({
-    username: new FormControl("", [Validators.required]),
-    password: new FormControl("", [Validators.required]),
+    userName: new FormControl("", [Validators.required]),
+    passWord: new FormControl("", [Validators.required]),
     firstName: new FormControl("", [Validators.required]),
     lastName: new FormControl("", [Validators.required]),
     email: new FormControl("", [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private accountsSrv: AccountsService, private router:Router) { 
-    this.accountsSrv.getAllUsers().subscribe(res=>{
-      this.lastId = res.length-1; 
-      console.log(res);
-    });
-    console.log("User: "+this.accountsSrv.loggedInUser);
-    
-
+  constructor(private accountsService: AccountsService) {
   }
 
-  userTypes = ["content provider", "default"];
+  ngOnInit() {
+    this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
+      // console.log(userInfo);
+      this.hasErrors = userInfo.error_msg ? true : false;
+      this.message = userInfo.error_msg ? userInfo.error_msg : userInfo.success_msg;
+    })
+  }
 
-  onSubmit() {
-    this.lastId += 1;
-    this.user = this.signupForm.value;
-    this.user["id"] = this.lastId; 
-       
-   this.accountsSrv.register(this.signupForm.value).subscribe(
-    error=>{
-      console.log(error);
-      
+  styleMessage() {
+    if (this.hasErrors) {
+      return {
+        "color": '#ff0000'
+      }
     }
-   )
-    
+    return {
+      "color": '#008000'
+    }
+  }
+
+  onRegister() {
+    this.accountsService.register(this.signupForm.value);
   }
 }
