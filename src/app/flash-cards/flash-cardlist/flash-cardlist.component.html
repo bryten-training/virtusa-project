@@ -1,1 +1,22 @@
-<p>flash-cardlist works!</p>
+<div class="main-div">
+    <mat-card class="example-card">
+        <mat-card-header>
+            <mat-card-title>Question:
+                {{ flashcardlist[index]["id"] }}
+
+            </mat-card-title>
+            <mat-card-content> </mat-card-content>
+        </mat-card-header>
+        <mat-card-content>
+            {{ flashcardlist[index]["question"] }} <br>
+            <mat-card-content *ngIf="flashcard">
+                Answer: {{ flashcardlist[index]["ans"] }} <br>
+            </mat-card-content>
+        </mat-card-content>
+    </mat-card>
+    <mat-card-actions>
+        <button mat-button (click)="leftArrow()" (click)='flashcard = false'>Left</button>
+        <button mat-button *ngIf="!flashcard" (click)='flashcard = !flashcard'>Answer</button>
+        <button mat-button (click)="rightArrow()" (click)='flashcard = false'>Right</button>
+    </mat-card-actions>
+</div>

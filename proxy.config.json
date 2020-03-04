@@ -1,15 +1,10 @@
 {
-    "/articles/*": {
-        "target": "http://localhost:3000",
-        "secure": false,
-        "logLevel": "debug"
-    },
     "/flashcard": {
         "target": "http://localhost:3000",
         "secure": false,
         "logLevel": "debug"
     },
-    "/userdata": {
+    "/cardslist": {
         "target": "http://localhost:3000",
         "secure": false,
         "logLevel": "debug"

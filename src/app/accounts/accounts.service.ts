@@ -2,46 +2,29 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { User } from './user.model'
 import { Observable, of, Observer } from 'rxjs';
-import { tap } from 'rxjs/operators';
+import { tap, share } from 'rxjs/operators';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AccountsService {
 
   loggedInUser: User = null;
-  obs: Observable<User>  = null;
-  observ: Observer<User> = null;
+  userObs: Observable<User> = null;
+  observ: Observer<User>;
 
-  constructor(private http: HttpClient) { 
+  constructor(private http: HttpClient) { }
+
+  getAllUsers(): Observable<[User]> {
+    return this.http.get<[User]>(`/Accounts`);
   }
 
-  getAllUsers(): Observable<[User]>{
-    return this.http.get<[User]>(`/userdata`);
-  }
-
-  checkUser(user: string, pass: string): Observable<User>{
-    return this.http.get<User>(`/userdata?username=${user}&password=${pass}`).pipe(
-     tap(data=>{
-       this.loggedInUser = data;
-     }) 
-    );
-  }
-
-  signout(){
-    this.loggedInUser = null;
+  getUser(user: string, pass: string): Observable<User> {
+    return this.http.get<User>(`/Accounts?username=${user}&password=${pass}`);
   }
 
   register(user) {
-    return this.http.post(`/userdata`, user);
-  }
+    console.log(user);
 
-  private hashPass(pass: string):string{
-    return "A!2cbfgr125!!?7895";
-  }
-
-  getUser(): Observable<User>{
-    return of(this.loggedInUser);
+    return this.http.post(`http://localhost:3000/Accounts`, user);
   }
 
 
