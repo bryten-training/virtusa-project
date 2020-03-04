@@ -11,12 +11,24 @@ export class VideoService {
 
     getVideoList(): Observable<Video[]> {
         return this.httpClient.get<Video[]>
-        ('http://localhost:3000/video')
+        (`/api/video/`)
+    }
+
+    getVideoData(): Observable<VideoDisplay[]> {
+        return this.httpClient.get<VideoDisplay[]>
+        ("/api/video/")
     }
 }
 
 export class Video {
-    title: string
-    url: string
-    courseId: number
+    courseName: string;
+    id: number;
+    videoData: object[];
+    icon: string;
+}
+
+export class VideoDisplay {
+    id: number;
+    title: string;
+    url: string;
 }
