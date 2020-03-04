@@ -35,8 +35,11 @@ export class AssessmentFormComponent implements OnInit {
     this.router.routerState.root.queryParams.subscribe(params => {
       this.courseNameStr = params.course;
       this.Svc.getCourse(this.courseNameStr).subscribe(coursD => {
-        this.courseData = coursD[0].courseData;
-        this.courseNm = coursD[0];
+        if(coursD[0] !== undefined) {
+          console.log(coursD);
+          this.courseData = coursD[0].courseData;
+          this.courseNm = coursD[0];
+        }
 
         // console.log(this.assesmentForm.value);
         // console.log(this.ans);
