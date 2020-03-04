@@ -6,6 +6,7 @@ export interface Article {
     title: string,
     image: string,
     author: {
+        userId: number,
         name: string,
         avatar: string
     },

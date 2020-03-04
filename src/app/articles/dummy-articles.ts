@@ -1,5 +1,5 @@
-import { Article } from "./article";
-import { Subject } from './subject';
+import { Article } from "./model/article";
+import { Subject } from './model/subject';
 
 // Add author and tags
 
@@ -14,8 +14,9 @@ export const ARTICLES: Article[] = [
     likes: 20,
     image: "https://material.angular.io/assets/img/examples/shiba2.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -39,8 +40,9 @@ export const ARTICLES: Article[] = [
     likes: 9,
     image: "https://www.bigstockphoto.com/images/homepage/module-6.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -65,8 +67,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://image.shutterstock.com/image-photo/colorful-flower-on-dark-tropical-260nw-721703848.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -91,8 +94,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-260nw-789676552.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -117,8 +121,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://image.shutterstock.com/image-photo/white-transparent-leaf-on-mirror-260nw-1029171697.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -143,8 +148,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://media.sproutsocial.com/uploads/2017/02/10x-featured-social-media-image-size.png",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -169,8 +175,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://as.ftcdn.net/r/v1/pics/7b11b8176a3611dbfb25406156a6ef50cd3a5009/home/discover_collections/optimized/image-2019-10-11-11-36-27-681.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -194,8 +201,9 @@ export const ARTICLES: Article[] = [
     likes: 150,
     image: "https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885__340.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {
@@ -220,8 +228,9 @@ export const ARTICLES: Article[] = [
     image:
       "https://thumbs.dreamstime.com/b/autumn-oak-leaf-fantastic-beautiful-spray-bubbles-blue-background-magic-autumn-blue-background-yellow-oak-leaf-158238643.jpg",
     author: {
+      userId: 1,
       name: "Josh Bloch",
-      avatar: "assets/avatar.jpeg"
+      avatar: "assets/default_avatar.png"
     },
     comments: [
       {

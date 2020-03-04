@@ -3,18 +3,23 @@
   max-width: 800px;
 
   .article-title {
-      margin: 40px 0;
-      font-size: 3rem;
-      line-height: 3rem;
+    margin: 40px 0;
+    font-size: 3rem;
+    line-height: 3rem;
   }
   .article-header-image {
     background-size: cover;
   }
 }
-
 .fab-button {
-    position: fixed;
-    z-index: 99;
-    left: 30px;
-    top: 90px;
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}
+.full-width {
+  width: 100%;
+}
+.assessmentButton {
+  margin-bottom: 30px;
 }

@@ -12,7 +12,9 @@ import { ArticlescommentsComponent } from './articlescomments/articlescomments.c
 import { MatInputModule } from '@angular/material/input';
 import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articlecommentsdisplay.component';
 import { AddArticleComponent } from './add-article/add-article.component'
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { SubjectBlogpageComponent } from './article-homepage/subject-blogpage/subject-blogpage.component';
+import { SpliterPipe } from './pipe/spliter.pipe'
 
 
 @NgModule({
@@ -21,7 +23,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ArticlescommentsComponent,
     ArticlecommentsdisplayComponent,
     ArticleComponent,
-    AddArticleComponent
+    AddArticleComponent,
+    SubjectBlogpageComponent,
+    SpliterPipe
   ],
   imports: [
     CommonModule,
@@ -32,6 +36,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatInputModule,
     MarkdownModule.forChild(),
+    FormsModule,
     ReactiveFormsModule
   ]
 })
