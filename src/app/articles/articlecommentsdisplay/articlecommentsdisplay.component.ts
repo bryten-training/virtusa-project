@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../service/articles.service';
 import { Article } from '../model/article';
+import { User } from 'src/app/accounts/models/user.model';
+
 
 @Component({
   selector: 'app-articlecommentsdisplay',
@@ -9,16 +11,19 @@ import { Article } from '../model/article';
 })
 export class ArticlecommentsdisplayComponent implements OnInit {
 
+  apple=false
+
   constructor(
     private articlesService: ArticlesService
   ) { }
+
+
 
   ngOnInit(): void {
     this.articlesService.articleSubject.subscribe((article: Article) => {
       console.log("ArticlecommentsdisplayComponent:: ", article);
       this.article = article
     })
-    
   }
   liked=false
   article: Article;
