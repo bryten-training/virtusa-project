@@ -1,7 +1,7 @@
 <div [hidden]="currentUser===undefined">
-<mat-card-actions>
-<button mat-button  [routerLink]="['/addcard']">Add a new flashcard</button>
-</mat-card-actions>
+    <mat-card-actions>
+        <button mat-button [routerLink]="['/addcard']">Add a new flashcard</button>
+    </mat-card-actions>
 </div>
 <div class="main-div" style="height:auto">
     <mat-card class="example-card">
@@ -10,12 +10,13 @@
             <mat-card-content> </mat-card-content>
         </mat-card-header>
         <mat-card-content>
-            {{ flashcardlist[index].question}} <br>
+            <h3 style="font-family: bold;font-size: 20px">{{ flashcardlist[index].question}}</h3> <br>
             <mat-card-content *ngIf="flashcardlist[index].front">
-                          Ans:
+                Ans:
                 {{ flashcardlist[index].ans }} <br>
                 <mat-card-actions>
-                    <input type="checkbox" [checked]="flashcardlist[index].pass===true" (change)="passcard()">{{flashcardlist[index].pass}}
+                    <input type="checkbox" [checked]="flashcardlist[index].pass===true"
+                        (change)="passcard()">{{flashcardlist[index].pass}}
                 </mat-card-actions>
             </mat-card-content>
 
@@ -24,11 +25,13 @@
 </div>
 <mat-card-actions>
     <button mat-button (click)="leftArrow()" (click)='flashcardlist[index].front = false'>Left</button>
-    <button mat-button *ngIf="!flashcardlist[index].front" (click)='flashcardlist[index].front = !flashcardlist[index].front'>Answer</button>
-    <button mat-button *ngIf="flashcardlist[index].front" (click)='flashcardlist[index].front = !flashcardlist[index].front'>Back to question</button>
+    <button mat-button *ngIf="!flashcardlist[index].front"
+        (click)='flashcardlist[index].front = !flashcardlist[index].front'>Answer</button>
+    <button mat-button *ngIf="flashcardlist[index].front"
+        (click)='flashcardlist[index].front = !flashcardlist[index].front'>Back to question</button>
     <button mat-button (click)="rightArrow()" (click)='flashcardlist[index].front = false'>Right</button>
 </mat-card-actions>
-<br/>
+<br />
 <mat-card-actions>
     <button mat-button (click)=reset()>Reset</button>
 </mat-card-actions>

@@ -341,25 +341,25 @@
   "flashCards": [
     {
       "id": 1,
-      "question": "what is diretive",
-      "ans": " ssssss",
+      "question": "What is Angular and Why Angular?",
+      "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
       "body": "content",
-      "pass": true,
+      "pass": false,
       "front": true,
       "show": true
     },
     {
       "id": 2,
-      "question": "what is Angular",
-      "ans": "SPA",
+      "question": "Name the building blocks of Angular.",
+      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
       "body": "content",
       "pass": true,
       "front": true,
       "show": false
     },
     {
-      "question": "Question",
-      "ans": "Answer",
+      "question": "What is the use of @Input and @Output?",
+      "ans": "When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component.",
       "body": "content",
       "pass": true,
       "front": true,
@@ -370,33 +370,97 @@
       "pass": true,
       "front": true,
       "show": false,
-      "question": "A",
-      "ans": "A",
+      "question": "What is RouterOutlet?",
+      "ans": "RouterOutlet is a substitution for templates rendering the components. In other words, it represents or renders the components on a template at a particular location.",
       "id": 4
     },
     {
       "pass": true,
       "front": true,
       "show": false,
-      "question": "ss",
-      "ans": "sa",
+      "question": "Explain the usage of {{}}?",
+      "ans": "The set of brackets {{}} when used with an HTML tag, represent data from a component. For example, on a HTML page which has <h1>{{variableName}}</h1>, here the ‘variableName’ is actually typescript (component) data representing its value on the template; i.e., HTML. This entire concept is called String Interpolation.",
       "id": 5
     },
     {
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
-      "question": "TestQ",
-      "ans": "testA",
+      "question": " Differentiate between Observables and Promises.",
+      "ans": "Observables are lazy, which means nothing happens until a subscription is made. Whereas Promises are eager; which means as soon as a promise is created, the execution takes place. Observable is a stream in which passing of zero or more events is possible and the callback is called for each event. Whereas, promise handles a single event.",
       "id": 6
     },
     {
       "pass": false,
       "front": false,
       "show": false,
-      "question": "what. is your name \n1",
-      "ans": "a\ns\nf\ng\nj\n",
+      "question": "Why Typescript with Angular?",
+      "ans": "Typescript is a superset of Javascript. Earlier, Javascript was the only client-side language supported by all browsers. But, the problem with Javascript is, it is not a pure Object Oriented Programming Language. The code written in JS without following patterns like Prototype Pattern becomes messy and finally leading to difficulties in maintainability and reusability. Instead of learning concepts (like patterns) to maintain code, programmers prefer to maintain the code.",
       "id": 7
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What Is Node.js?",
+      "ans": "Node.js is a powerful framework developed on Chrome’s V8 JavaScript engine that compiles the JavaScript directly into the native machine code. It is a lightweight framework used for creating server-side web applications and extends JavaScript API to offer usual server-side functionalities. It is generally used for large-scale application development, especially for video streaming sites, single page application, and other web applications.",
+      "id": 8
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "Why Node.js is single threaded?",
+      "ans": "Node.js uses a single threaded model in order to support async processing. With async processing, an application can perform better and is more scalable under web loads. Thus, Node.js makes use of a single-threaded model approach rather than typical thread-based implementation.",
+      "id": 9
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "How many types of API functions are there in Node.js?",
+      "ans": "There are two types of API functions in Node.js: Asynchronous, non-blocking functions Synchronous, blocking functions",
+      "id": 10
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is package.json?",
+      "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
+      "id": 11
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is JavaScript?",
+      "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
+      "id": 12
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What are JavaScript Data Types?",
+      "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
+      "id": 13
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What is the use of isNaN function?",
+      "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
+      "id": 14
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " Between JavaScript and an ASP script, which is faster?",
+      "ans": "JavaScript is faster. JavaScript is a client-side language and thus it does not need the assistance of the web server to execute. On the other hand, ASP is a server-side language and hence is always slower than JavaScript. Javascript now is also a server side language (nodejs).",
+      "id": 15
     }
   ],
   "assessment": [
