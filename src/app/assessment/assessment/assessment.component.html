@@ -1,20 +1,9 @@
-<mat-card *ngFor="let d of data" (click)="onClick(d.courseId)" class="cards" >
+<mat-card *ngFor="let d of data" (click)="nav(d.courseName)" class="cards">
     <mat-card-title [(title)]="d.courseName">{{d.courseName}}</mat-card-title>
     <img src="{{d.icon}}" mat-card-image alt="{{d.courseName}} icon" width="100px">
 </mat-card>
 
-
-<!-- <div id="theangular" *ngIf="displayArr[1]"  class="form">
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-    <h1>sahbdjashdha</h1>
-</div> -->
-
-<div *ngFor="let d of data">
-    <app-assessment-form *ngIf="displayArr[d.courseId]" [courseData]="d.courseData"></app-assessment-form>
-</div>
+<mat-card>
+    <mat-card-title>Upload</mat-card-title>
+    <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
+</mat-card>

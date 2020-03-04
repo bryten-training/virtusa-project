@@ -25,6 +25,24 @@
           "author": "anyone",
           "comment": "effective",
           "datetime": "Mar 3, 2020"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This is awesome",
+          "datetime": "2020-03-04T18:08:24.184Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "😊🏡🛁🏡👍🏻🧴👍🏻🧴🧴",
+          "datetime": "2020-03-04T19:13:34.566Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -245,14 +263,7 @@
       "content": "RXJyb3JzIGluIE5vZGUuanMgYXJlIGhhbmRsZWQgdGhyb3VnaCBleGNlcHRpb25zLgoKIyMgQ3JlYXRpbmcgZXhjZXB0aW9ucwoKQW4gZXhjZXB0aW9uIGlzIGNyZWF0ZWQgdXNpbmcgdGhlIGB0aHJvd2Aga2V5d29yZDoKCmB0aHJvdyB2YWx1ZWAKCkFzIHNvb24gYXMgSmF2YVNjcmlwdCBleGVjdXRlcyB0aGlzIGxpbmUsIHRoZSBub3JtYWwgcHJvZ3JhbSBmbG93IGlzIGhhbHRlZCBhbmQgdGhlIGNvbnRyb2wgaXMgaGVsZCBiYWNrIHRvIHRoZSBuZWFyZXN0ICoqZXhjZXB0aW9uIGhhbmRsZXIqKi4KClVzdWFsbHkgaW4gY2xpZW50LXNpZGUgY29kZSBgdmFsdWVgIGNhbiBiZSBhbnkgSmF2YVNjcmlwdCB2YWx1ZSBpbmNsdWRpbmcgYSBzdHJpbmcsIGEgbnVtYmVyIG9yIGFuIG9iamVjdC4KCkluIE5vZGUuanMsIHdlIGRvbid0IHRocm93IHN0cmluZ3MsIHdlIGp1c3QgdGhyb3cgRXJyb3Igb2JqZWN0cy4KCiMjIEVycm9yIG9iamVjdHMKCkFuIGVycm9yIG9iamVjdCBpcyBhbiBvYmplY3QgdGhhdCBpcyBlaXRoZXIgYW4gaW5zdGFuY2Ugb2YgdGhlIEVycm9yIG9iamVjdCwgb3IgZXh0ZW5kcyB0aGUgRXJyb3IgY2xhc3MsIHByb3ZpZGVkIGluIHRoZSAqKltFcnJvciBjb3JlIG1vZHVsZV0oaHR0cHM6Ly9ub2RlanMub3JnL2FwaS9lcnJvcnMuaHRtbCkqKjoKCmB0aHJvdyBuZXcgRXJyb3IoJ1JhbiBvdXQgb2YgY29mZmVlJylgCgpvcgoKYGBgdHlwZXNjcmlwdApjbGFzcyBOb3RFbm91Z2hDb2ZmZWVFcnJvciBleHRlbmRzIEVycm9yIHsKICAvLy4uLgp9CnRocm93IG5ldyBOb3RFbm91Z2hDb2ZmZWVFcnJvcigpOwpgYGAKCiMjIEhhbmRsaW5nIGV4Y2VwdGlvbnMKCkFuIGV4Y2VwdGlvbiBoYW5kbGVyIGlzIGEgYHRyeWAvYGNhdGNoYCBzdGF0ZW1lbnQuCgpBbnkgZXhjZXB0aW9uIHJhaXNlZCBpbiB0aGUgbGluZXMgb2YgY29kZSBpbmNsdWRlZCBpbiB0aGUgYHRyeWAgYmxvY2sgaXMgaGFuZGxlZCBpbiB0aGUgY29ycmVzcG9uZGluZyBgY2F0Y2hgIGJsb2NrOgoKYGBgdHlwZXNjcmlwdAp0cnkgewogIC8vbGluZXMgb2YgY29kZQp9IGNhdGNoIChlKSB7fQpgYGAKCmBlYCBpbiB0aGlzIGV4YW1wbGUgaXMgdGhlIGV4Y2VwdGlvbiB2YWx1ZS4KCllvdSBjYW4gYWRkIG11bHRpcGxlIGhhbmRsZXJzLCB0aGF0IGNhbiBjYXRjaCBkaWZmZXJlbnQga2luZHMgb2YgZXJyb3JzLgoKIyMgQ2F0Y2hpbmcgdW5jYXVnaHQgZXhjZXB0aW9ucwoKSWYgYW4gdW5jYXVnaHQgZXhjZXB0aW9uIGdldHMgdGhyb3duIGR1cmluZyB0aGUgZXhlY3V0aW9uIG9mIHlvdXIgcHJvZ3JhbSwgeW91ciBwcm9ncmFtIHdpbGwgY3Jhc2guCgpUbyBzb2x2ZSB0aGlzLCB5b3UgbGlzdGVuIGZvciB0aGUgYHVuY2F1Z2h0RXhjZXB0aW9uYCBldmVudCBvbiB0aGUgYHByb2Nlc3NgIG9iamVjdDoKCmBgYHR5cGVzY3JpcHQKcHJvY2Vzcy5vbigidW5jYXVnaHRFeGNlcHRpb24iLCBlcnIgPT4gewogIGNvbnNvbGUuZXJyb3IoIlRoZXJlIHdhcyBhbiB1bmNhdWdodCBlcnJvciIsIGVycik7CiAgcHJvY2Vzcy5leGl0KDEpOyAvL21hbmRhdG9yeSAoYXMgcGVyIHRoZSBOb2RlLmpzIGRvY3MpCn0pOwpgYGAKCllvdSBkb24ndCBuZWVkIHRvIGltcG9ydCB0aGUgYHByb2Nlc3NgIGNvcmUgbW9kdWxlIGZvciB0aGlzLCBhcyBpdCdzIGF1dG9tYXRpY2FsbHkgaW5qZWN0ZWQuCgojIyBFeGNlcHRpb25zIHdpdGggcHJvbWlzZXMKClVzaW5nIHByb21pc2VzIHlvdSBjYW4gY2hhaW4gZGlmZmVyZW50IG9wZXJhdGlvbnMsIGFuZCBoYW5kbGUgZXJyb3JzIGF0IHRoZSBlbmQ6CgpgYGB0eXBlc2NyaXB0CmRvU29tZXRoaW5nMSgpCiAgLnRoZW4oZG9Tb21ldGhpbmcyKCkpCiAgLnRoZW4oZG9Tb21ldGhpbmczKCkpCiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpOwpgYGAKCkhvdyBkbyB5b3Uga25vdyB3aGVyZSB0aGUgZXJyb3Igb2NjdXJyZWQ/IFlvdSBkb24ndCByZWFsbHkga25vdywgYnV0IHlvdSBjYW4gaGFuZGxlIGVycm9ycyBpbiBlYWNoIG9mIHRoZSBmdW5jdGlvbnMgeW91IGNhbGwgKGBkb1NvbWV0aGluZ1hgKSwgYW5kIGluc2lkZSB0aGUgZXJyb3IgaGFuZGxlciB0aHJvdyBhIG5ldyBlcnJvciwgdGhhdCdzIGdvaW5nIHRvIGNhbGwgdGhlIG91dHNpZGUgYGNhdGNoYCBoYW5kbGVyOgoKYGBgdHlwZXNjcmlwdApjb25zdCBkb1NvbWV0aGluZzEgPSAoKSA9PiB7CiAgLy8uLi4KICB0cnkgewogICAgLy8uLi4KICB9IGNhdGNoIChlcnIpIHsKICAgIC8vLi4uIGhhbmRsZSBpdCBsb2NhbGx5CiAgICB0aHJvdyBuZXcgRXJyb3IoZXJyLm1lc3NhZ2UpOwogIH0KICAvLy4uLgp9OwpgYGAKClRvIGJlIGFibGUgdG8gaGFuZGxlIGVycm9ycyBsb2NhbGx5IHdpdGhvdXQgaGFuZGxpbmcgdGhlbSBpbiB0aGUgZnVuY3Rpb24gd2UgY2FsbCwgd2UgY2FuIGJyZWFrIHRoZSBjaGFpbiB5b3UgY2FuIGNyZWF0ZSBhIGZ1bmN0aW9uIGluIGVhY2ggYHRoZW4oKWAgYW5kIHByb2Nlc3MgdGhlIGV4Y2VwdGlvbjoKCmBgYHR5cGVzY3JpcHQKZG9Tb21ldGhpbmcxCiAgLnRoZW4oKCgpID0+IHsKICAgIHJldHVybiBkb1NvbWV0aGluZzIoKS5jYXRjaChlcnIgPT4gewogICAgICAvL2hhbmRsZSBlcnJvcgogICAgICB0aHJvdyBlcnIgLy9icmVhayB0aGUgY2hhaW4hCiAgICB9KQogIH0pCiAgLnRoZW4oKCgpID0+IHsKICAgIHJldHVybiBkb1NvbWV0aGluZzIoKS5jYXRjaChlcnIgPT4gewogICAgICAvL2hhbmRsZSBlcnJvcgogICAgICB0aHJvdyBlcnIgLy9icmVhayB0aGUgY2hhaW4hCiAgICB9KQogIH0pCiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpCmBgYAoKIyMgRXJyb3IgaGFuZGxpbmcgd2l0aCBhc3luYy9hd2FpdAoKVXNpbmcgYXN5bmMvYXdhaXQsIHlvdSBzdGlsbCBuZWVkIHRvIGNhdGNoIGVycm9ycywgYW5kIHlvdSBkbyBpdCB0aGlzIHdheToKCmBgYHR5cGVzY3JpcHQKYXN5bmMgZnVuY3Rpb24gc29tZUZ1bmN0aW9uKCkgewogIHRyeSB7CiAgICBhd2FpdCBzb21lT3RoZXJGdW5jdGlvbigpOwogIH0gY2F0Y2ggKGVycikgewogICAgY29uc29sZS5lcnJvcihlcnIubWVzc2FnZSk7CiAgfQp9CmBgYA==",
       "timeToRead": 3,
       "likes": 236,
-      "comments": [
-        {
-          "id": 1,
-          "author": "Someone",
-          "comment": "very effective",
-          "datetime": "Mar 2, 2020"
-        }
-      ],
+      "comments": [],
       "assessmentURL": "/assessment/NodeJS/1"
     },
     {
@@ -277,6 +288,32 @@
         }
       ],
       "assessmentURL": "/assessment/NodeJS/1"
+    },
+    {
+      "id": 13,
+      "subject": "JavaScript",
+      "title": "Website Visitors Using JavaScript",
+      "image": "assets/JavaScript.jpg",
+      "author": {
+        "name": "Adeynki Adegbenro",
+        "avatar": "assets/default_avatar.png"
+      },
+      "publish_date": "October 02, 2019",
+      "content": "IyMgSG93IFRvIERldGVjdCBUaGUgTG9jYXRpb24gb2YgWW91ciBXZWJzaXRl4oCZcyBWaXNpdG9ycyBVc2luZyBKYXZhU2NyaXB0CgohW1Bob3RvIGJ5IFtHb3JhbiBJdm9zXShodHRwczovL3Vuc3BsYXNoLmNvbS9AZ29yYW5faXZvcz91dG1fc291cmNlPXVuc3BsYXNoJnV0bV9tZWRpdW09cmVmZXJyYWwmdXRtX2NvbnRlbnQ9Y3JlZGl0Q29weVRleHQpIG9uIFtVbnNwbGFzaF0KCkRldGVjdGluZyB0aGUgbG9jYXRpb24gb2YgeW91ciB3ZWJzaXRl4oCZcyB1c2VycyBpcyB1c2VmdWwgZm9yIGEgdmFyaWV0eSBvZiByZWFzb25zLgoKWW91IG1pZ2h0LCBmb3IgaW5zdGFuY2UsIHdhbnQgdG8gZGlzcGxheSBkaWZmZXJlbnQgY29udGVudCwgcGVyaGFwcyBpbiBkaWZmZXJlbnQgbGFuZ3VhZ2VzIGZvciBwZW9wbGUgZnJvbSBkaWZmZXJlbnQgY291bnRyaWVzLCBvciBkaXNwbGF5IHRhcmdldGVkIGluZm9ybWF0aW9uIHRvIHZpc2l0b3JzIGZyb20gZGlmZmVyZW50IGxvY2F0aW9ucy4KCldoYXRldmVyIHlvdXIgcmVhc29ucyBtaWdodCBiZSwgeW91IGhhdmUgdHdvIG9wdGlvbnM6CgogMS4gVGhlIFtHZW9sb2NhdGlvbiBBUEldKGh0dHBzOi8vZGV2ZWxvcGVycy5nb29nbGUuY29tL21hcHMvZG9jdW1lbnRhdGlvbi9nZW9sb2NhdGlvbi9pbnRybykgYW5kCgogMi4gSVAgYWRkcmVzcyBsb29rdXAKCiMjIFRoZSBHZW9sb2NhdGlvbiBBUEkKClRoZSBnZW9sb2NhdGlvbiBBUEkgaXMgYSBuZXcgSFRNTDUgZmVhdHVyZSB0aGF0IGFsbG93cyBhIHdlYiBwYWdl4oCZcyB2aXNpdG9yIHRvIHNoYXJlIHRoZWlyIGxvY2F0aW9uIHdpdGggeW91IGlmIHRoZXkgc28gY2hvb3NlLgoKV2hlbiB5b3UgdHJ5IHRvIHJldHJpZXZlIHRoZSBsb2NhdGlvbiB1c2luZyB0aGlzIEFQSSwgYSBwcm9tcHQgaXMgc2hvd24gdG8gdGhlIHVzZXIsIGFza2luZyB0aGVtIGlmIHRoZXnigJlkIGxpa2UgdG8gc2hhcmUgdGhlaXIgbG9jYXRpb24gd2l0aCB5b3VyIHNpdGUuCgohW0V4YW1wbGUgb2YgdGhlIGtpbmQgb2YgcHJvbXB0IHNob3duIHRvIHRoZSB1c2VyXShodHRwczovL2Nkbi1pbWFnZXMtMS5tZWRpdW0uY29tL21heC8yNzMyLzEqR3VXSzA2V2JsVTFzLXVwVWI2RjU5US5wbmcgPTEwMHgzMCkKCk9idmlvdXNseSwgdGhpcyBtZWFucyB0aGF0IHlvdSB3b27igJl0IGdldCB0aGUgbG9jYXRpb24gaWYgdGhlIHVzZXIgZGVjaWRlcyBub3QgdG8gc2hhcmUgdGhlaXIgbG9jYXRpb24gd2l0aCB5b3Uu",
+      "timeToRead": 2,
+      "likes": 236,
+      "comments": [
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This was an amazing article!",
+          "datetime": "2020-03-04T20:08:41.417Z"
+        }
+      ],
+      "assessmentURL": "/assessment/JavaScript/1"
     }
   ],
   "links": [
@@ -484,11 +521,12 @@
   ],
   "assessment": [
     {
+      "id": 0,
       "courseName": "Angular",
       "icon": "assets/img/angular.jpg",
-      "id": 0,
       "courseData": [
         {
+          "id": 0,
           "q": " What is Angular?",
           "options": [
             {
@@ -510,6 +548,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "What decorator is used for configuring your module class",
           "options": [
             {
@@ -531,6 +570,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
@@ -552,6 +592,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Router is part of which of the following module?",
           "options": [
             {
@@ -573,6 +614,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "RxJS can be used for?",
           "options": [
             {
@@ -601,6 +643,7 @@
       "id": 1,
       "courseData": [
         {
+          "id": 0,
           "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
@@ -622,6 +665,7 @@
           ]
         },
         {
+          "id": 1,
           "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
@@ -643,6 +687,7 @@
           ]
         },
         {
+          "id": 2,
           "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
@@ -664,6 +709,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
@@ -685,6 +731,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
@@ -713,6 +760,7 @@
       "id": 2,
       "courseData": [
         {
+          "id": 0,
           "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
@@ -734,6 +782,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "How can we check the current version of NPM?",
           "options": [
             {
@@ -755,6 +804,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "What is the advantage of using node.js?",
           "options": [
             {
@@ -776,6 +826,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
@@ -797,6 +848,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following provides in-built events.",
           "options": [
             {

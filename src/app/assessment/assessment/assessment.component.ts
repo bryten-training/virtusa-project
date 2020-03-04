@@ -1,5 +1,6 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AssessmentService, Assessment } from '../assessment.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -10,19 +11,21 @@ import { AssessmentService, Assessment } from '../assessment.service';
 export class AssessmentComponent implements OnInit {
 
   data: Assessment[] = [];
-  angular = false;
-  nodeJs = false;
-  javascript = false;
   displayArr = [];
 
-  constructor(private asSvc: AssessmentService) { }
+  constructor(private asSvc: AssessmentService, private router: Router ) { }
 
   ngOnInit(): void {
-    this.asSvc.getVideoList().subscribe(res => {
+    this.asSvc.getAssessmentList().subscribe(res => {
       this.data = res;
       this.data.forEach(a => this.displayArr.push(false));
-      console.log(this.displayArr);
     });
+  }
+  nav(courseName) {
+    this.router.navigate(['course'], {queryParams:
+      {
+      course: courseName,
+    }});
   }
 
   onClick(courseId: number) {
