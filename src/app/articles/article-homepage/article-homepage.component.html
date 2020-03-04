@@ -6,21 +6,14 @@
   <mat-icon aria-hidden="false" aria-label="Search icon">search</mat-icon>
   <span class="gap hover">Browse</span>
   <span class="gap hover">Explore</span>
+  <span class="gap hover" [routerLink]="['/artcls/add-article']">Add Article</span>
 </mat-toolbar>
 
 <div id="subjectDiv">
-  <mat-card
-    class="subject-card"
-    *ngFor="let subject of subjects"
-    [routerLink]="[subject.name]"
-  >
+  <mat-card class="subject-card" *ngFor="let subject of subjects" [routerLink]="['/artcls/', subject.name]">
     <mat-card-content>
       <h1>{{ subject.name }}</h1>
-      <img
-        mat-card-image
-        src="{{ subject.imagePath }}"
-        alt="{{ subject.name }} logo"
-      />
+      <img mat-card-image src="{{ subject.imagePath }}" alt="{{ subject.name }} logo" />
     </mat-card-content>
     <!-- <app-subject-blogpage [headerTitle]="subject.name"></app-subject-blogpage> -->
   </mat-card>
