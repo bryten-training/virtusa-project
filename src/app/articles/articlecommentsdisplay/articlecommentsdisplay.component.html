@@ -24,7 +24,7 @@
     </button>
     <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()">
 
-      <div *ngIf="e.author.userType == null; else pun">
+      <div *ngIf="e.authorinfo.userType == null; else pun">
         <mat-icon>favorite</mat-icon>
       </div>  
       <ng-template #pun>

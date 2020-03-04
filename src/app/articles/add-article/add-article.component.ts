@@ -24,7 +24,7 @@ export class AddArticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.user = this.articlesService.getCurrentUser();
+    // this.user = this.articlesService.getCurrentUser();
   }
   mdText: string;
   user: User = {
