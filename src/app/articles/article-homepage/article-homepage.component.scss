@@ -14,7 +14,7 @@ $primary: #0b2161;
 
 #desc {
   background-color: #f2f2f2;
-  height: 20%;
+  height: 20vh;
   text-align: center;
   margin-top: 2%;
   display: flex;
@@ -138,14 +138,23 @@ $primary: #0b2161;
 
 .subject-card {
   width: 20vw;
-  height: 50vh;
+  height: 45vh;
   margin: 1em;
+  text-align: center;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   display: inline-block;
   &:hover {
     cursor: pointer;
     box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
   }
+  & > h1 {
+    font-size: 2em;
+  }
+}
+
+#subjectDiv {
+  padding: 70px 0;
+  text-align: center;
 }
 
 @media screen and (max-width: 450px) {

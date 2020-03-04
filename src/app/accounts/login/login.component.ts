@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { AccountsService } from '../services/accounts.service';
 
 @Component({
   selector: 'app-login',
@@ -12,11 +13,17 @@ export class LoginComponent implements OnInit {
   isEmailValid: boolean;
   isPassWordValid: boolean;
   hasErrors: boolean;
+  message: string;
 
-  constructor() { }
+  constructor(private accountsService: AccountsService) { }
 
   ngOnInit(): void {
     this.instantiateMyForm();
+    this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
+      // console.log(userInfo);
+      this.hasErrors = userInfo.error_msg ? true : false;
+      this.message = userInfo.error_msg ? userInfo.error_msg : userInfo.success_msg;
+    })
   }
 
   instantiateMyForm() {
@@ -25,6 +32,17 @@ export class LoginComponent implements OnInit {
       email: new FormControl(undefined, [Validators.required]),
       passWord: new FormControl(undefined, [Validators.required])
     })
+  }
+
+  styleMessage() {
+    if (this.hasErrors) {
+      return {
+        "color": '#ff0000'
+      }
+    }
+    return {
+      "color": '#008000'
+    }
   }
 
   onLogIn() {
@@ -48,9 +66,7 @@ export class LoginComponent implements OnInit {
     }
 
     if (this.myForm.valid) {
-      this.hasErrors = false;
-    } else {
-      this.hasErrors = true;
+      this.accountsService.logIn(this.myForm.value);
     }
   }
 }
