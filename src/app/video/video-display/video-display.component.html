@@ -1,0 +1,10 @@
+<mat-list>
+    <mat-list-item *ngFor="let x of videoData; index as i"> 
+        <hr>
+        <div class="mat-list-item">
+            <iframe width="250" [src]="safeUrl(x.url)" 
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>
+            <h2>{{x.title}}</h2>
+        </div>  
+    </mat-list-item>
+</mat-list>
