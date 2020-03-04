@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   constructor(private accountsService: AccountsService) { }
 
   ngOnInit(): void {
-    this.accountsService.getObservable().subscribe((auth: Auth) => {
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       this.currentUser = auth.currentUser;
     })
   }

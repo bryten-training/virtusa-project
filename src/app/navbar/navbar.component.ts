@@ -14,7 +14,7 @@ export class NavbarComponent implements OnInit {
   constructor(private accountsService: AccountsService) { }
 
   ngOnInit(): void {
-    this.accountsService.getObservable().subscribe((auth: Auth) => {
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       this.isAuthenticated = auth.isAuthenticated;
       this.currentUserName = auth.currentUser ? auth.currentUser.userName : '';
     })

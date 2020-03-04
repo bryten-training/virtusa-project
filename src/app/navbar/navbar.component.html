@@ -1,7 +1,7 @@
 <mat-toolbar color="primary">
   <img class="logo" src="assets/img/logo.png" />
 
-  <button mat-button [routerLink]="['/home']" routerLinkActive="active">
+  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/home']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Home</span>
   </button>
 
@@ -38,7 +38,7 @@
         <a [routerLink]="['/home']" [style.font-weight]="'lighter'">
           {{ currentUserName }}
         </a> &nbsp; | &nbsp;
-        <a [style.font-weight]="'lighter'" (click)="onLogOut()">Log out</a>
+        <a [style.font-weight]="'lighter'" (click)="onLogOut()" class="log-out-btn">Log out</a>
       </small>
     </ng-container>
   </div>

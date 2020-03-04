@@ -10,13 +10,12 @@ import { User } from '../user.model';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent {
-
-  lastId = 0;
+  userTypes: string[] = ["content provider", "default"];
   user: User = new User();
 
   signupForm = new FormGroup({
-    username: new FormControl("", [Validators.required]),
-    password: new FormControl("", [Validators.required]),
+    userName: new FormControl("", [Validators.required]),
+    passWord: new FormControl("", [Validators.required]),
     firstName: new FormControl("", [Validators.required]),
     lastName: new FormControl("", [Validators.required]),
     email: new FormControl("", [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
@@ -25,25 +24,17 @@ export class SignUpComponent {
 
   constructor(private registerService: RegisterService, private router: Router) {
     this.registerService.getAllUsers().subscribe(res => {
-      this.lastId = res.length - 1;
       console.log(res);
     });
     console.log("User: " + this.registerService.loggedInUser);
-
-
   }
 
-  userTypes = ["content provider", "default"];
-
-  onSubmit() {
-    this.lastId += 1;
+  onRegister() {
     this.user = this.signupForm.value;
-    this.user["id"] = this.lastId;
 
     this.registerService.register(this.signupForm.value).subscribe(
       error => {
         console.log(error);
-
       }
     )
 

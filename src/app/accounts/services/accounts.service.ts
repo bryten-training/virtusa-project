@@ -14,7 +14,9 @@ export class AccountsService implements OnInit {
   // mock user
   authUser: Auth = {
     currentUser: undefined,
-    isAuthenticated: false
+    isAuthenticated: false,
+    error_msg: undefined,
+    success_msg: undefined
   }
   allUsers: User[] = [];
   public accountsServiceSubj: BehaviorSubject<Auth>;
@@ -34,7 +36,7 @@ export class AccountsService implements OnInit {
     this.isAuthenticated();
   }
 
-  getObservable(): BehaviorSubject<Auth> {
+  getBehaviorSubject(): BehaviorSubject<Auth> {
     if (!this.accountsServiceSubj) {
       this.accountsServiceSubj = new BehaviorSubject<Auth>(this.authUser);
     }
@@ -56,38 +58,54 @@ export class AccountsService implements OnInit {
   }
 
   logIn(user: User) {
-    // console.log(user);
     // check validation
     console.log(this.allUsers);
-    this.validateLogIn(user);
+    let isValidated: boolean = this.validateLogIn(user);
 
-    let auth: Auth = {
-      currentUser: user,
-      isAuthenticated: true
+    if (isValidated) {
+      let auth: Auth = {
+        currentUser: user,
+        isAuthenticated: true,
+        error_msg: undefined,
+        success_msg: 'You have logged in successfully'
+      }
+      this.authUser = { ...auth };
+      this.accountsServiceSubj.next(this.authUser);
+
+      // save userEmail to localStorage
+      localStorage.setItem('userData', JSON.stringify({
+        userName: user.userName,
+        email: user.email
+      }));
+
+      // logged in success => route to Home page
+      setTimeout(() => {
+        this.router.navigate(['/home']);
+      }, 1000);
+    } else {
+      let auth: Auth = {
+        currentUser: undefined,
+        isAuthenticated: false,
+        error_msg: "Invalid username/email/password. Check again!",
+        success_msg: undefined
+      }
+      this.authUser = { ...auth };
+      this.accountsServiceSubj.next(this.authUser);
     }
-    this.authUser = { ...auth };
-    this.accountsServiceSubj.next(this.authUser);
-
-    // save userEmail to localStorage
-    localStorage.setItem('userData', JSON.stringify({
-      userName: user.userName,
-      email: user.email
-    }));
-
-    this.router.navigate(['/home']);
   }
 
-  validateLogIn(user: User) {
+  validateLogIn(user: User): boolean {
     let foundUser: User = this.allUsers.find((us: User) => us.email === user.email);
-    console.log('FOUND USER: ' + foundUser);
+    // console.log('FOUND USER: ' + foundUser);
 
     if (foundUser !== undefined && foundUser !== null) {
       if (foundUser.userName === user.userName) {
         // correct username
         console.log('correct username');
         if (window.btoa(user.passWord) === foundUser.passWord) {
-          // correct password
+          // correct password ==> good
           console.log('Correct password');
+          return true;
         } else {
           // wrong password
           console.log('Wrong password');
@@ -97,6 +115,7 @@ export class AccountsService implements OnInit {
         console.log('wrong username');
       }
     }
+    return false;
   }
 
   logOut() {

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { User } from './user.model'
+import { User } from './models/user.model'
 import { Observable, Observer } from 'rxjs';
 
 @Injectable({
@@ -19,12 +19,12 @@ export class RegisterService {
   }
 
   getUser(user: string, pass: string): Observable<User> {
-    return this.http.get<User>(`http://localhost:3000/Accounts?username=${user}&password=${pass}`);
+    return this.http.get<User>(`http://localhost:3000/Accounts?userName=${user}&passWord=${pass}`);
   }
 
-  register(user) {
-    console.log(user);
-
+  register(user: User) {
+    // console.log(user);
+    user.passWord = window.btoa(user.passWord);
     return this.http.post(`http://localhost:3000/Accounts`, user);
   }
 
