@@ -42,8 +42,8 @@ export class AddArticleComponent implements OnInit {
   articleForm: FormGroup = this.fb.group({
     subject: [, [Validators.required]],
     title: [, [Validators.required]],
-    image: [, [Validators.required]],
-    imageURL: [, [Validators.required]],
+    image: [, []],
+    imageURL: [, []],
     timeToRead: [, [Validators.required, Validators.min(1), Validators.max(100)]],
     tags: [, [Validators.required]],
     mdText: [, [Validators.required]]
@@ -53,16 +53,16 @@ export class AddArticleComponent implements OnInit {
     console.log(this.articleForm);
     this.submitted = true;
     // retrieve the length of articles, +1 as id
-    this.articlesService.get('articles').pipe(
+    this.articlesService.get('api/articles').pipe(
       catchError(err => throwError(err)),
       flatMap(a => a),
       count()
     ).subscribe(num => {
       let newArticle = this.constructANewArticle(num);
       console.log("newArticle:: ", newArticle)
-      this.articlesService.post('articles', newArticle).subscribe(response => {
+      this.articlesService.post('api/articles', newArticle).subscribe(response => {
         console.log(response);
-        this._snackBar.open("Your article has been published!", "OK", {
+        this._snackBar.open(`Your article has been published! Redirecting in ${this.snackBarTimeOut / 1000} seconds`, "OK", {
           duration: this.snackBarTimeOut
         });
         setTimeout(() => {
@@ -83,7 +83,7 @@ export class AddArticleComponent implements OnInit {
       id: num + 1,
       subject: this.articleForm.value.subject,
       title: this.articleForm.value.title,
-      image: this.articleForm.value.image,
+      image: this.articleForm.value.image == null ? this.getDefaultImage(this.articleForm.value.subject) : this.articleForm.value.image,
       author: {
         userId: this.user.id,
         name: `${this.user.firstName} ${this.user.lastName}`,
@@ -132,5 +132,15 @@ export class AddArticleComponent implements OnInit {
       duration: this.snackBarTimeOut
     });
     this.submitted = false; // reset submitted, so the submit button is enabled again
+  }
+
+  getDefaultImage(subject: Subject) {
+    if (subject == Subject.Angular) {
+      return 'assets/angular_default.png'
+    } else if (subject == Subject.JavaScript) {
+      return 'assets/js_default.png'
+    } else if (subject == Subject.NodeJS) {
+      return 'assets/nodejs_default.png'
+    }
   }
 }

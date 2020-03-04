@@ -16,33 +16,21 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         },
         {
           "id": 2,
-          "author": "anyone",
+          "authorinfo": {
+            "userType": null,
+            "name": "anyone"
+          },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "This is awesome",
-          "datetime": "2020-03-04T18:08:24.184Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "😊🏡🛁🏡👍🏻🧴👍🏻🧴🧴",
-          "datetime": "2020-03-04T19:13:34.566Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -63,13 +51,19 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         },
         {
           "id": 2,
-          "author": "Someone2",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone2"
+          },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
         }
@@ -197,7 +191,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -220,7 +217,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -243,7 +243,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -282,7 +285,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "authorinfo": {
+            "userType": null,
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
