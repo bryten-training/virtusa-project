@@ -1,17 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
-import { RegisterService } from '../register.service';
-import { Router } from '@angular/router';
-import { User } from '../user.model';
+import { User } from '../models/user.model';
+import { AccountsService } from '../services/accounts.service';
 
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss']
 })
-export class SignUpComponent {
+export class SignUpComponent implements OnInit {
   userTypes: string[] = ["content provider", "default"];
-  user: User = new User();
+  hasErrors: boolean;
+  message: string;
 
   signupForm = new FormGroup({
     userName: new FormControl("", [Validators.required]),
@@ -22,21 +22,29 @@ export class SignUpComponent {
     userType: new FormControl("", [Validators.required])
   });
 
-  constructor(private registerService: RegisterService, private router: Router) {
-    this.registerService.getAllUsers().subscribe(res => {
-      console.log(res);
-    });
-    console.log("User: " + this.registerService.loggedInUser);
+  constructor(private accountsService: AccountsService) {
+  }
+
+  ngOnInit() {
+    this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
+      // console.log(userInfo);
+      this.hasErrors = userInfo.error_msg ? true : false;
+      this.message = userInfo.error_msg ? userInfo.error_msg : userInfo.success_msg;
+    })
+  }
+
+  styleMessage() {
+    if (this.hasErrors) {
+      return {
+        "color": '#ff0000'
+      }
+    }
+    return {
+      "color": '#008000'
+    }
   }
 
   onRegister() {
-    this.user = this.signupForm.value;
-
-    this.registerService.register(this.signupForm.value).subscribe(
-      error => {
-        console.log(error);
-      }
-    )
-
+    this.accountsService.register(this.signupForm.value);
   }
 }

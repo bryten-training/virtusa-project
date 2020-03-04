@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.instantiateMyForm();
     this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
-      console.log(userInfo);
+      // console.log(userInfo);
       this.hasErrors = userInfo.error_msg ? true : false;
       this.message = userInfo.error_msg ? userInfo.error_msg : userInfo.success_msg;
     })

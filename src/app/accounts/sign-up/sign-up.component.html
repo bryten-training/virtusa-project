@@ -77,7 +77,20 @@
           </mat-form-field>
         </div>
 
-        <button [disabled]="!signupForm.valid" mat-raised-button color="primary" (click)="onRegister()">Submit</button>
+        <!-- For message after hitting log in button -->
+        <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
+          <i class="material-icons" *ngIf="hasErrors">
+            close &nbsp;&nbsp;
+          </i>
+          <i class="material-icons" *ngIf="hasErrors === false">
+            check &nbsp;&nbsp;
+          </i>
+          {{ message }}
+        </span>
+
+        <button [disabled]="!signupForm.valid" mat-raised-button color="primary"
+                (click)="onRegister()">Register
+        </button>
 
       </form>
     </mat-card-content>

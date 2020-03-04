@@ -4,8 +4,9 @@ import { User } from '../models/user.model';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Auth } from '../models/auth.model';
 import { Router } from '@angular/router';
+import { tap } from 'rxjs/operators';
 
-const API_URL = "http://localhost:3000";
+const API_URL: string = "http://localhost:3000";
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,7 @@ export class AccountsService implements OnInit {
   ) {
     this.loadAllUsers().subscribe(users => {
       this.allUsers = users;
-      console.log(this.allUsers)
+      // console.log(this.allUsers)
     })
   }
 
@@ -60,7 +61,7 @@ export class AccountsService implements OnInit {
   logIn(user: User) {
     // check validation
     console.log(this.allUsers);
-    let isValidated: boolean = this.validateLogIn(user);
+    let { isValidated, foundUser } = this.validateLogIn(user);
 
     if (isValidated) {
       let auth: Auth = {
@@ -75,7 +76,10 @@ export class AccountsService implements OnInit {
       // save userEmail to localStorage
       localStorage.setItem('userData', JSON.stringify({
         userName: user.userName,
-        email: user.email
+        email: user.email,
+        firstName: foundUser.firstName,
+        lastName: foundUser.lastName,
+        userType: foundUser.userType
       }));
 
       // logged in success => route to Home page
@@ -94,7 +98,7 @@ export class AccountsService implements OnInit {
     }
   }
 
-  validateLogIn(user: User): boolean {
+  validateLogIn(user: User): { isValidated: boolean, foundUser: User } {
     let foundUser: User = this.allUsers.find((us: User) => us.email === user.email);
     // console.log('FOUND USER: ' + foundUser);
 
@@ -105,7 +109,7 @@ export class AccountsService implements OnInit {
         if (window.btoa(user.passWord) === foundUser.passWord) {
           // correct password ==> good
           console.log('Correct password');
-          return true;
+          return { isValidated: true, foundUser: foundUser };
         } else {
           // wrong password
           console.log('Wrong password');
@@ -115,8 +119,58 @@ export class AccountsService implements OnInit {
         console.log('wrong username');
       }
     }
-    return false;
+    return { isValidated: false, foundUser: undefined };
   }
+
+  register(user: User) {
+    // console.log(user);
+    // check exist user
+    let userExist: boolean = this.isUserExist(user);
+    if (userExist) {
+      let auth: Auth = {
+        currentUser: undefined,
+        isAuthenticated: false,
+        error_msg: "This user account already exists",
+        success_msg: undefined
+      }
+      this.authUser = { ...auth };
+      this.accountsServiceSubj.next(this.authUser);
+    } else {
+      // hash password
+      user.passWord = window.btoa(user.passWord);
+      this.http.post<User>(`${API_URL}/accounts`, user).pipe(
+        tap(() => {
+          this.loadAllUsers().subscribe(users => {
+            this.allUsers = users;
+            // console.log(this.allUsers);
+            let auth: Auth = {
+              currentUser: undefined,
+              isAuthenticated: false,
+              error_msg: undefined,
+              success_msg: "Account created successfully."
+            }
+            this.authUser = { ...auth };
+            this.accountsServiceSubj.next(this.authUser);
+
+            // on register success
+            setTimeout(() => {
+              this.router.navigate(['/logIn']);
+            }, 1000);
+          })
+        })
+      ).subscribe(
+        (val) => { },
+        (err) => console.log(err)
+      );
+    }
+  }
+
+
+  isUserExist(user: User): boolean {
+    let foundUser: User = this.allUsers.find(u => u.email === user.email);
+    return foundUser ? true : false;
+  }
+
 
   logOut() {
     // clear Local storage
@@ -126,11 +180,15 @@ export class AccountsService implements OnInit {
     this.router.navigate(['/logIn']);
   }
 
+
   setCurrentUser() {
     let auth: Auth = {
       currentUser: {
         userName: JSON.parse(localStorage.getItem('userData'))['userName'],
-        email: JSON.parse(localStorage.getItem('userData'))['email']
+        email: JSON.parse(localStorage.getItem('userData'))['email'],
+        firstName: JSON.parse(localStorage.getItem('userData'))['firstName'],
+        lastName: JSON.parse(localStorage.getItem('userData'))['lastName'],
+        userType: JSON.parse(localStorage.getItem('userData'))['userType']
       },
       isAuthenticated: true
     }
@@ -138,6 +196,7 @@ export class AccountsService implements OnInit {
 
     this.accountsServiceSubj.next(this.authUser);
   }
+
 
   clearCurrentUser() {
     let auth: Auth = {

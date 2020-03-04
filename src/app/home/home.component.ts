@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // console.log('HOME COMP: ' + JSON.stringify(auth.currentUser, null, 2));
       this.currentUser = auth.currentUser;
     })
   }
