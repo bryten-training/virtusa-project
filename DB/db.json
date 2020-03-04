@@ -519,11 +519,12 @@
   ],
   "assessment": [
     {
+      "id": 0,
       "courseName": "Angular",
       "icon": "assets/img/angular.jpg",
-      "id": 0,
       "courseData": [
         {
+          "id": 0,
           "q": " What is Angular?",
           "options": [
             {
@@ -545,6 +546,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "What decorator is used for configuring your module class",
           "options": [
             {
@@ -566,6 +568,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
@@ -587,6 +590,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Router is part of which of the following module?",
           "options": [
             {
@@ -608,6 +612,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "RxJS can be used for?",
           "options": [
             {
@@ -636,6 +641,7 @@
       "id": 1,
       "courseData": [
         {
+          "id": 0,
           "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
@@ -657,6 +663,7 @@
           ]
         },
         {
+          "id": 1,
           "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
@@ -678,6 +685,7 @@
           ]
         },
         {
+          "id": 2,
           "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
@@ -699,6 +707,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
@@ -720,6 +729,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
@@ -748,6 +758,7 @@
       "id": 2,
       "courseData": [
         {
+          "id": 0,
           "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
@@ -769,6 +780,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "How can we check the current version of NPM?",
           "options": [
             {
@@ -790,6 +802,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "What is the advantage of using node.js?",
           "options": [
             {
@@ -811,6 +824,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
@@ -832,6 +846,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following provides in-built events.",
           "options": [
             {
