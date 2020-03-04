@@ -36,7 +36,7 @@ export class ArticlescommentsComponent implements OnInit {
     console.log(this.article);
 
 
-    this.articlesService.put(`articles/${this.article.id}`, this.article).subscribe((data) => {
+    this.articlesService.put(`api/articles/${this.article.id}`, this.article).subscribe((data) => {
       console.log("after::", data);
 
       
