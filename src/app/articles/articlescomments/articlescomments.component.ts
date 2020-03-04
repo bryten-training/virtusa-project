@@ -43,7 +43,7 @@ export class ArticlescommentsComponent implements OnInit {
   commentsubmit() {
     let commentdata = {
       id: 2,
-      author: {
+      authorinfo: {
         userType: this.user.userType,
         name: this.user.firstName + " " + this.user.lastName
       },

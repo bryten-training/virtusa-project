@@ -17,7 +17,7 @@ export interface Article {
     likes: number,
     comments: {
         id: number,
-        author: {
+        authorinfo: {
             userType: string,
             name: string
         },
