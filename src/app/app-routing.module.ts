@@ -22,7 +22,7 @@ const routes: Routes = [
   { path: "crdlist/:id", component: FlashCardlistComponent },
    { path: 'cards', component: FlashCardlistComponent },
   {
-    path: 'artcls',
+    path: 'articles',
     loadChildren: () =>
       import("./articles/articles.module").then(m => m.ArticlesModule)
   },

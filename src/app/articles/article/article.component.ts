@@ -22,7 +22,7 @@ export class ArticleComponent implements OnInit {
       this.articlesService.get("api/articles", { params: { subject: param.type, id: param.id } })
         .subscribe((data: Article[]) => {
           if (data == undefined || !Array.isArray(data) || data.length == 0) { // not valid route, redirect to Article Homepage
-            this.router.navigateByUrl("artcls");
+            this.router.navigateByUrl("articles");
             return;
           }
           this.article = data[0];
