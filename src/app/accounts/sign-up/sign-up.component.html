@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <mat-card class="login-card">
+<div class="wrapper" style="height: auto;">
+  <mat-card class="login-card" style="top: 41vh;">
     <mat-card-header>
       <mat-card-title>
         <i class="material-icons">
@@ -39,7 +39,8 @@
           </i>
           <mat-form-field class="example-full-width" appearance="fill">
             <mat-label>Email</mat-label>
-            <input matInput placeholder="Enter email address" formControlName="email">
+            <input matInput placeholder="Email" formControlName="email">
+            <mat-error>Invalid input</mat-error>
           </mat-form-field>
         </div>
 
@@ -88,7 +89,7 @@
           {{ message }}
         </span>
 
-        <button [disabled]="!signupForm.valid" mat-raised-button color="primary"
+        <button  mat-raised-button color="primary"
                 (click)="onRegister()">Register
         </button>
 

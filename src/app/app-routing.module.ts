@@ -11,26 +11,27 @@ import { AlreadyAuthService } from './accounts/services/already-auth.service';
 import { LoginComponent } from './accounts/login/login.component';
 import { AddcardComponent } from './flash-cards/addcard/addcard.component';
 import { FlashCardlistComponent } from './flash-cards/flash-cardlist/flash-cardlist.component';
+import { AssessmentFormComponent } from "./assessment/assessment-form/assessment-form.component";
 
 const routes: Routes = [
 
 
   { path: "", redirectTo: 'logIn', pathMatch: 'full', canActivate: [AlreadyAuthService] },
-  { path: "home", component: HomeComponent, canActivate: [AuthGuardService] },
-  { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService] },
-  { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService] },
-  { path: "crdlist/:id", component: FlashCardlistComponent },
-   { path: 'cards', component: FlashCardlistComponent },
+  { path: "home", component: HomeComponent, canActivate: [AuthGuardService], data: { state: 'home' } },
+  { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService], data: { state: 'login' } },
+  { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService], data: { state: 'signup' } },
+  { path: "crdlist/:id", component: FlashCardlistComponent, data: { state: 'cardlist' } },
+   { path: 'cards', component: FlashCardlistComponent, data: { state: 'cards' } },
   {
     path: 'articles',
     loadChildren: () =>
       import("./articles/articles.module").then(m => m.ArticlesModule)
   },
-  { path: 'assessment', component: AssessmentComponent },
-  { path: 'sign-up', component: SignUpComponent },
-  { path: 'addcard', component: AddcardComponent},
-  { path: 'card', component: FlashCardComponent},
-  { path: 'video', component: VideoComponent }
+  { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
+  { path: "course", component: AssessmentFormComponent },
+  { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' }},
+  { path: 'card', component: FlashCardComponent, data: { state: 'card' }},
+  { path: 'video', component: VideoComponent, data: { state: 'video' } }
 ];
 
 @NgModule({

@@ -1,7 +1,14 @@
 import { Article } from "./model/article";
 import { Subject } from './model/subject';
 
-// Add author and tags
+
+/* Hey Team we changed the schema for article a bit,
+the comments added author: {
+            userType: string,
+            name: string
+        }*/
+
+
 
 export const ARTICLES: Article[] = [
   {
@@ -21,7 +28,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -47,7 +58,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -74,7 +89,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -101,7 +120,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -128,7 +151,10 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
         comment: "Good",
         datetime: new Date()
       }
@@ -155,7 +181,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -182,7 +212,10 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
         comment: "Good",
         datetime: new Date()
       }
@@ -208,7 +241,11 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
+
         comment: "Good",
         datetime: new Date()
       }
@@ -235,7 +272,10 @@ export const ARTICLES: Article[] = [
     comments: [
       {
         id: 1,
-        author: "Mike",
+        authorinfo: {
+          userType: "Content Creaator",
+          name: "Someo"
+        },
         comment: "Good",
         datetime: new Date()
       }
