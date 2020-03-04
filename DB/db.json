@@ -16,15 +16,30 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         },
         {
           "id": 2,
-          "author": "anyone",
+          "author": {
+            "userType": "content provider",
+            "name": "anyone"
+          },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
+        },
+        {
+          "id": 2,
+          "author": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This is awesome",
+          "datetime": "2020-03-04T18:08:24.184Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -45,13 +60,19 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         },
         {
           "id": 2,
-          "author": "Someone2",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone2"
+          },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
         }
@@ -179,7 +200,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -202,7 +226,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -225,7 +252,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -248,7 +278,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }
@@ -271,7 +304,10 @@
       "comments": [
         {
           "id": 1,
-          "author": "Someone",
+          "author": {
+            "userType": "content provider",
+            "name": "Someone"
+          },
           "comment": "very effective",
           "datetime": "Mar 2, 2020"
         }

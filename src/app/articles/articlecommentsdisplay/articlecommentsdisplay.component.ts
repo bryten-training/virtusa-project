@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../service/articles.service';
 import { Article } from '../model/article';
+import { User } from 'src/app/accounts/models/user.model';
 
 
 @Component({
@@ -13,7 +14,7 @@ export class ArticlecommentsdisplayComponent implements OnInit {
   apple=false
 
   constructor(
-    private articlesService: ArticlesService,
+    private articlesService: ArticlesService
   ) { }
 
 
@@ -23,7 +24,6 @@ export class ArticlecommentsdisplayComponent implements OnInit {
       console.log("ArticlecommentsdisplayComponent:: ", article);
       this.article = article
     })
-    
   }
   liked=false
   article: Article;
