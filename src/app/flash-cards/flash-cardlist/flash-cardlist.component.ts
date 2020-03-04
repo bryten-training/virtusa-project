@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardsService, Flashcard } from '../flash-cards.service';
 import { Router } from '@angular/router';
+import { AccountsService } from 'src/app/accounts/services/accounts.service';
+import { User } from 'src/app/accounts/models/user.model';
+import { Auth } from 'src/app/accounts/models/auth.model';
 
 
 @Component({
@@ -10,10 +13,10 @@ import { Router } from '@angular/router';
 })
 export class FlashCardlistComponent implements OnInit {
   index = 0;
-
+  currentUser: User;
   flashcard: Flashcard;
   flashcardlist = [new Flashcard()];
-  constructor(private CardSvc: FlashcardsService, private router: Router) {
+  constructor(private CardSvc: FlashcardsService, private accountsService: AccountsService, private router: Router) {
   this.CardSvc.getFlashcard().subscribe(flashcard => {this.flashcard = flashcard; });
 
 }
@@ -29,6 +32,15 @@ setlist(list) {
       console.log(' ' + this.flashcardlist[this.index]);
       this.flashcard = this.flashcardlist[this.index];
     });
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // print out user info
+      console.log('HOME COMP: ' + JSON.stringify(auth.currentUser, null, 2));
+
+      // set currentUser for your component (if needed)
+      this.currentUser = auth.currentUser;
+    });
+
+
   }
 
   passcard() {
@@ -37,10 +49,12 @@ setlist(list) {
     // this.CardSvc.getFlashcard().pipe(tap(e => this.flashcard.pass));
     this.CardSvc.pass(this.flashcard).subscribe(_ => {
       this.router.navigate(['/cards']);
-
-
   });
 }
+
+  reset() {
+    this.flashcardlist.forEach(card => {card.pass = false; card.front = false; });
+    }
 
   addcard() {
     this.CardSvc.pass(this.flashcard).subscribe(_ => {

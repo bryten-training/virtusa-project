@@ -3,7 +3,7 @@
     {
       "id": 1,
       "subject": "Angular",
-      "title": "Effective Java for Android (cheatsheet).",
+      "title": "Effective Java for Android (cheatisheet).",
       "image": "assets/phone.png",
       "author": {
         "name": "Author",
@@ -363,6 +363,15 @@
       "email": "anjila@gmail.com",
       "userType": "content provider",
       "id": 5
+    },
+    {
+      "userName": "a",
+      "passWord": "YQ==",
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a@a.com",
+      "userType": "content provider",
+      "id": 6
     }
   ],
   "flashCards": [
@@ -388,8 +397,8 @@
       "question": "Question",
       "ans": "Answer",
       "body": "content",
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
       "id": 3
     },
@@ -400,6 +409,30 @@
       "question": "A",
       "ans": "A",
       "id": 4
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "ss",
+      "ans": "sa",
+      "id": 5
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "question": "TestQ",
+      "ans": "testA",
+      "id": 6
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "question": "what. is your name \n1",
+      "ans": "a\ns\nf\ng\nj\n",
+      "id": 7
     }
   ],
   "assessment": [
