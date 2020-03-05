@@ -5,7 +5,7 @@
         <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
     </mat-card>
 
-    <div [hidden]="currentUser===undefined" class="upload">
+    <div [hidden]="currentUser===undefined" class="upload" *ngIf="!flipped">
     <mat-card (click)="flipIt()">
         <mat-card-title>Upload</mat-card-title>
         <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
@@ -16,6 +16,7 @@
         <form [formGroup]="uploadForm">
             <input type="file" formControlName="theName" accept="video/*" (change)="onFileChanged($event)" />
             <mat-form-field class="full-width" appearance="outline">
+                <mat-label>Select Course*</mat-label>
                 <mat-select formControlName="theCourse">
                     <mat-option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</mat-option>
                 </mat-select>
