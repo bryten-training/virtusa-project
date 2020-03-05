@@ -7,7 +7,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from "../../accounts/models/user.model";
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { throwError } from 'rxjs';
+import { throwError, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-add-article',
@@ -23,12 +23,25 @@ export class AddArticleComponent implements OnInit {
     private router: Router
   ) { }
 
+  private subscription: Subscription = new Subscription();
   ngOnInit(): void {
-    this.user = this.articlesService.getCurrentUser();
-    if (this.user == undefined || this.user.userType != "content provider") {
-      this.router.navigateByUrl(`/articles`);
-    }
+    this.subscription = this.articlesService.getCurrentUser().subscribe((user: User) => {
+      if (user == undefined || user.userType != "content provider") {
+        this.router.navigateByUrl(`/articles`);
+      } else {
+        this.user = user;
+        let sub2 = this.articleForm.valueChanges.subscribe((changes) => {
+          this.articlesService.isAddArticleFormDirty = true;
+        });
+        this.subscription.add(sub2);
+      }
+    });
   }
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
+
   mdText: string;
   user: User = {
     id: 1,
@@ -65,7 +78,7 @@ export class AddArticleComponent implements OnInit {
       console.log("newArticle:: ", newArticle)
       this.articlesService.post('api/articles', newArticle).subscribe(response => {
         console.log(response);
-        this._snackBar.open(`Your article has been published! Redirecting in ${this.snackBarTimeOut / 1000} seconds`, "OK", {
+        this._snackBar.open(`Your article has been published!\nRedirecting in ${this.snackBarTimeOut / 1000} seconds`, "OK", {
           duration: this.snackBarTimeOut
         });
         setTimeout(() => {

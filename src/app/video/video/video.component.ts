@@ -55,6 +55,7 @@ export class VideoComponent implements OnInit {
   url
   newItemUrl
   submitted: boolean = false;
+  showalert: boolean;
   regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
 
   uploadForm = new FormGroup ({
@@ -99,6 +100,10 @@ export class VideoComponent implements OnInit {
     }});
   } 
 
+  //nav back
+  navBack() {
+    this.flipped = !this.flipped;
+  }
   flipIt() {
     this.flipped = !this.flipped;
     this.uploadForm.reset();
@@ -150,7 +155,7 @@ export class VideoComponent implements OnInit {
 
     this.httpClient.put(`/api/video/${this.selectedCourse}`, this.videoDataForPost).subscribe((data) => {
     //console.log("after::", data);
-
+    this.showalert = !this.showalert
     this.openSnackBar();
     setTimeout (() => { this.flipIt(); }, 800);
     });

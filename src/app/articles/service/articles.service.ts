@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpEvent } from '@angular/common/http';
 import { Article } from '../model/article';
-import { Observable, BehaviorSubject } from 'rxjs';
+import { Observable, BehaviorSubject, Subscription } from 'rxjs';
 import { AccountsService } from 'src/app/accounts/services/accounts.service';
 import { Auth } from 'src/app/accounts/models/auth.model';
 import { User } from 'src/app/accounts/models/user.model';
@@ -11,21 +11,28 @@ import { User } from 'src/app/accounts/models/user.model';
 })
 export class ArticlesService {
 
+  private currentUserSubject: BehaviorSubject<User>;
   articleSubject: BehaviorSubject<Article>;
+  private subscription: Subscription;
 
   constructor(
     private http: HttpClient,
     private accountsService: AccountsService
   ) {
     this.articleSubject = new BehaviorSubject(null);
-    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+    this.currentUserSubject = new BehaviorSubject(null);
+    this.subscription = this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       console.log(auth)
       if (auth.currentUser != undefined) {
-        this.currentUser = auth.currentUser;
+        this.currentUserSubject.next(auth.currentUser);
       }
     });
   }
-  private currentUser: User;
+  isAddArticleFormDirty = false;
+
+  ngOnDestroy(): void {
+    this.subscription.unsubscribe();
+  }
 
   get(url: string, options?): Observable<any> {
     return this.http.get<Article[]>(url, options);
@@ -48,6 +55,6 @@ export class ArticlesService {
   }
 
   getCurrentUser() {
-    return this.currentUser;
+    return this.currentUserSubject;
   }
 }

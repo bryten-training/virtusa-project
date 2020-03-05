@@ -4,6 +4,7 @@ import { Router } from '@angular/router';
 import { User } from 'src/app/accounts/models/user.model';
 import { AccountsService } from 'src/app/accounts/services/accounts.service';
 import { Auth } from 'src/app/accounts/models/auth.model';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -16,7 +17,10 @@ export class AssessmentComponent implements OnInit {
   data: Assessment[] = [];
   displayArr = [];
   currentUser: User;
-  constructor(private asSvc: AssessmentService, private router: Router, private accountsService: AccountsService ) { }
+  constructor(private asSvc: AssessmentService,
+              private router: Router,
+              private accountsService: AccountsService,
+              private _snackBar: MatSnackBar ) { }
 
   ngOnInit(): void {
     this.asSvc.getAssessmentList().subscribe(res => {
@@ -24,11 +28,11 @@ export class AssessmentComponent implements OnInit {
       this.data.forEach(a => this.displayArr.push(false));
     },
     error => {
-      alert('Sorry. There was a problem course data.');
+      this._snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok');
     });
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       // print out user info
-      //console.log('Assessment Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
+      // console.log('Assessment Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
       // set currentUser for your component (if needed)
       this.currentUser = auth.currentUser;
     });

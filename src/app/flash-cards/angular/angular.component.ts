@@ -4,16 +4,12 @@ import { Router } from '@angular/router';
 import { AccountsService } from 'src/app/accounts/services/accounts.service';
 import { User } from 'src/app/accounts/models/user.model';
 import { Auth } from 'src/app/accounts/models/auth.model';
-
-
 @Component({
-  selector: 'app-flash-cardlist',
-  templateUrl: './flash-cardlist.component.html',
-  styleUrls: ['./flash-cardlist.component.scss']
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.scss']
 })
-export class FlashCardlistComponent implements OnInit {
-  flipped = false;
-  imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkL8GlKZ775j3f0VVgS1rU8L2LoX5UEM6fKv_eGLzeza27WYH";
+export class AngularComponent implements OnInit {
   index = 0;
   currentUser: User;
   flashcard: Flashcard;
@@ -32,7 +28,7 @@ export class FlashCardlistComponent implements OnInit {
 
 setlist(list) {
   console.log('in setlist');
-  this.flashcardlist = list.filter(card => card.pass !== true);
+  this.flashcardlist = list.filter(card => card.type === 'angular' && card.pass !== true);
 }
   ngOnInit(): void {
 

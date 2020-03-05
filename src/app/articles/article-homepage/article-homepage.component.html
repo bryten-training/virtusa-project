@@ -11,7 +11,7 @@
 
 <div id="subjectDiv">
   <mat-card class="subject-card" *ngFor="let subject of subjects" 
-  [routerLink]="['/articles/', subject.name, subject.name === 'Angular' ? 1:13 ]">
+  [routerLink]="['/articles/', subject.name]">
     <mat-card-content>
       <h1>{{ subject.name }}</h1>
       <img mat-card-image src="{{ subject.imagePath }}" alt="{{ subject.name }} logo" />
@@ -22,7 +22,7 @@
   <mat-card class="subject-card" [routerLink]="['/articles/add-article']">
     <mat-card-content>
       <h1>Add Article</h1>
-      <img mat-card-image src="assets/img/angular.jpg" alt="add article logo" />
+      <img mat-card-image src="assets/add-article.png" alt="add article logo" />
     </mat-card-content>
   </mat-card>
 </div>

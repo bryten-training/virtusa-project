@@ -11,6 +11,9 @@ import {
   Options,
   AssessmentService
 } from '../assessment.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-new-assessment',
@@ -18,7 +21,10 @@ import {
   styleUrls: ['./new-assessment.component.scss']
 })
 export class NewAssessmentComponent implements OnInit {
-  constructor(private formB: FormBuilder, private assSvc: AssessmentService ) { }
+  constructor(private formB: FormBuilder,
+              private router: Router,
+              private assSvc: AssessmentService,
+              private _snackBar: MatSnackBar) { }
 
   Answers = [true, false];
   courses = ['Angular', 'JavaScript', 'NodeJS'];
@@ -126,31 +132,14 @@ export class NewAssessmentComponent implements OnInit {
       ],
     };
     console.log(courseNew);
-    // this.assSvc.postCourse(this.assessmentForm.value.course, courseNew);
-    // this.assSvc.postCrs(courseNew).subscribe(data => console.log(data));
+    this.assSvc.postCourse(courseNew).subscribe(data => {
+      console.log(data);
+      this._snackBar.open('Successfully saved data', 'Ok', {
+        duration: 2000,
+      });
+    });
+    setTimeout(() => {
+      this.router.navigate(['/assessment']);
+    }, 1000);
   }
 }
-//   let courseNew: Assessment ;
-    //   let courseDataNew: AssessmentQuestions ;
-    //   let courseoptionsNew: Options;
-
-    //   for (let i = 1; i < 4; i++) {
-    //     courseDataNew.id = i - 1;
-    //     courseDataNew.q = this.assessmentForm.value['ques' + i];
-    //     for (let l = 1; l < 5; l++) {
-    //       if (courseoptionsNew === undefined) {
-    //         courseoptionsNew.id = l - 1;
-    //         courseoptionsNew.opt = this.assessmentForm.value[
-    //           'ques' + i + 'op' + l
-    //         ];
-    //         courseoptionsNew.optAns = this.assessmentForm.value[
-    //           'ques' + i + 'Ans' + l
-    //         ];
-    //         courseDataNew.options.push(courseoptionsNew);
-    //       }
-    //     }
-    //     courseNew.courseData.push(courseDataNew);
-    //   }
-    //   courseNew.courseName = this.assessmentForm.value.course;
-    //   courseNew.icon = '';
-    //   courseNew.id = 4;

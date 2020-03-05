@@ -31,15 +31,6 @@
           },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "This is fun",
-          "datetime": "2020-03-04T21:35:41.903Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -165,7 +156,7 @@
     },
     {
       "id": 7,
-      "subject": "NodeJS",
+      "subject": "Angular",
       "title": "Learning",
       "image": "data:image/png;base64,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",
       "author": {
@@ -335,6 +326,24 @@
           },
           "comment": "This class is awesome  window 😎",
           "datetime": "2020-03-04T21:34:02.705Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This really awesome : 😎 ",
+          "datetime": "2020-03-05T14:44:15.658Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This is great",
+          "datetime": "2020-03-05T14:48:08.636Z"
         }
       ],
       "assessmentURL": "/assessment/JavaScript/1"
@@ -447,22 +456,33 @@
       "id": 9
     },
     {
-      "userName": "fdfgf",
-      "passWord": "cGFzcw==",
-      "firstName": "abderrahim",
-      "lastName": "dsfdsf",
-      "email": "sasd@dfdas.com",
+
+      "userName": "saik",
+      "passWord": "MTIzNA==",
+      "firstName": "saik",
+      "lastName": "kumar",
+      "email": "sai1@gmail.com",
       "userType": "content provider",
       "id": 10
     },
     {
-      "userName": "sdsdf",
-      "passWord": "c2ZmZg==",
-      "firstName": "qsdfgf",
-      "lastName": "sfgs",
-      "email": "sdds@sees.com",
+      "userName": "Sai",
+      "passWord": "U2Fp",
+      "firstName": "SaiSampath",
+      "lastName": "kumar",
+      "email": "sai123@gmail.com",
       "userType": "content provider",
       "id": 11
+    },
+    {  
+      "userName": "Amruta",
+      "passWord": "TmFpZHU=",
+      "firstName": "Amruta",
+      "lastName": "Naidu",
+      "email": "amruta@test.com",
+      "userType": "content provider",
+      "id": 12
+
     }
   ],
   "flashCards": [
@@ -652,18 +672,22 @@
           "q": " What is Angular?",
           "options": [
             {
+              "id": 0,
               "opt": "SPA",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": "MPA",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None",
               "optAns": false
             }
@@ -674,18 +698,22 @@
           "q": "What decorator is used for configuring your module class",
           "options": [
             {
+              "id": 0,
               "opt": "@NgModule",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": "@NgApp",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -696,18 +724,22 @@
           "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
+              "id": 0,
               "opt": "|",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": ":",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -718,18 +750,22 @@
           "q": "Router is part of which of the following module?",
           "options": [
             {
+              "id": 0,
               "opt": "@angular/core",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "@angular/router",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -740,18 +776,22 @@
           "q": "RxJS can be used for?",
           "options": [
             {
+              "id": 0,
               "opt": " Browser",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "Server Side",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -769,18 +809,22 @@
           "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
+              "id": 0,
               "opt": "append()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "concat()",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "attach()",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -791,18 +835,22 @@
           "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
+              "id": 0,
               "opt": "pop()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "join()",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "map()",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "push()",
               "optAns": true
             }
@@ -813,18 +861,22 @@
           "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
+              "id": 0,
               "opt": "alertbox(“GeeksforGeeks”);",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "alert(“GeeksforGeeks”);",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "msgbox(“GeeksforGeeks”);",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "msg(“GeeksforGeeks”);",
               "optAns": false
             }
@@ -835,18 +887,22 @@
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
+              "id": 0,
               "opt": "variable carName;",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "var carName;  ",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "v carName;",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None",
               "optAns": false
             }
@@ -857,20 +913,76 @@
           "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
+              "id": 0,
               "opt": "reverse()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "shift()",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "slice()",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "some()",
               "optAns": false
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "q": "What is JavaScript",
+          "options": [
+            {
+              "id": 1,
+              "opt": "Framwork",
+              "optAns": false
+            },
+            {
+              "id": 2,
+              "opt": "Scripting",
+              "optAns": true
+            },
+            {
+              "id": 3,
+              "opt": "Hypertext",
+              "optAns": false
+            },
+            {
+              "id": 4,
+              "opt": "All the above",
+              "optAns": false
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "q": "kaaksdajbhsdahbshb",
+          "options": [
+            {
+              "id": 1,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": false
+            },
+            {
+              "id": 2,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": false
+            },
+            {
+              "id": 3,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": true
+            },
+            {
+              "id": 4,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": true
             }
           ]
         }
@@ -886,18 +998,22 @@
           "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
+              "id": 0,
               "opt": "to store the result",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "to get the last command used",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "to get the last result",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -908,18 +1024,22 @@
           "q": "How can we check the current version of NPM?",
           "options": [
             {
+              "id": 0,
               "opt": "npm --ver",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "npm help",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "npm --version",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -930,18 +1050,22 @@
           "q": "What is the advantage of using node.js?",
           "options": [
             {
+              "id": 0,
               "opt": "It provides an easy way to build scalable network programs",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "Generally fast",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Great concurrency",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "All of these",
               "optAns": true
             }
@@ -952,18 +1076,22 @@
           "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
+              "id": 0,
               "opt": "Express.js",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "GruntJS",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "NPM",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -974,18 +1102,22 @@
           "q": "Which of the following provides in-built events.",
           "options": [
             {
+              "id": 0,
               "opt": "callback",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "throw",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "handler",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "events",
               "optAns": true
             }
