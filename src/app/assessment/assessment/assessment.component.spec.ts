@@ -9,7 +9,7 @@ describe('AssessmentComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ AssessmentComponent ]
-    }) 
+    })
     .compileComponents();
   }));
 

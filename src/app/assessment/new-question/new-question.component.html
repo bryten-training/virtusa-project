@@ -20,7 +20,7 @@
         <input formControlName="ques1op1" matInput placeholder="Enter Option 1">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Answer 1</mat-label>
+        <mat-label>Answer</mat-label>
         <mat-select formControlName="ques1Ans1">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -29,11 +29,11 @@
     </mat-form-field>
 
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Answer 1</mat-label>
+        <mat-label>Option 2</mat-label>
         <input formControlName="ques1op2" matInput placeholder="Enter Option 2">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Option 1</mat-label>
+        <mat-label>Answer</mat-label>
         <mat-select formControlName="ques1Ans2">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -46,7 +46,7 @@
         <input formControlName="ques1op3" matInput placeholder="Enter Option 3">    
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Answer 1</mat-label>
+        <mat-label>Answer</mat-label>
         <mat-select formControlName="ques1Ans3">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -59,7 +59,7 @@
         <input formControlName="ques1op4" matInput placeholder="Enter Option 4">    
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Answer 1</mat-label>
+        <mat-label>Answer</mat-label>
         <mat-select formControlName="ques1Ans4">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -69,6 +69,6 @@
     <mat-error *ngIf="assessmentForm.valid">
         Please Enter Form Correctly
     </mat-error>
-    <button mat-raised-button color='primary' type="submit" class="full-width submitButton" >Submit</button>
+    <button [disabled]="assessmentForm.invalid" matTooltip="Check your score" matTooltipPosition="right" mat-raised-button color='primary' type="submit" class="full-width submitButton" >Submit</button>
 </form>
 <br><br>

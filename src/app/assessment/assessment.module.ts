@@ -9,6 +9,8 @@ import {FormsModule} from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
 import { NewAssessmentComponent } from './new-assessment/new-assessment.component';
 import { NewQuestionComponent } from './new-question/new-question.component';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { NewQuestionComponent } from './new-question/new-question.component';
     MaterialModule,
     ReactiveFormsModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    MatSnackBarModule,
+    MatTooltipModule
   ]
 })
 export class AssessmentModule { }
