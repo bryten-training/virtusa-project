@@ -19,6 +19,9 @@ export class AssessmentComponent implements OnInit {
     this.asSvc.getAssessmentList().subscribe(res => {
       this.data = res;
       this.data.forEach(a => this.displayArr.push(false));
+    },
+    error => {
+      alert('Sorry. There was a problem course data.');
     });
   }
   nav(courseName) {
@@ -26,6 +29,9 @@ export class AssessmentComponent implements OnInit {
       {
       course: courseName,
     }});
+  }
+  navNew() {
+    this.router.navigate(['NewAssessment']);
   }
 
   onClick(courseId: number) {

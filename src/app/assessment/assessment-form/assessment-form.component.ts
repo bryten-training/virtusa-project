@@ -42,7 +42,13 @@ export class AssessmentFormComponent implements OnInit {
           });
           // console.log(this.ans);
         });
+      },
+      error => {
+        alert('There was a problem getting Course data.');
       });
+    },
+    error => {
+      alert('Sorry. There was a problem getting root params.');
     });
   }
 

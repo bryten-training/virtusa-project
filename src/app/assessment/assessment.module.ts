@@ -7,10 +7,11 @@ import { AssessmentFormComponent } from './assessment-form/assessment-form.compo
 import { RouterModule } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { AlertComponent } from './alert/alert.component';
+import { NewAssessmentComponent } from './new-assessment/new-assessment.component';
 
 
 @NgModule({
-  declarations: [AssessmentComponent, AssessmentFormComponent, AlertComponent],
+  declarations: [AssessmentComponent, AssessmentFormComponent, AlertComponent, NewAssessmentComponent],
   imports: [
     CommonModule,
     MaterialModule,
