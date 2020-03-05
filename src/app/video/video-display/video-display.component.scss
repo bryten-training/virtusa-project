@@ -6,6 +6,9 @@
         height: auto;
         display: inline-block;
         width: auto;
+        .mat-list-item {
+            width: 240px;
+        }
     }
 }
 
