@@ -4,14 +4,12 @@ import { Router } from '@angular/router';
 import { AccountsService } from 'src/app/accounts/services/accounts.service';
 import { User } from 'src/app/accounts/models/user.model';
 import { Auth } from 'src/app/accounts/models/auth.model';
-
-
 @Component({
-  selector: 'app-flash-cardlist',
-  templateUrl: './flash-cardlist.component.html',
-  styleUrls: ['./flash-cardlist.component.scss']
+  selector: 'app-angular',
+  templateUrl: './angular.component.html',
+  styleUrls: ['./angular.component.scss']
 })
-export class FlashCardlistComponent implements OnInit {
+export class AngularComponent implements OnInit {
   index = 0;
   currentUser: User;
   flashcard: Flashcard;
@@ -30,7 +28,7 @@ export class FlashCardlistComponent implements OnInit {
 
 setlist(list) {
   console.log('in setlist');
-  this.flashcardlist = list.filter(card => card.pass !== true);
+  this.flashcardlist = list.filter(card => card.pass !== true && card.type === 'Angular');
 }
   ngOnInit(): void {
 
@@ -95,14 +93,6 @@ setlist(list) {
        } else {
         this.index--;
        }
-    // while (this.flashcardlist[this.index].pass === true) {
-    //   if (this.index < 0) {
-    //     this.index = this.flashcardlist.length;
-    //      } else {
-    //       this.index--;
-    //      }
-    // }
-
   }
   rightArrow() {
 
@@ -111,4 +101,3 @@ setlist(list) {
     }
   }
 }
-

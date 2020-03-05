@@ -12,4 +12,10 @@
          <button  [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
     </mat-card-actions>
   </mat-form-field>
+  <mat-form-field appearance="fill">
+  <mat-label>chose a type</mat-label>
+  <select formControlName='type' >
+  <option *ngFor="let t of type" [ngValue]="t">{{t}}</option>
+  </select><br/>
+</mat-form-field>
 </form>

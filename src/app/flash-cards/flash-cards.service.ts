@@ -62,6 +62,7 @@ export class Flashcard {
   front: boolean;
   pass: boolean;
   show: boolean;
+  type: string;
 
   constructor() {
     this.pass = false;
