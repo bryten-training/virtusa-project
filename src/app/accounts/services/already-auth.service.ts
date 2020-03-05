@@ -14,7 +14,7 @@ export class AlreadyAuthService implements CanActivate {
 
   canActivate(): boolean {
     if (this.accountsService.isAuthenticated()) {
-      this.router.navigate(['/home']);
+      this.router.navigate(['/account']);
       return false;
     }
     return true;
