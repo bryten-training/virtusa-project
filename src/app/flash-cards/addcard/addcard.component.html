@@ -9,8 +9,15 @@
   <mat-form-field appearance="fill">
     <mat-label>Enter the ans</mat-label>
     <textarea rows="5" cols="50" matInput formControlName="ans" placeholder="enter the ans"></textarea>
-    <mat-card-actions>
-      <button [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
-    </mat-card-actions>
   </mat-form-field>
+  <mat-form-field appearance="fill">
+  <mat-label>chose a type</mat-label>
+  <mat-select formControlName='type' >
+  <mat-option *ngFor="let t of type" [value]="t">{{t}}</mat-option>
+  </mat-select><br/>
+  <mat-card-actions>
+    <button [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
+  </mat-card-actions>
+</mat-form-field>
+
 </form>

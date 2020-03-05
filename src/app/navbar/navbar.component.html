@@ -19,15 +19,21 @@
 
 
 
-  <button mat-button [matMenuTriggerFor]="cardMenu" routerLinkActive="active">
-    <span [style.font-weight]="'lighter'">Flash Cards</span>
-    <mat-menu #cardMenu="matMenu" yPosition="above">
-      <button mat-menu-item [routerLink]="['/cards']" routerLinkActive="active">
-        <span [style.font-weight]="'lighter'">Flash Cards</span>
-      </button>
-      <div [hidden]="currentUser===undefined">
-        <button mat-menu-item [routerLink]="['/addcard']" routerLinkActive="active">
+  <button mat-button [matMenuTriggerFor]="cardMenu" [routerLink]="['/card/cards']" routerLinkActive="active">
+      <span [style.font-weight]="'lighter'">Flash Cards</span>
+        <mat-menu #cardMenu="matMenu" yPosition="above">
+        <button mat-menu-item [routerLink]="['/card/cards']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Home</span>
+        </button>
+        <!-- <button mat-menu-item [routerLink]="['/card/']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Flash Cards catagories</span>
+        </button> -->
+        <div  [hidden]="currentUser===undefined">
+        <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Add Card</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/card/Angular']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">angular</span>
         </button>
       </div>
     </mat-menu>

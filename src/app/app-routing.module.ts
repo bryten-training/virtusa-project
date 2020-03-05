@@ -15,6 +15,7 @@ import { AssessmentFormComponent } from './assessment/assessment-form/assessment
 import { NewAssessmentComponent } from './assessment/new-assessment/new-assessment.component';
 import { VideoDisplayComponent } from './video/video-display/video-display.component';
 import { NewQuestionComponent } from './assessment/new-question/new-question.component';
+import { AngularComponent } from './flash-cards/angular/angular.component';
 
 
 const routes: Routes = [
@@ -22,8 +23,9 @@ const routes: Routes = [
   { path: "account", component: HomeComponent, canActivate: [AuthGuardService], data: { state: 'home' } },
   { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService], data: { state: 'login' } },
   { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService], data: { state: 'signup' } },
-  { path: "crdlist/:id", component: FlashCardlistComponent, data: { state: 'cardlist' } },
-  { path: 'cards', component: FlashCardlistComponent, data: { state: 'cards' } },
+  { path: 'crdlist/:id', component: FlashCardlistComponent, data: { state: 'cardlist' } },
+  { path: 'card/cards', component: FlashCardlistComponent },
+  { path: 'card/Angular', component: AngularComponent},
   {
     path: 'articles',
     loadChildren: () =>
