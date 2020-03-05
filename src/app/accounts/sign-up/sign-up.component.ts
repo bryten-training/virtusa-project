@@ -26,6 +26,8 @@ export class SignUpComponent implements OnInit {
   constructor(private accountsService: AccountsService) {
   }
 
+  confirmPass: string;
+
   ngOnInit() {
     this.accountsService.getBehaviorSubject().subscribe((userInfo) => {
       // console.log(userInfo);
