@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AssessmentService, Assessment } from '../assessment.service';
 import { Router } from '@angular/router';
+import { User } from 'src/app/accounts/models/user.model';
+import { AccountsService } from 'src/app/accounts/services/accounts.service';
+import { Auth } from 'src/app/accounts/models/auth.model';
 
 
 @Component({
@@ -12,8 +15,8 @@ export class AssessmentComponent implements OnInit {
 
   data: Assessment[] = [];
   displayArr = [];
-
-  constructor(private asSvc: AssessmentService, private router: Router ) { }
+  currentUser: User;
+  constructor(private asSvc: AssessmentService, private router: Router, private accountsService: AccountsService ) { }
 
   ngOnInit(): void {
     this.asSvc.getAssessmentList().subscribe(res => {
@@ -22,6 +25,12 @@ export class AssessmentComponent implements OnInit {
     },
     error => {
       alert('Sorry. There was a problem course data.');
+    });
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // print out user info
+      //console.log('Assessment Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
+      // set currentUser for your component (if needed)
+      this.currentUser = auth.currentUser;
     });
   }
   nav(courseName) {
