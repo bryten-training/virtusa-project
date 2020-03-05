@@ -37,7 +37,6 @@ export class NewQuestionComponent implements OnInit {
   ngOnInit(): void {
     this.assSvc.getAssessmentList().subscribe(data => {
       this.courseDt = data;
-      console.log(this.courseDt);
     });
   }
   dataSubmit() {
@@ -69,13 +68,10 @@ export class NewQuestionComponent implements OnInit {
     this.courseDt.forEach(data => {
       if (data.courseName === this.assessmentForm.value.course) {
         this.specCourseDt = data;
-        console.log(this.specCourseDt.courseData);
       }
     });
     this.specCourseDt.courseData.push(this.courseNewQuestion);
-    console.log(this.courses.indexOf(this.assessmentForm.value.course));
     this.assSvc.putQuestion(this.specCourseDt, this.courses.indexOf(this.assessmentForm.value.course)).subscribe(questiondata => {
-      console.log(questiondata);
       this._snackBar.open('Successfully saved data', 'Ok', {
         duration: 2000,
       });

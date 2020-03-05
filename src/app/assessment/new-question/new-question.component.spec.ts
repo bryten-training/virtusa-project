@@ -1,6 +1,15 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewQuestionComponent } from './new-question.component';
+import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
+import { By } from '@angular/platform-browser';
+import { RouterTestingModule } from '@angular/router/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { DebugElement } from '@angular/core';
+import { MaterialModule } from 'src/app/material/material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 describe('NewQuestionComponent', () => {
   let component: NewQuestionComponent;
@@ -8,7 +17,10 @@ describe('NewQuestionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NewQuestionComponent ]
+      declarations: [ NewQuestionComponent ],
+      // tslint:disable-next-line: max-line-length
+      imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
+      providers: [FormBuilder]
     })
     .compileComponents();
   }));
@@ -19,7 +31,9 @@ describe('NewQuestionComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  fit('new question required', () => {
+    const crsEl = fixture.debugElement.nativeElement;
+    console.log(crsEl.value);
+    expect(crsEl.querySelector('h1').textContent).toContain('Please add a question here');
   });
 });
