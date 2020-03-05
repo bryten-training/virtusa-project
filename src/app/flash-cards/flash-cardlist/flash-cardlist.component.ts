@@ -12,6 +12,8 @@ import { Auth } from 'src/app/accounts/models/auth.model';
   styleUrls: ['./flash-cardlist.component.scss']
 })
 export class FlashCardlistComponent implements OnInit {
+  flipped = false;
+  imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkL8GlKZ775j3f0VVgS1rU8L2LoX5UEM6fKv_eGLzeza27WYH";
   index = 0;
   currentUser: User;
   flashcard: Flashcard;
