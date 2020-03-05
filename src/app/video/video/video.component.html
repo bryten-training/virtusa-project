@@ -15,13 +15,27 @@
         <mat-card-title>Select a file and course to upload</mat-card-title>
         <form [formGroup]="uploadForm">
             <input type="file" formControlName="theName" accept="video/*" (change)="onFileChanged($event)" />
+            <mat-form-field>
+                <mat-label>Enter Title*</mat-label>
+                <input matInput formControlName="theTitle" #theTitle>
+                <mat-error *ngIf="uploadForm.controls.theTitle.hasError('required')">
+                    Title is required.
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+                <mat-label>Enter URL*</mat-label>
+                <input matInput formControlName="theUrl" #theUrl>
+                <mat-error *ngIf="uploadForm.controls.theUrl.hasError('pattern')">
+                    URL entered is not correct. Only YouTube URLs allowed.
+                </mat-error>
+            </mat-form-field>
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Select Course*</mat-label>
                 <mat-select formControlName="theCourse">
                     <mat-option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button mat-raised-button color='primary' [disabled]="uploadForm.invalid" (click)="onUpload()">Submit</button>
+            <button mat-raised-button color='primary' [disabled]="uploadForm.invalid || submitted" (click)="onUpload()">Submit</button>
         </form>
     </div>
 </div>
