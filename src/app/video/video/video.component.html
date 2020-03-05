@@ -1,22 +1,26 @@
 <!-- Skills display -->
-<mat-card *ngFor="let x of videoList; index as i" (click)="onClick(x.id)">
-    <mat-card-title>{{x.courseName}}</mat-card-title>
-    <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
-</mat-card>
+<div class="wrapper">
+    <mat-card *ngFor="let x of videoList; index as i" (click)="nav(x.courseName)">
+        <mat-card-title>{{x.courseName}}</mat-card-title>
+        <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
+    </mat-card>
 
-<mat-card>
-    <mat-card-title>Upload</mat-card-title>
-    <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
-    <form [formGroup]="uploadForm">
-        <input type="file" formControlName="theName" accept="video/*" (change)="onFileChanged($event)"/>
-        <select formControlName="theCourse">
-            <option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</option>
-        </select>
-        <button mat-button [disabled]="uploadForm.invalid" (click)="onUpload()">Submit</button>
-    </form>
-</mat-card>
-
-<!-- Videos Display -->
-<div *ngFor="let x of videoList">
-    <app-video-display *ngIf="displayArr[x.id]" [videoData]="x.videoData"></app-video-display>
+    <mat-card (click)="flipIt()">
+        <mat-card-title>Upload</mat-card-title>
+        <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
+    </mat-card>
+    <div class="form" *ngIf="flipped">
+        <mat-card-title>Select a file and course to upload</mat-card-title>
+        <form [formGroup]="uploadForm">
+            <input type="file" formControlName="theName" accept="video/*" (change)="onFileChanged($event)" />
+            <mat-form-field class="full-width" appearance="outline">
+                <mat-select formControlName="theCourse">
+                    <mat-option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button mat-raised-button color='primary' [disabled]="uploadForm.invalid" (click)="onUpload()">Submit</button>
+        </form>
+    </div>
 </div>
+
+
