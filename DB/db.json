@@ -31,15 +31,6 @@
           },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "This is fun",
-          "datetime": "2020-03-04T21:35:41.903Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -335,6 +326,24 @@
           },
           "comment": "This class is awesome  window 😎",
           "datetime": "2020-03-04T21:34:02.705Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This really awesome : 😎 ",
+          "datetime": "2020-03-05T14:44:15.658Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This is great",
+          "datetime": "2020-03-05T14:48:08.636Z"
         }
       ],
       "assessmentURL": "/assessment/JavaScript/1"
