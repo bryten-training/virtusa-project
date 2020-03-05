@@ -14,11 +14,11 @@
         <markdown [data]="markdownContent"></markdown>
     </mat-card-content>
     <mat-card-actions>
-        <button mat-icon-button color="warn" aria-label="Example icon-button with a heart icon" *ngIf="liked"
+        <button mat-icon-button color="warn" aria-label="icon-button with a heart icon" *ngIf="liked"
             (click)="like()">
             <mat-icon>favorite</mat-icon>
         </button>
-        <button mat-icon-button aria-label="Example icon-button with a heart icon" *ngIf="!liked" (click)="like()">
+        <button mat-icon-button aria-label="icon-button with a heart icon" *ngIf="!liked" (click)="like()">
             <mat-icon>favorite</mat-icon>
         </button>
         {{article.likes}}
