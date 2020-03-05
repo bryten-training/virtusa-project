@@ -36,6 +36,10 @@
     <span [style.font-weight]="'lighter'">Videos</span>
   </button>
 
+  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/relatedlinks']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Related Links</span>
+  </button>
+
   <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Profile</span>
   </button>

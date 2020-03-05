@@ -11,5 +11,6 @@ export class RelatedLinksHomepageComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  panelOpenState = false;
 
 }
