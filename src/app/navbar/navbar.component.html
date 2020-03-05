@@ -11,7 +11,7 @@
 
 
 
-  <button mat-button [matMenuTriggerFor]="cardMenu" [routerLink]="['/card/cards']" routerLinkActive="active">
+  <!-- <button mat-button [matMenuTriggerFor]="cardMenu" [routerLink]="['/card/cards']" routerLinkActive="active">
       <span [style.font-weight]="'lighter'">Flash Cards</span>
         <mat-menu #cardMenu="matMenu" yPosition="above">
         <button mat-menu-item [routerLink]="['/card/cards']"  routerLinkActive="active">
@@ -20,7 +20,7 @@
         <!-- <button mat-menu-item [routerLink]="['/card/']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Flash Cards catagories</span>
         </button> -->
-        <div  [hidden]="currentUser===undefined">
+        <!-- <div  [hidden]="currentUser===undefined">
         <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Add Card</span>
         </button>
@@ -29,11 +29,17 @@
         </button>
       </div>
     </mat-menu>
+  </button> -->
+
+  <button mat-button [routerLink]="['/card']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Flash Card</span>
   </button>
-
-
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
+  </button>
+
+  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/relatedlinks']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Related Links</span>
   </button>
 
   <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">

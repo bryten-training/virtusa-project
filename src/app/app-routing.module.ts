@@ -25,11 +25,16 @@ const routes: Routes = [
   { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService], data: { state: 'signup' } },
   { path: 'crdlist/:id', component: FlashCardlistComponent, data: { state: 'cardlist' } },
   { path: 'card/cards', component: FlashCardlistComponent },
-  { path: 'card/Angular', component: AngularComponent},
+  { path: 'card/Angular', component: AngularComponent },
   {
     path: 'articles',
     loadChildren: () =>
       import('./articles/articles.module').then(m => m.ArticlesModule)
+  },
+  {
+    path: 'relatedlinks',
+    loadChildren: () =>
+      import('./related-links/related-links.module').then(m => m.RelatedLinksModule)
   },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
   { path: 'course', component: AssessmentFormComponent },
