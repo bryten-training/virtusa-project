@@ -3,7 +3,7 @@
     {
       "id": 1,
       "subject": "Angular",
-      "title": "Effective Java for Android (cheatisheet).",
+      "title": "Effective Angular for Webpage",
       "image": "assets/pc1.jpg",
       "author": {
         "name": "Author",
@@ -82,7 +82,10 @@
       "publish_date": "2020-03-03T21:35:52.962Z",
       "content": "IyBUaXRsZSBoMQoKYGBgdHlwZXNjcmlwdApjb25zb2xlLmxvZygiSSBhbSBsZWFybmluZyBBbmd1bGFyIDkiKQpgYGA=",
       "timeToRead": 20,
-      "tags": ["Angular", "Typescript"],
+      "tags": [
+        "Angular",
+        "Typescript"
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
@@ -99,7 +102,12 @@
       "publish_date": "2020-03-04T03:08:38.492Z",
       "content": "W0VmZmVjdGl2ZSBKYXZhXShodHRwczovL3d3dy5hbWF6b24uY28udWsvRWZmZWN0aXZlLUphdmEtU2Vjb25kLUpvc2h1YS1CbG9jaC9kcC8wMzIxMzU2NjgzKSBpcyBjb25zaWRlcmVkIGJ5IG1hbnksIG9uZQpvZiB0aGUgbW9zdCBpbXBvcnRhbnQgYm9va3MgZm9yIHdyaXRpbmcgSmF2YSBjb2RlIHRoYXQgaXMgKiptYWludGFpbmFibGUqKiBpbiB0aGUgbG9uZyBydW4gYW5kICoqZWZmaWNpZW50KiogYXQgdGhlIHNhbWUKdGltZS4gQW5kcm9pZCBpcyB1c2luZyBKYXZhIGFuZCB0aGF0IG1lYW5zIHRoYXQgYWxsIG9mIHRoZSBhZHZpY2UgZ2l2ZW4gaW4gdGhlIGJvb2sgbXVzdCBiZSBhcHBsaWNhYmxlLCByaWdodD8gTm90CmV4YWN0bHkuIFNvbWUgcGVvcGxlIGNvbnNpZGVyIHRoYXQgbW9zdCBvZiB0aGUgYWR2aWNlIGdpdmVuIGJ5IHRoZSBib29rIGFyZSBub3QgYXBwbGljYWJsZSBpbiB0aGUgQW5kcm9pZCBkZXZlbG9wbWVudAp3b3JsZC4gSW4gbXkgb3BpbmlvbiwgdGhpcyBpcyBub3QgdGhlIGNhc2UuIEkgYmVsaWV2ZSB0aGF0IHRoZXJlIGFyZSBwYXJ0cyBvZiB0aGUgYm9vayB0aGF0IGFyZSBub3QgYXBwbGljYWJsZSwgZWl0aGVyCmJlY2F1c2Ugbm90IGFsbCBKYXZhIGZlYXR1cmVzIGFyZSBvcHRpbWl6ZWQgdG8gYmUgdXNlZCB3aXRoIEFuZHJvaWQgKGUuZy4gZW51bXMsIHNlcmlhbGl6YXRpb24sIGV0Yykgb3IgZHVlIHRvIHRoZQpsaW1pdGF0aW9ucyB0aGF0IGEgbW9iaWxlIGRldmljZSBoYXMgKGUuZy4gRGFsdmlrL0FSVCBiZWhhdmVzIGRpZmZlcmVudGx5IHRoYW4gYSBkZXNrdG9wIEpWTSkgLiBOZXZlcnRoZWxlc3MsIG1vc3Qgb2YKdGhlIHBhcmFkaWdtcyBpbiB0aGUgYm9vayBjYW4gYmUgdXNlZCB3aXRoIGxpdHRsZSB0byBubyBtb2RpZmljYXRpb24gYW5kIGNhbiBjb250cmlidXRlIHRvIGEgaGVhbHRoaWVyLCBjbGVhbmVyIGFuZCBtb3JlCm1haW50YWluYWJsZSBjb2RlIGJhc2UuCgpUaGlzIHBvc3QgaXMgYW4gYXR0ZW1wdCB0byBjb25jZW50cmF0ZSB3aGF0IEkgY29uc2lkZXIgdGhlIG1vc3QgaW1wb3J0YW50IGl0ZW1zIGZyb20gdGhlIGJvb2sgd2hlbiBkZXZlbG9waW5nIGFuIEFuZHJvaWQKYXBwLiBGb3IgdGhvc2Ugd2hvIHJlYWQgdGhlIGJvb2ssIHRoaXMgcG9zdCBtaWdodCBhY3QgYXMgYSByZW1pbmRlciBvZiB0aGUgaXRlbXMvcHJpbmNpcGxlcyB0aGF0IGFyZSBtZW50aW9uZWQuIEZvcgp0aG9zZSB3aG8gZGlkbuKAmXQgcmVhZCBpdCAoeWV0KSwgaXQgY2FuIGJlIHVzZWQgdG8gZ2l2ZSB0aGVtIGEgdGFzdGUgb2Ygd2hhdCB0aGUgYm9vayBvZmZlcnMuCgojIyBGb3JjZSBub24taW5zdGFudGlhYmlsaXR5CgpJZiB5b3UgZG8gbm90IHdhbnQgYW4gb2JqZWN0IHRvIGJlIGNyZWF0ZWQgdXNpbmcgdGhlIG5ldyBrZXl3b3JkLCBlbmZvcmNlIGl0IHVzaW5nIGEgKipwcml2YXRlIGNvbnN0cnVjdG9yKiouIEVzcGVjaWFsbHkKdXNlZnVsIGZvciB1dGlsaXR5IGNsYXNzZXMgdGhhdCBjb250YWluIG9ubHkgc3RhdGljIGZ1bmN0aW9ucy4KCmBgYGphdmEKY2xhc3MgTW92aWVVdGlscyB7CiAgICBwcml2YXRlIE1vdmllVXRpbHMoKSB7fQogICAgc3RhdGljIFN0cmluZyB0aXRsZUFuZFllYXIoTW92aWUgbW92aWUpIHsKICAgICAgICBbLi4uXQogICAgfQp9CmBgYAoKIyMgU3RhdGljIEZhY3RvcmllcwoKSW5zdGVhZCBvZiB1c2luZyB0aGUgbmV3IGtleXdvcmQgYW5kIHRoZSBjb25zdHJ1Y3RvciB1c2UgYSAqKnN0YXRpYyBmYWN0b3J5IG1ldGhvZCoqIChhbmQgYSBwcml2YXRlIGNvbnN0cnVjdG9yKS4gVGhlc2UgZmFjdG9yeSBtZXRob2RzIGFyZSAqKm5hbWVkKiosIGFyZSBub3QgcmVxdWlyZWQgdG8gcmV0dXJuIGEgKipuZXcgaW5zdGFuY2UqKiBvZiB0aGUgb2JqZWN0IGVhY2ggdGltZSBhbmQgY2FuIHJldHVybiBhICoqZGlmZmVyZW50IHN1YnR5cGUqKiBkZXBlbmRpbmcgb24gd2hhdOKAmXMgbmVlZGVkLgoKYGBgamF2YQpjbGFzcyBNb3ZpZSB7CiAgICBbLi4uXQogICAgcHVibGljIHN0YXRpYyBNb3ZpZSBjcmVhdGUoU3RyaW5nIHRpdGxlKSB7CiAgICAgICAgcmV0dXJuIG5ldyBNb3ZpZSh0aXRsZSk7CiAgICB9Cn0KYGBgCgoqKltVcGRhdGVdIEEgdXNlZnVsIHRpcCBieSBvdXIgcmVhZGVyKiogW0BzdHNkZW1hMjhdKGh0dHBzOi8vbWVkaXVtLmNvbS9Ac3RzZGVtYTI4KTogVXNpbmcgc3RhdGljIGZhY3RvcmllcyBjYW4gbWFrZSB0ZXN0aW5nIGRpZmZpY3VsdC4gSWYgdGhhdCdzIHRoZSBjYXNlLCBjb25zaWRlciB1c2luZyBub24tc3RhdGljIGZhY3RvcmllcyB0aGF0IHlvdSBjYW4gbW9jayBkdXJpbmcgdGVzdGluZyAob3IgYSBmYWN0b3J5IGludGVyZmFjZSB0aGF0IGEgZmFrZSBjYW4gaW1wbGVtZW50KS4K",
       "timeToRead": 10,
-      "tags": ["Angular", "Typescript", "Routing", ""],
+      "tags": [
+        "Angular",
+        "Typescript",
+        "Routing",
+        ""
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
@@ -116,7 +124,11 @@
       "publish_date": "2020-03-04T03:21:00.058Z",
       "content": "YGBgdHlwZXNjcmlwdApsZXQgYSA9IG5ldyBTdWJqZWN0PEFydGljbGU+KCk7CmBgYA==",
       "timeToRead": 12,
-      "tags": ["Angular", "Typescript", "Routing"],
+      "tags": [
+        "Angular",
+        "Typescript",
+        "Routing"
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
@@ -133,7 +145,11 @@
       "publish_date": "2020-03-04T03:21:49.017Z",
       "content": "YGBgdHlwZXNjcmlwdApsZXQgYSA9IG5ldyBTdWJqZWN0PEFydGljbGU+KCk7CmBgYA==",
       "timeToRead": 13,
-      "tags": ["Angular", "Routing", "JS"],
+      "tags": [
+        "Angular",
+        "Routing",
+        "JS"
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
@@ -150,7 +166,11 @@
       "publish_date": "2020-03-04T03:23:48.905Z",
       "content": "YGBgamF2YQp0aGlzLl9zbmFja0Jhci5vcGVuKCJZb3VyIGFydGljbGUgaGFzIGJlZW4gcHVibGlzaGVkISIsICJPSyIsIHsKICAgICAgICAgIGR1cmF0aW9uOiB0aGlzLnNuYWNrQmFyVGltZU91dAogICAgICAgIH0pOwpgYGA=",
       "timeToRead": 12,
-      "tags": ["Angular", "Typescript", "Routing"],
+      "tags": [
+        "Angular",
+        "Typescript",
+        "Routing"
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
@@ -350,13 +370,18 @@
       "publish_date": "2020-03-04T21:42:02.674Z",
       "content": "IyBoMQoKKipMZWFybmluZyBBbmd1bGFyKioKCmBgYHR5cHNjcmlwdApjb25zb2xlLmxvZygiRG9uJ3Qgc2VhcmNoIikKYGBg",
       "timeToRead": 8,
-      "tags": ["Angular", "Typescript"],
+      "tags": [
+        "Angular",
+        "Typescript"
+      ],
       "likes": 0,
       "comments": [],
       "assessmentURL": ""
     }
   ],
-  "links": [{}],
+  "links": [
+    {}
+  ],
   "accounts": [
     {
       "userName": "rahimmechtemel",
