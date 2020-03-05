@@ -57,4 +57,13 @@ export class ArticleComponent implements OnInit {
       console.error("something went wrong: ", err);
     })
   }
+
+  gotoAssessment() {
+    this.router.navigate(['course'], {
+      queryParams:
+      {
+        course: this.prevType,
+      }
+    })
+  }
 }

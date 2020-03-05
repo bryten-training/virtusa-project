@@ -2,7 +2,7 @@
     <mat-icon>arrow_back</mat-icon>
 </button>
 <form [formGroup]="articleForm" class="add-article-form" (ngSubmit)="submit()">
-    <mat-label>Hi, {{user.firstName}}</mat-label>
+    <mat-label>Hi, {{ user ? user.firstName : ""}}</mat-label>
     <mat-form-field class="full-width" appearance="outline">
         <mat-label>Subject*</mat-label>
         <mat-select formControlName="subject">
