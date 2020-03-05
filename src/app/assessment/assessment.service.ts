@@ -16,6 +16,14 @@ export class AssessmentService {
   getCourse(courseNm): Observable<Assessment> {
       return this.httpClient.get<Assessment>('api/assessment?courseName=' + courseNm);
   }
+
+  postCourse(courseNm, coursedt) {
+    console.log(coursedt);
+    return this.httpClient.put('api/assessment/' + courseNm, coursedt);
+  }
+  postCrs(courseNew) {
+    return this.httpClient.put('/api/assessment/Angular' , courseNew);
+  }
 }
 
 
@@ -34,6 +42,7 @@ export class AssessmentQuestions {
 }
 
 export class Options {
+  id: number;
  opt: string;
  optAns: boolean;
 }
