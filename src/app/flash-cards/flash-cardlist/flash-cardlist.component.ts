@@ -51,15 +51,10 @@ setlist(list) {
   passcard() {
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.pass = !this.flashcard.pass;
-    // this.CardSvc.getFlashcard().pipe(tap(e => this.flashcard.pass));
-    this.CardSvc.pass(this.flashcard).subscribe(list => {
-      this.setlist(list);
-      this.flashcard = this.flashcardlist[this.index];
-      this.flashcard.front = false;
-      this.router.navigate(['card/cards']);
-    });
-      // this.router.navigate(['card/cards']);
-  // });
+    this.CardSvc.pass(this.flashcard).subscribe(_ =>
+    this.router.navigate(['card/cards']));
+    // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
+    // this.rightArrow();
 }
 
   reset() {
@@ -90,8 +85,8 @@ setlist(list) {
   }
 
   leftArrow() {
-    if (this.index < 0) {
-      this.index = this.flashcardlist.length;
+    if (this.index === 0) {
+      this.index = this.flashcardlist.length - 1;
        } else {
         this.index--;
        }
@@ -106,9 +101,24 @@ setlist(list) {
   }
   rightArrow() {
 
-    if (this.index < this.flashcardlist.length - 1) {
+    if (this.index === this.flashcardlist.length - 1) {
+      this.index = 0;
+    } else {
       this.index++;
     }
+  }
+
+  onClickQuesAns(flashCard: Flashcard) {
+    flashCard.front = !flashCard.front;
+  }
+
+  changeColorQuesAns(flashCard: Flashcard) {
+    if (!flashCard.front) {
+      return {
+        'background-color': '#a8d0cc'
+      };
+    }
+    return { 'background-color': '#dedce9' };
   }
 }
 

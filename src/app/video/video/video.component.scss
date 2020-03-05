@@ -1,27 +1,55 @@
 @import '../../../styles.scss';
 
+.wrapper {
+    text-align: center
+}
+
+.mat-list-base {
+    margin-top: 5%;
+}
+
 mat-card {
     display: inline-block;
     flex-wrap: wrap;
     padding: 50px;
     margin: 20px;
-    width: 10%;
+    width: 140px;
     text-align: center;
     height: auto;
-    background-color: white;
+    background-color: ehite;
     font-weight: bold;
     &:hover {
         @include hover;
     }
 }
 
-.mat-list-base .mat-list-item {
-    height: auto;
-    display: inline-block;
-    width: auto;
-    margin-right: 20px;
+.upload {
+    //display: inline-block;
+    padding: 0;
+    margin: 0;
+    mat-card {
+        width: 100px;
+        margin: 0;
+    }
 }
 
-hr {
-    margin: 10px 0 30px 0;
+.form {
+    margin-top: 20px;
+    input {
+        display: block;
+        margin: 20px auto;
+        box-sizing: border-box;
+        align-items: baseline;
+        cursor: pointer;
+        padding: 15px 20px;
+        border: 2px solid #e0dede;
+        border-radius: 5px;
+        &:hover {
+            border: 2px solid black;
+        }
+    }
+    .mat-form-field {
+        margin-right: 20px;
+    }
 }
+

@@ -8,7 +8,7 @@ import {FormGroup,  FormControl, Validators} from '@angular/forms';
   styleUrls: ['./addcard.component.scss']
 })
 export class AddcardComponent implements OnInit {
-  type = ['Angular', 'javascript' , 'nodejs', 'other'];
+  type = ['angular', 'javascript' , 'nodejs', 'other'];
 
   card: Flashcard = new Flashcard();
   flashcardlist: Flashcard[] = [];

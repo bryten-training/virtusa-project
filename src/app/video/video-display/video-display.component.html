@@ -1,0 +1,17 @@
+<!-- Back Button -->
+<button mat-fab color="primary" class="fab-button" (click)="navBack()">
+    <mat-icon>arrow_back</mat-icon>
+</button>
+
+<h2 class="courseName">{{courseNameStr}}</h2>
+
+<!-- Videos Display -->
+<mat-list *ngIf="videoData">
+    <mat-list-item *ngFor="let x of videoData; index as i"> 
+        <div class="mat-list-item">
+            <iframe width="240" [src]="safeUrl(x.url)" 
+                    frameborder="0" allow="accelerometer; encrypted-media; gyroscope;"></iframe>
+            <h3>{{x.title}}</h3>
+        </div>  
+    </mat-list-item>
+</mat-list>

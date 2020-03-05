@@ -26,10 +26,12 @@ export class AccountsService implements OnInit {
     private http: HttpClient,
     private router: Router
   ) {
+    this.accountsServiceSubj = this.getBehaviorSubject();
     this.loadAllUsers().subscribe(users => {
       this.allUsers = users;
       // console.log(this.allUsers)
     })
+    this.isAuthenticated();
   }
 
   ngOnInit() {
@@ -55,7 +57,7 @@ export class AccountsService implements OnInit {
   }
 
   loadAllUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${API_URL}/Accounts`);
+    return this.http.get<User[]>(`api/accounts`);
   }
 
   logIn(user: User) {
@@ -138,7 +140,7 @@ export class AccountsService implements OnInit {
     } else {
       // hash password
       user.passWord = window.btoa(user.passWord);
-      this.http.post<User>(`${API_URL}/accounts`, user).pipe(
+      this.http.post<User>(`api/accounts`, user).pipe(
         tap(() => {
           this.loadAllUsers().subscribe(users => {
             this.allUsers = users;
@@ -193,7 +195,7 @@ export class AccountsService implements OnInit {
       isAuthenticated: true
     }
     this.authUser = { ...auth };
-
+    console.log('inside accounts service...' + this.authUser);
     this.accountsServiceSubj.next(this.authUser);
   }
 

@@ -1,16 +1,24 @@
-<mat-toolbar color="primary">
+<mat-toolbar color="primary" #toolbar>
   <img class="logo" src="assets/img/logo.png" />
 
   <button mat-button *ngIf="isAuthenticated" [routerLink]="['/home']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Home</span>
   </button>
 
-  <button mat-button [routerLink]="['/artcls']" routerLinkActive="active">
+  <button mat-button [routerLink]="['/articles']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button [routerLink]="['/assessment']"  routerLinkActive="active">
+  <button mat-button [matMenuTriggerFor]="cardMenuAssessment" [routerLink]="['/assessment']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
+    <mat-menu #cardMenuAssessment="matMenu" yPosition="above">
+      <button mat-menu-item [routerLink]="['/NewAssessment']">
+        <span [style.font-weight]="'lighter'">Add New Assessment</span>
+      </button>
+      <button mat-menu-item [routerLink]="['/newQuestion']">
+        <span [style.font-weight]="'lighter'">Add New Question</span>
+      </button>
+    </mat-menu>
   </button>
 
 
@@ -19,7 +27,7 @@
       <span [style.font-weight]="'lighter'">Flash Cards</span>
         <mat-menu #cardMenu="matMenu" yPosition="above">
         <button mat-menu-item [routerLink]="['/card/cards']"  routerLinkActive="active">
-          <span [style.font-weight]="'lighter'">Flash Cards</span>
+          <span [style.font-weight]="'lighter'">Home</span>
         </button>
         <!-- <button mat-menu-item [routerLink]="['/card/']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Flash Cards catagories</span>
@@ -28,9 +36,12 @@
         <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Add Card</span>
         </button>
+        <button mat-menu-item [routerLink]="['/card/Angular']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">angular</span>
+        </button>
       </div>
-      </mat-menu>
-    </button>
+    </mat-menu>
+  </button>
 
 
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
