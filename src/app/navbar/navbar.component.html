@@ -1,37 +1,37 @@
 <mat-toolbar color="primary">
   <img class="logo" src="assets/img/logo.png" />
 
-  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/home']" routerLinkActive="active">
-    <span [style.font-weight]="'lighter'">Home</span>
-  </button>
-
   <button mat-button [routerLink]="['/articles']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button [routerLink]="['/assessment']"  routerLinkActive="active">
+  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
   </button>
 
 
 
   <button mat-button [matMenuTriggerFor]="cardMenu" routerLinkActive="active">
-      <span [style.font-weight]="'lighter'">Flash Cards</span>
-        <mat-menu #cardMenu="matMenu" yPosition="above">
-        <button mat-menu-item [routerLink]="['/cards']"  routerLinkActive="active">
-          <span [style.font-weight]="'lighter'">Flash Cards</span>
-        </button>
-        <div  [hidden]="currentUser===undefined">
-        <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Flash Cards</span>
+    <mat-menu #cardMenu="matMenu" yPosition="above">
+      <button mat-menu-item [routerLink]="['/cards']" routerLinkActive="active">
+        <span [style.font-weight]="'lighter'">Flash Cards</span>
+      </button>
+      <div [hidden]="currentUser===undefined">
+        <button mat-menu-item [routerLink]="['/addcard']" routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Add Card</span>
         </button>
       </div>
-      </mat-menu>
-    </button>
+    </mat-menu>
+  </button>
 
 
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
+  </button>
+
+  <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Profile</span>
   </button>
 
   <div class="user_info">
@@ -48,7 +48,7 @@
         <i class="material-icons">
           account_circle &nbsp;
         </i>
-        <a [routerLink]="['/home']" [style.font-weight]="'lighter'">
+        <a [routerLink]="['/account']" [style.font-weight]="'lighter'">
           {{ currentUserName }}
         </a> &nbsp; | &nbsp;
         <a [style.font-weight]="'lighter'" (click)="onLogOut()" class="log-out-btn">Log out</a>

@@ -16,11 +16,11 @@ const routes: Routes = [
 
 
   { path: "", redirectTo: 'logIn', pathMatch: 'full', canActivate: [AlreadyAuthService] },
-  { path: "home", component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: "account", component: HomeComponent, canActivate: [AuthGuardService] },
   { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService] },
   { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService] },
   { path: "crdlist/:id", component: FlashCardlistComponent },
-   { path: 'cards', component: FlashCardlistComponent },
+  { path: 'cards', component: FlashCardlistComponent },
   {
     path: 'articles',
     loadChildren: () =>
@@ -28,8 +28,8 @@ const routes: Routes = [
   },
   { path: 'assessment', component: AssessmentComponent },
   { path: 'sign-up', component: SignUpComponent },
-  { path: 'addcard', component: AddcardComponent},
-  { path: 'card', component: FlashCardComponent},
+  { path: 'addcard', component: AddcardComponent },
+  { path: 'card', component: FlashCardComponent },
   { path: 'video', component: VideoComponent }
 ];
 

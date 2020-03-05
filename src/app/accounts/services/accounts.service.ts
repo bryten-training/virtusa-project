@@ -86,7 +86,7 @@ export class AccountsService implements OnInit {
 
       // logged in success => route to Home page
       setTimeout(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/account']);
       }, 1000);
     } else {
       let auth: Auth = {
