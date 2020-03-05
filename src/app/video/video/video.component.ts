@@ -3,7 +3,10 @@ import { VideoService, Video, VideoDisplay } from '../video.service';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import {MatSnackBar} from '@angular/material/snack-bar';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { User } from 'src/app/accounts/models/user.model';
+import { AccountsService } from 'src/app/accounts/services/accounts.service';
+import { Auth } from 'src/app/accounts/models/auth.model';
 
 @Component({
   selector: 'app-video',
@@ -15,7 +18,8 @@ export class VideoComponent implements OnInit {
   constructor(private videoSvc: VideoService, 
               private httpClient: HttpClient, 
               private router: Router,
-              private _snackBar: MatSnackBar) { }
+              private _snackBar: MatSnackBar,
+              private accountsService: AccountsService) { }
   
   ngOnInit(): void {
     this.videoSvc.getVideoList().subscribe(response => {
@@ -23,9 +27,17 @@ export class VideoComponent implements OnInit {
     },
     error => {
       alert("Sorry. There was a problem getting data.")
-    })
+    });
+
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // print out user info
+      console.log('Video Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
+      // set currentUser for your component (if needed)
+      this.currentUser = auth.currentUser;
+    });
   }
 
+  currentUser: User;
   flipped: boolean = false;
   videoList: Video[] = [];
   videoData: VideoDisplay[] = [];
@@ -106,7 +118,7 @@ export class VideoComponent implements OnInit {
     videoData.push(newItem);
 
     this.httpClient.put(`/api/video/${this.selectedCourse}`, this.videoDataForPost).subscribe((data) => {
-    console.log("after::", data);
+    //console.log("after::", data);
 
     //this.uploadForm.reset();
     this.openSnackBar();
