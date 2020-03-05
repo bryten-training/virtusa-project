@@ -11,6 +11,7 @@ import { User } from 'src/app/accounts/models/user.model';
 })
 export class ArticlesService {
 
+  private currentUserSubject: BehaviorSubject<User>;
   articleSubject: BehaviorSubject<Article>;
 
   constructor(
@@ -18,14 +19,14 @@ export class ArticlesService {
     private accountsService: AccountsService
   ) {
     this.articleSubject = new BehaviorSubject(null);
+    this.currentUserSubject = new BehaviorSubject(null);
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       console.log(auth)
       if (auth.currentUser != undefined) {
-        this.currentUser = auth.currentUser;
+        this.currentUserSubject.next(auth.currentUser);
       }
     });
   }
-  private currentUser: User;
 
   get(url: string, options?): Observable<any> {
     return this.http.get<Article[]>(url, options);
@@ -48,6 +49,6 @@ export class ArticlesService {
   }
 
   getCurrentUser() {
-    return this.currentUser;
+    return this.currentUserSubject;
   }
 }
