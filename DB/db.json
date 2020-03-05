@@ -27,7 +27,7 @@
       "id": 11,
       "subject": "NodeJS",
       "title": "Basic Concepts of Node.js",
-      "image": "",
+      "image": "assets/phone.png",
       "author": {
         "name": "Anup Sarkar",
         "avatar": "assets/img/man-author.jpg"
@@ -50,10 +50,10 @@
       "id": 12,
       "subject": "NodeJS",
       "title": "How to install Node.js",
-      "image": "",
+      "image": "assets/phone.png",
       "author": {
         "name": "Myles Borins",
-        "avatar": "assets/img/article-authors/nodejs12.jpeg"
+        "avatar": "assets/img/man-author.jpg"
       },
       "publish_date": "Mar 3, 2019",
       "content": "Tm9kZS5qcyBjYW4gYmUgaW5zdGFsbGVkIGluIGRpZmZlcmVudCB3YXlzLiBUaGlzIHBvc3QgaGlnaGxpZ2h0cyB0aGUgbW9zdCBjb21tb24gYW5kIGNvbnZlbmllbnQgb25lcy4KCk9mZmljaWFsIHBhY2thZ2VzIGZvciBhbGwgdGhlIG1ham9yIHBsYXRmb3JtcyBhcmUgYXZhaWxhYmxlIGF0ICoqW05vZGVKUyBkb3dubG9hZF0oaHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkLykqKi4KCk9uZSB2ZXJ5IGNvbnZlbmllbnQgd2F5IHRvIGluc3RhbGwgTm9kZS5qcyBpcyB0aHJvdWdoIGEgcGFja2FnZSBtYW5hZ2VyLiBJbiB0aGlzIGNhc2UsIGV2ZXJ5IG9wZXJhdGluZyBzeXN0ZW0gaGFzIGl0cyBvd24uCgpPbiBtYWNPUywgSG9tZWJyZXcgaXMgdGhlIGRlLWZhY3RvIHN0YW5kYXJkLCBhbmQgLSBvbmNlIGluc3RhbGxlZCAtIGFsbG93cyB0byBpbnN0YWxsIE5vZGUuanMgdmVyeSBlYXNpbHksIGJ5IHJ1bm5pbmcgdGhpcyBjb21tYW5kIGluIHRoZSBDTEk6CgpgYnJldyBpbnN0YWxsIG5vZGVgCgpPdGhlciBwYWNrYWdlIG1hbmFnZXJzIGZvciBMaW51eCBhbmQgV2luZG93cyBhcmUgbGlzdGVkIGluICoqW1BhY2thZ2UgTWFuYWdlcl0oaHR0cHM6Ly9ub2RlanMub3JnL2VuL2Rvd25sb2FkL3BhY2thZ2UtbWFuYWdlci8pKioKCm52bSBpcyBhIHBvcHVsYXIgd2F5IHRvIHJ1biBOb2RlLmpzLiBJdCBhbGxvd3MgeW91IHRvIGVhc2lseSBzd2l0Y2ggdGhlIE5vZGUuanMgdmVyc2lvbiwgYW5kIGluc3RhbGwgbmV3IHZlcnNpb25zIHRvIHRyeSBhbmQgZWFzaWx5IHJvbGxiYWNrIGlmIHNvbWV0aGluZyBicmVha3MsIGZvciBleGFtcGxlLgoKSXQgaXMgYWxzbyB2ZXJ5IHVzZWZ1bCB0byB0ZXN0IHlvdXIgY29kZSB3aXRoIG9sZCBOb2RlLmpzIHZlcnNpb25zLgoKU2VlICoqW2hlcmVdKGh0dHBzOi8vZ2l0aHViLmNvbS9jcmVhdGlvbml4L252bSkqKiBmb3IgbW9yZSBpbmZvcm1hdGlvbiBhYm91dCB0aGlzIG9wdGlvbi4KCk15IHN1Z2dlc3Rpb24gaXMgdG8gdXNlIHRoZSBvZmZpY2lhbCBpbnN0YWxsZXIgaWYgeW91IGFyZSBqdXN0IHN0YXJ0aW5nIG91dCBhbmQgeW91IGRvbid0IHVzZSBIb21lYnJldyBhbHJlYWR5LCBvdGhlcndpc2UsIEhvbWVicmV3IGlzIG15IGZhdm9yaXRlIHNvbHV0aW9uLgoKSW4gYW55IGNhc2UsIHdoZW4gTm9kZS5qcyBpcyBpbnN0YWxsZWQgeW91J2xsIGhhdmUgYWNjZXNzIHRvIHRoZSBub2RlIGV4ZWN1dGFibGUgcHJvZ3JhbSBpbiB0aGUgY29tbWFuZCBsaW5lLg==",
@@ -73,10 +73,10 @@
       "id": 13,
       "subject": "NodeJS",
       "title": "Basic Routing",
-      "image": "",
+      "image": "assets/phone.png",
       "author": {
         "name": "Hage Yaapa",
-        "avatar": "assets/img/article-authors/nodejs13.jpeg"
+        "avatar": "assets/img/man-author.jpg"
       },
       "publish_date": "Mar 2, 2019",
       "content": "KipfUm91dGluZ18qKiByZWZlcnMgdG8gZGV0ZXJtaW5pbmcgaG93IGFuIGFwcGxpY2F0aW9uIHJlc3BvbmRzIHRvIGEgY2xpZW50IHJlcXVlc3QgdG8gYSBwYXJ0aWN1bGFyIGVuZHBvaW50LCB3aGljaCBpcyBhIFVSSSAob3IgcGF0aCkgYW5kIGEgc3BlY2lmaWMgSFRUUCByZXF1ZXN0IG1ldGhvZCAoR0VULCBQT1NULCBhbmQgc28gb24pLgoKRWFjaCByb3V0ZSBjYW4gaGF2ZSBvbmUgb3IgbW9yZSBoYW5kbGVyIGZ1bmN0aW9ucywgd2hpY2ggYXJlIGV4ZWN1dGVkIHdoZW4gdGhlIHJvdXRlIGlzIG1hdGNoZWQuCgpSb3V0ZSBkZWZpbml0aW9uIHRha2VzIHRoZSBmb2xsb3dpbmcgc3RydWN0dXJlOgoKYGFwcC5NRVRIT0QoUEFUSCwgSEFORExFUilgCgpXaGVyZToKCi0gYGFwcGAgaXMgYW4gaW5zdGFuY2Ugb2YgZXhwcmVzcy4KLSBgTUVUSE9EYCBpcyBhbiBIVFRQIHJlcXVlc3QgbWV0aG9kLCBpbiBsb3dlcmNhc2UuCi0gYFBBVEhgIGlzIGEgcGF0aCBvbiB0aGUgc2VydmVyLgotIGBIQU5ETEVSYCBpcyB0aGUgZnVuY3Rpb24gZXhlY3V0ZWQgd2hlbiB0aGUgcm91dGUgaXMgbWF0Y2hlZC4KClRoaXMgdHV0b3JpYWwgYXNzdW1lcyB0aGF0IGFuIGluc3RhbmNlIG9mIGV4cHJlc3MgbmFtZWQgYXBwIGlzIGNyZWF0ZWQgYW5kIHRoZSBzZXJ2ZXIgaXMgcnVubmluZy4gSWYgeW91IGFyZSBub3QgZmFtaWxpYXIgd2l0aCBjcmVhdGluZyBhbiBhcHAgYW5kIHN0YXJ0aW5nIGl0LCBzZWUgdGhlIFtIZWxsbyB3b3JsZCBleGFtcGxlXShodHRwczovL2V4cHJlc3Nqcy5jb20vZW4vc3RhcnRlci9oZWxsby13b3JsZC5odG1sKS4KClRoZSBmb2xsb3dpbmcgZXhhbXBsZXMgaWxsdXN0cmF0ZSBkZWZpbmluZyBzaW1wbGUgcm91dGVzLgoKUmVzcG9uZCB3aXRoIGBIZWxsbyBXb3JsZCFgIG9uIHRoZSBob21lcGFnZToKCmBgYHR5cGVzY3JpcHQKYXBwLmdldCgiLyIsIGZ1bmN0aW9uKHJlcSwgcmVzKSB7CiAgcmVzLnNlbmQoIkhlbGxvIFdvcmxkISIpOwp9KTsKYGBgCgpSZXNwb25kIHRvIFBPU1QgcmVxdWVzdCBvbiB0aGUgcm9vdCByb3V0ZSAoLyksIHRoZSBhcHBsaWNhdGlvbuKAmXMgaG9tZSBwYWdlOgoKYGBgdHlwZXNjcmlwdAphcHAucG9zdCgiLyIsIGZ1bmN0aW9uKHJlcSwgcmVzKSB7CiAgcmVzLnNlbmQoIkdvdCBhIFBPU1QgcmVxdWVzdCIpOwp9KTsKYGBgCgpSZXNwb25kIHRvIGEgUFVUIHJlcXVlc3QgdG8gdGhlIC91c2VyIHJvdXRlOgoKYGBgdHlwZXNjcmlwdAphcHAucHV0KCIvdXNlciIsIGZ1bmN0aW9uKHJlcSwgcmVzKSB7CiAgcmVzLnNlbmQoIkdvdCBhIFBVVCByZXF1ZXN0IGF0IC91c2VyIik7Cn0pOwpgYGAKClJlc3BvbmQgdG8gYSBERUxFVEUgcmVxdWVzdCB0byB0aGUgL3VzZXIgcm91dGU6CgpgYGB0eXBlc2NyaXB0CmFwcC5kZWxldGUoIi91c2VyIiwgZnVuY3Rpb24ocmVxLCByZXMpIHsKICByZXMuc2VuZCgiR290IGEgREVMRVRFIHJlcXVlc3QgYXQgL3VzZXIiKTsKfSk7CmBgYAoKRm9yIG1vcmUgZGV0YWlscyBhYm91dCByb3V0aW5nLCBzZWUgdGhlIFtyb3V0aW5nIGd1aWRlXShodHRwczovL2V4cHJlc3Nqcy5jb20vZW4vZ3VpZGUvcm91dGluZy5odG1sKS4=",
@@ -96,10 +96,10 @@
       "id": 14,
       "subject": "NodeJS",
       "title": "Error handling in Node.js",
-      "image": "",
+      "image": "assets/phone.png",
       "author": {
         "name": "Myles Borins",
-        "avatar": "assets/img/article-authors/nodejs12.jpeg"
+        "avatar": "assets/img/man-author.jpg"
       },
       "publish_date": "Apr 3, 2019",
       "content": "RXJyb3JzIGluIE5vZGUuanMgYXJlIGhhbmRsZWQgdGhyb3VnaCBleGNlcHRpb25zLgoKIyMgQ3JlYXRpbmcgZXhjZXB0aW9ucwoKQW4gZXhjZXB0aW9uIGlzIGNyZWF0ZWQgdXNpbmcgdGhlIGB0aHJvd2Aga2V5d29yZDoKCmB0aHJvdyB2YWx1ZWAKCkFzIHNvb24gYXMgSmF2YVNjcmlwdCBleGVjdXRlcyB0aGlzIGxpbmUsIHRoZSBub3JtYWwgcHJvZ3JhbSBmbG93IGlzIGhhbHRlZCBhbmQgdGhlIGNvbnRyb2wgaXMgaGVsZCBiYWNrIHRvIHRoZSBuZWFyZXN0ICoqZXhjZXB0aW9uIGhhbmRsZXIqKi4KClVzdWFsbHkgaW4gY2xpZW50LXNpZGUgY29kZSBgdmFsdWVgIGNhbiBiZSBhbnkgSmF2YVNjcmlwdCB2YWx1ZSBpbmNsdWRpbmcgYSBzdHJpbmcsIGEgbnVtYmVyIG9yIGFuIG9iamVjdC4KCkluIE5vZGUuanMsIHdlIGRvbid0IHRocm93IHN0cmluZ3MsIHdlIGp1c3QgdGhyb3cgRXJyb3Igb2JqZWN0cy4KCiMjIEVycm9yIG9iamVjdHMKCkFuIGVycm9yIG9iamVjdCBpcyBhbiBvYmplY3QgdGhhdCBpcyBlaXRoZXIgYW4gaW5zdGFuY2Ugb2YgdGhlIEVycm9yIG9iamVjdCwgb3IgZXh0ZW5kcyB0aGUgRXJyb3IgY2xhc3MsIHByb3ZpZGVkIGluIHRoZSAqKltFcnJvciBjb3JlIG1vZHVsZV0oaHR0cHM6Ly9ub2RlanMub3JnL2FwaS9lcnJvcnMuaHRtbCkqKjoKCmB0aHJvdyBuZXcgRXJyb3IoJ1JhbiBvdXQgb2YgY29mZmVlJylgCgpvcgoKYGBgdHlwZXNjcmlwdApjbGFzcyBOb3RFbm91Z2hDb2ZmZWVFcnJvciBleHRlbmRzIEVycm9yIHsKICAvLy4uLgp9CnRocm93IG5ldyBOb3RFbm91Z2hDb2ZmZWVFcnJvcigpOwpgYGAKCiMjIEhhbmRsaW5nIGV4Y2VwdGlvbnMKCkFuIGV4Y2VwdGlvbiBoYW5kbGVyIGlzIGEgYHRyeWAvYGNhdGNoYCBzdGF0ZW1lbnQuCgpBbnkgZXhjZXB0aW9uIHJhaXNlZCBpbiB0aGUgbGluZXMgb2YgY29kZSBpbmNsdWRlZCBpbiB0aGUgYHRyeWAgYmxvY2sgaXMgaGFuZGxlZCBpbiB0aGUgY29ycmVzcG9uZGluZyBgY2F0Y2hgIGJsb2NrOgoKYGBgdHlwZXNjcmlwdAp0cnkgewogIC8vbGluZXMgb2YgY29kZQp9IGNhdGNoIChlKSB7fQpgYGAKCmBlYCBpbiB0aGlzIGV4YW1wbGUgaXMgdGhlIGV4Y2VwdGlvbiB2YWx1ZS4KCllvdSBjYW4gYWRkIG11bHRpcGxlIGhhbmRsZXJzLCB0aGF0IGNhbiBjYXRjaCBkaWZmZXJlbnQga2luZHMgb2YgZXJyb3JzLgoKIyMgQ2F0Y2hpbmcgdW5jYXVnaHQgZXhjZXB0aW9ucwoKSWYgYW4gdW5jYXVnaHQgZXhjZXB0aW9uIGdldHMgdGhyb3duIGR1cmluZyB0aGUgZXhlY3V0aW9uIG9mIHlvdXIgcHJvZ3JhbSwgeW91ciBwcm9ncmFtIHdpbGwgY3Jhc2guCgpUbyBzb2x2ZSB0aGlzLCB5b3UgbGlzdGVuIGZvciB0aGUgYHVuY2F1Z2h0RXhjZXB0aW9uYCBldmVudCBvbiB0aGUgYHByb2Nlc3NgIG9iamVjdDoKCmBgYHR5cGVzY3JpcHQKcHJvY2Vzcy5vbigidW5jYXVnaHRFeGNlcHRpb24iLCBlcnIgPT4gewogIGNvbnNvbGUuZXJyb3IoIlRoZXJlIHdhcyBhbiB1bmNhdWdodCBlcnJvciIsIGVycik7CiAgcHJvY2Vzcy5leGl0KDEpOyAvL21hbmRhdG9yeSAoYXMgcGVyIHRoZSBOb2RlLmpzIGRvY3MpCn0pOwpgYGAKCllvdSBkb24ndCBuZWVkIHRvIGltcG9ydCB0aGUgYHByb2Nlc3NgIGNvcmUgbW9kdWxlIGZvciB0aGlzLCBhcyBpdCdzIGF1dG9tYXRpY2FsbHkgaW5qZWN0ZWQuCgojIyBFeGNlcHRpb25zIHdpdGggcHJvbWlzZXMKClVzaW5nIHByb21pc2VzIHlvdSBjYW4gY2hhaW4gZGlmZmVyZW50IG9wZXJhdGlvbnMsIGFuZCBoYW5kbGUgZXJyb3JzIGF0IHRoZSBlbmQ6CgpgYGB0eXBlc2NyaXB0CmRvU29tZXRoaW5nMSgpCiAgLnRoZW4oZG9Tb21ldGhpbmcyKCkpCiAgLnRoZW4oZG9Tb21ldGhpbmczKCkpCiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpOwpgYGAKCkhvdyBkbyB5b3Uga25vdyB3aGVyZSB0aGUgZXJyb3Igb2NjdXJyZWQ/IFlvdSBkb24ndCByZWFsbHkga25vdywgYnV0IHlvdSBjYW4gaGFuZGxlIGVycm9ycyBpbiBlYWNoIG9mIHRoZSBmdW5jdGlvbnMgeW91IGNhbGwgKGBkb1NvbWV0aGluZ1hgKSwgYW5kIGluc2lkZSB0aGUgZXJyb3IgaGFuZGxlciB0aHJvdyBhIG5ldyBlcnJvciwgdGhhdCdzIGdvaW5nIHRvIGNhbGwgdGhlIG91dHNpZGUgYGNhdGNoYCBoYW5kbGVyOgoKYGBgdHlwZXNjcmlwdApjb25zdCBkb1NvbWV0aGluZzEgPSAoKSA9PiB7CiAgLy8uLi4KICB0cnkgewogICAgLy8uLi4KICB9IGNhdGNoIChlcnIpIHsKICAgIC8vLi4uIGhhbmRsZSBpdCBsb2NhbGx5CiAgICB0aHJvdyBuZXcgRXJyb3IoZXJyLm1lc3NhZ2UpOwogIH0KICAvLy4uLgp9OwpgYGAKClRvIGJlIGFibGUgdG8gaGFuZGxlIGVycm9ycyBsb2NhbGx5IHdpdGhvdXQgaGFuZGxpbmcgdGhlbSBpbiB0aGUgZnVuY3Rpb24gd2UgY2FsbCwgd2UgY2FuIGJyZWFrIHRoZSBjaGFpbiB5b3UgY2FuIGNyZWF0ZSBhIGZ1bmN0aW9uIGluIGVhY2ggYHRoZW4oKWAgYW5kIHByb2Nlc3MgdGhlIGV4Y2VwdGlvbjoKCmBgYHR5cGVzY3JpcHQKZG9Tb21ldGhpbmcxCiAgLnRoZW4oKCgpID0+IHsKICAgIHJldHVybiBkb1NvbWV0aGluZzIoKS5jYXRjaChlcnIgPT4gewogICAgICAvL2hhbmRsZSBlcnJvcgogICAgICB0aHJvdyBlcnIgLy9icmVhayB0aGUgY2hhaW4hCiAgICB9KQogIH0pCiAgLnRoZW4oKCgpID0+IHsKICAgIHJldHVybiBkb1NvbWV0aGluZzIoKS5jYXRjaChlcnIgPT4gewogICAgICAvL2hhbmRsZSBlcnJvcgogICAgICB0aHJvdyBlcnIgLy9icmVhayB0aGUgY2hhaW4hCiAgICB9KQogIH0pCiAgLmNhdGNoKGVyciA9PiBjb25zb2xlLmVycm9yKGVycikpCmBgYAoKIyMgRXJyb3IgaGFuZGxpbmcgd2l0aCBhc3luYy9hd2FpdAoKVXNpbmcgYXN5bmMvYXdhaXQsIHlvdSBzdGlsbCBuZWVkIHRvIGNhdGNoIGVycm9ycywgYW5kIHlvdSBkbyBpdCB0aGlzIHdheToKCmBgYHR5cGVzY3JpcHQKYXN5bmMgZnVuY3Rpb24gc29tZUZ1bmN0aW9uKCkgewogIHRyeSB7CiAgICBhd2FpdCBzb21lT3RoZXJGdW5jdGlvbigpOwogIH0gY2F0Y2ggKGVycikgewogICAgY29uc29sZS5lcnJvcihlcnIubWVzc2FnZSk7CiAgfQp9CmBgYA==",
@@ -119,10 +119,10 @@
       "id": 15,
       "subject": "NodeJS",
       "title": "Reading files with Node.js",
-      "image": "",
+      "image": "assets/phone.png",
       "author": {
         "name": "Myles Borins",
-        "avatar": "assets/img/article-authors/nodejs12.jpeg"
+        "avatar": "assets/img/man-author.jpg"
       },
       "publish_date": "Aug 14, 2019",
       "content": "VGhlIHNpbXBsZXN0IHdheSB0byByZWFkIGEgZmlsZSBpbiBOb2RlLmpzIGlzIHRvIHVzZSB0aGUgYGZzLnJlYWRGaWxlKClgIG1ldGhvZCwgcGFzc2luZyBpdCB0aGUgZmlsZSBwYXRoIGFuZCBhIGNhbGxiYWNrIGZ1bmN0aW9uIHRoYXQgd2lsbCBiZSBjYWxsZWQgd2l0aCB0aGUgZmlsZSBkYXRhIChhbmQgdGhlIGVycm9yKToKCmBgYHR5cGVzY3JpcHQKY29uc3QgZnMgPSByZXF1aXJlKCJmcyIpOwoKZnMucmVhZEZpbGUoIi9Vc2Vycy9qb2UvdGVzdC50eHQiLCAoZXJyLCBkYXRhKSA9PiB7CiAgaWYgKGVycikgewogICAgY29uc29sZS5lcnJvcihlcnIpOwogICAgcmV0dXJuOwogIH0KICBjb25zb2xlLmxvZyhkYXRhKTsKfSk7CmBgYAoKQWx0ZXJuYXRpdmVseSwgeW91IGNhbiB1c2UgdGhlIHN5bmNocm9ub3VzIHZlcnNpb24gYGZzLnJlYWRGaWxlU3luYygpYDoKCmBgYHR5cGVzY3JpcHQKY29uc3QgZnMgPSByZXF1aXJlKCJmcyIpOwoKdHJ5IHsKICBjb25zdCBkYXRhID0gZnMucmVhZEZpbGVTeW5jKCIvVXNlcnMvam9lL3Rlc3QudHh0IiwgInV0ZjgiKTsKICBjb25zb2xlLmxvZyhkYXRhKTsKfSBjYXRjaCAoZXJyKSB7CiAgY29uc29sZS5lcnJvcihlcnIpOwp9CmBgYAoKVGhlIGRlZmF1bHQgZW5jb2RpbmcgaXMgdXRmOCwgYnV0IHlvdSBjYW4gc3BlY2lmeSBhIGN1c3RvbSBlbmNvZGluZyB1c2luZyBhIHNlY29uZCBwYXJhbWV0ZXIuCgpCb3RoIGBmcy5yZWFkRmlsZSgpYCBhbmQgYGZzLnJlYWRGaWxlU3luYygpYCByZWFkIHRoZSBmdWxsIGNvbnRlbnQgb2YgdGhlIGZpbGUgaW4gbWVtb3J5IGJlZm9yZSByZXR1cm5pbmcgdGhlIGRhdGEuCgpUaGlzIG1lYW5zIHRoYXQgYmlnIGZpbGVzIGFyZSBnb2luZyB0byBoYXZlIGEgbWFqb3IgaW1wYWN0IG9uIHlvdXIgbWVtb3J5IGNvbnN1bXB0aW9uIGFuZCBzcGVlZCBvZiBleGVjdXRpb24gb2YgdGhlIHByb2dyYW0uCgpJbiB0aGlzIGNhc2UsIGEgYmV0dGVyIG9wdGlvbiBpcyB0byByZWFkIHRoZSBmaWxlIGNvbnRlbnQgdXNpbmcgc3RyZWFtcy4=",
@@ -139,9 +139,7 @@
       "assessmentURL": "/assessment/NodeJS/1"
     }
   ],
-  "links": [
-    {}
-  ],
+  "links": [{}],
   "accounts": [
     {
       "username": "rahimmechtemel",
@@ -198,9 +196,7 @@
       "id": 5
     }
   ],
-  "flashCards": [
-    {}
-  ],
+  "flashCards": [{}],
   "assessment": [
     {
       "courseName": "Angular",
@@ -382,7 +378,7 @@
             }
           ]
         },
-          {
+        {
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
@@ -592,12 +588,12 @@
           "title": "Functions",
           "url": "https://www.youtube.com/embed/eL0RGZ0GddE"
         },
-          {
+        {
           "id": 4,
           "title": "Arrays",
           "url": "https://www.youtube.com/embed/SrT8-9I4WnE"
         },
-          {
+        {
           "id": 5,
           "title": "Objects",
           "url": "https://www.youtube.com/embed/s0IdE51JE80"

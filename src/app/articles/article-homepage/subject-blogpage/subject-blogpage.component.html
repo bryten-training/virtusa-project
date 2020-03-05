@@ -24,11 +24,8 @@
           <div class="item3">3</div>
         </div>
 
-        <div
-          *ngFor="let article of dummy_articles; let i = index"
-          class="example-card hover-card"
-        >
-          <mat-card *ngIf="i <= 2" [routerLink]="[article.id]">
+        <div *ngFor="let article of articles" class="example-card hover-card">
+          <mat-card [routerLink]="[article.id]">
             <mat-card-header>
               <div
                 mat-card-avatar

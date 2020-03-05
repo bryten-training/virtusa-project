@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { ARTICLES } from "../../dummy-articles";
+import { ArticlesService } from "../../articles.service";
 import { Article } from "../../article";
 import { ActivatedRoute } from "@angular/router";
 
@@ -10,13 +10,28 @@ import { ActivatedRoute } from "@angular/router";
 })
 export class SubjectBlogpageComponent implements OnInit {
   headerTitle: string;
-  dummy_articles: Article[] = ARTICLES;
+  articles: Article[];
 
-  constructor(private route: ActivatedRoute) {}
+  constructor(
+    private articlesService: ArticlesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.route.params.subscribe(param => {
       this.headerTitle = param.type;
+
+      this.articlesService
+        .get("api/articles", { params: { subject: param.type } })
+        .subscribe((data: Article[]) => {
+          data.forEach(article => {
+            console.log(article);
+          });
+          this.articles = data;
+
+          // this.markdownContent = atob(this.article.content);
+          // console.log(this.markdownContent);
+        });
     });
   }
 
