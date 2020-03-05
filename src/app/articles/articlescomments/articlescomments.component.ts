@@ -37,7 +37,11 @@ export class ArticlescommentsComponent implements OnInit {
 
     })
 
-    // this.user = this.articlesService.getCurrentUser();
+    this.articlesService.getCurrentUser().subscribe(user=>{
+      if (user != undefined) {
+        this.user = user;
+      }
+    });
   }
 
   commentsubmit() {
@@ -45,7 +49,7 @@ export class ArticlescommentsComponent implements OnInit {
       id: 2,
       authorinfo: {
         userType: this.user.userType,
-        name: this.user.firstName + " " + this.user.lastName
+        name: this.user.userType == null ? "Guest" : this.user.firstName + " " + this.user.lastName
       },
       comment: this.comments,
       datetime: new Date()
