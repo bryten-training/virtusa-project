@@ -6,6 +6,8 @@ import {
   Assessment
 } from '../assessment.service';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { Action } from 'rxjs/internal/scheduler/Action';
 
 @Component({
   selector: 'app-assessment-form',
@@ -23,7 +25,9 @@ export class AssessmentFormComponent implements OnInit {
   ans = [];
   userAns = [];
 
-  constructor(private Svc: AssessmentService, private router: Router) {}
+  constructor(private Svc: AssessmentService,
+              private router: Router,
+              private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
     this.router.routerState.root.queryParams.subscribe(params => {
@@ -44,11 +48,15 @@ export class AssessmentFormComponent implements OnInit {
         });
       },
       error => {
-        alert('There was a problem getting Course data.');
+        this._snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok', {
+          duration: 2000,
+        });
       });
     },
     error => {
-      alert('Sorry. There was a problem getting root params.');
+      this._snackBar.open('Sorry. There was a problem getting root params, please check the server and try again', 'Ok', {
+        duration: 2000,
+      });
     });
   }
 
