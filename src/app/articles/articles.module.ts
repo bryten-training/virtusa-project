@@ -14,7 +14,7 @@ import { ArticlecommentsdisplayComponent } from './articlecommentsdisplay/articl
 import { AddArticleComponent } from './add-article/add-article.component'
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { SubjectBlogpageComponent } from './article-homepage/subject-blogpage/subject-blogpage.component';
-import { SpliterPipe } from './pipe/spliter.pipe'
+import { SpliterPipe } from './pipe/spliter.pipe';
 
 
 @NgModule({

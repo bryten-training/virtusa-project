@@ -31,42 +31,6 @@
           },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "This is fun",
-          "datetime": "2020-03-04T21:35:41.903Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "hello 👋 ",
-          "datetime": "2020-03-05T14:57:40.767Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Guest"
-          },
-          "comment": "hello",
-          "datetime": "2020-03-05T15:03:57.812Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "anish",
-          "datetime": "2020-03-05T15:04:44.968Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
