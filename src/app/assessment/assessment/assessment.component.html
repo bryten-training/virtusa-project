@@ -4,10 +4,12 @@
         <img src="{{d.icon}}" mat-card-image alt="{{d.courseName}} icon" width="100px">
     </mat-card>
     
+    <div [hidden]="currentUser===undefined" class="upload">
     <mat-card (click)="navNew()">
         <mat-card-title> Add Assessment</mat-card-title>
         <img src="/assets/plus.png" mat-card-image alt="skill icon" width="100px">
     </mat-card>    
+    </div>
     <mat-card (click)="navNewQues()">
         <mat-card-title> Add question</mat-card-title>
         <img src="/assets/plus.png" mat-card-image alt="skill icon" width="100px">
