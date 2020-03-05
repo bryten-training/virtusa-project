@@ -37,6 +37,7 @@ export class ArticleComponent implements OnInit {
   article: Article;
   liked = false;
   prevType = "";
+
   like() {
     setTimeout(() => {
       if (this.liked) {
@@ -45,6 +46,15 @@ export class ArticleComponent implements OnInit {
         this.article.likes += 1;
       }
       this.liked = !this.liked;
+      this.updateLikesToServer();
     }, 400)
+  }
+
+  updateLikesToServer() {
+    this.articlesService.put(`api/articles/${this.article.id}`, this.article).subscribe((response) => {
+      console.log("Success! ", response);
+    }, err => {
+      console.error("something went wrong: ", err);
+    })
   }
 }

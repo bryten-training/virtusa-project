@@ -1,5 +1,9 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AssessmentService, Assessment } from '../assessment.service';
+import { Router } from '@angular/router';
+import { User } from 'src/app/accounts/models/user.model';
+import { AccountsService } from 'src/app/accounts/services/accounts.service';
+import { Auth } from 'src/app/accounts/models/auth.model';
 
 
 @Component({
@@ -10,19 +14,36 @@ import { AssessmentService, Assessment } from '../assessment.service';
 export class AssessmentComponent implements OnInit {
 
   data: Assessment[] = [];
-  angular = false;
-  nodeJs = false;
-  javascript = false;
   displayArr = [];
-
-  constructor(private asSvc: AssessmentService) { }
+  currentUser: User;
+  constructor(private asSvc: AssessmentService, private router: Router, private accountsService: AccountsService ) { }
 
   ngOnInit(): void {
-    this.asSvc.getVideoList().subscribe(res => {
+    this.asSvc.getAssessmentList().subscribe(res => {
       this.data = res;
       this.data.forEach(a => this.displayArr.push(false));
-      console.log(this.displayArr);
+    },
+    error => {
+      alert('Sorry. There was a problem course data.');
     });
+    this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
+      // print out user info
+      //console.log('Assessment Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
+      // set currentUser for your component (if needed)
+      this.currentUser = auth.currentUser;
+    });
+  }
+  nav(courseName) {
+    this.router.navigate(['course'], {queryParams:
+      {
+      course: courseName,
+    }});
+  }
+  navNew() {
+    this.router.navigate(['newAssessment']);
+  }
+  navNewQues() {
+    this.router.navigate(['newQuestion']);
   }
 
   onClick(courseId: number) {

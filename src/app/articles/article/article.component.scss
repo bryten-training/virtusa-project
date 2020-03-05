@@ -10,6 +10,11 @@
   .article-header-image {
     background-size: cover;
   }
+  markdown {
+    p img {
+      max-width: 100% !important;
+    }
+  }
 }
 .fab-button {
   position: fixed;
