@@ -3,9 +3,9 @@
 mat-card {
     display: inline-block;
     flex-wrap: wrap;
-    padding: 50px;
+    padding: 20px;
     margin: 20px;
-    width: 10%;
+    width: 12%;
     text-align: center;
     height: auto;
     background-color: white;
@@ -24,4 +24,8 @@ mat-card {
 
 hr {
     margin: 10px 0 30px 0;
+}
+
+.stack{
+    text-align: center;
 }
