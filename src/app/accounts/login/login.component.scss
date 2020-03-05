@@ -9,6 +9,7 @@ mat-card.login-card {
   max-width: 500px;
   top: 50vh;
   transform: translate(0, -50%);
+  background-color: #e9e0f3;
 }
 
 mat-card-header {
@@ -42,15 +43,21 @@ mat-form-field {
   color: red;
 }
 
-.invalid-msg {
-  color: red;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
+// .invalid-msg {
+//   color: #ff0000;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
 
-.valid-msg {
-  color: green;
+// .valid-msg {
+//   color: #008000;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+.message {
   display: flex;
   align-items: center;
   justify-content: center;

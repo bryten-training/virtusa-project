@@ -1,0 +1,47 @@
+.example-card {
+background-color: whitesmoke;
+margin: auto;
+}
+matInput{
+justify-content: center;
+text-align: center;
+padding: 8px;
+}
+mat-form-field{
+justify-content: center;
+text-align: center;
+padding: 8px;
+display: flex;
+}
+mat-card-title{
+background-color:purple;
+padding: 8px;
+border-radius: 4px 4px 0 0;
+display: flex;
+margin: auto;
+justify-content: center;
+text-align: center;
+}
+mat-label{
+justify-content: center;
+}
+mat-card-header{
+display: flex;
+margin: auto;
+justify-content: center;
+text-align: center;
+}
+mat-card-actions{
+justify-content: center;
+text-align: center;
+}
+mat-card-content{
+justify-content: center;
+text-align: center;
+}
+.main-div{
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+}

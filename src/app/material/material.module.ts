@@ -4,16 +4,20 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatButtonModule } from "@angular/material/button";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { MatIconModule } from "@angular/material/icon";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
+// tslint:disable-next-line:quotemark
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from "@angular/material/card";
-import { MatInputModule } from '@angular/material/input';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from "@angular/material/input";
+import { MatRadioModule } from "@angular/material/radio";
+import { MatSelectModule } from "@angular/material/select";
+import { MatMenuModule } from "@angular/material/menu";
+import { MatSnackBarModule } from "@angular/material/snack-bar";
 
 @NgModule({
   declarations: [],
   imports: [
+    MatAutocompleteModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -27,6 +31,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatRadioModule,
     MatCardModule,
     MatMenuModule,
+    MatSnackBarModule
   ],
   exports: [
     LayoutModule,
@@ -43,6 +48,7 @@ import { MatMenuModule } from '@angular/material/menu';
     MatRadioModule,
     MatCardModule,
     MatMenuModule,
+    MatSnackBarModule
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

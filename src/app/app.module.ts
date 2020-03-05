@@ -17,7 +17,10 @@ import { AssessmentModule } from './assessment/assessment.module';
 import { VideoModule } from './video/video.module';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { AccountsService } from './accounts/accounts.service';
+import { AccountsService } from './accounts/services/accounts.service';
+import { AuthGuardService } from './accounts/services/auth-guard.service';
+import { AlreadyAuthService } from './accounts/services/already-auth.service';
+
 
 
 
@@ -50,7 +53,7 @@ import { AccountsService } from './accounts/accounts.service';
     AssessmentModule,
     VideoModule
   ],
-  providers: [AccountsService],
+  providers: [AccountsService, AuthGuardService, AlreadyAuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

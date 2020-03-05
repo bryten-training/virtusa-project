@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 img.logo {
   width: 60px;
@@ -24,6 +24,18 @@ img.logo {
   background-color: $minor_primary_color;
 }
 
-button{
-  margin: auto 10px;
+.user_profile_name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.log-out-btn {
+  cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }

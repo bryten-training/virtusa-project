@@ -1,6 +1,9 @@
 import { Component, OnInit, Input } from "@angular/core";
-import { ArticlesService } from "../../articles.service";
-import { Article } from "../../article";
+import { FormControl } from "@angular/forms";
+import { Observable } from "rxjs";
+import { map, startWith } from "rxjs/operators";
+import { ArticlesService } from "../../service/articles.service";
+import { Article } from "../../model/article";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -11,6 +14,10 @@ import { ActivatedRoute } from "@angular/router";
 export class SubjectBlogpageComponent implements OnInit {
   headerTitle: string;
   articles: Article[];
+  markdownContent;
+  myControl = new FormControl();
+  options: string[] = ["One", "Two", "Three"];
+  filteredOptions: Observable<string[]>;
 
   constructor(
     private articlesService: ArticlesService,
@@ -24,18 +31,27 @@ export class SubjectBlogpageComponent implements OnInit {
       this.articlesService
         .get("api/articles", { params: { subject: param.type } })
         .subscribe((data: Article[]) => {
+          console.log("data " + data);
           data.forEach(article => {
-            console.log(article);
+            this.markdownContent = atob(article.content);
+            article.content = this.markdownContent;
           });
+          //console.log
           this.articles = data;
-
-          // this.markdownContent = atob(this.article.content);
-          // console.log(this.markdownContent);
         });
     });
+
+    this.filteredOptions = this.myControl.valueChanges.pipe(
+      startWith(""),
+      map(value => this._filter(value))
+    );
   }
 
-  addArticle() {
-    console.log("In add articles method");
+  private _filter(value: string): string[] {
+    const filterValue = value.toLowerCase();
+
+    return this.options.filter(
+      option => option.toLowerCase().indexOf(filterValue) === 0
+    );
   }
 }

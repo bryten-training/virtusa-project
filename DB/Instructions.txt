@@ -4,13 +4,16 @@ installing JSON Server:
 
 Starting JSOn Server:
 
-- json-server --watch ./DB/db.json
+- json-server --watch ./DB/db.json --routes routes.json
+
+Note: in order for routes to work properly you can 
+start using this command 'npm run rest'
 
 ROUTES:
 
-http://localhost:3000/Articles  
-http://localhost:3000/Links      
-http://localhost:3000/Accounts   
-http://localhost:3000/Flash Cards
-http://localhost:3000/assessment 
-http://localhost:3000/video    
+  http://localhost:3000/api/articles
+  http://localhost:3000/api/links
+  http://localhost:3000/api/accounts
+  http://localhost:3000/api/flashCards
+  http://localhost:3000/api/assessment
+  http://localhost:3000/api/video   

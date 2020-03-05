@@ -1,5 +1,5 @@
-<div class="wrapper">
-  <mat-card class="login-card">
+<div class="wrapper" style="height: auto;">
+  <mat-card class="login-card" style="top: 41vh;">
     <mat-card-header>
       <mat-card-title>
         <i class="material-icons">
@@ -20,7 +20,7 @@
             <mat-label>Username</mat-label>
             <input matInput placeholder="Enter your username" formControlName='userName'>
             <small class="invalid" *ngIf="isUserNameValid === false">
-              Invalid username
+              Please fill in username
             </small>
           </mat-form-field>
         </div>
@@ -36,7 +36,7 @@
                    formControlName="email"
                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
             <small class="invalid" *ngIf="isEmailValid === false">
-              <br>Invalid email address
+              <br>Fill in email in correct format
             </small>
           </mat-form-field>
         </div>
@@ -52,7 +52,7 @@
                    formControlName="passWord"
                    placeholder="Enter your password">
             <small class="invalid" *ngIf="isPassWordValid === false">
-              <br>Invalid password
+              <br>Please fill in password
             </small>
           </mat-form-field>
         </div>
@@ -60,17 +60,15 @@
       </form>
     </mat-card-content>
 
-    <span class="invalid-msg" *ngIf="hasErrors">
-      <i class="material-icons">
+    <!-- For message after hitting log in button -->
+    <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
+      <i class="material-icons" *ngIf="hasErrors">
         close &nbsp;&nbsp;
       </i>
-      Some errors happened, check your fields
-    </span>
-    <span class="valid-msg" *ngIf="hasErrors===false">
-      <i class="material-icons">
+      <i class="material-icons" *ngIf="hasErrors === false">
         check &nbsp;&nbsp;
       </i>
-      Logging in...
+      {{ message }}
     </span>
 
     <mat-card-actions>
