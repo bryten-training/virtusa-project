@@ -31,7 +31,7 @@ export class VideoComponent implements OnInit {
 
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       // print out user info
-      console.log('Video Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
+      //console.log('Video Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
       // set currentUser for your component (if needed)
       this.currentUser = auth.currentUser;
     });
@@ -48,10 +48,20 @@ export class VideoComponent implements OnInit {
   theCourse;
   selectedCourse;
   durationInSeconds = 4000;
-  
+  fileUrl
+  theTitle
+  title
+  theUrl
+  url
+  newItemUrl
+  submitted: boolean = false;
+  regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|\&v=)([^#\&\?]*).*/;
+
   uploadForm = new FormGroup ({
-    theName: new FormControl('', Validators.required),
-    theCourse: new FormControl('', Validators.required)
+    theName: new FormControl(''),
+    theCourse: new FormControl('', Validators.required),
+    theTitle: new FormControl('', Validators.required),
+    theUrl: new FormControl('', Validators.pattern(this.regExp))
   })
   
   //show videos
@@ -91,11 +101,24 @@ export class VideoComponent implements OnInit {
 
   flipIt() {
     this.flipped = !this.flipped;
+    this.uploadForm.reset();
+  }
+
+  convertUrl(url) {
+    let match = url.match(this.regExp);
+    if (match && match[2].length == 11) {
+      console.log("//www.youtube.com/embed/" + match[2]);
+      return "//www.youtube.com/embed/" + match[2];
+    } else {
+      return 'no video found';
+    }
   }
 
   onUpload() {
     this.selectedCourse = this.uploadForm.controls.theCourse.value;
-    
+    this.title = this.uploadForm.controls.theTitle.value;
+    this.url = this.uploadForm.controls.theUrl.value;
+
     if(this.selectedCourse == 0) {
       this.videoDataForPost = this.videoList[0]
     } else if(this.selectedCourse == 1) {
@@ -104,26 +127,33 @@ export class VideoComponent implements OnInit {
       this.videoDataForPost = this.videoList[2]
     }
 
-    const uploadData = new FormData();
-    uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
-
+    if(this.selectedFile != undefined) {
+      const uploadData = new FormData();
+      uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
+      this.fileUrl = window.URL.createObjectURL(this.selectedFile);
+      this.newItemUrl = this.fileUrl;
+      this.submitted = true;
+    } else {
+      this.newItemUrl = this.convertUrl(this.url);
+      this.submitted = true;
+    }
+    
     let videoData = this.videoDataForPost.videoData;
     let len = videoData.length;
     
     let newItem = new VideoDisplay;
     newItem.id = len + 1;
-    newItem.title = this.selectedFile.name;
-    newItem.url = "http://test";
+    newItem.title = this.title;
+    newItem.url = this.newItemUrl;
 
     videoData.push(newItem);
 
     this.httpClient.put(`/api/video/${this.selectedCourse}`, this.videoDataForPost).subscribe((data) => {
     //console.log("after::", data);
 
-    //this.uploadForm.reset();
     this.openSnackBar();
     setTimeout (() => { this.flipIt(); }, 800);
-    })
+    });
   }
 
 }
