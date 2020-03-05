@@ -31,7 +31,10 @@ export class AssessmentComponent implements OnInit {
     }});
   }
   navNew() {
-    this.router.navigate(['NewAssessment']);
+    this.router.navigate(['newAssessment']);
+  }
+  navNewQues() {
+    this.router.navigate(['newQuestion']);
   }
 
   onClick(courseId: number) {
