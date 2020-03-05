@@ -31,6 +31,15 @@
           },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This is fun",
+          "datetime": "2020-03-04T21:35:41.903Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -317,9 +326,39 @@
           },
           "comment": "This was an amazing article!",
           "datetime": "2020-03-04T20:08:41.417Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This class is awesome  window 😎",
+          "datetime": "2020-03-04T21:34:02.705Z"
         }
       ],
       "assessmentURL": "/assessment/JavaScript/1"
+    },
+    {
+      "id": 14,
+      "subject": "Angular",
+      "title": "Routing",
+      "image": "assets/angular_default.png",
+      "author": {
+        "userId": 1,
+        "name": "Eason Liu",
+        "avatar": "assets/default_avatar.png"
+      },
+      "publish_date": "2020-03-04T21:42:02.674Z",
+      "content": "IyBoMQoKKipMZWFybmluZyBBbmd1bGFyKioKCmBgYHR5cHNjcmlwdApjb25zb2xlLmxvZygiRG9uJ3Qgc2VhcmNoIikKYGBg",
+      "timeToRead": 8,
+      "tags": [
+        "Angular",
+        "Typescript"
+      ],
+      "likes": 0,
+      "comments": [],
+      "assessmentURL": ""
     }
   ],
   "links": [
@@ -379,6 +418,24 @@
       "email": "a@a.com",
       "userType": "content provider",
       "id": 6
+    },
+    {
+      "userName": "anish",
+      "passWord": "cGFzcw==",
+      "firstName": "anish",
+      "lastName": "anish",
+      "email": "rahi232332m@gmail.com",
+      "userType": "content provider",
+      "id": 7
+    },
+    {
+      "userName": "anish",
+      "passWord": "cGFzcw==",
+      "firstName": "aaa",
+      "lastName": "aa",
+      "email": "anish@gmail.com",
+      "userType": "content provider",
+      "id": 8
     }
   ],
   "flashCards": [
@@ -387,7 +444,7 @@
       "question": "What is Angular and Why Angular?",
       "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
       "body": "content",
-      "pass": false,
+      "pass": true,
       "front": true,
       "show": true
     },
@@ -546,6 +603,15 @@
       "question": " What is the use of isNaN function?",
       "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
       "id": 14
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "body": "",
+      "ans": "\"Angular is the best Programming language.\" -Mark",
+      "question": "what is Angular",
+      "id": 17
     }
   ],
   "assessment": [
@@ -931,6 +997,11 @@
           "id": 5,
           "title": "Routing and Navigation",
           "url": "https://www.youtube.com/embed/Nehk4tBxD4o"
+        },
+        {
+          "id": 5,
+          "title": "Annotation 2020-03-04 162519.png",
+          "url": "http://test"
         }
       ]
     },
