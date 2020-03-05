@@ -1,4 +1,4 @@
-@import '../../styles.scss';
+@import "../../styles.scss";
 
 img.logo {
   width: 60px;
@@ -32,4 +32,10 @@ img.logo {
 
 .log-out-btn {
   cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }

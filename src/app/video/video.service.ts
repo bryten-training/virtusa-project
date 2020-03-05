@@ -14,9 +14,8 @@ export class VideoService {
         (`/api/video/`)
     }
 
-    getVideoData(): Observable<VideoDisplay[]> {
-        return this.httpClient.get<VideoDisplay[]>
-        ("/api/video/")
+    getCourse(courseName): Observable<Video> {
+        return this.httpClient.get<Video>('api/video?courseName=' + courseName);
     }
 }
 
