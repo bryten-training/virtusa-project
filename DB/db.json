@@ -420,11 +420,11 @@
       "id": 6
     },
     {
-      "userName": "anish",
-      "passWord": "cGFzcw==",
-      "firstName": "anish",
-      "lastName": "anish",
-      "email": "rahi232332m@gmail.com",
+      "userName": "eason",
+      "passWord": "MTIz",
+      "firstName": "Yuxuan",
+      "lastName": "Liu",
+      "email": "595130607@qq.com",
       "userType": "content provider",
       "id": 7
     },
@@ -436,18 +436,27 @@
       "email": "anish@gmail.com",
       "userType": "content provider",
       "id": 8
+    },
+    {
+      "userName": "rahim",
+      "passWord": "cGFzcw==",
+      "firstName": "rahim",
+      "lastName": "rahim",
+      "email": "r@gmail.com",
+      "userType": "content provider",
+      "id": 9
     }
   ],
   "flashCards": [
     {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "body": "",
-      "ans": "sada",
-      "question": "sda",
       "id": 1,
       "type": "angular"
+      "question": "What is Angular and Why Angular?",
+      "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
+      "body": "content",
+      "pass": false,
+      "front": true,
+      "show": true
     },
     {
       "pass": false,

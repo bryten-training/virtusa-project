@@ -24,7 +24,10 @@ export class AddArticleComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // this.user = this.articlesService.getCurrentUser();
+    this.user = this.articlesService.getCurrentUser();
+    if (this.user == undefined || this.user.userType != "content provider") {
+      this.router.navigateByUrl(`/articles`);
+    }
   }
   mdText: string;
   user: User = {
@@ -120,7 +123,9 @@ export class AddArticleComponent implements OnInit {
     let res = [];
     values.forEach(val => {
       let v = val.trim();
-      if (v != "") { // avoid last empty string for "Angular, Routing, "
+      if (v.length > 0) { // avoid last empty string for "Angular, Routing, "
+        // remove extra space
+        v = v.replace(/\s+/ig, " ");
         res.push(v);
       }
     });

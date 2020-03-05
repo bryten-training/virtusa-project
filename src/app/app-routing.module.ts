@@ -19,10 +19,8 @@ import { AngularComponent } from './flash-cards/angular/angular.component';
 
 
 const routes: Routes = [
-
-
-  { path: '', redirectTo: 'logIn', pathMatch: 'full', canActivate: [AlreadyAuthService] },
-  { path: 'home', component: HomeComponent, canActivate: [AuthGuardService], data: { state: 'home' } },
+  { path: "", redirectTo: 'logIn', pathMatch: 'full', canActivate: [AlreadyAuthService] },
+  { path: "account", component: HomeComponent, canActivate: [AuthGuardService], data: { state: 'home' } },
   { path: 'logIn', component: LoginComponent, canActivate: [AlreadyAuthService], data: { state: 'login' } },
   { path: 'signUp', component: SignUpComponent, canActivate: [AlreadyAuthService], data: { state: 'signup' } },
   { path: 'crdlist/:id', component: FlashCardlistComponent, data: { state: 'cardlist' } },
@@ -35,12 +33,12 @@ const routes: Routes = [
   },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
   { path: 'course', component: AssessmentFormComponent },
-  { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' }},
-  { path: 'card', component: FlashCardComponent, data: { state: 'card' }},
+  { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' } },
+  { path: 'card', component: FlashCardComponent, data: { state: 'card' } },
   { path: 'video', component: VideoComponent, data: { state: 'video' } },
   { path: 'videoList', component: VideoDisplayComponent },
-  { path: 'newAssessment', component: NewAssessmentComponent},
-  { path: 'newQuestion', component: NewQuestionComponent},
+  { path: 'newAssessment', component: NewAssessmentComponent },
+  { path: 'newQuestion', component: NewQuestionComponent },
 ];
 
 @NgModule({

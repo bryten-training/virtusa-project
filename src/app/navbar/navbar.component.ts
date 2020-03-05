@@ -24,7 +24,7 @@ export class NavbarComponent implements OnInit {
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       console.log('INSIDE NAVBAR:...' + JSON.stringify(auth, null, 2));
       this.isAuthenticated = auth.isAuthenticated;
-      this.currentUserName = auth.currentUser ? auth.currentUser.userName : '';
+      this.currentUserName = auth.currentUser ? auth.currentUser.userName.toUpperCase() : '';
       this.currentUser = auth.currentUser;
     });
   }

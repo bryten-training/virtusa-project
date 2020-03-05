@@ -60,6 +60,10 @@ export class AccountsService implements OnInit {
     return this.http.get<User[]>(`api/accounts`);
   }
 
+  getUser(email:string): Observable<User>{
+    return this.http.get<User>(`api/accounts?email=${email}`);
+  }
+
   logIn(user: User) {
     // check validation
     console.log(this.allUsers);
@@ -86,7 +90,7 @@ export class AccountsService implements OnInit {
 
       // logged in success => route to Home page
       setTimeout(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/account']);
       }, 1000);
     } else {
       let auth: Auth = {
