@@ -28,7 +28,7 @@ export class AngularComponent implements OnInit {
 
 setlist(list) {
   console.log('in setlist');
-  this.flashcardlist = list.filter(card => card.pass !== true);
+  this.flashcardlist = list.filter(card => card.type === 'angular' && card.pass !== true);
 }
   ngOnInit(): void {
 
