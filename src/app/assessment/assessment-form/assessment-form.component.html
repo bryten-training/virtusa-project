@@ -1,17 +1,31 @@
 <div class="form" *ngIf="courseData">
-    <form [formGroup]="assesmentForm" (ngSubmit)="submitForm()">
+    <form #myForm="ngForm" (ngSubmit)="submitForm(myForm)">
+
         <h1>{{courseNm['courseName']}}</h1>
-        <!-- <h1>{{score}}</h1> -->
-        <mat-card *ngFor="let c of courseData">
-            <mat-card-title>
-                {{c['q']}}
-            </mat-card-title>
-            <mat-radio-group class="radio-group">
-                <mat-radio-button *ngFor="let op of c.options" class="radio-button" type="radio" value={{op.optAns}}>
-                    {{op.opt}}</mat-radio-button>
-            </mat-radio-group>
+
+        <h1 *ngIf="score > 0">Your score: {{score}}</h1>
+
+        <mat-card [ngClass]="{'correct': userAns[c.id], 'wrong':myForm.submitted && !userAns[c.id] }" *ngFor="let c of courseData">
+
+            <mat-card-title>{{c['q']}}</mat-card-title>
+
+            <div class="radio-group" *ngFor="let op of c.options">
+                <input class="radio-button" ngModel required type="radio" name={{c.id}} value={{op.opt}}
+                    id=""><label for="{{c.id}}">{{op.opt}}</label>
+            </div>
         </mat-card>
-        <button type="button" mat-raised-button (click)="navBack()">close</button>
-        <button type="submit" mat-raised-button color="primary">submit</button>
+        <button *ngIf="courseData" mat-fab color="primary" class="fab-button" [routerLink]="['/assessment']">
+            <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button class="classbutton" (click)="showalert = !showalert" type="submit" [disabled]="myForm.invalid || myForm.submitted"  mat-raised-button data-modal="#modal1">submit</button>
     </form>
 </div>
+
+<app-alert [(visible)]="showalert">
+
+    <h1 *ngIf="this.score >= 3">Congratulations you have passed</h1>
+    
+    <h1 *ngIf="this.score < 3">I am sorry try again later</h1>
+    
+    <button class="closebutton" mat-raised-button (click)="showalert = !showalert" class="btn">Close</button>
+</app-alert>
