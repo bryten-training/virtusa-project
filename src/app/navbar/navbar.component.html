@@ -57,7 +57,7 @@
           account_circle &nbsp;
         </i>
         <a [routerLink]="['/home']" [style.font-weight]="'lighter'">
-          {{ currentUserName }}
+          <strong>{{ currentUserName }}</strong>
         </a> &nbsp; | &nbsp;
         <a [style.font-weight]="'lighter'" (click)="onLogOut()" class="log-out-btn">Log out</a>
       </small>
