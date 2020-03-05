@@ -8,6 +8,7 @@ import {FormGroup,  FormControl, Validators} from '@angular/forms';
   styleUrls: ['./addcard.component.scss']
 })
 export class AddcardComponent implements OnInit {
+  type = ['angular', 'javascript' , 'nodejs', 'other'];
 
   card: Flashcard = new Flashcard();
   flashcardlist: Flashcard[] = [];
@@ -15,6 +16,8 @@ export class AddcardComponent implements OnInit {
   dataForm = new FormGroup({
     question: new FormControl('' , [Validators.required] ),
     ans: new FormControl('', [Validators.required] ),
+    type: new FormControl('', [Validators.required] ),
+
   });
 
   constructor(private cardSvc: FlashcardsService, private router: Router) { }
@@ -26,11 +29,13 @@ export class AddcardComponent implements OnInit {
   }
   add_Card() {
     this.card.body  = '',
+    this.card.pass  = false,
     this.card.ans = this.dataForm.value.ans,
     this.card.question = this.dataForm.value.question,
+    this.card.type = this.dataForm.value.type;
     this.cardSvc.addCard(this.card).subscribe(_ => {
       // this.card.id = this.flashcardlist.length,
-      this.router.navigate(['/logIn']);
+      this.router.navigate(['/card/cards']);
     });
 }
 }

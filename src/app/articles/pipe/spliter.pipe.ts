@@ -9,8 +9,13 @@ export class SpliterPipe implements PipeTransform {
     let values = value.split(spliter);
     let res = "";
     values.forEach(val => {
-      res += val.trim() + " ";
+      if (val.trim().length > 0) {
+        res += `"${val.trim()}", `;
+      }
     });
+    if (res.endsWith(", ")) {
+      return res.substring(0, res.length - 2);
+    }
     return res;
   }
 

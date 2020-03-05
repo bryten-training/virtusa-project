@@ -31,69 +31,6 @@
           },
           "comment": "effective",
           "datetime": "Mar 3, 2020"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "This is fun",
-          "datetime": "2020-03-04T21:35:41.903Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "hello 👋 ",
-          "datetime": "2020-03-05T14:57:40.767Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Guest"
-          },
-          "comment": "hello",
-          "datetime": "2020-03-05T15:03:57.812Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "anish",
-          "datetime": "2020-03-05T15:04:44.968Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "This is great",
-          "datetime": "2020-03-05T15:17:41.112Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "This is superb",
-          "datetime": "2020-03-05T15:34:44.836Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": "content provider",
-            "name": "aaa aa"
-          },
-          "comment": "Hello 👋 ",
-          "datetime": "2020-03-05T15:41:30.433Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -579,11 +516,11 @@
       "id": 6
     },
     {
-      "userName": "anish",
-      "passWord": "cGFzcw==",
-      "firstName": "anish",
-      "lastName": "anish",
-      "email": "rahi232332m@gmail.com",
+      "userName": "eason",
+      "passWord": "MTIz",
+      "firstName": "Yuxuan",
+      "lastName": "Liu",
+      "email": "595130607@qq.com",
       "userType": "content provider",
       "id": 7
     },
@@ -595,6 +532,44 @@
       "email": "anish@gmail.com",
       "userType": "content provider",
       "id": 8
+    },
+    {
+      "userName": "rahim",
+      "passWord": "cGFzcw==",
+      "firstName": "rahim",
+      "lastName": "rahim",
+      "email": "r@gmail.com",
+      "userType": "content provider",
+      "id": 9
+    },
+    {
+
+      "userName": "saik",
+      "passWord": "MTIzNA==",
+      "firstName": "saik",
+      "lastName": "kumar",
+      "email": "sai1@gmail.com",
+      "userType": "content provider",
+      "id": 10
+    },
+    {
+      "userName": "Sai",
+      "passWord": "U2Fp",
+      "firstName": "SaiSampath",
+      "lastName": "kumar",
+      "email": "sai123@gmail.com",
+      "userType": "content provider",
+      "id": 11
+    },
+    {  
+      "userName": "Amruta",
+      "passWord": "TmFpZHU=",
+      "firstName": "Amruta",
+      "lastName": "Naidu",
+      "email": "amruta@test.com",
+      "userType": "content provider",
+      "id": 12
+
     }
   ],
   "flashCards": [
@@ -603,7 +578,7 @@
       "question": "What is Angular and Why Angular?",
       "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
       "body": "content",
-      "pass": true,
+      "pass": false,
       "front": true,
       "show": true
     },
@@ -784,18 +759,22 @@
           "q": " What is Angular?",
           "options": [
             {
+              "id": 0,
               "opt": "SPA",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": "MPA",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None",
               "optAns": false
             }
@@ -806,18 +785,22 @@
           "q": "What decorator is used for configuring your module class",
           "options": [
             {
+              "id": 0,
               "opt": "@NgModule",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": "@NgApp",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -828,18 +811,22 @@
           "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
+              "id": 0,
               "opt": "|",
               "optAns": true
             },
             {
+              "id": 1,
               "opt": ":",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -850,18 +837,22 @@
           "q": "Router is part of which of the following module?",
           "options": [
             {
+              "id": 0,
               "opt": "@angular/core",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "@angular/router",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -872,18 +863,22 @@
           "q": "RxJS can be used for?",
           "options": [
             {
+              "id": 0,
               "opt": " Browser",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "Server Side",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Both",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -901,18 +896,22 @@
           "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
+              "id": 0,
               "opt": "append()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "concat()",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "attach()",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -923,18 +922,22 @@
           "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
+              "id": 0,
               "opt": "pop()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "join()",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "map()",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "push()",
               "optAns": true
             }
@@ -945,18 +948,22 @@
           "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
+              "id": 0,
               "opt": "alertbox(“GeeksforGeeks”);",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "alert(“GeeksforGeeks”);",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "msgbox(“GeeksforGeeks”);",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "msg(“GeeksforGeeks”);",
               "optAns": false
             }
@@ -967,18 +974,22 @@
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
+              "id": 0,
               "opt": "variable carName;",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "var carName;  ",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "v carName;",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None",
               "optAns": false
             }
@@ -989,20 +1000,76 @@
           "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
+              "id": 0,
               "opt": "reverse()",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "shift()",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "slice()",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "some()",
               "optAns": false
+            }
+          ]
+        },
+        {
+          "id": 5,
+          "q": "What is JavaScript",
+          "options": [
+            {
+              "id": 1,
+              "opt": "Framwork",
+              "optAns": false
+            },
+            {
+              "id": 2,
+              "opt": "Scripting",
+              "optAns": true
+            },
+            {
+              "id": 3,
+              "opt": "Hypertext",
+              "optAns": false
+            },
+            {
+              "id": 4,
+              "opt": "All the above",
+              "optAns": false
+            }
+          ]
+        },
+        {
+          "id": 6,
+          "q": "kaaksdajbhsdahbshb",
+          "options": [
+            {
+              "id": 1,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": false
+            },
+            {
+              "id": 2,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": false
+            },
+            {
+              "id": 3,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": true
+            },
+            {
+              "id": 4,
+              "opt": "kaaksdajbhsdahbshb",
+              "optAns": true
             }
           ]
         }
@@ -1018,18 +1085,22 @@
           "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
+              "id": 0,
               "opt": "to store the result",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "to get the last command used",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "to get the last result",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -1040,18 +1111,22 @@
           "q": "How can we check the current version of NPM?",
           "options": [
             {
+              "id": 0,
               "opt": "npm --ver",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "npm help",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "npm --version",
               "optAns": true
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -1062,18 +1137,22 @@
           "q": "What is the advantage of using node.js?",
           "options": [
             {
+              "id": 0,
               "opt": "It provides an easy way to build scalable network programs",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "Generally fast",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "Great concurrency",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "All of these",
               "optAns": true
             }
@@ -1084,18 +1163,22 @@
           "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
+              "id": 0,
               "opt": "Express.js",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "GruntJS",
               "optAns": true
             },
             {
+              "id": 2,
               "opt": "NPM",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "None of the above",
               "optAns": false
             }
@@ -1106,18 +1189,22 @@
           "q": "Which of the following provides in-built events.",
           "options": [
             {
+              "id": 0,
               "opt": "callback",
               "optAns": false
             },
             {
+              "id": 1,
               "opt": "throw",
               "optAns": false
             },
             {
+              "id": 2,
               "opt": "handler",
               "optAns": false
             },
             {
+              "id": 3,
               "opt": "events",
               "optAns": true
             }

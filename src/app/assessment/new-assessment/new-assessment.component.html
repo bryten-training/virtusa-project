@@ -2,13 +2,9 @@
     <h1>Please update assessment here</h1>
 
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Course</mat-label>
-        <mat-select formControlName="course">
-            <mat-option *ngFor="let course of courses" [value]="course">
-                {{course}}
-            </mat-option>
-        </mat-select>
-    </mat-form-field>
+        <mat-label>Course Name</mat-label>
+            <input formControlName="course" matInput placeholder="Enter Course Name">
+        </mat-form-field>
     <hr>
     <mat-form-field class="full-width" appearance="outline">
         <mat-label>Please enter question 1</mat-label>
@@ -29,11 +25,11 @@
     </mat-form-field>
 
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Answer 1</mat-label>
+        <mat-label>Option 2</mat-label>
         <input formControlName="ques1op2" matInput placeholder="Enter Option 2">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Option 1</mat-label>
+        <mat-label>Answer 1</mat-label>
         <mat-select formControlName="ques1Ans2">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -180,9 +176,6 @@
         </mat-select>
     </mat-form-field>
 
-    <mat-error *ngIf="assessmentForm.valid">
-        Please Enter Form Correctly
-    </mat-error>
-    <button mat-raised-button color='primary' type="submit" class="full-width submitButton">Submit</button>
+    <button matTooltip="Check your score" matTooltipPosition="right" mat-raised-button [disabled]="assessmentForm.invalid" color='primary' type="submit" class="full-width submitButton">Submit</button>
 </form>
 <br><br>
