@@ -12,12 +12,12 @@
       "publish_date": "Mar 2, 2020",
       "content": "W0VmZmVjdGl2ZSBKYXZhXShodHRwczovL3d3dy5hbWF6b24uY28udWsvRWZmZWN0aXZlLUphdmEtU2Vjb25kLUpvc2h1YS1CbG9jaC9kcC8wMzIxMzU2NjgzKSBpcyBjb25zaWRlcmVkIGJ5IG1hbnksIG9uZQpvZiB0aGUgbW9zdCBpbXBvcnRhbnQgYm9va3MgZm9yIHdyaXRpbmcgSmF2YSBjb2RlIHRoYXQgaXMgKiptYWludGFpbmFibGUqKiBpbiB0aGUgbG9uZyBydW4gYW5kICoqZWZmaWNpZW50KiogYXQgdGhlIHNhbWUKdGltZS4gQW5kcm9pZCBpcyB1c2luZyBKYXZhIGFuZCB0aGF0IG1lYW5zIHRoYXQgYWxsIG9mIHRoZSBhZHZpY2UgZ2l2ZW4gaW4gdGhlIGJvb2sgbXVzdCBiZSBhcHBsaWNhYmxlLCByaWdodD8gTm90CmV4YWN0bHkuIFNvbWUgcGVvcGxlIGNvbnNpZGVyIHRoYXQgbW9zdCBvZiB0aGUgYWR2aWNlIGdpdmVuIGJ5IHRoZSBib29rIGFyZSBub3QgYXBwbGljYWJsZSBpbiB0aGUgQW5kcm9pZCBkZXZlbG9wbWVudAp3b3JsZC4gSW4gbXkgb3BpbmlvbiwgdGhpcyBpcyBub3QgdGhlIGNhc2UuIEkgYmVsaWV2ZSB0aGF0IHRoZXJlIGFyZSBwYXJ0cyBvZiB0aGUgYm9vayB0aGF0IGFyZSBub3QgYXBwbGljYWJsZSwgZWl0aGVyCmJlY2F1c2Ugbm90IGFsbCBKYXZhIGZlYXR1cmVzIGFyZSBvcHRpbWl6ZWQgdG8gYmUgdXNlZCB3aXRoIEFuZHJvaWQgKGUuZy4gZW51bXMsIHNlcmlhbGl6YXRpb24sIGV0Yykgb3IgZHVlIHRvIHRoZQpsaW1pdGF0aW9ucyB0aGF0IGEgbW9iaWxlIGRldmljZSBoYXMgKGUuZy4gRGFsdmlrL0FSVCBiZWhhdmVzIGRpZmZlcmVudGx5IHRoYW4gYSBkZXNrdG9wIEpWTSkgLiBOZXZlcnRoZWxlc3MsIG1vc3Qgb2YKdGhlIHBhcmFkaWdtcyBpbiB0aGUgYm9vayBjYW4gYmUgdXNlZCB3aXRoIGxpdHRsZSB0byBubyBtb2RpZmljYXRpb24gYW5kIGNhbiBjb250cmlidXRlIHRvIGEgaGVhbHRoaWVyLCBjbGVhbmVyIGFuZCBtb3JlCm1haW50YWluYWJsZSBjb2RlIGJhc2UuCgpUaGlzIHBvc3QgaXMgYW4gYXR0ZW1wdCB0byBjb25jZW50cmF0ZSB3aGF0IEkgY29uc2lkZXIgdGhlIG1vc3QgaW1wb3J0YW50IGl0ZW1zIGZyb20gdGhlIGJvb2sgd2hlbiBkZXZlbG9waW5nIGFuIEFuZHJvaWQKYXBwLiBGb3IgdGhvc2Ugd2hvIHJlYWQgdGhlIGJvb2ssIHRoaXMgcG9zdCBtaWdodCBhY3QgYXMgYSByZW1pbmRlciBvZiB0aGUgaXRlbXMvcHJpbmNpcGxlcyB0aGF0IGFyZSBtZW50aW9uZWQuIEZvcgp0aG9zZSB3aG8gZGlkbuKAmXQgcmVhZCBpdCAoeWV0KSwgaXQgY2FuIGJlIHVzZWQgdG8gZ2l2ZSB0aGVtIGEgdGFzdGUgb2Ygd2hhdCB0aGUgYm9vayBvZmZlcnMuCgojIyBGb3JjZSBub24taW5zdGFudGlhYmlsaXR5CgpJZiB5b3UgZG8gbm90IHdhbnQgYW4gb2JqZWN0IHRvIGJlIGNyZWF0ZWQgdXNpbmcgdGhlIG5ldyBrZXl3b3JkLCBlbmZvcmNlIGl0IHVzaW5nIGEgKipwcml2YXRlIGNvbnN0cnVjdG9yKiouIEVzcGVjaWFsbHkKdXNlZnVsIGZvciB1dGlsaXR5IGNsYXNzZXMgdGhhdCBjb250YWluIG9ubHkgc3RhdGljIGZ1bmN0aW9ucy4KCmBgYGphdmEKY2xhc3MgTW92aWVVdGlscyB7CiAgICBwcml2YXRlIE1vdmllVXRpbHMoKSB7fQogICAgc3RhdGljIFN0cmluZyB0aXRsZUFuZFllYXIoTW92aWUgbW92aWUpIHsKICAgICAgICBbLi4uXQogICAgfQp9CmBgYAoKIyMgU3RhdGljIEZhY3RvcmllcwoKSW5zdGVhZCBvZiB1c2luZyB0aGUgbmV3IGtleXdvcmQgYW5kIHRoZSBjb25zdHJ1Y3RvciB1c2UgYSAqKnN0YXRpYyBmYWN0b3J5IG1ldGhvZCoqIChhbmQgYSBwcml2YXRlIGNvbnN0cnVjdG9yKS4gVGhlc2UgZmFjdG9yeSBtZXRob2RzIGFyZSAqKm5hbWVkKiosIGFyZSBub3QgcmVxdWlyZWQgdG8gcmV0dXJuIGEgKipuZXcgaW5zdGFuY2UqKiBvZiB0aGUgb2JqZWN0IGVhY2ggdGltZSBhbmQgY2FuIHJldHVybiBhICoqZGlmZmVyZW50IHN1YnR5cGUqKiBkZXBlbmRpbmcgb24gd2hhdCdzIG5lZWRlZC4KCmBgYGphdmEKY2xhc3MgTW92aWUgewogICAgWy4uLl0KICAgIHB1YmxpYyBzdGF0aWMgTW92aWUgY3JlYXRlKFN0cmluZyB0aXRsZSkgewogICAgICAgIHJldHVybiBuZXcgTW92aWUodGl0bGUpOwogICAgfQp9CmBgYAoKKipbVXBkYXRlXSBBIHVzZWZ1bCB0aXAgYnkgb3VyIHJlYWRlcioqIFtAc3RzZGVtYTI4XShodHRwczovL21lZGl1bS5jb20vQHN0c2RlbWEyOCk6IFVzaW5nIHN0YXRpYyBmYWN0b3JpZXMgY2FuIG1ha2UgdGVzdGluZyBkaWZmaWN1bHQuIElmIHRoYXQncyB0aGUgY2FzZSwgY29uc2lkZXIgdXNpbmcgbm9uLXN0YXRpYyBmYWN0b3JpZXMgdGhhdCB5b3UgY2FuIG1vY2sgZHVyaW5nIHRlc3RpbmcgKG9yIGEgZmFjdG9yeSBpbnRlcmZhY2UgdGhhdCBhIGZha2UgY2FuIGltcGxlbWVudCku",
       "timeToRead": 8,
-      "likes": 500,
+      "likes": 502,
       "comments": [
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -26,7 +26,7 @@
         {
           "id": 2,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "anyone"
           },
           "comment": "effective",
@@ -38,35 +38,8 @@
             "userType": null,
             "name": "Eason Liu"
           },
-          "comment": "This is awesome",
-          "datetime": "2020-03-04T18:08:24.184Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "😊🏡🛁🏡👍🏻🧴👍🏻🧴🧴",
-          "datetime": "2020-03-04T19:13:34.566Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "THIS IS AWESOME",
-          "datetime": "2020-03-04T20:51:20.987Z"
-        },
-        {
-          "id": 2,
-          "authorinfo": {
-            "userType": null,
-            "name": "Eason Liu"
-          },
-          "comment": "THIS IS AWESOME AND AWESOME",
-          "datetime": "2020-03-04T20:51:34.211Z"
+          "comment": "This is fun",
+          "datetime": "2020-03-04T21:35:41.903Z"
         }
       ],
       "assessmentURL": "/assessment/java/1"
@@ -88,7 +61,7 @@
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -97,7 +70,7 @@
         {
           "id": 2,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone2"
           },
           "comment": "effective",
@@ -228,7 +201,7 @@
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -254,7 +227,7 @@
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -280,7 +253,7 @@
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -322,7 +295,7 @@
         {
           "id": 1,
           "authorinfo": {
-            "userType": "content provider",
+            "userType": null,
             "name": "Someone"
           },
           "comment": "very effective",
@@ -353,9 +326,39 @@
           },
           "comment": "This was an amazing article!",
           "datetime": "2020-03-04T20:08:41.417Z"
+        },
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Eason Liu"
+          },
+          "comment": "This class is awesome  window 😎",
+          "datetime": "2020-03-04T21:34:02.705Z"
         }
       ],
       "assessmentURL": "/assessment/JavaScript/1"
+    },
+    {
+      "id": 14,
+      "subject": "Angular",
+      "title": "Routing",
+      "image": "assets/angular_default.png",
+      "author": {
+        "userId": 1,
+        "name": "Eason Liu",
+        "avatar": "assets/default_avatar.png"
+      },
+      "publish_date": "2020-03-04T21:42:02.674Z",
+      "content": "IyBoMQoKKipMZWFybmluZyBBbmd1bGFyKioKCmBgYHR5cHNjcmlwdApjb25zb2xlLmxvZygiRG9uJ3Qgc2VhcmNoIikKYGBg",
+      "timeToRead": 8,
+      "tags": [
+        "Angular",
+        "Typescript"
+      ],
+      "likes": 0,
+      "comments": [],
+      "assessmentURL": ""
     }
   ],
   "links": [
@@ -408,47 +411,38 @@
       "id": 5
     },
     {
-      "username": "mechteml12",
-      "password": "d2VmZXJm",
-      "firstName": "xsdfdsfs",
-      "lastName": "dfgegr",
-      "email": "a@vd.com",
+      "userName": "a",
+      "passWord": "YQ==",
+      "firstName": "a",
+      "lastName": "a",
+      "email": "a@a.com",
       "userType": "content provider",
       "id": 6
     },
     {
-      "username": "mechteml",
-      "password": "YWxnZXJpZW53",
-      "firstName": "xsdfdsfs",
-      "lastName": "dfgegr",
-      "email": "a@vd.com",
+      "userName": "anish",
+      "passWord": "cGFzcw==",
+      "firstName": "anish",
+      "lastName": "anish",
+      "email": "rahi232332m@gmail.com",
       "userType": "content provider",
       "id": 7
     },
     {
-      "username": "sammy234",
-      "password": "bWF5YmU=",
-      "firstName": "mechteml",
-      "lastName": "mechtemel Belkadi",
-      "email": "rahim@gmail.com",
-      "userType": "default",
+      "userName": "anish",
+      "passWord": "cGFzcw==",
+      "firstName": "aaa",
+      "lastName": "aa",
+      "email": "anish@gmail.com",
+      "userType": "content provider",
       "id": 8
-    },
-    {
-      "userName": "",
-      "passWord": "",
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "userType": "",
-      "id": 9
     }
   ],
   "flashCards": [
     {
       "id": 1,
-      "question": "what is diretive",
-      "ans": " ssssss",
+      "question": "What is Angular and Why Angular?",
+      "ans": " Angular (2/4/5) is not a programming language like Javascript or Typescript. Angular is a front-end or client-side Framework, which needs a programming language like Typescript (developed by Microsoft). Now, what does it mean when one says, 'Angular is a client-side framework'? It means that it runs on the client-side or user's browser and not on a Web Server (where java/python/ruby/vb.net run). Of course, there is the Angular Universal which allows Angular to run on a server; but, primarily, angular is a client-side framework. Angular is a product developed and maintained by the techie giant Google and has adopted the SPA (Single Page Application) principles.",
       "body": "content",
       "pass": true,
       "front": true,
@@ -456,16 +450,16 @@
     },
     {
       "id": 2,
-      "question": "what is Angular",
-      "ans": "SPA",
+      "question": "Name the building blocks of Angular.",
+      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
       "body": "content",
       "pass": true,
       "front": true,
       "show": false
     },
     {
-      "question": "Question",
-      "ans": "Answer",
+      "question": "What is the use of @Input and @Output?",
+      "ans": "When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component.",
       "body": "content",
       "pass": true,
       "front": true,
@@ -476,72 +470,158 @@
       "pass": true,
       "front": true,
       "show": false,
-      "question": "A",
-      "ans": "A",
+      "question": "What is RouterOutlet?",
+      "ans": "RouterOutlet is a substitution for templates rendering the components. In other words, it represents or renders the components on a template at a particular location.",
       "id": 4
     },
     {
       "pass": true,
       "front": true,
       "show": false,
-      "question": "ss",
-      "ans": "sa",
+      "question": "Explain the usage of {{}}?",
+      "ans": "The set of brackets {{}} when used with an HTML tag, represent data from a component. For example, on a HTML page which has <h1>{{variableName}}</h1>, here the ‘variableName’ is actually typescript (component) data representing its value on the template; i.e., HTML. This entire concept is called String Interpolation.",
       "id": 5
     },
     {
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
-      "question": "TestQ",
-      "ans": "testA",
+      "question": " Differentiate between Observables and Promises.",
+      "ans": "Observables are lazy, which means nothing happens until a subscription is made. Whereas Promises are eager; which means as soon as a promise is created, the execution takes place. Observable is a stream in which passing of zero or more events is possible and the callback is called for each event. Whereas, promise handles a single event.",
       "id": 6
     },
     {
       "pass": false,
       "front": false,
       "show": false,
-      "question": "what. is your name \n1",
-      "ans": "a\ns\nf\ng\nj\n",
+      "question": "Why Typescript with Angular?",
+      "ans": "Typescript is a superset of Javascript. Earlier, Javascript was the only client-side language supported by all browsers. But, the problem with Javascript is, it is not a pure Object Oriented Programming Language. The code written in JS without following patterns like Prototype Pattern becomes messy and finally leading to difficulties in maintainability and reusability. Instead of learning concepts (like patterns) to maintain code, programmers prefer to maintain the code.",
       "id": 7
     },
     {
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
+      "question": "What Is Node.js?",
+      "ans": "Node.js is a powerful framework developed on Chrome’s V8 JavaScript engine that compiles the JavaScript directly into the native machine code. It is a lightweight framework used for creating server-side web applications and extends JavaScript API to offer usual server-side functionalities. It is generally used for large-scale application development, especially for video streaming sites, single page application, and other web applications.",
       "id": 8
     },
     {
-      "pass": false,
-      "front": false,
+      "pass": true,
+      "front": true,
       "show": false,
+      "question": "Why Node.js is single threaded?",
+      "ans": "Node.js uses a single threaded model in order to support async processing. With async processing, an application can perform better and is more scalable under web loads. Thus, Node.js makes use of a single-threaded model approach rather than typical thread-based implementation.",
       "id": 9
     },
     {
-      "pass": false,
+      "pass": true,
       "front": true,
       "show": false,
-      "body": "",
-      "ans": "sad",
-      "question": "sdasd",
+      "question": "How many types of API functions are there in Node.js?",
+      "ans": "There are two types of API functions in Node.js: Asynchronous, non-blocking functions Synchronous, blocking functions",
       "id": 10
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is package.json?",
+      "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
+      "id": 11
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is JavaScript?",
+      "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
+      "id": 12
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What are JavaScript Data Types?",
+      "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
+      "id": 13
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What is the use of isNaN function?",
+      "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
+      "id": 14
     },
     {
       "pass": false,
       "front": false,
       "show": false,
       "body": "",
-      "ans": "fgjk",
-      "question": "gfgh",
+      "ans": "Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.\n\nUndefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.",
+      "question": "What are undeclared and undefined variables?",
+      "id": 15
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "body": "",
+      "ans": "=== is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.",
+      "question": "What is === operator?",
+      "id": 16
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is package.json?",
+      "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
       "id": 11
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": "What is JavaScript?",
+      "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
+      "id": 12
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What are JavaScript Data Types?",
+      "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
+      "id": 13
+    },
+    {
+      "pass": true,
+      "front": true,
+      "show": false,
+      "question": " What is the use of isNaN function?",
+      "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
+      "id": 14
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "body": "",
+      "ans": "\"Angular is the best Programming language.\" -Mark",
+      "question": "what is Angular",
+      "id": 17
     }
   ],
   "assessment": [
     {
+      "id": 0,
       "courseName": "Angular",
       "icon": "assets/img/angular.jpg",
-      "id": 0,
       "courseData": [
         {
+          "id": 0,
           "q": " What is Angular?",
           "options": [
             {
@@ -563,6 +643,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "What decorator is used for configuring your module class",
           "options": [
             {
@@ -584,6 +665,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "Which character is used for chaining multiple pipes?",
           "options": [
             {
@@ -605,6 +687,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Router is part of which of the following module?",
           "options": [
             {
@@ -626,6 +709,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "RxJS can be used for?",
           "options": [
             {
@@ -654,6 +738,7 @@
       "id": 1,
       "courseData": [
         {
+          "id": 0,
           "q": "Which built-in method combines the text of two strings and returns a new string?",
           "options": [
             {
@@ -675,6 +760,7 @@
           ]
         },
         {
+          "id": 1,
           "q": " Which of the following function of Array object adds one or more elements to the end of an array and returns the new length of the array?",
           "options": [
             {
@@ -696,6 +782,7 @@
           ]
         },
         {
+          "id": 2,
           "q": " Which of the following is the correct syntax to display “GeeksforGeeks” in an alert box using JavaScript?",
           "options": [
             {
@@ -717,6 +804,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "How do you declare a JavaScript variable?",
           "options": [
             {
@@ -738,6 +826,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following function of Array object extracts a section of an array and returns a new array? ",
           "options": [
             {
@@ -766,6 +855,7 @@
       "id": 2,
       "courseData": [
         {
+          "id": 0,
           "q": "In Nodejs what is use of underscore variable in REPL session?",
           "options": [
             {
@@ -787,6 +877,7 @@
           ]
         },
         {
+          "id": 1,
           "q": "How can we check the current version of NPM?",
           "options": [
             {
@@ -808,6 +899,7 @@
           ]
         },
         {
+          "id": 2,
           "q": "What is the advantage of using node.js?",
           "options": [
             {
@@ -829,6 +921,7 @@
           ]
         },
         {
+          "id": 3,
           "q": "Which of the following tool automates various tasks of Node.js application?",
           "options": [
             {
@@ -850,6 +943,7 @@
           ]
         },
         {
+          "id": 4,
           "q": "Which of the following provides in-built events.",
           "options": [
             {
@@ -903,6 +997,11 @@
           "id": 5,
           "title": "Routing and Navigation",
           "url": "https://www.youtube.com/embed/Nehk4tBxD4o"
+        },
+        {
+          "id": 5,
+          "title": "Annotation 2020-03-04 162519.png",
+          "url": "http://test"
         }
       ]
     },

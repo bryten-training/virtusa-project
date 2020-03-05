@@ -1,8 +1,9 @@
 .example-card {
-  width: 500px;
-  height: 250px;
+  width: 600px;
+ 
   border: 3px solid rgb(206, 158, 228);
   background-color: whitesmoke;
+  margin: auto;
 }
 mat-card-title{
   background-color: purple;
@@ -12,34 +13,32 @@ mat-card-title{
   margin: auto;
   justify-content: center;
   text-align: center;
- color:white;
-
+  color:white;
 }
 mat-card-header{
   display: flex;
   margin: auto;
   justify-content: center;
   text-align: center;
-  font-style: bold;
+  
 }
 mat-card-actions{
   justify-content: center;  
   text-align: center;
-  font-style: bold;
   color: purple;
-
+  font-style: bold;
 }
 mat-card-content{
   justify-content: center;
   text-align: center;
   font-style: bold;
-
+ 
+  
 }
-
 .main-div{
   height: 100vh;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-style: bold;
 }
