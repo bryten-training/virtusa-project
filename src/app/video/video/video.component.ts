@@ -122,7 +122,7 @@ export class VideoComponent implements OnInit {
 
     //this.uploadForm.reset();
     this.openSnackBar();
-    setTimeout (() => { this.flipIt(); }, 500);
+    setTimeout (() => { this.flipIt(); }, 800);
     })
   }
 
