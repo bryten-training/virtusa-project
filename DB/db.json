@@ -416,7 +416,7 @@
       "question": "what is diretive",
       "ans": " ssssss",
       "body": "content",
-      "pass": true,
+      "pass": false,
       "front": true,
       "show": true
     },
