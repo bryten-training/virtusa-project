@@ -5,16 +5,8 @@
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button [matMenuTriggerFor]="cardMenuAssessment" [routerLink]="['/assessment']" routerLinkActive="active">
+  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
-    <mat-menu #cardMenuAssessment="matMenu" yPosition="above">
-      <button mat-menu-item [routerLink]="['/NewAssessment']">
-        <span [style.font-weight]="'lighter'">Add New Assessment</span>
-      </button>
-      <button mat-menu-item [routerLink]="['/newQuestion']">
-        <span [style.font-weight]="'lighter'">Add New Question</span>
-      </button>
-    </mat-menu>
   </button>
 
 
