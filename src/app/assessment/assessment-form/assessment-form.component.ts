@@ -65,6 +65,8 @@ export class AssessmentFormComponent implements OnInit {
   }
 
   submitForm(myForm: NgForm) {
+    console.log(this.ans);
+    console.log(this.userAns);
     for (let i = 0; i < this.ans.length; i++) {
       if (this.ans[i] === myForm.form.value[i]) {
         this.score += 1;

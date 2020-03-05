@@ -1129,6 +1129,32 @@
               "optAns": true
             }
           ]
+        },
+        {
+          "id": 6,
+          "q": "for what is npm is used?",
+          "options": [
+            {
+              "id": 1,
+              "opt": "For server",
+              "optAns": false
+            },
+            {
+              "id": 2,
+              "opt": "For ts file execution",
+              "optAns": false
+            },
+            {
+              "id": 3,
+              "opt": "downloading packages",
+              "optAns": false
+            },
+            {
+              "id": 4,
+              "opt": "all the above",
+              "optAns": true
+            }
+          ]
         }
       ]
     }
