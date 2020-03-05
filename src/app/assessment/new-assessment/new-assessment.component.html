@@ -8,18 +8,19 @@
                 {{course}}
             </mat-option>
         </mat-select>
-
     </mat-form-field>
+    <hr>
     <mat-form-field class="full-width" appearance="outline">
         <mat-label>Please enter question 1</mat-label>
         <input formControlName="ques1" matInput placeholder="Enter question 1">
     </mat-form-field>
-    
+
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 1</mat-label>
         <input formControlName="ques1op1" matInput placeholder="Enter Option 1">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 1</mat-label>
         <mat-select formControlName="ques1Ans1">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -28,10 +29,11 @@
     </mat-form-field>
 
     <mat-form-field class="half-width" appearance="outline">
-        <mat-label>Option 2</mat-label>
+        <mat-label>Answer 1</mat-label>
         <input formControlName="ques1op2" matInput placeholder="Enter Option 2">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Option 1</mat-label>
         <mat-select formControlName="ques1Ans2">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -41,9 +43,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 3</mat-label>
-        <input formControlName="ques1op3" matInput placeholder="Enter Option 3">    
+        <input formControlName="ques1op3" matInput placeholder="Enter Option 3">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 1</mat-label>
         <mat-select formControlName="ques1Ans3">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -53,26 +56,27 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 4</mat-label>
-        <input formControlName="ques1op4" matInput placeholder="Enter Option 4">    
+        <input formControlName="ques1op4" matInput placeholder="Enter Option 4">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 1</mat-label>
         <mat-select formControlName="ques1Ans4">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-
+    <hr>
     <mat-form-field class="full-width" appearance="outline">
         <mat-label>Please enter question 2</mat-label>
         <input formControlName="ques2" matInput placeholder="Enter question 2">
     </mat-form-field>
-    
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 1</mat-label>
-        <input formControlName="ques2op1" matInput placeholder="Enter Option 1">    
+        <input formControlName="ques2op1" matInput placeholder="Enter Option 1">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 2</mat-label>
         <mat-select formControlName="ques2Ans1">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -82,9 +86,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 2</mat-label>
-        <input formControlName="ques2op2" matInput placeholder="Enter Option 2">    
+        <input formControlName="ques2op2" matInput placeholder="Enter Option 2">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 2</mat-label>
         <mat-select formControlName="ques2Ans2">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -94,9 +99,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 3</mat-label>
-        <input formControlName="ques2op3" matInput placeholder="Enter Option 3">    
+        <input formControlName="ques2op3" matInput placeholder="Enter Option 3">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 2</mat-label>
         <mat-select formControlName="ques2Ans3">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -106,26 +112,28 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 4</mat-label>
-        <input formControlName="ques2op4" matInput placeholder="Enter Option 4">    
+        <input formControlName="ques2op4" matInput placeholder="Enter Option 4">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 2</mat-label>
         <mat-select formControlName="ques2Ans4">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
             </mat-option>
         </mat-select>
     </mat-form-field>
-
+    <hr>
     <mat-form-field class="full-width" appearance="outline">
         <mat-label>Please enter question 3</mat-label>
         <input formControlName="ques3" matInput placeholder="Enter question 3">
     </mat-form-field>
-    
+
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 1</mat-label>
-        <input formControlName="ques3op1" matInput placeholder="Enter Option 1">    
+        <input formControlName="ques3op1" matInput placeholder="Enter Option 1">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 3</mat-label>
         <mat-select formControlName="ques3Ans1">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -135,9 +143,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 2</mat-label>
-        <input formControlName="ques3op2" matInput placeholder="Enter Option 2">    
+        <input formControlName="ques3op2" matInput placeholder="Enter Option 2">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 3</mat-label>
         <mat-select formControlName="ques3Ans2">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -147,9 +156,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 3</mat-label>
-        <input formControlName="ques3op3" matInput placeholder="Enter Option 3">    
+        <input formControlName="ques3op3" matInput placeholder="Enter Option 3">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 3</mat-label>
         <mat-select formControlName="ques3Ans3">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -159,9 +169,10 @@
 
     <mat-form-field class="half-width" appearance="outline">
         <mat-label>Option 4</mat-label>
-        <input formControlName="ques3op4" matInput placeholder="Enter Option 4">    
+        <input formControlName="ques3op4" matInput placeholder="Enter Option 4">
     </mat-form-field>
     <mat-form-field class="half-width" appearance="outline">
+        <mat-label>Answer 3</mat-label>
         <mat-select formControlName="ques3Ans4">
             <mat-option *ngFor="let Answer of Answers" placeholder="Enter Answer 1" [value]="Answer">
                 {{Answer}}
@@ -172,6 +183,6 @@
     <mat-error *ngIf="assessmentForm.valid">
         Please Enter Form Correctly
     </mat-error>
-    <button mat-raised-button color='primary' type="submit" class="full-width submitButton" >Submit</button>
+    <button mat-raised-button color='primary' type="submit" class="full-width submitButton">Submit</button>
 </form>
 <br><br>

@@ -14,6 +14,8 @@ import { FlashCardlistComponent } from './flash-cards/flash-cardlist/flash-cardl
 import { AssessmentFormComponent } from './assessment/assessment-form/assessment-form.component';
 import { NewAssessmentComponent } from './assessment/new-assessment/new-assessment.component';
 import { VideoDisplayComponent } from './video/video-display/video-display.component';
+import { NewQuestionComponent } from './assessment/new-question/new-question.component';
+
 
 const routes: Routes = [
 
@@ -35,7 +37,8 @@ const routes: Routes = [
   { path: 'card', component: FlashCardComponent, data: { state: 'card' }},
   { path: 'video', component: VideoComponent, data: { state: 'video' } },
   { path: 'videoList', component: VideoDisplayComponent },
-  { path: 'NewAssessment', component: NewAssessmentComponent},
+  { path: 'newAssessment', component: NewAssessmentComponent},
+  { path: 'newQuestion', component: NewQuestionComponent},
 ];
 
 @NgModule({
