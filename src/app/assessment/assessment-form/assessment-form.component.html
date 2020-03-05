@@ -17,7 +17,7 @@
         <button *ngIf="courseData" mat-fab color="primary" class="fab-button" [routerLink]="['/assessment']">
             <mat-icon>arrow_back</mat-icon>
         </button>
-        <button class="classbutton" (click)="showalert = !showalert" type="submit"  mat-raised-button data-modal="#modal1">submit</button>
+        <button class="classbutton" (click)="showalert = !showalert" type="submit" [disabled]="myForm.invalid || myForm.submitted"  mat-raised-button data-modal="#modal1">submit</button>
     </form>
 </div>
 
