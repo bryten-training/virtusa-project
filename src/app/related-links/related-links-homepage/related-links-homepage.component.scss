@@ -5,3 +5,8 @@ mat-expansion-panel {
   margin: 0 auto;
   max-width: 800px;
 }
+
+
+mat-expansion-panel:hover {
+  background-color: #ffd151
+}

@@ -13,26 +13,34 @@
   </mat-card-header>
 
   <mat-card-content>
-    <p style="margin-top: 5px;">
+    <p style="margin-top: 10px;">
       {{e.comment}}
     </p>
   </mat-card-content>
 
   <mat-card-actions style="width: 100%;">
+<!--     
     <button mat-icon-button color="warn" aria-label="Example" *ngIf="liked" (click)="like()">
       <mat-icon>favorite {{e.likes}}</mat-icon>
     </button>
-    <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()">
+
+    <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()"> -->
+
 
       <div *ngIf="e.authorinfo.userType == null; else pun">
-        <mat-icon>favorite</mat-icon>
+
+        <mat-icon style="float: left; width: 90%;" >person_outline</mat-icon>
+        <mat-card-subtitle style="font-size: 13px;" >Guest User</mat-card-subtitle>
+        <!-- <mat-icon>face</mat-icon> -->
+        
       </div>  
-      <ng-template #pun>
-        <mat-icon>check_circle_outline</mat-icon>
+      <ng-template #pun style="float: left; width: 20%;">
+        <mat-icon style="float: left; width: 90%;" >check_circle_outline</mat-icon>
+        <mat-card-subtitle style="font-size: 13px;" >User Verified</mat-card-subtitle>
       </ng-template>
 
 
-    </button>
+    <!-- </button> -->
     <!-- {{article.likes}} -->
   </mat-card-actions>
 
