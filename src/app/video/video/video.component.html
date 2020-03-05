@@ -9,7 +9,7 @@
 
     <!-- Upload video -->
     <div class="upload" *ngIf="!flipped">
-    <mat-card (click)="flipIt()" class="uploadMatCard" [hidden]="currentUser===undefined">
+    <mat-card (click)="flipIt()" class="uploadMatCard" *ngIf="currentUser">
         <mat-card-title>Upload</mat-card-title>
         <img src="/assets/img/upload.jpeg" mat-card-image alt="skill icon" width="100px">
     </mat-card>
@@ -20,20 +20,23 @@
         <button mat-fab color="primary" class="fab-button" (click)="navBack()">
             <mat-icon>arrow_back</mat-icon>
         </button>
-        <mat-card-title>Select a file and course to upload</mat-card-title>
+        <mat-card-title>Select course and video to upload</mat-card-title>
         <form [formGroup]="uploadForm">
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Select Course*</mat-label>
                     <mat-select formControlName="theCourse">
                          <mat-option *ngFor="let x of videoList; index as i" value="{{x.id}}">{{x.courseName}}</mat-option>
                     </mat-select>
+                    <mat-error *ngIf="uploadForm.controls.theTitle.hasError('required')">
+                        Please select a Course
+                    </mat-error>
             </mat-form-field>
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Enter Title*</mat-label>
                     <input matInput formControlName="theTitle" #theTitle>
                     <mat-error *ngIf="uploadForm.controls.theTitle.hasError('required')">
-                        Title is required.
-                </mat-error>
+                        Please enter Title
+                    </mat-error>
             </mat-form-field>
             <div class="full-width" appearance="outline">
                 <input type="file" class="fileSelect" formControlName="theName" accept="video/*" (change)="onFileChanged($event)" />
@@ -43,7 +46,7 @@
                 <mat-label>Enter URL*</mat-label>
                 <input matInput formControlName="theUrl" #theUrl>
                 <mat-error *ngIf="uploadForm.controls.theUrl.hasError('pattern')">
-                    URL entered is not correct. Only YouTube URLs allowed.
+                    Please enter a YouTube URL
                 </mat-error>
             </mat-form-field>
             <button mat-raised-button color='primary' class="submit" [disabled]="uploadForm.invalid || submitted" (click)="onUpload()">Submit</button>
