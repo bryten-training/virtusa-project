@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { VideoService, Video, VideoDisplay } from '../video.service';
 import { HttpClient } from '@angular/common/http';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-video',
@@ -10,7 +12,10 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class VideoComponent implements OnInit {
   
-  constructor(private videoSvc: VideoService, private httpClient: HttpClient) { }
+  constructor(private videoSvc: VideoService, 
+              private httpClient: HttpClient, 
+              private router: Router,
+              private _snackBar: MatSnackBar) { }
   
   ngOnInit(): void {
     this.videoSvc.getVideoList().subscribe(response => {
@@ -20,7 +25,8 @@ export class VideoComponent implements OnInit {
       alert("Sorry. There was a problem getting data.")
     })
   }
-  
+
+  flipped: boolean = false;
   videoList: Video[] = [];
   videoData: VideoDisplay[] = [];
   displayArr: boolean[] = [];
@@ -29,7 +35,7 @@ export class VideoComponent implements OnInit {
   theName;
   theCourse;
   selectedCourse;
- 
+  durationInSeconds = 4000;
   
   uploadForm = new FormGroup ({
     theName: new FormControl('', Validators.required),
@@ -53,42 +59,59 @@ export class VideoComponent implements OnInit {
     console.log(this.selectedFile)
   }
 
+  openSnackBar() {
+    this._snackBar.open(`Video has been uploaded successfully`, "OK", {
+      duration: this.durationInSeconds
+    });
+  }
+
+  resetForm() {
+    this.uploadForm.controls.theCourse.setValue = null;
+    this.uploadForm.controls.theName.setValue = null;
+  }
+
+  nav(courseName) {
+    this.router.navigate(['videoList'], {queryParams:
+      {
+      course: courseName,
+    }});
+  } 
+
+  flipIt() {
+    this.flipped = !this.flipped;
+  }
+
   onUpload() {
     this.selectedCourse = this.uploadForm.controls.theCourse.value;
-    console.log("selectedCourse "+this.selectedCourse);
+    
     if(this.selectedCourse == 0) {
       this.videoDataForPost = this.videoList[0]
-      console.log(this.videoDataForPost)
     } else if(this.selectedCourse == 1) {
       this.videoDataForPost = this.videoList[1]
     } else if (this.selectedCourse == 2) {
       this.videoDataForPost = this.videoList[2]
     }
-    console.log(event);
+
     const uploadData = new FormData();
     uploadData.append('myFile', this.selectedFile, this.selectedFile.name);
 
     let videoData = this.videoDataForPost.videoData;
     let len = videoData.length;
-    console.log("videoData length before " +len)
-    console.log("videoData "+videoData)
-
+    
     let newItem = new VideoDisplay;
-    newItem.id = videoData.length + 1;
+    newItem.id = len + 1;
     newItem.title = this.selectedFile.name;
     newItem.url = "http://test";
 
-    console.log("newItem "+newItem)
     videoData.push(newItem);
-    len = videoData.length;
-    console.log("videoData length after " +len)
-
-    console.log("videoList " +this.videoList)
 
     this.httpClient.put(`/api/video/${this.selectedCourse}`, this.videoDataForPost).subscribe((data) => {
-      console.log("after::", data);
-    })
+    console.log("after::", data);
 
+    //this.uploadForm.reset();
+    this.openSnackBar();
+    setTimeout (() => { this.flipIt(); }, 500);
+    })
   }
 
 }

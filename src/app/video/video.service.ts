@@ -13,6 +13,10 @@ export class VideoService {
         return this.httpClient.get<Video[]>
         (`/api/video/`)
     }
+
+    getCourse(courseName): Observable<Video> {
+        return this.httpClient.get<Video>('api/video?courseName=' + courseName);
+    }
 }
 
 export class Video {

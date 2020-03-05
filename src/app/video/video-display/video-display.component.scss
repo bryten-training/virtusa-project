@@ -1,10 +1,20 @@
-.mat-list-base .mat-list-item {
-    height: auto;
-    display: inline-block;
-    width: auto;
-    margin-right: 20px;
+@import '../../../styles.scss';
+
+.mat-list-base {
+    margin-top: 2%;
+    .mat-list-item {
+        height: auto;
+        display: inline-block;
+        width: auto;
+    }
 }
 
-hr {
-    margin: 10px 0 30px 0;
+.mat-fab {
+    @include backButton
+}
+
+.courseName {
+    position: absolute;
+    top: 10%;
+    left: 50%;
 }
