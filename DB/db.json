@@ -1163,11 +1163,6 @@
           "id": 5,
           "title": "Routing and Navigation",
           "url": "https://www.youtube.com/embed/Nehk4tBxD4o"
-        },
-        {
-          "id": 5,
-          "title": "Annotation 2020-03-04 162519.png",
-          "url": "http://test"
         }
       ]
     },
@@ -1183,8 +1178,8 @@
         },
         {
           "id": 2,
-          "title": "DOM",
-          "url": "https://www.youtube.com/embed/_Gxpmq4aqg"
+          "title": "Variables and Data Types",
+          "url": "https://www.youtube.com/embed/Hrd3SfCCXZw"
         },
         {
           "id": 3,
