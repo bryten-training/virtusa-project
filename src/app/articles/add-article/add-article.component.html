@@ -4,8 +4,8 @@
 <form [formGroup]="articleForm" class="add-article-form" (ngSubmit)="submit()">
     <mat-label>Hi, {{ user ? user.firstName : ""}}</mat-label>
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Subject*</mat-label>
-        <mat-select formControlName="subject">
+        <mat-label>Subject</mat-label>
+        <mat-select formControlName="subject" required>
             <mat-option *ngFor="let subject of subjects" [value]="subject">
                 {{subject}}
             </mat-option>
@@ -16,8 +16,8 @@
     </mat-form-field>
 
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Title*</mat-label>
-        <input matInput placeholder="Ex. Learning..." formControlName="title">
+        <mat-label>Title</mat-label>
+        <input matInput placeholder="Ex. Learning..." formControlName="title" required>
         <mat-error *ngIf="articleForm.controls.title.hasError('required')">
             Title is <strong>required</strong>
         </mat-error>
@@ -31,8 +31,8 @@
     </mat-form-field>
     <!-- <h4>Basic native select</h4> -->
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Time to read* (1 to 100, in minutes)</mat-label>
-        <input matInput placeholder="Estimated time to read this article..." formControlName="timeToRead" type="number">
+        <mat-label>Time to read (1 to 100, in minutes)</mat-label>
+        <input matInput placeholder="Estimated time to read this article..." formControlName="timeToRead" type="number" required>
         <mat-error *ngIf="articleForm.controls.timeToRead.hasError('required')">
             Estimated time is <strong>required</strong>
         </mat-error>
@@ -44,18 +44,18 @@
         </mat-error>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Tags*</mat-label>
-        <input matInput placeholder="Add some tags, use ',' as delimiter" formControlName="tags" #tags>
+        <mat-label>Tags</mat-label>
+        <input matInput placeholder="Add some tags, use ',' as delimiter" formControlName="tags" #tags required>
         <mat-hint align="start" *ngIf="tags.value">Your tags: <strong>{{tags.value | splitBy: ','}}</strong></mat-hint>
         <mat-error *ngIf="articleForm.controls.tags.hasError('required')">
             Tags is <strong>required</strong>
         </mat-error>
     </mat-form-field>
     <mat-form-field class="full-width" appearance="outline">
-        <mat-label>Write your article here*</mat-label>
+        <mat-label>Write your article here</mat-label>
         <textarea matInput placeholder="Ex. Learning..." cdkTextareaAutosize #autosize="cdkTextareaAutosize"
             cdkAutosizeMinRows="10" cdkAutosizeMaxRows="30" name="add-article-textarea" formControlName="mdText"
-            #mdText></textarea>
+            #mdText required></textarea>
         <mat-hint align="start"><strong>Markdown Supported!</strong> </mat-hint>
         <mat-error *ngIf="articleForm.controls.mdText.hasError('required')">
             Article content is <strong>required</strong>

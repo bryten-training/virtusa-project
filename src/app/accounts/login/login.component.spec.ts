@@ -28,11 +28,11 @@ describe('LoginComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should LogInComponent create', () => {
+  fit('should LogInComponent create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('All fields in Login filled and valid', () => {
+  fit('All fields in Login filled and valid', () => {
     component.myForm.controls.userName.setValue('trungvo');
     component.myForm.controls.email.setValue('vtt311096@gmail.com');
     component.myForm.controls.passWord.setValue('pass');
@@ -44,7 +44,7 @@ describe('LoginComponent', () => {
     expect(component.myForm.valid).toBe(true);
   })
 
-  it('Email valid', () => {
+  fit('Email valid', () => {
     component.myForm.controls.email.setValue('vtt311096@gmail.com');
     fixture.detectChanges();
 
@@ -54,7 +54,7 @@ describe('LoginComponent', () => {
     expect(component.myForm.controls.email.valid).toBe(true);
   })
 
-  it('Email invalid', () => {
+  fit('Email invalid', () => {
     component.myForm.controls.email.setValue('vtt311096@gmail.');
     fixture.detectChanges();
 

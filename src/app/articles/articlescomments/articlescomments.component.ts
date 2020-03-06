@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ArticlesService } from '../service/articles.service';
 import { Article } from '../model/article';
 import { User } from 'src/app/accounts/models/user.model';
+import {FormsModule} from '@angular/forms'
 
 @Component({
   selector: 'app-articlescomments',
@@ -37,15 +38,19 @@ export class ArticlescommentsComponent implements OnInit {
 
     })
 
-    // this.user = this.articlesService.getCurrentUser();
+    this.articlesService.getCurrentUser().subscribe(user=>{
+      if (user != undefined) {
+        this.user = user;
+      }
+    });
   }
 
-  commentsubmit() {
+  commentsubmit(puneetform) {
     let commentdata = {
       id: 2,
       authorinfo: {
         userType: this.user.userType,
-        name: this.user.firstName + " " + this.user.lastName
+        name: this.user.userType == null ? "Guest" : this.user.firstName + " " + this.user.lastName
       },
       comment: this.comments,
       datetime: new Date()
@@ -57,6 +62,8 @@ export class ArticlescommentsComponent implements OnInit {
 
     this.articlesService.put(`api/articles/${this.article.id}`, this.article).subscribe((data) => {
       console.log("after::", data);
+      puneetform.resetForm()
+
 
 
     })

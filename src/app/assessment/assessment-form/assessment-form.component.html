@@ -14,10 +14,10 @@
                     id=""><label for="{{c.id}}">{{op.opt}}</label>
             </div>
         </mat-card>
-        <button *ngIf="courseData" mat-fab color="primary" class="fab-button" [routerLink]="['/assessment']">
+        <button matTooltip="Go back"  *ngIf="courseData" mat-fab color="primary" class="fab-button" [routerLink]="['/assessment']">
             <mat-icon>arrow_back</mat-icon>
         </button>
-        <button class="classbutton" (click)="showalert = !showalert" type="submit" [disabled]="myForm.invalid || myForm.submitted"  mat-raised-button data-modal="#modal1">submit</button>
+        <button matTooltip="Check your score" matTooltipPosition="right" class="submitButton" (click)="showalert = !showalert" type="submit" [disabled]="myForm.invalid || myForm.submitted"  mat-raised-button data-modal="#modal1">Submit</button>
     </form>
 </div>
 
@@ -25,7 +25,8 @@
 
     <h1 *ngIf="this.score >= 3">Congratulations you have passed</h1>
     
-    <h1 *ngIf="this.score < 3">I am sorry try again later</h1>
+    <h1 *ngIf="this.score < 3">Sorry you hvae failed 
+        I am sorry try again later</h1>
     
     <button class="closebutton" mat-raised-button (click)="showalert = !showalert" class="btn">Close</button>
 </app-alert>

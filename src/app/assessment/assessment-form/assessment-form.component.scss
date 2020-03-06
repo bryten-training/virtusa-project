@@ -113,12 +113,9 @@ mat-radio-group {
 // }
 
 .classbutton {
-  display: block;
-  position: absolute;
+  margin: 20px;
+  padding: 20px;
   z-index: 99;
-  right: 30px;
-  background-color: green;
-  top: 20px;
 }
 h1{
   margin: 10px;
@@ -144,4 +141,10 @@ h1{
 }
 button{
   margin: auto;
+}
+.submitButton {
+  margin: 20px auto;
+  padding: 5px;
+  font-size: 30px;
+  width: 98%;
 }

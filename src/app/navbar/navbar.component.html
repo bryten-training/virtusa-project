@@ -5,37 +5,41 @@
     <span [style.font-weight]="'lighter'">Articles</span>
   </button>
 
-  <button mat-button [matMenuTriggerFor]="cardMenuAssessment" [routerLink]="['/assessment']" routerLinkActive="active">
+  <button mat-button [routerLink]="['/assessment']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Assessments</span>
-    <mat-menu #cardMenuAssessment="matMenu" yPosition="above">
-      <button mat-menu-item [routerLink]="['/NewAssessment']">
-        <span [style.font-weight]="'lighter'">Add New Assessment</span>
-      </button>
-      <button mat-menu-item [routerLink]="['/newQuestion']">
-        <span [style.font-weight]="'lighter'">Add New Question</span>
-      </button>
-    </mat-menu>
   </button>
 
 
 
-  <button mat-button [matMenuTriggerFor]="cardMenu" routerLinkActive="active">
-    <span [style.font-weight]="'lighter'">Flash Cards</span>
-    <mat-menu #cardMenu="matMenu" yPosition="above">
-      <button mat-menu-item [routerLink]="['/cards']" routerLinkActive="active">
-        <span [style.font-weight]="'lighter'">Flash Cards</span>
-      </button>
-      <div [hidden]="currentUser===undefined">
-        <button mat-menu-item [routerLink]="['/addcard']" routerLinkActive="active">
+  <!-- <button mat-button [matMenuTriggerFor]="cardMenu" [routerLink]="['/card/cards']" routerLinkActive="active">
+      <span [style.font-weight]="'lighter'">Flash Cards</span>
+        <mat-menu #cardMenu="matMenu" yPosition="above">
+        <button mat-menu-item [routerLink]="['/card/cards']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Home</span>
+        </button>
+        <!-- <button mat-menu-item [routerLink]="['/card/']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">Flash Cards catagories</span>
+        </button> -->
+        <!-- <div  [hidden]="currentUser===undefined">
+        <button mat-menu-item [routerLink]="['/addcard']"  routerLinkActive="active">
           <span [style.font-weight]="'lighter'">Add Card</span>
+        </button>
+        <button mat-menu-item [routerLink]="['/card/Angular']"  routerLinkActive="active">
+          <span [style.font-weight]="'lighter'">angular</span>
         </button>
       </div>
     </mat-menu>
+  </button> -->
+
+  <button mat-button [routerLink]="['/card']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Flash Card</span>
   </button>
-
-
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
+  </button>
+
+  <button mat-button [routerLink]="['/relatedlinks']" routerLinkActive="active">
+    <span [style.font-weight]="'lighter'">Related Links</span>
   </button>
 
   <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">
