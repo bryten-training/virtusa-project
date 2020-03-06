@@ -9,6 +9,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DebugElement } from '@angular/core';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 describe('AssessmentFormComponent', () => {
   let component: AssessmentFormComponent;
@@ -23,11 +24,11 @@ describe('AssessmentFormComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AssessmentFormComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AssessmentFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   fit('should create', () => {
     expect(component).toBeTruthy();

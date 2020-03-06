@@ -15,7 +15,6 @@ mat-horizontal-stepper{
   font-size: larger;
   .submitButton {
     margin-top: 20px;
-    font-size: 40px;
   }
 }
 .full-width {
@@ -26,10 +25,11 @@ mat-horizontal-stepper{
 }
 
 .fab-button {
+  display: block;
   position: fixed;
-  z-index: 99;
+  z-index: 0;
   left: 30px;
-  top: 90px;
+  top: 100px;
 }
 mat-form-field{
   margin: 0 5px ;
