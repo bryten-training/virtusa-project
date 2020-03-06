@@ -1,6 +1,5 @@
 <app-navbar></app-navbar>
-<main [@routerTransition]="getState(o)">
-    <router-outlet #o="outlet"></router-outlet>
+<main [@routerTransition]="getState(o)" style="min-height: 83vh;">
+  <router-outlet #o="outlet"></router-outlet>
 </main>
-<br><br><br>
 <app-footer></app-footer>

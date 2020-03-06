@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssessmentFormComponent } from './assessment-form.component';
 import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
@@ -9,6 +9,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DebugElement } from '@angular/core';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 describe('AssessmentFormComponent', () => {
   let component: AssessmentFormComponent;
@@ -29,9 +30,12 @@ describe('AssessmentFormComponent', () => {
     fixture.detectChanges();
   });
 
+  fit('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
   fit('form required', () => {
     const crsEl = fixture.debugElement.nativeElement;
-    console.log(crsEl.value);
     expect(crsEl.querySelector('h1').textContent).toContain('Sorry you hvae failed I am sorry try again later');
   });
 });
