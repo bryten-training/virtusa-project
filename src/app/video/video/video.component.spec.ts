@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
-// import { VideoComponent } from './video.component';
-=======
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { VideoComponent } from './video.component';
@@ -12,20 +7,11 @@ import { By } from '@angular/platform-browser';
 import { VideoService } from '../video.service';
 import { MaterialModule } from 'src/app/material/material.module';
 import { MatCardModule } from '@angular/material/card';
->>>>>>> e51e0cb2d8532106c60f0a69ba6858712a961aba
 
-// describe('VideoComponent', () => {
-//   let component: VideoComponent;
-//   let fixture: ComponentFixture<VideoComponent>;
+describe('VideoComponent', () => {
+  let component: VideoComponent;
+  let fixture: ComponentFixture<VideoComponent>;
 
-<<<<<<< HEAD
-//   beforeEach(async(() => {
-//     TestBed.configureTestingModule({
-//       declarations: [ VideoComponent ]
-//     })
-//     .compileComponents();
-//   }));
-=======
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ VideoComponent ],
@@ -34,7 +20,6 @@ import { MatCardModule } from '@angular/material/card';
     })
     .compileComponents();
   }));
->>>>>>> e51e0cb2d8532106c60f0a69ba6858712a961aba
 
 //   beforeEach(() => {
 //     fixture = TestBed.createComponent(VideoComponent);
@@ -42,12 +27,6 @@ import { MatCardModule } from '@angular/material/card';
 //     fixture.detectChanges();
 //   });
 
-<<<<<<< HEAD
-//   it('should create', () => {
-//     expect(component).toBeTruthy();
-//   });
-// });
-=======
   it('should create', () => {
     expect(component).toBeTruthy();
   });
@@ -63,10 +42,9 @@ import { MatCardModule } from '@angular/material/card';
 
   it('VideoService videoCourse array not empty', () => {
     service = TestBed.inject(VideoService);
-    let courseName;
+courseName;
     let responseData = service.getCourse(courseName);
     expect(responseData).toBeTruthy;
     expect(responseData.subscribe.length).toBeGreaterThan(0);
   });
 });
->>>>>>> e51e0cb2d8532106c60f0a69ba6858712a961aba

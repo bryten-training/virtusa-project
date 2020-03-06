@@ -10,9 +10,9 @@ import { DebugElement } from '@angular/core';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-// describe('AssessmentFormComponent', () => {
-//   let component: AssessmentFormComponent;
-//   let fixture: ComponentFixture<AssessmentFormComponent>;
+describe('AssessmentFormComponent', () => {
+  let component: AssessmentFormComponent;
+  let fixture: ComponentFixture<AssessmentFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

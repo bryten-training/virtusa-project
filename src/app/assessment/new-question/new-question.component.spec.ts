@@ -11,9 +11,9 @@ import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
-// describe('NewQuestionComponent', () => {
-//   let component: NewQuestionComponent;
-//   let fixture: ComponentFixture<NewQuestionComponent>;
+describe('NewQuestionComponent', () => {
+  let component: NewQuestionComponent;
+  let fixture: ComponentFixture<NewQuestionComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({

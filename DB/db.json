@@ -508,8 +508,8 @@
       "question": "Name the building blocks of Angular.",
       "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
       "body": "content",
-      "pass": true,
-      "front": true,
+      "pass": false,
+      "front": false,
       "show": false,
       "type": "Angular"
     },
@@ -517,15 +517,15 @@
       "question": "What is the use of @Input and @Output?",
       "ans": "When it comes to the communication of Angular Components, which are in Parent-Child Relationship; we use @Input in Child Component when we are passing data from Parent to Child Component and @Output is used in Child Component to receive an event from Child to Parent Component.",
       "body": "content",
-      "pass": true,
-      "front": true,
+      "pass": false,
+      "front": false,
       "show": false,
       "id": 3,
       "type": "Angular"
     },
     {
-      "pass": true,
-      "front": true,
+      "pass": false,
+      "front": false,
       "show": false,
       "question": "What is RouterOutlet?",
       "ans": "RouterOutlet is a substitution for templates rendering the components. In other words, it represents or renders the components on a template at a particular location.",
@@ -533,8 +533,8 @@
       "type": "Angular"
     },
     {
-      "pass": true,
-      "front": true,
+      "pass": false,
+      "front": false,
       "show": false,
       "question": "Explain the usage of {{}}?",
       "ans": "The set of brackets {{}} when used with an HTML tag, represent data from a component. For example, on a HTML page which has <h1>{{variableName}}</h1>, here the ‘variableName’ is actually typescript (component) data representing its value on the template; i.e., HTML. This entire concept is called String Interpolation.",
@@ -566,7 +566,7 @@
       "question": "What Is Node.js?",
       "ans": "Node.js is a powerful framework developed on Chrome’s V8 JavaScript engine that compiles the JavaScript directly into the native machine code. It is a lightweight framework used for creating server-side web applications and extends JavaScript API to offer usual server-side functionalities. It is generally used for large-scale application development, especially for video streaming sites, single page application, and other web applications.",
       "id": 8,
-      "type": "Node"
+      "type": "NodeJS"
     },
     {
       "pass": false,
@@ -575,7 +575,7 @@
       "question": "Why Node.js is single threaded?",
       "ans": "Node.js uses a single threaded model in order to support async processing. With async processing, an application can perform better and is more scalable under web loads. Thus, Node.js makes use of a single-threaded model approach rather than typical thread-based implementation.",
       "id": 9,
-      "type": "Node"
+      "type": "NodeJS"
     },
     {
       "pass": false,
@@ -584,7 +584,7 @@
       "question": "How many types of API functions are there in Node.js?",
       "ans": "There are two types of API functions in Node.js: Asynchronous, non-blocking functions Synchronous, blocking functions",
       "id": 10,
-      "type": "Node"
+      "type": "NodeJS"
     },
     {
       "pass": false,
@@ -593,7 +593,7 @@
       "question": "What is package.json?",
       "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
       "id": 11,
-      "type": "NodeJs"
+      "type": "JavaScript"
     },
     {
       "pass": false,
@@ -602,7 +602,7 @@
       "question": "What is JavaScript?",
       "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
       "id": 12,
-      "type": "NodeJs"
+      "type": "Javascript"
     },
     {
       "pass": false,
@@ -641,62 +641,6 @@
       "question": "What is === operator?",
       "id": 16,
       "type": "Javascript"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": "What is package.json?",
-      "ans": "The package.json file in Node.js is the heart of the entire application. It is basically the manifest file that contains the metadata of the project where we define the properties of a package.",
-      "id": 11,
-      "type": "Javascript"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": "What is JavaScript?",
-      "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
-      "id": 12,
-      "type": "Javascript"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": " What are JavaScript Data Types?",
-      "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
-      "id": 13,
-      "type": "Javascript"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "question": " What is the use of isNaN function?",
-      "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
-      "id": 14,
-      "type": "Javascript"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "body": "",
-      "ans": "\"Angular is the best Programming language.\" -Mark",
-      "question": "what is Angular",
-      "id": 17,
-      "type": "Angular"
-    },
-    {
-      "pass": false,
-      "front": false,
-      "show": false,
-      "body": "",
-      "ans": "Not a Number",
-      "question": "What is NaN?",
-      "type": "javascript",
-      "id": 18
     }
   ],
   "assessment": [
