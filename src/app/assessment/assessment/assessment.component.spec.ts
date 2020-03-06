@@ -28,10 +28,12 @@ beforeEach(async(() => {
 //     component = fixture.componentInstance;
 //     fixture.detectChanges();
 //   });
+  fit('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-fit('Assessment required', () => {
+  fit('Assessment required', () => {
     const crsEl = fixture.debugElement.nativeElement;
-    console.log(crsEl.value);
     expect(crsEl.querySelector('h1').textContent).toContain('Please Login to add some content');
   });
 });

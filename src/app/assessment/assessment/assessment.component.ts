@@ -20,7 +20,7 @@ export class AssessmentComponent implements OnInit {
   constructor(private asSvc: AssessmentService,
               private router: Router,
               private accountsService: AccountsService,
-              private _snackBar: MatSnackBar ) { }
+              private snackBar: MatSnackBar ) { }
 
   ngOnInit(): void {
     this.asSvc.getAssessmentList().subscribe(res => {
@@ -28,7 +28,7 @@ export class AssessmentComponent implements OnInit {
       this.data.forEach(a => this.displayArr.push(false));
     },
     error => {
-      this._snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok');
+      this.snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok');
     });
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
       // print out user info

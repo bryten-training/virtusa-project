@@ -64,7 +64,7 @@ export class VideoComponent implements OnInit {
     theTitle: new FormControl('', Validators.required),
     theUrl: new FormControl('', Validators.compose([
                             Validators.pattern(this.regExp), 
-                            Validators.minLength(43)
+                            Validators.minLength(48)
     ]))
   })
   
