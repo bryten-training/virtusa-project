@@ -505,8 +505,8 @@
   "flashCards": [
     {
       "id": 1,
-      "question": "Name the building blocks of Angular.",
-      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
+      "question": "What is Angular?",
+      "ans": "Angular is a TypeScript-based open-source web application framework, developed and maintained by Google. It offers an easy and powerful way of building front end web-based applications.",
       "body": "content",
       "pass": false,
       "front": false,
@@ -612,7 +612,7 @@
       "question": "What is JavaScript?",
       "ans": "JavaScript is a client-side as well as server side scripting language that can be inserted into HTML pages and is understood by web browsers. JavaScript is also an Object based Programming language",
       "id": 12,
-      "type": "Javascript"
+      "type": "JavaScript"
     },
     {
       "pass": false,
@@ -621,7 +621,7 @@
       "question": " What are JavaScript Data Types?",
       "ans": "Following are the JavaScript Data types: Number,String, Boolean, Object, Undefined",
       "id": 13,
-      "type": "Javascript"
+      "type": "JavaScript"
     },
     {
       "pass": false,
@@ -630,27 +630,25 @@
       "question": " What is the use of isNaN function?",
       "ans": "isNan function returns true if the argument is not a number otherwise it is false.",
       "id": 14,
-      "type": "Javascript"
+      "type": "JavaScript"
     },
     {
       "pass": false,
       "front": false,
       "show": false,
-      "body": "",
       "ans": "Undeclared variables are those that do not exist in a program and are not declared. If the program tries to read the value of an undeclared variable, then a runtime error is encountered.\n\nUndefined variables are those that are declared in the program but have not been given any value. If the program tries to read the value of an undefined variable, an undefined value is returned.",
       "question": "What are undeclared and undefined variables?",
       "id": 15,
-      "type": "Javascript"
+      "type": "JavaScript"
     },
     {
       "pass": false,
       "front": false,
       "show": false,
-      "body": "",
       "ans": "=== is called as strict equality operator which returns true when the two operands are having the same value without any type conversion.",
       "question": "What is === operator?",
       "id": 16,
-      "type": "Javascript"
+      "type": "JavaScript"
     }
   ],
   "assessment": [
