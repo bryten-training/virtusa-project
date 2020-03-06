@@ -67,9 +67,10 @@ export class ArticleComponent implements OnInit {
   }
 
   gotoAssessment() {
-    this.router.navigate(["course"], {
-      queryParams: {
-        course: this.prevType
+    this.router.navigate(['course'], {
+      queryParams:
+      {
+        course: this.prevType == 'NodeJS' ? "NodeJs" : this.prevType,
       }
     });
   }
