@@ -23,7 +23,6 @@ export class AngularComponent implements OnInit {
     this.CardSvc.getFlashcard().subscribe(flashcard => { this.flashcard = flashcard; });
     this.CardSvc.getFlashcards().subscribe(list => {
       console.log('account.constr.list : ' + list);
-
       this.aroute.params.subscribe(
         (data) => {
           console.log('topic: ' + data['topic']);
@@ -93,7 +92,7 @@ export class AngularComponent implements OnInit {
     this.router.navigate(['card/' + this.topic]));
     // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
     // this.rightArrow();
-}
+  }
 
   reset() {
     this.CardSvc.getFlashcards().subscribe(list =>
@@ -111,8 +110,8 @@ export class AngularComponent implements OnInit {
       this.router.navigate(['/']);
 
 
-  });
-}
+    });
+  }
   deletecard(flashcard: Flashcard) {
     this.CardSvc.deleteCard(flashcard).subscribe(_ => {
         this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
@@ -126,9 +125,9 @@ export class AngularComponent implements OnInit {
   leftArrow() {
     if (this.index === 0) {
       this.index = this.flashcardlist.length - 1;
-       } else {
-        this.index--;
-       }
+    } else {
+      this.index--;
+    }
     // while (this.flashcardlist[this.index].pass === true) {
     //   if (this.index < 0) {
     //     this.index = this.flashcardlist.length;

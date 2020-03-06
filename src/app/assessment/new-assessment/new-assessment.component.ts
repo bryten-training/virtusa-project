@@ -63,8 +63,6 @@ export class NewAssessmentComponent implements OnInit {
   });
   ngOnInit(): void { }
   dataSubmit() {
-    console.log(this.assessmentForm.value);
-
     const courseNew = {
       courseName: this.assessmentForm.value.course,
       icon: 'assets/add-article.jpeg',
@@ -131,9 +129,7 @@ export class NewAssessmentComponent implements OnInit {
       }
       ],
     };
-    console.log(courseNew);
     this.assSvc.postCourse(courseNew).subscribe(data => {
-      console.log(data);
       this._snackBar.open('Successfully saved data', 'Ok', {
         duration: 2000,
       });

@@ -10,7 +10,7 @@ export class AssessmentService {
   constructor(private httpClient: HttpClient) {}
 
   getAssessmentList(): Observable<Assessment[]> {
-        return this.httpClient.get<Assessment[]>('api/assessment');
+      return this.httpClient.get<Assessment[]>('api/assessment');
     }
 
   getCourse(courseNm): Observable<Assessment> {
@@ -18,7 +18,6 @@ export class AssessmentService {
   }
 
   postCourse( coursedt): Observable<AssessmentQuestions> {
-    console.log(coursedt);
     return this.httpClient.post<AssessmentQuestions>('api/assessment/', coursedt);
   }
   putQuestion(courseDataNewQuestion, courseNm): Observable<AssessmentQuestions> {

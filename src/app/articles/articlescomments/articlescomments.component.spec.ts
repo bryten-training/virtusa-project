@@ -2,6 +2,10 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ArticlescommentsComponent } from './articlescomments.component';
 
+
+
+
+
 describe('ArticlescommentsComponent', () => {
   let component: ArticlescommentsComponent;
   let fixture: ComponentFixture<ArticlescommentsComponent>;
@@ -19,7 +23,13 @@ describe('ArticlescommentsComponent', () => {
     fixture.detectChanges();
   });
 
+
+
   it('should create', () => {
+    fixture = TestBed.createComponent(ArticlescommentsComponent);
+    fixture.detectChanges();
+    const compiled = fixture.nativeElement
+    expect(compiled)
     expect(component).toBeTruthy();
   });
 });
