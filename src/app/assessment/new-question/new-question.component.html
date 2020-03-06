@@ -67,9 +67,6 @@
             </mat-option>
         </mat-select>
     </mat-form-field>
-    <mat-error *ngIf="assessmentForm.valid">
-        Please Enter Form Correctly
-    </mat-error>
     <button [disabled]="assessmentForm.invalid" matTooltip="Check your score" matTooltipPosition="right" mat-raised-button color='primary' type="submit" class="full-width submitButton" >Submit</button>
 </form>
 <br><br>

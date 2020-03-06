@@ -2,10 +2,7 @@ import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 
 import { AccountsService } from './accounts.service';
-import { Observable, BehaviorSubject } from 'rxjs';
-import { Auth } from '../models/auth.model';
 import { User } from '../models/user.model';
-import { AppModule } from 'src/app/app.module';
 import { RouterTestingModule } from '@angular/router/testing';
 
 
@@ -16,17 +13,17 @@ describe('AccountsService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule, RouterTestingModule],
-      providers: [AccountsService],
+      providers: [AccountsService]
     });
     service = TestBed.inject(AccountsService);
     httpMock = TestBed.get(HttpTestingController);
   });
 
-  fit('should AccountsService be created', () => {
+  it('should AccountsService be created', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('Login User credentials', () => {
+  it('Login User credentials', () => {
     service.allUsers = [
       {
         userName: 'trungvo',
@@ -56,7 +53,7 @@ describe('AccountsService', () => {
 
   it('should get a populated array', () => {
     service.loadAllUsers().subscribe((data: any) => {
-      expect(data.length > 0).toBeTruthy
+      expect(data.length > 0).toBeTruthy();
     });
 
     const req = httpMock.expectOne(`api/accounts`, 'call to api');

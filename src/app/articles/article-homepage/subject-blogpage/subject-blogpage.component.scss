@@ -1,5 +1,12 @@
 $primary: #0b2161;
 
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}
+
 img {
   height: 10%;
 }
