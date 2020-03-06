@@ -33,31 +33,31 @@ describe('AssessmentService', () => {
     });
   });
 
-  fit('should be created', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should get assessment list data', async((done: DoneFn) => {
+  it('should get assessment list data', async((done: DoneFn) => {
     service.getAssessmentList().subscribe(value => {
       expect(value).toBe(dataList);
       done();
     });
   }));
 
-  fit('should try for put and get error', async((done: DoneFn) => {
+  it('should try for put and get error', async((done: DoneFn) => {
     service.getCourse('').subscribe(value => {
       expect(value).toBe(dataQerror);
       done();
     });
   }));
 
-  fit('should try for put and get error', async((done: DoneFn) => {
+  it('should try for put and get error', async((done: DoneFn) => {
     service.putQuestion(dataQ, 'HTML').subscribe(value => {
     },
-    error => {
-      expect(error).toBe('error');
-      done();
-    });
+      error => {
+        expect(error).toBe('error');
+        done();
+      });
   }));
 
 });

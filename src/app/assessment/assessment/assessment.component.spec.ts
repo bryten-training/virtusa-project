@@ -19,9 +19,9 @@ describe('AssessmentComponent', () => {
     TestBed.configureTestingModule({
       // tslint:disable-next-line: max-line-length
       imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
-      declarations: [ AssessmentComponent ]
+      declarations: [AssessmentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -29,11 +29,11 @@ describe('AssessmentComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('Assessment required', () => {
+  it('Assessment required', () => {
     const crsEl = fixture.debugElement.nativeElement;
     expect(crsEl.querySelector('h1').textContent).toContain('Please Login to add some content');
   });
