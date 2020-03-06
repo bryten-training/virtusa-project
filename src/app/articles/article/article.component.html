@@ -9,7 +9,9 @@
         <mat-card-subtitle>{{article.publish_date | date: 'MMM dd, yyyy'}} · {{article.timeToRead}} min read
         </mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="article.image" alt="Cover Photo">
+    <div class="cover-div">
+        <img mat-card-image class="cover-photo" [src]="article.image" alt="Cover Photo">
+    </div>
     <mat-card-content>
         <markdown [data]="markdownContent"></markdown>
     </mat-card-content>
@@ -23,8 +25,7 @@
         {{article.likes}}
         <!-- <button mat-button>SHARE</button> -->
     </mat-card-actions>
-    <button mat-raised-button color='primary' class="full-width assessmentButton"
-        (click)="gotoAssessment()">Go To
+    <button mat-raised-button color='primary' class="full-width assessmentButton" (click)="gotoAssessment()">Go To
         Assessment</button>
     <app-articlescomments></app-articlescomments>
     <app-articlecommentsdisplay></app-articlecommentsdisplay>
