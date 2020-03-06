@@ -1,8 +1,8 @@
 <br><br><br>
 <div *ngIf="currentUser!==undefined">
     <h1>Hey, {{currentUser.firstName}} {{currentUser.lastName}}</h1>
-    <h2>What's your IQ of following skills ?</h2>    
 </div>
+<h2>What's your IQ of following skills ?</h2>    
 <br><hr><br>
 <div class="stack">
     <mat-card *ngFor="let d of data" (click)="nav(d.courseName)" class="cards">
