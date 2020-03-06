@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssessmentComponent } from './assessment.component';
 import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
@@ -14,7 +14,7 @@ describe('AssessmentComponent', () => {
   let component: AssessmentComponent;
   let fixture: ComponentFixture<AssessmentComponent>;
 
-  beforeEach(async(() => {
+beforeEach(async(() => {
     TestBed.configureTestingModule({
       // tslint:disable-next-line: max-line-length
       imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
@@ -23,12 +23,11 @@ describe('AssessmentComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AssessmentComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(AssessmentComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
   fit('should create', () => {
     expect(component).toBeTruthy();
   });

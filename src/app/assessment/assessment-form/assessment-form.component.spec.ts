@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AssessmentFormComponent } from './assessment-form.component';
 import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
@@ -23,11 +23,11 @@ describe('AssessmentFormComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(AssessmentFormComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(AssessmentFormComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
   fit('should create', () => {
     expect(component).toBeTruthy();

@@ -14,8 +14,8 @@ export class AngularComponent implements OnInit {
   currentUser: User;
   flashcard: Flashcard;
   flashcardlist = [new Flashcard()];
+  read = 'unread';
   topic: string = 'Angular';
-
   constructor(private CardSvc: FlashcardsService,
     private accountsService: AccountsService,
     private router: Router,
@@ -23,16 +23,17 @@ export class AngularComponent implements OnInit {
     this.CardSvc.getFlashcard().subscribe(flashcard => { this.flashcard = flashcard; });
     this.CardSvc.getFlashcards().subscribe(list => {
       console.log('account.constr.list : ' + list);
-      this.setlist(list);
       this.aroute.params.subscribe(
         (data) => {
           console.log('topic: ' + data['topic']);
           this.topic = data['topic'];
+          this.setlist(list);
         }
       )
       console.log(' ' + this.flashcardlist[this.index]);
       this.flashcard = this.flashcardlist[this.index];
       this.flashcard.front = false;
+      console.log(this.topic);
     });
   }
 
@@ -42,22 +43,27 @@ export class AngularComponent implements OnInit {
   }
   setlist(list) {
     console.log('in setlist');
+    console.log(this.topic);
+
     this.flashcardlist = list.filter(card => {
-      if (this.topic === 'Angular' && card.type === 'Angular' && card.id > -1 && card.id < 8) {
+      if (this.topic === 'Angular' && card.type === 'Angular' && card.pass === false) {
         return true;
       }
-      if (this.topic === 'NodeJS' && card.id > 7 && card.id < 12) {
+      if (this.topic === 'NodeJS' && card.type === 'NodeJS' && card.pass === false) {
         return true;
       }
-      return true;
+      if (this.topic === 'JavaScript' && card.type === 'JavaScript' && card.pass === false) {
+        return true;
+      }
       // if(this.topic === 'Angular' && this.id < 8){
       //   return true;
-      // }    
+      // }
       //card.type === 'angular' && card.pass !== true);
     });
+    console.log(this.flashcardlist);
+
     // this.flashcardlist = list;
   }
-
   ngOnInit(): void {
 
 
@@ -77,19 +83,24 @@ export class AngularComponent implements OnInit {
   passcard() {
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.pass = !this.flashcard.pass;
+    if (this.flashcard.pass === true) {
+    this.read = 'read';
+    } else {
+      this.read = 'unread';
+    }
     this.CardSvc.pass(this.flashcard).subscribe(_ =>
-      this.router.navigate(['card/cards']));
+    this.router.navigate(['card/' + this.topic]));
     // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
     // this.rightArrow();
   }
 
   reset() {
-
-    this.CardSvc.getFlashcards().subscribe(list => list.forEach(card => {
-      card.pass = false, card.front = false,
-        this.CardSvc.pass(card).subscribe(_ => {
-          this.flashcard = card;
-        });
+    this.CardSvc.getFlashcards().subscribe(list =>
+      list.forEach(card => {
+        card.pass = false, card.front = false,
+      this.CardSvc.pass(card).subscribe(_ => {
+       this.flashcard = card;
+      });
     })
     );
     window.location.reload();
@@ -102,12 +113,12 @@ export class AngularComponent implements OnInit {
     });
   }
   deletecard(flashcard: Flashcard) {
-    this.CardSvc.deleteBook(flashcard).subscribe(_ => {
-      this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
-      console.log(this.flashcardlist[0].id);
-      console.log(flashcard.id);
-      // this.router.navigate(['card/cards']);
-      window.location.reload();
+    this.CardSvc.deleteCard(flashcard).subscribe(_ => {
+        this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
+        console.log(this.flashcardlist[0].id);
+        console.log(flashcard.id);
+        // this.router.navigate(['card/cards']);
+        window.location.reload();
     });
   }
 

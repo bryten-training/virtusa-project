@@ -1,22 +1,24 @@
-<form [formGroup]='dataForm'>
-  <mat-form-field appearance="fill">
+<form [formGroup]='dataForm' class="add-article-form" (ngSubmit)="add_Card()">
+    <h1>Please add card here</h1>
+  <mat-form-field class="full-width" appearance="outline">
     <mat-label>Enter the question</mat-label>
     <textarea styles="margin 0 auto" rows="2" cols="100" matInput formControlName='question'
       placeholder="enter the question"></textarea>
     <br />
   </mat-form-field>
   <br />
-  <mat-form-field appearance="fill">
+  <mat-form-field class="full-width" appearance="outline">
     <mat-label>Enter the ans</mat-label>
     <textarea rows="5" cols="50" matInput formControlName="ans" placeholder="enter the ans"></textarea>
   </mat-form-field>
-  <mat-form-field appearance="fill">
-    <mat-label>chose a type</mat-label>
-    <mat-select formControlName='type'>
-      <mat-option *ngFor="let t of type" [value]="t">{{t}}</mat-option>
-    </mat-select><br />
-    <mat-card-actions>
-      <button [disabled]='dataForm.invalid' (click)="add_Card()">save</button>
-    </mat-card-actions>
-  </mat-form-field>
+  <mat-form-field class="full-width" appearance="outline">
+  <mat-label>chose a type</mat-label>
+  <mat-select formControlName='type' >
+  <mat-option *ngFor="let t of type" [value]="t">{{t}}</mat-option>
+  </mat-select><br/>
+</mat-form-field>
+<mat-card-actions>
+    <button matTooltip="Check your score" matTooltipPosition="right" mat-raised-button [disabled]="dataForm.invalid" color='primary' type="submit" class="full-width submitButton">Save</button>
+  </mat-card-actions>
+
 </form>
