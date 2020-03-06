@@ -33,9 +33,4 @@ describe('AssessmentFormComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('form required', () => {
-    const crsEl = fixture.debugElement.nativeElement;
-    expect(crsEl.querySelector('h1').textContent).toContain('Congratulations you have passed your score: {{score}}');
-  });
 });

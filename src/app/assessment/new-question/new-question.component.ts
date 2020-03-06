@@ -45,7 +45,7 @@ export class NewQuestionComponent implements OnInit {
   dataSubmit() {
     const q1ans = [false, false, false, false];
     this.Answers.forEach(num => {
-        if (this.assessmentForm.value.ques1Ans === num) {
+        if (this.assessmentForm.value.ques1Ans == num) {
           q1ans[num - 1] = true;
         }
       });
