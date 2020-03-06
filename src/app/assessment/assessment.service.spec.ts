@@ -54,10 +54,10 @@ describe('AssessmentService', () => {
   it('should try for put and get error', async((done: DoneFn) => {
     service.putQuestion(dataQ, 'HTML').subscribe(value => {
     },
-    error => {
-      expect(error).toBe('error');
-      done();
-    });
+      error => {
+        expect(error).toBe('error');
+        done();
+      });
   }));
 
 });

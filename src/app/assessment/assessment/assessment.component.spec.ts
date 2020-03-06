@@ -19,9 +19,9 @@ describe('AssessmentComponent', () => {
     TestBed.configureTestingModule({
       // tslint:disable-next-line: max-line-length
       imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
-      declarations: [ AssessmentComponent ]
+      declarations: [AssessmentComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
