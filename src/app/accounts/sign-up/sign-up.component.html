@@ -1,5 +1,5 @@
 <div class="wrapper" style="height: auto;">
-  <mat-card class="login-card" style="top: 41vh;">
+  <mat-card class="login-card" style="top: 40vh;">
     <mat-card-header>
       <mat-card-title>
         <i class="material-icons">
@@ -9,90 +9,98 @@
       </mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form class="form" [formGroup]="signupForm">
-        <!-- USERNAME -->
-        <div class="field">
-          <i class="material-icons">
-            account_circle &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>User name</mat-label>
-            <input matInput placeholder="Enter username" formControlName="userName">
-          </mat-form-field>
-        </div>
+      <mat-horizontal-stepper [linear]="true" #stepper style="height: 420px;background-color: #e9e0f3;">
+        <mat-step [stepControl]="formCredentials">
+          <form class="form" [formGroup]="formCredentials">
+            <!-- USERNAME -->
+            <div class="field">
+              <i class="material-icons">
+                account_circle &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>USER NAME</mat-label>
+                <input matInput placeholder="Enter username" formControlName="userName">
+              </mat-form-field>
+            </div>
 
-        <!-- PASSWORD -->
-        <div class="field">
-          <i class="material-icons">
-            lock &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Password</mat-label>
-            <input matInput type="password" placeholder="Enter password" formControlName="passWord">
-          </mat-form-field>
-        </div>
+            <!-- PASSWORD -->
+            <div class="field">
+              <i class="material-icons">
+                lock &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>PASSWORD</mat-label>
+                <input matInput type="password" placeholder="Enter password" formControlName="passWord">
+              </mat-form-field>
+            </div>
+            <button mat-button matStepperNext mat-raised-button color="primary">Next</button>
+          </form>
+        </mat-step>
 
-        <!-- EMAIL -->
-        <div class="field">
-          <i class="material-icons">
-            email &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Email</mat-label>
-            <input matInput placeholder="Email" formControlName="email">
-          </mat-form-field>
-        </div>
+        <mat-step [stepControl]="formInfo">
+          <form class="form" [formGroup]="formInfo">
+            <!-- EMAIL -->
+            <div class="field">
+              <i class="material-icons">
+                email &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>EMAIL</mat-label>
+                <input matInput placeholder="Email" formControlName="email">
+              </mat-form-field>
+            </div>
 
-        <div class="field">
-          <i class="material-icons">
-            account_circle &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>User types</mat-label>
-            <mat-select formControlName="userType">
-              <mat-option *ngFor="let type of userTypes" [value]="type">
-                {{type}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-        </div>
+            <div class="field">
+              <i class="material-icons">
+                account_circle &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>USER TYPE</mat-label>
+                <mat-select formControlName="userType">
+                  <mat-option *ngFor="let type of userTypes" [value]="type">
+                    {{type}}
+                  </mat-option>
+                </mat-select>
+              </mat-form-field>
+            </div>
 
-        <div class="field">
-          <i class="material-icons">
-            account_circle &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>First name</mat-label>
-            <input matInput placeholder="Enter First Name" formControlName="firstName">
-          </mat-form-field>
-        </div>
+            <div class="field">
+              <i class="material-icons">
+                account_circle &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>FIRST NAME</mat-label>
+                <input matInput placeholder="Enter First Name" formControlName="firstName">
+              </mat-form-field>
+            </div>
 
-        <div class="field">
-          <i class="material-icons">
-            account_circle &nbsp; &nbsp;
-          </i>
-          <mat-form-field class="example-full-width" appearance="fill">
-            <mat-label>Last name</mat-label>
-            <input matInput placeholder="Enter Last Name" formControlName="lastName">
-          </mat-form-field>
-        </div>
+            <div class="field">
+              <i class="material-icons">
+                account_circle &nbsp; &nbsp;
+              </i>
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>LAST NAME</mat-label>
+                <input matInput placeholder="Enter Last Name" formControlName="lastName">
+              </mat-form-field>
+            </div>
 
-        <!-- For message after hitting log in button -->
-        <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
-          <i class="material-icons" *ngIf="hasErrors">
-            close &nbsp;&nbsp;
-          </i>
-          <i class="material-icons" *ngIf="hasErrors === false">
-            check &nbsp;&nbsp;
-          </i>
-          {{ message }}
-        </span>
+            <!-- For message after hitting log in button -->
+            <span class="message" *ngIf="message" [ngStyle]="styleMessage()">
+              <i class="material-icons" *ngIf="hasErrors">
+                close &nbsp;&nbsp;
+              </i>
+              <i class="material-icons" *ngIf="hasErrors === false">
+                check &nbsp;&nbsp;
+              </i>
+              {{ message }}
+            </span>
 
-        <button  mat-raised-button color="primary"
-                (click)="onRegister()">Register
-        </button>
+            <button mat-raised-button color="primary" (click)="onRegister()">Register
+            </button>
+          </form>
+        </mat-step>
 
-      </form>
+      </mat-horizontal-stepper>
     </mat-card-content>
 
     <div>Already have an account? <a [routerLink]="['/logIn']">Login</a></div>

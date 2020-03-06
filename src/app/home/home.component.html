@@ -1,10 +1,10 @@
 <mat-card>
   <div class="header">
-    <h1>Welcome to your profile</h1>
+    <h1 class="mat-display-1">Welcome to your profile</h1>
   </div>
   <mat-card-header>
     <div mat-card-avatar>
-      <i class="material-icons user-circle">
+      <i class="material-icons user-circle" [style.font-size]="'45px'">
         account_circle &nbsp; &nbsp;
       </i>
     </div>
@@ -16,5 +16,4 @@
       Your role: &nbsp; {{ currentUser.userType }}
     </p>
   </mat-card-content>
-
 </mat-card>
