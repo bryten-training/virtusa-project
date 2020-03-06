@@ -26,11 +26,11 @@ describe('NewQuestionComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(NewQuestionComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(NewQuestionComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   fit('should create', () => {
     expect(component).toBeTruthy();

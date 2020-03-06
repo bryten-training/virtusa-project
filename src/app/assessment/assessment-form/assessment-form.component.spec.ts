@@ -24,11 +24,11 @@ describe('AssessmentFormComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AssessmentFormComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AssessmentFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   fit('should create', () => {
     expect(component).toBeTruthy();

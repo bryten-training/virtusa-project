@@ -1,9 +1,9 @@
-<br><br><br>
-<div *ngIf="currentUser!==undefined">
+
+<!-- <div *ngIf="currentUser!==undefined">
     <h1 class="h1">Hey, {{currentUser.firstName}} {{currentUser.lastName}}</h1>
 </div>
 <h2>What's your IQ of following skills ?</h2>    
-<br><hr><br>
+<br><hr><br> -->
 <div class="stack">
     <mat-card *ngFor="let d of data" (click)="nav(d.courseName)" class="cards">
         <mat-card-title [(title)]="d.courseName">{{d.courseName}}</mat-card-title>
@@ -25,6 +25,3 @@
         <h1>Please Login to add some content </h1>
     </div>
 </div>
-<br><br><br>
-<br><br><br>
-<br><br><br>
