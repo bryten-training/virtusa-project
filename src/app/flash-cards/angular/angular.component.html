@@ -18,13 +18,16 @@
         </mat-card-content>
     </mat-card>
 </div>
-<mat-card-actions style=" margin-right: 0px; margin-left: 0px">
-    <button mat-button (click)="leftArrow()" (click)='flashcardlist[index].front = false'>Left</button>
-    <button mat-button *ngIf="!flashcardlist[index].front"
-        (click)='onClickQuesAns(flashcardlist[index])'>Answer</button>
-    <button mat-button *ngIf="flashcardlist[index].front" (click)='onClickQuesAns(flashcardlist[index])'>Back to
-        question</button>
-    <button mat-button (click)="rightArrow()" (click)='flashcardlist[index].front = false'>Right</button>
+<mat-card-actions class="wrapper" style=" margin-right: 0px; margin-left: 0px">
+    <button mat-button (click)="leftArrow()" class="biggerarrow" (click)='flashcardlist[index].front = false'>
+        < </button>
+            <button mat-button *ngIf="!flashcardlist[index].front"
+                (click)='onClickQuesAns(flashcardlist[index])'>Answer</button>
+            <button mat-button *ngIf="flashcardlist[index].front" (click)='onClickQuesAns(flashcardlist[index])'>Back to
+                question</button>
+            <button mat-button (click)="rightArrow()" class="biggerarrow"
+                (click)='flashcardlist[index].front = false'>></button>
+
 </mat-card-actions>
 <br />
 <!-- <mat-card-actions>
