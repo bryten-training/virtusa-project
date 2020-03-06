@@ -34,8 +34,8 @@ describe('NewAssessmentComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('new assessment required', () => {
-    const crsEl = fixture.debugElement.nativeElement;
-    expect(crsEl.querySelector('h1').textContent).toContain('Please update assessment here');
-  });
+  // fit('new assessment required', () => {
+  //   const crsEl = fixture.debugElement.nativeElement;
+  //   expect(crsEl.querySelector('h1').textContent).toContain('Please update assessment here');
+  // });
 });

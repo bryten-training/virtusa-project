@@ -42,7 +42,7 @@ describe('VideoComponent', () => {
 
   it('VideoService videoCourse array not empty', () => {
     service = TestBed.inject(VideoService);
-    let courseName;
+    let courseName = "Angular";
     let responseData = service.getCourse(courseName);
     expect(responseData).toBeTruthy;
     expect(responseData.subscribe.length).toBeGreaterThan(0);

@@ -488,6 +488,16 @@
   ],
   "flashCards": [
     {
+      "id": 1,
+      "question": "Name the building blocks of Angular.",
+      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
+      "body": "content",
+      "pass": false,
+      "front": false,
+      "show": false,
+      "type": "Angular"
+    },
+    {
       "id": 2,
       "question": "Name the building blocks of Angular.",
       "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
