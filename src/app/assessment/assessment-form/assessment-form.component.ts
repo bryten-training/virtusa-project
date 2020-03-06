@@ -45,7 +45,6 @@ export class AssessmentFormComponent implements OnInit {
               this.userAns.push(false);
             }
           });
-          // console.log(this.ans);
         });
       },
       error => {
@@ -66,12 +65,12 @@ export class AssessmentFormComponent implements OnInit {
   }
 
   submitForm(myForm: NgForm) {
+    this.score = 0;
     for (let i = 0; i < this.ans.length; i++) {
       if (this.ans[i] === myForm.form.value[i]) {
         this.score += 1;
         this.userAns[i] = true;
       }
     }
-    // this.score = 0;
   }
 }

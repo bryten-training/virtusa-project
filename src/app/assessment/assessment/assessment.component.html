@@ -1,9 +1,9 @@
-<br><br><br>
-<div *ngIf="currentUser!==undefined">
-    <h1>Hey, {{currentUser.firstName}} {{currentUser.lastName}}</h1>
+
+<!-- <div *ngIf="currentUser!==undefined">
+    <h1 class="h1">Hey, {{currentUser.firstName}} {{currentUser.lastName}}</h1>
 </div>
 <h2>What's your IQ of following skills ?</h2>    
-<br><hr><br>
+<br><hr><br> -->
 <div class="stack">
     <mat-card *ngFor="let d of data" (click)="nav(d.courseName)" class="cards">
         <mat-card-title [(title)]="d.courseName">{{d.courseName}}</mat-card-title>
@@ -12,12 +12,12 @@
 
     <div *ngIf="currentUser!==undefined" class="upload">
         <mat-card (click)="navNew()">
-            <mat-card-title> Add assessment</mat-card-title>
+            <mat-card-title> Add Assessment</mat-card-title>
             <img src="/assets/plus.png" mat-card-image alt="skill icon" width="100px">
         </mat-card>
 
         <mat-card (click)="navNewQues()">
-            <mat-card-title> Add question</mat-card-title>
+            <mat-card-title> Add Question</mat-card-title>
             <img src="/assets/plus.png" mat-card-image alt="skill icon" width="100px">
         </mat-card>
     </div>
@@ -25,6 +25,3 @@
         <h1>Please Login to add some content </h1>
     </div>
 </div>
-<br><br><br>
-<br><br><br>
-<br><br><br>

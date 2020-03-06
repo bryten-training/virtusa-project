@@ -83,8 +83,8 @@ export class AccountsService implements OnInit {
       localStorage.setItem('userData', JSON.stringify({
         userName: user.userName,
         email: user.email,
-        firstName: foundUser.firstName,
-        lastName: foundUser.lastName,
+        firstName: foundUser.firstName.toLocaleUpperCase(),
+        lastName: foundUser.lastName.toLocaleUpperCase(),
         userType: foundUser.userType
       }));
 
