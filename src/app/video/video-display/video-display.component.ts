@@ -1,8 +1,9 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Inject } from '@angular/core';
 import { VideoDisplay, VideoService } from '../video.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-video-display',
@@ -19,7 +20,8 @@ export class VideoDisplayComponent implements OnInit {
   constructor(private videoSvc: VideoService,
               public sanitizer: DomSanitizer, 
               private httpClient: HttpClient,
-              private router: Router) { }
+              private router: Router,
+              public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.router.routerState.root.queryParams.subscribe(params => {
@@ -34,6 +36,20 @@ export class VideoDisplayComponent implements OnInit {
     });
   }
 
+  openDialog(video) {
+    const dialogRef = this.dialog.open(VideoDialog, {
+      data: {
+        url: this.safeUrl(video.url)
+      },
+      height: '80%',
+      width: '80%',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
+  }
+
   // sanitize the url
   safeUrl(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
@@ -45,3 +61,18 @@ export class VideoDisplayComponent implements OnInit {
   }
 
 }
+
+
+@Component({
+  selector: 'video-dialog',
+  templateUrl: 'video-dialog.html',
+})
+export class VideoDialog {
+  constructor(@Inject(MAT_DIALOG_DATA) public data: any) {}
+}
+
+export interface DialogData {
+  video: '';
+}
+
+

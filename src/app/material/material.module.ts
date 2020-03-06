@@ -15,7 +15,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatStepperModule } from '@angular/material/stepper';
-
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [],
@@ -36,7 +36,8 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatMenuModule,
     MatSnackBarModule,
     MatExpansionModule,
-    MatStepperModule
+    MatStepperModule,
+    MatDialogModule,
   ],
   exports: [
     LayoutModule,
@@ -56,6 +57,7 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatSnackBarModule,
     MatExpansionModule,
     MatStepperModule,
+    MatDialogModule,
   ]
 })
 export class MaterialModule {}

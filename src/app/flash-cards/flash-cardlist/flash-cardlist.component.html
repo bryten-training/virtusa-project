@@ -13,7 +13,7 @@
             <mat-card-content *ngIf="flashcardlist[index].front">
                 Ans:
                 {{ flashcardlist[index].ans }} <br>
-                <mat-card-actions>
+                <mat-card-actions >
                     <input type="checkbox" [checked]="flashcardlist[index].pass===true"
                         (change)="passcard()">{{flashcardlist[index].pass}}
                 </mat-card-actions>
@@ -22,7 +22,7 @@
     </mat-card>
 </div>
 
-<mat-card-actions>
+<mat-card-actions style=" margin-right: 0px; margin-left: 0px">
     <button mat-button (click)="leftArrow()" (click)='flashcardlist[index].front = false'>Left</button>
     <button mat-button *ngIf="!flashcardlist[index].front"
         (click)='onClickQuesAns(flashcardlist[index])'>Answer</button>
