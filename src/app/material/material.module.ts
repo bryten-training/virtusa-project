@@ -13,6 +13,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatCardModule,
     MatMenuModule,
     MatSnackBarModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatStepperModule
   ],
   exports: [
     LayoutModule,
@@ -51,7 +53,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatMenuModule,
     MatSnackBarModule,
     MatExpansionModule,
-    
+    MatStepperModule,
   ]
 })
 export class MaterialModule { }
