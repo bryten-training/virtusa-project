@@ -7,10 +7,10 @@ input.ngValid{
 }
 .fab-button {
   display: block;
-  position: absolute;
+  position: fixed;
   z-index: 0;
   left: 30px;
-  top: 10px;
+  top: 100px;
 }
 
 .radio-group {
@@ -85,7 +85,9 @@ radio-group{
   min-width: 50%;
   max-width: fit-content;
   justify-content: center;
+  margin-bottom: 20px;
 }
+
 mat-expansion-panel-header{
   background-color: white;
   font-size: large;
@@ -124,7 +126,6 @@ button{
 .submitButton {
   margin: 20px auto;
   padding: 5px;
-  font-size: 30px;
   width: 50%;
 }
 label{

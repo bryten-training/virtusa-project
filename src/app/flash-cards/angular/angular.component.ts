@@ -22,18 +22,14 @@ export class AngularComponent implements OnInit {
     private aroute: ActivatedRoute) {
     this.CardSvc.getFlashcard().subscribe(flashcard => { this.flashcard = flashcard; });
     this.CardSvc.getFlashcards().subscribe(list => {
-      console.log('account.constr.list : ' + list);
       this.aroute.params.subscribe(
         (data) => {
-          console.log('topic: ' + data['topic']);
           this.topic = data['topic'];
           this.setlist(list);
         }
-      )
-      console.log(' ' + this.flashcardlist[this.index]);
+      );
       this.flashcard = this.flashcardlist[this.index];
       this.flashcard.front = false;
-      console.log(this.topic);
     });
   }
 
@@ -42,9 +38,6 @@ export class AngularComponent implements OnInit {
     return 'card';
   }
   setlist(list) {
-    console.log('in setlist');
-    console.log(this.topic);
-
     this.flashcardlist = list.filter(card => {
       if (this.topic === 'Angular' && card.type === 'Angular' && card.pass === false) {
         return true;
@@ -55,10 +48,6 @@ export class AngularComponent implements OnInit {
       if (this.topic === 'JavaScript' && card.type === 'JavaScript' && card.pass === false) {
         return true;
       }
-      // if(this.topic === 'Angular' && this.id < 8){
-      //   return true;
-      // }
-      //card.type === 'angular' && card.pass !== true);
     });
     console.log(this.flashcardlist);
 
@@ -83,16 +72,27 @@ export class AngularComponent implements OnInit {
   passcard() {
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.pass = !this.flashcard.pass;
-    if (this.flashcard.pass === true) {
-    this.read = 'read';
-    } else {
-      this.read = 'unread';
-    }
     this.CardSvc.pass(this.flashcard).subscribe(_ =>
     this.router.navigate(['card/' + this.topic]));
-    // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
     // this.rightArrow();
+    if (this.flashcardlist.length > 1 ) {
+    this.CardSvc.getFlashcards().subscribe(list => {
+      this.aroute.params.subscribe(
+        (data) => {
+          this.topic = data['topic'];
+          this.setlist(list);
+        }
+      );
+      this.flashcard = this.flashcardlist[this.index];
+      this.flashcard.front = false;
+    });
+    this.rightArrow();
+    this.flashcard = this.flashcardlist[this.index];
+  } else {
+    this.router.navigate(['/card']);
   }
+}
+
 
   reset() {
     this.CardSvc.getFlashcards().subscribe(list =>
@@ -103,7 +103,21 @@ export class AngularComponent implements OnInit {
       });
     })
     );
-    window.location.reload();
+    this.CardSvc.getFlashcards().subscribe(list => {
+      console.log('account.constr.list : ' + list);
+      this.aroute.params.subscribe(
+        (data) => {
+          console.log('topic: ' + data['topic']);
+          this.topic = data['topic'];
+          this.setlist(list);
+        }
+      )
+      console.log(' ' + this.flashcardlist[this.index]);
+      this.index = 0;
+      this.flashcard = this.flashcardlist[0];
+      this.flashcard.front = false;
+      console.log(this.topic);
+    });
   }
   addcard() {
     this.CardSvc.pass(this.flashcard).subscribe(_ => {
@@ -151,7 +165,7 @@ export class AngularComponent implements OnInit {
   }
 
   changeColorQuesAns(flashCard: Flashcard) {
-    if (!flashCard.front) {
+    if (flashCard && !flashCard.front) {
       return {
         'background-color': '#a8d0cc'
       };

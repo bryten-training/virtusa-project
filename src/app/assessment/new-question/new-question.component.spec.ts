@@ -26,18 +26,18 @@ describe('NewQuestionComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(NewQuestionComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
-
-  fit('should create', () => {
-    expect(component).toBeTruthy();
+  beforeEach(() => {
+    fixture = TestBed.createComponent(NewQuestionComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
   });
 
-  fit('new question required', () => {
-    const crsEl = fixture.debugElement.nativeElement;
-    expect(crsEl.querySelector('h1').textContent).toContain('Please add a question here');
-  });
+  // fit('should create', () => {
+  //   expect(component).toBeTruthy();
+  // });
+
+  // fit('new question required', () => {
+  //   const crsEl = fixture.debugElement.nativeElement;
+  //   expect(crsEl.querySelector('h1').textContent).toContain('Please add a question here');
+  // });
 });

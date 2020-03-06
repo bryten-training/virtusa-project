@@ -26,7 +26,7 @@ export class NewAssessmentComponent implements OnInit {
               private assSvc: AssessmentService,
               private snackBar: MatSnackBar) { }
 
-  Answers = [1, 2, 3, 4];
+  Answers = [ 1, 2, 3, 4];
   courses = ['Angular', 'JavaScript', 'NodeJS'];
   questions: AssessmentQuestions[];
   assessmentForm1: FormGroup = this.formB.group({
@@ -65,13 +65,13 @@ export class NewAssessmentComponent implements OnInit {
     const q3ans = [false, false, false, false];
     const q2ans = [false, false, false, false];
     this.Answers.forEach(num => {
-      if (this.assessmentForm1.value.ques1Ans === num) {
+      if (this.assessmentForm2.value.ques1Ans == num) {
         q1ans[num - 1] = true;
       }
-      if (this.assessmentForm2.value.ques2Ans === num) {
+      if (this.assessmentForm3.value.ques2Ans == num) {
         q2ans[num - 1] = true;
       }
-      if (this.assessmentForm3.value.ques3Ans === num) {
+      if (this.assessmentForm4.value.ques3Ans == num) {
         q3ans[num - 1] = true;
       }
     });
@@ -83,22 +83,22 @@ export class NewAssessmentComponent implements OnInit {
         q: this.assessmentForm2.value.ques1,
         options: [
           {
-            id: 1,
+            id: 0,
             opt: this.assessmentForm2.value.ques1op1,
             optAns: q1ans[0],
           },
           {
-            id: 2,
+            id: 1,
             opt: this.assessmentForm2.value.ques1op2,
             optAns:  q1ans[1],
           },
           {
-            id: 3,
+            id: 2,
             opt: this.assessmentForm2.value.ques1op3,
             optAns: q1ans[2],
           },
           {
-            id: 4,
+            id: 3,
             opt: this.assessmentForm2.value.ques1op4,
             optAns: q1ans[3],
           }]
@@ -107,22 +107,22 @@ export class NewAssessmentComponent implements OnInit {
         q: this.assessmentForm3.value.ques2,
         options: [
           {
-            id: 1,
+            id: 0,
             opt: this.assessmentForm3.value.ques2op1,
             optAns: q2ans[0],
           },
           {
-            id: 2,
+            id: 1,
             opt: this.assessmentForm3.value.ques2op2,
             optAns: q2ans[1],
           },
           {
-            id: 3,
+            id: 2,
             opt: this.assessmentForm3.value.ques2op3,
             optAns: q2ans[2],
           },
           {
-            id: 4,
+            id: 3,
             opt: this.assessmentForm3.value.ques2op4,
             optAns: q2ans[3],
           }]
@@ -131,22 +131,22 @@ export class NewAssessmentComponent implements OnInit {
         q: this.assessmentForm4.value.ques3,
         options: [
           {
-            id: 1,
+            id: 0,
             opt: this.assessmentForm4.value.ques3op1,
             optAns: q3ans[0],
           },
           {
-            id: 2,
+            id: 1,
             opt: this.assessmentForm4.value.ques3op2,
             optAns: q3ans[1],
           },
           {
-            id: 3,
+            id: 2,
             opt: this.assessmentForm4.value.ques3op3,
             optAns: q3ans[2],
           },
           {
-            id: 4,
+            id: 3,
             opt: this.assessmentForm4.value.ques3op4,
             optAns: q3ans[3],
           }]

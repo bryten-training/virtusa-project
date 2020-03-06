@@ -15,16 +15,17 @@
         />
       </mat-card-content>
     </mat-card>
+    <span [hidden]="currentUser===undefined">
     <mat-card    [routerLink]="['/addcard']">
         <mat-card-content>
-            <h1>add card</h1>
+            <h1>Add Flashcard</h1>
               <img
                 mat-card-image
-                src='/assets/img/upload.jpeg'
-                alt="add card"
+                src='/assets/plus.png'
+                alt="Add card"
               />
             </mat-card-content>
     </mat-card>
-
+  </span>
   </div>
 

@@ -1,5 +1,6 @@
 <br><br><br>
-<mat-horizontal-stepper [linear]="true">
+<mat-horizontal-stepper class="minheight" [linear]="true">
+    <h1>Please update assessment here</h1>
     <mat-step [stepControl]="assessmentForm1">
         <ng-template matStepLabel>Course Name</ng-template>
         <form [formGroup]="assessmentForm1" class="add-article-form">
@@ -135,14 +136,14 @@
             </mat-form-field>
             <br>
             <button matTooltip="Check your score" matTooltipPosition="right" mat-raised-button 
-            [disabled]="assessmentForm1.invalid && assessmentForm2.invalid && assessmentForm3.invalid && assessmentForm4.invalid" 
+            [disabled]="assessmentForm4.invalid" 
             color='primary' type="submit"
             (click)="dataSubmit()" class="full-width submitButton">Submit</button>
             </form>
     </mat-step>
 </mat-horizontal-stepper>
+<!-- <br><br><br>
 <br><br><br>
 <br><br><br>
 <br><br><br>
-<br><br><br>
-<br><br><br>
+<br><br><br><br> -->

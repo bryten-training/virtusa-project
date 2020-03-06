@@ -82,7 +82,7 @@ export class VideoComponent implements OnInit {
 
   onFileChanged(event) {
     this.selectedFile = event.target.files[0]
-    console.log(this.selectedFile)
+    //console.log(this.selectedFile)
   }
 
   openSnackBar() {
@@ -115,7 +115,7 @@ export class VideoComponent implements OnInit {
   convertUrl(url) {
     let match = url.match(this.regExp);
     if (match && match[2].length == 11) {
-      console.log("//www.youtube.com/embed/" + match[2]);
+      //console.log("//www.youtube.com/embed/" + match[2]);
       return "//www.youtube.com/embed/" + match[2];
     } else {
       return 'no video found';
@@ -143,7 +143,7 @@ export class VideoComponent implements OnInit {
       this.submitted = true;
     } else {
       this.newItemUrl = this.convertUrl(this.url);
-      console.log(this.newItemUrl+this.newItemUrl.length);
+      //console.log(this.newItemUrl+this.newItemUrl.length);
       this.submitted = true;
     }
     

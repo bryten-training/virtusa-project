@@ -36,7 +36,7 @@ export class AddcardComponent implements OnInit {
       this.card.type = this.dataForm.value.type;
     this.cardSvc.addCard(this.card).subscribe(_ => {
       // this.card.id = this.flashcardlist.length,
-      this.router.navigate(['/card/cards']);
+      this.router.navigate(['/card']);
     });
   }
 }

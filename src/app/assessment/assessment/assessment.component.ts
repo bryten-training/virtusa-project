@@ -31,21 +31,21 @@ export class AssessmentComponent implements OnInit {
       this.snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok');
     });
     this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
-      // print out user info
-      // console.log('Assessment Component User Info: ' + JSON.stringify(auth.currentUser, null, 2));
-      // set currentUser for your component (if needed)
-      this.currentUser = auth.currentUser;
+    this.currentUser = auth.currentUser;
     });
   }
+
   nav(courseName) {
     this.router.navigate(['course'], {queryParams:
       {
       course: courseName,
     }});
   }
+
   navNew() {
     this.router.navigate(['newAssessment']);
   }
+
   navNewQues() {
     this.router.navigate(['newQuestion']);
   }

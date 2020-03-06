@@ -7,11 +7,13 @@ div.ng-star-inserted {
     text-align: center;
     width: 100%;
     display: block;
+    margin-top: 40px;
     div.ng-star-inserted {
         display: inline;
     }
     div.form {
         display: block;
+        margin-top: 70px;
     }
     .loginText {
         margin-top: 5%;
@@ -41,10 +43,10 @@ mat-card {
     display: inline;
     padding: 0;
     margin: 0;
-    mat-card {
-        width: 165px;
-        margin: 0;
-    }
+    // mat-card {
+    //     width: 165px;
+    //     margin: 0;
+    // }
 }
 
 .mat-fab {
