@@ -21,11 +21,11 @@ describe('VideoComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(VideoComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(VideoComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
@@ -42,7 +42,7 @@ describe('VideoComponent', () => {
 
   it('VideoService videoCourse array not empty', () => {
     service = TestBed.inject(VideoService);
-courseName;
+    let courseName;
     let responseData = service.getCourse(courseName);
     expect(responseData).toBeTruthy;
     expect(responseData.subscribe.length).toBeGreaterThan(0);
