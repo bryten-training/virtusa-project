@@ -1,5 +1,5 @@
 <!-- <h3 style="text-align: center; color: grey;margin-top: 50px; font-weight: 400; font-size: medium;">Reviews</h3> -->
-<mat-card-title style="margin-top: 50px;">Reviews</mat-card-title>
+<mat-card-title style="margin-top: 50px;" *ngIf="article.comments.length > 0">Reviews</mat-card-title>
 
 
 <!-- Puneet this is the comments layput for guest -->
@@ -19,7 +19,7 @@
   </mat-card-content>
 
   <mat-card-actions style="width: 100%;">
-<!--     
+    <!--     
     <button mat-icon-button color="warn" aria-label="Example" *ngIf="liked" (click)="like()">
       <mat-icon>favorite {{e.likes}}</mat-icon>
     </button>
@@ -27,17 +27,17 @@
     <button mat-icon-button aria-label="Examp" *ngIf="!liked" (click)="like()"> -->
 
 
-      <div *ngIf="e.authorinfo.userType == null; else pun">
+    <div *ngIf="e.authorinfo.userType == null; else pun">
 
-        <mat-icon style="float: left; width: 90%;" >person_outline</mat-icon>
-        <mat-card-subtitle style="font-size: 13px;" >Guest User</mat-card-subtitle>
-        <!-- <mat-icon>face</mat-icon> -->
-        
-      </div>  
-      <ng-template #pun style="float: left; width: 20%;">
-        <mat-icon style="float: left; width: 90%;" >check_circle_outline</mat-icon>
-        <mat-card-subtitle style="font-size: 13px;" >User Verified</mat-card-subtitle>
-      </ng-template>
+      <mat-icon style="float: left; width: 90%;">person_outline</mat-icon>
+      <mat-card-subtitle style="font-size: 13px;">Guest User</mat-card-subtitle>
+      <!-- <mat-icon>face</mat-icon> -->
+
+    </div>
+    <ng-template #pun style="float: left; width: 20%;">
+      <mat-icon style="float: left; width: 90%;">check_circle_outline</mat-icon>
+      <mat-card-subtitle style="font-size: 13px;">User Verified</mat-card-subtitle>
+    </ng-template>
 
 
     <!-- </button> -->

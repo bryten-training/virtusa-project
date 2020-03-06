@@ -1,6 +1,7 @@
 .article-card {
   margin: 0 auto;
   max-width: 800px;
+  padding-bottom: 80px;
 
   .article-title {
     margin: 40px 0;
@@ -9,6 +10,15 @@
   }
   .article-header-image {
     background-size: cover;
+  }
+  .cover-div {
+    max-height: 300px;
+    overflow: hidden;
+    margin: 0 -16px 25px -16px;
+  }
+  .cover-photo {
+    overflow: hidden;
+    margin-top: -100px;
   }
   markdown {
     p img {
