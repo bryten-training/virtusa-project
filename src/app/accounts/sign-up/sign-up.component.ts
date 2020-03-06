@@ -24,12 +24,12 @@ export class SignUpComponent implements OnInit {
   });
   formCredentials = new FormGroup({
     userName: new FormControl("", [Validators.required]),
+    email: new FormControl("", [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
     passWord: new FormControl("", [Validators.required]),
   });
   formInfo = new FormGroup({
     firstName: new FormControl("", [Validators.required]),
     lastName: new FormControl("", [Validators.required]),
-    email: new FormControl("", [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
     userType: new FormControl("", [Validators.required]),
   });
 
@@ -61,10 +61,10 @@ export class SignUpComponent implements OnInit {
   onRegister() {
 
     let data = new User();
-    data.userName= this.formCredentials.value.userName;
-    data.passWord= this.formCredentials.value.passWord;
-    data.userType= this.formInfo.value.userType;
-    data.email = this.formInfo.value.email;
+    data.userName = this.formCredentials.value.userName;
+    data.passWord = this.formCredentials.value.passWord;
+    data.userType = this.formInfo.value.userType;
+    data.email = this.formCredentials.value.email;
     data.firstName = this.formInfo.value.firstName;
     data.lastName = this.formInfo.value.lastName;
     console.log(data);
