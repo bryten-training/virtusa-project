@@ -1,31 +1,25 @@
-import { Component, OnInit } from '@angular/core';
-import { ArticlesService } from '../service/articles.service';
-import { Article } from '../model/article';
-import { User } from 'src/app/accounts/models/user.model';
-
+import { Component, OnInit } from "@angular/core";
+import { ArticlesService } from "../service/articles.service";
+import { Article } from "../model/article";
+import { User } from "src/app/accounts/models/user.model";
 
 @Component({
-  selector: 'app-articlecommentsdisplay',
-  templateUrl: './articlecommentsdisplay.component.html',
-  styleUrls: ['./articlecommentsdisplay.component.scss']
+  selector: "app-articlecommentsdisplay",
+  templateUrl: "./articlecommentsdisplay.component.html",
+  styleUrls: ["./articlecommentsdisplay.component.scss"]
 })
 export class ArticlecommentsdisplayComponent implements OnInit {
+  apple = false;
 
-  apple=false
-
-  constructor(
-    private articlesService: ArticlesService
-  ) { }
-
-
+  constructor(private articlesService: ArticlesService) {}
 
   ngOnInit(): void {
     this.articlesService.articleSubject.subscribe((article: Article) => {
-      console.log("ArticlecommentsdisplayComponent:: ", article);
-      this.article = article
-    })
+      //console.log("ArticlecommentsdisplayComponent:: ", article);
+      this.article = article;
+    });
   }
-  liked=false
+  liked = false;
   article: Article;
 
   like() {
@@ -36,7 +30,6 @@ export class ArticlecommentsdisplayComponent implements OnInit {
         this.article.likes += 1;
       }
       this.liked = !this.liked;
-    }, 400)
+    }, 400);
   }
 }
-

@@ -1,16 +1,15 @@
-import { Injectable } from '@angular/core';
-import { HttpClient, HttpEvent } from '@angular/common/http';
-import { Article } from '../model/article';
-import { Observable, BehaviorSubject, Subscription } from 'rxjs';
-import { AccountsService } from 'src/app/accounts/services/accounts.service';
-import { Auth } from 'src/app/accounts/models/auth.model';
-import { User } from 'src/app/accounts/models/user.model';
+import { Injectable } from "@angular/core";
+import { HttpClient, HttpEvent } from "@angular/common/http";
+import { Article } from "../model/article";
+import { Observable, BehaviorSubject, Subscription } from "rxjs";
+import { AccountsService } from "src/app/accounts/services/accounts.service";
+import { Auth } from "src/app/accounts/models/auth.model";
+import { User } from "src/app/accounts/models/user.model";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class ArticlesService {
-
   private currentUserSubject: BehaviorSubject<User>;
   articleSubject: BehaviorSubject<Article>;
   private subscription: Subscription;
@@ -21,12 +20,14 @@ export class ArticlesService {
   ) {
     this.articleSubject = new BehaviorSubject(null);
     this.currentUserSubject = new BehaviorSubject(null);
-    this.subscription = this.accountsService.getBehaviorSubject().subscribe((auth: Auth) => {
-      console.log(auth)
-      if (auth.currentUser != undefined) {
-        this.currentUserSubject.next(auth.currentUser);
-      }
-    });
+    this.subscription = this.accountsService
+      .getBehaviorSubject()
+      .subscribe((auth: Auth) => {
+        //console.log(auth)
+        if (auth.currentUser != undefined) {
+          this.currentUserSubject.next(auth.currentUser);
+        }
+      });
   }
   isAddArticleFormDirty = false;
 
