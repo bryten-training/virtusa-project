@@ -1,7 +1,8 @@
 mat-card {
-  max-width: 500px;
+  width: 70%;
+  height: 50vh;
   margin: 0 auto;
-  top: 20vh;
+  top: 10vh;
 }
 
 .header {
@@ -12,4 +13,13 @@ mat-card {
 
 .user-circle {
   margin-bottom: 20px;
+}
+
+mat-card-header-text{
+  margin: 0 20%;
+}
+
+img {
+  width: 100px;
+  border-radius: 50%;
 }
