@@ -1,3 +1,7 @@
+<button mat-fab color="primary" class="fab-button" [routerLink]="['/articles']">
+  <mat-icon>arrow_back</mat-icon>
+</button>
+
 <div id="desc">
   <h1>{{ headerTitle }} blog articles</h1>
 </div>
@@ -7,54 +11,24 @@
 </div>
 
 <div>
-  <mat-drawer-container class="example-container">
-    <mat-drawer mode="side" opened class="nav-content">
-      <div class="sidenav">
-        <a href="#">Fundamentals</a>
-        <a href="#">Data Structures</a>
-        <a href="#">Deployment</a>
-        <a href="#">Advanced</a>
-      </div>
-    </mat-drawer>
-    <mat-drawer-content>
-      <div class="main-content">
-        <div class="grid-container">
-          <div class="item1">1</div>
-          <div class="item2">2</div>
-          <div class="item3">3</div>
-        </div>
+  <div class="main-content">
+    <div *ngFor="let article of articles" class="example-card hover-card">
+      <mat-card [routerLink]="[article.id]">
+        <mat-card-header>
+          <div
+            mat-card-avatar
+            class="example-header-image"
+            style="background-image: url({{ article.author.avatar }});"
+          ></div>
+          <mat-card-title>{{ article.title }}</mat-card-title>
+          <mat-card-subtitle>{{
+            article.publish_date | date
+          }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{ article.image }}" alt="Person coding" />
+      </mat-card>
+    </div>
 
-        <div
-          *ngFor="let article of dummy_articles; let i = index"
-          class="example-card hover-card"
-        >
-          <mat-card *ngIf="i <= 2" [routerLink]="[article.id]">
-            <mat-card-header>
-              <div
-                mat-card-avatar
-                class="example-header-image"
-                style="background-image: url({{ article.image }});"
-              ></div>
-              <mat-card-title>{{ article.title }}</mat-card-title>
-              <mat-card-subtitle>{{
-                article.publish_date | date
-              }}</mat-card-subtitle>
-            </mat-card-header>
-            <img
-              mat-card-image
-              src="{{ article.image }}"
-              alt="Photo of a Shiba Inu"
-            />
-            <mat-card-content>
-              <p>{{ article.content }}</p>
-            </mat-card-content>
-          </mat-card>
-        </div>
-
-        <div></div>
-      </div>
-    </mat-drawer-content>
-  </mat-drawer-container>
-
-  <button id="add" (click)="addArticle()">Add article</button>
+    <div></div>
+  </div>
 </div>
