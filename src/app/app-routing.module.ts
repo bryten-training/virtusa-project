@@ -34,6 +34,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./articles/articles.module').then(m => m.ArticlesModule)
   },
+  {
+    path: 'relatedlinks',
+    loadChildren: () =>
+      import('./related-links/related-links.module').then(m => m.RelatedLinksModule)
+  },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
   { path: 'course', component: AssessmentFormComponent },
   { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' } },
