@@ -51,19 +51,19 @@ describe('AccountsService', () => {
     expect(service.validateLogIn(user).isValidated).toBe(true);
   });
 
-  it('should get a populated array', () => {
-    service.loadAllUsers().subscribe((data: any) => {
-      expect(data.length > 0).toBeTruthy();
-    });
+  // it('should get a populated array', () => {
+  //   service.loadAllUsers().subscribe((data: any) => {
+  //     expect(data.length > 0).toBeTruthy();
+  //   });
 
-    const req = httpMock.expectOne(`api/accounts`, 'call to api');
-    expect(req.request.method).toBe('GET');
+  //   const req = httpMock.expectOne(`api/accounts`, 'call to api');
+  //   expect(req.request.method).toBe('GET');
 
-    req.flush(["1", "2"]);
+  //   req.flush(["1", "2"]);
 
-    httpMock.verify();
+  //   httpMock.verify();
 
-  });
+  // });
 
 });
 
