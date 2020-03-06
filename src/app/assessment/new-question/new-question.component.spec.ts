@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NewQuestionComponent } from './new-question.component';
 import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
@@ -25,11 +25,11 @@ describe('NewQuestionComponent', () => {
     .compileComponents();
   }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(NewQuestionComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(NewQuestionComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
 
   fit('should create', () => {
     expect(component).toBeTruthy();

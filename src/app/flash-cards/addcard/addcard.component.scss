@@ -1,52 +1,35 @@
-.example-card {
-    background-color: whitesmoke;
-    margin: auto;
-    }
-    matInput{
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
-    }
-    mat-form-field{
-    justify-content: center;
-    text-align: center;
-    padding: 8px;
-    display: flex;
-    }
-    mat-card-title{
-    background-color:purple;
-    padding: 8px;
-    border-radius: 4px 4px 0 0;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    }
-    mat-label{
-    justify-content: center;
-    }
-    mat-card-header{
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
-    }
-    mat-card-actions{
-    justify-content: center;
-    text-align: center;
-    display: flex;
-    margin: auto;
-    justify-content: center;
-    text-align: center;
+$border-color: #d1d5da;
 
-    }
-    mat-card-content{
-    justify-content: center;
-    text-align: center;
-    }
-    .main-div{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
+.add-article-form {
+  max-width: 50%;
+  margin: auto;
+  padding: 40px;
+  border: 2px solid $border-color;
+  border-radius: 5px;
+  font-size: larger;
+  .submitButton {
+    margin-top: 20px;
+  }
+}
+.full-width {
+  width: 100%;
+}
+.half-width {
+  width: 40%;
+}
+
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}
+mat-form-field{
+  margin: 0 5px ;
+}
+h1{
+  margin: 10px 5px;
+}
+hr{
+  border: 2px solid black;
+}
