@@ -87,7 +87,17 @@
         "Typescript"
       ],
       "likes": 0,
-      "comments": [],
+      "comments": [
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": "content provider",
+            "name": "Abderrahim Mechteml"
+          },
+          "comment": "dsdsdfds",
+          "datetime": "2020-03-06T02:41:51.785Z"
+        }
+      ],
       "assessmentURL": ""
     },
     {
