@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { AssessmentService, Assessment } from './assessment.service';
+import { AssessmentService, Assessment, AssessmentQuestions, Options } from './assessment.service';
 import { FormsModule, FormBuilder, ReactiveFormsModule, FormControlName } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -15,7 +15,9 @@ describe('AssessmentService', () => {
   let service: AssessmentService;
   // tslint:disable-next-line: prefer-const
   let dataList: Assessment[];
-  let dataC: Assessment;
+  // tslint:disable-next-line: prefer-const
+  let dataQ: AssessmentQuestions;
+  let dataQerror: any;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -26,25 +28,39 @@ describe('AssessmentService', () => {
     service.getAssessmentList().subscribe(data => {
       dataList = data;
     });
-
+    service.putQuestion(dataQ, 'Html').subscribe(data => {
+      dataQerror = data;
+    });
   });
 
-  it('should be created', () => {
+  fit('should be created', () => {
     expect(service).toBeTruthy();
   });
 
-  fit('should get assessment list data',async((done: DoneFn) => {
+  fit('should get assessment list data', async((done: DoneFn) => {
     service.getAssessmentList().subscribe(value => {
       expect(value).toBe(dataList);
       done();
     });
   }));
 
-  // fit('should get assessment list data',async((done: DoneFn) => {
-  //   service.getAssessmentList().subscribe(value => {
-  //     expect(value).toBe(dataList);
-  //     done();
-  //   });
-  // }));
-  
+  fit('should try for put and get error', async((done: DoneFn) => {
+    service.getCourse('').subscribe(value => {
+      expect(value).toBe(dataQerror);
+      done();
+    });
+  }));
+
+  fit('should try for put and get error', async((done: DoneFn) => {
+    service.putQuestion(dataQ, 'HTML').subscribe(value => {
+      console.log('ashbdjabhs');
+    },
+    error => {
+      console.log('ashbdjabhs');
+      console.log(error + 'asdasdasdasd');
+      expect(error).toBe('error');
+      done();
+    });
+  }));
+
 });

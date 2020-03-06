@@ -1,14 +1,21 @@
 $border-color: #d1d5da;
 
-.add-article-form {
+mat-horizontal-stepper{
   max-width: 50%;
   margin: auto;
   padding: 40px;
   border: 2px solid $border-color;
+  border-radius: 5px;  
+}
+.add-article-form {
+  margin: auto;
+  padding: 10px;
+  // border: 2px solid $border-color; 
   border-radius: 5px;
   font-size: larger;
   .submitButton {
     margin-top: 20px;
+    font-size: 40px;
   }
 }
 .full-width {
@@ -32,4 +39,11 @@ h1{
 }
 hr{
   border: 2px solid black;
+}
+.mat-stepper-horizontal {
+  margin-top: 8px;
+}
+
+.mat-form-field {
+  margin-top: 16px;
 }
