@@ -22,18 +22,14 @@ export class AngularComponent implements OnInit {
     private aroute: ActivatedRoute) {
     this.CardSvc.getFlashcard().subscribe(flashcard => { this.flashcard = flashcard; });
     this.CardSvc.getFlashcards().subscribe(list => {
-      console.log('account.constr.list : ' + list);
       this.aroute.params.subscribe(
         (data) => {
-          console.log('topic: ' + data['topic']);
           this.topic = data['topic'];
           this.setlist(list);
         }
-      )
-      console.log(' ' + this.flashcardlist[this.index]);
+      );
       this.flashcard = this.flashcardlist[this.index];
       this.flashcard.front = false;
-      console.log(this.topic);
     });
   }
 
@@ -78,12 +74,25 @@ export class AngularComponent implements OnInit {
     this.flashcard.pass = !this.flashcard.pass;
     this.CardSvc.pass(this.flashcard).subscribe(_ =>
     this.router.navigate(['card/' + this.topic]));
-    window.location.reload();
     // this.rightArrow();
-    // this.setlist(this.flashcardlist);
-    // this.rightArrow();
-    // this.flashcard = this.flashcardlist[this.index];
+    if (this.flashcardlist.length > 1 ) {
+    this.CardSvc.getFlashcards().subscribe(list => {
+      this.aroute.params.subscribe(
+        (data) => {
+          this.topic = data['topic'];
+          this.setlist(list);
+        }
+      );
+      this.flashcard = this.flashcardlist[this.index];
+      this.flashcard.front = false;
+    });
+    this.rightArrow();
+    this.flashcard = this.flashcardlist[this.index];
+  } else {
+    this.router.navigate(['/card']);
   }
+}
+
 
   reset() {
     this.CardSvc.getFlashcards().subscribe(list =>
