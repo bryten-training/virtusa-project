@@ -7,6 +7,7 @@ import { Observable, BehaviorSubject } from 'rxjs';
 import { Auth } from '../models/auth.model';
 import { User } from '../models/user.model';
 import { AppModule } from 'src/app/app.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 
 describe('AccountsService', () => {
@@ -14,7 +15,7 @@ describe('AccountsService', () => {
   let httpMock: HttpTestingController;
   beforeEach(() => {    
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
+      imports: [HttpClientTestingModule, RouterTestingModule],
       providers: [AccountsService, Router],
     });
 
