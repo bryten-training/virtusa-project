@@ -1,5 +1,16 @@
 $primary: #0b2161;
 
+.fab-button {
+  position: fixed;
+  z-index: 99;
+  left: 30px;
+  top: 90px;
+}
+
+img {
+  height: 10%;
+}
+
 #add {
   width: 10vw;
   height: 5vh;
@@ -99,6 +110,8 @@ $primary: #0b2161;
 
 .example-card {
   width: 20vw;
+  height: 50vh;
+  overflow: hidden;
   margin: 1em;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
   display: inline-block;

@@ -25,8 +25,9 @@
 
     <h1 *ngIf="this.score >= 3">Congratulations you have passed</h1>
     
-    <h1 *ngIf="this.score < 3">Sorry you hvae failed 
-        I am sorry try again later</h1>
+    <h1 *ngIf="this.score < 3">Sorry you have failed try again later</h1>
+
+    <h1 *ngIf="score > 0">Your score: {{score}}</h1>
     
     <button class="closebutton" mat-raised-button (click)="showalert = !showalert" class="btn">Close</button>
 </app-alert>

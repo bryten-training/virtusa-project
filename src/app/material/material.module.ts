@@ -1,9 +1,10 @@
-import { NgModule } from '@angular/core';
-import { LayoutModule } from '@angular/cdk/layout';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { MatIconModule } from '@angular/material/icon';
+import { NgModule } from "@angular/core";
+import { LayoutModule } from "@angular/cdk/layout";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatButtonModule } from "@angular/material/button";
+import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatIconModule } from "@angular/material/icon";
+import { MatAutocompleteModule } from "@angular/material/autocomplete";
 // tslint:disable-next-line:quotemark
 import { MatListModule } from "@angular/material/list";
 import { MatCardModule } from '@angular/material/card';
@@ -19,6 +20,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 @NgModule({
   declarations: [],
   imports: [
+    MatAutocompleteModule,
     LayoutModule,
     MatToolbarModule,
     MatButtonModule,
@@ -56,4 +58,4 @@ import { MatStepperModule } from '@angular/material/stepper';
     MatStepperModule,
   ]
 })
-export class MaterialModule { }
+export class MaterialModule {}

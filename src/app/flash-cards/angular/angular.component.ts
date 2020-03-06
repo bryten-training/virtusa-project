@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashcardsService, Flashcard } from '../flash-cards.service';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { AccountsService } from 'src/app/accounts/services/accounts.service';
 import { User } from 'src/app/accounts/models/user.model';
 import { Auth } from 'src/app/accounts/models/auth.model';
@@ -14,22 +14,50 @@ export class AngularComponent implements OnInit {
   currentUser: User;
   flashcard: Flashcard;
   flashcardlist = [new Flashcard()];
-  constructor(private CardSvc: FlashcardsService, private accountsService: AccountsService, private router: Router) {
-  this.CardSvc.getFlashcard().subscribe(flashcard => {this.flashcard = flashcard; });
-  this.CardSvc.getFlashcards().subscribe(list => {
-    console.log(list);
-    this.setlist(list);
+  topic: string = 'Angular';
 
-    console.log(' ' + this.flashcardlist[this.index]);
-    this.flashcard = this.flashcardlist[this.index];
-    this.flashcard.front = false;
-  });
-}
+  constructor(private CardSvc: FlashcardsService,
+    private accountsService: AccountsService,
+    private router: Router,
+    private aroute: ActivatedRoute) {
+    this.CardSvc.getFlashcard().subscribe(flashcard => { this.flashcard = flashcard; });
+    this.CardSvc.getFlashcards().subscribe(list => {
+      console.log('account.constr.list : ' + list);
+      this.setlist(list);
+      this.aroute.params.subscribe(
+        (data) => {
+          console.log('topic: ' + data['topic']);
+          this.topic = data['topic'];
+        }
+      )
+      console.log(' ' + this.flashcardlist[this.index]);
+      this.flashcard = this.flashcardlist[this.index];
+      this.flashcard.front = false;
+    });
+  }
 
-setlist(list) {
-  console.log('in setlist');
-  this.flashcardlist = list.filter(card => card.type === 'angular' && card.pass !== true);
-}
+  displayCard() {
+    console.log(JSON.stringify(this.flashcardlist[this.index]));
+    return 'card';
+  }
+  setlist(list) {
+    console.log('in setlist');
+    this.flashcardlist = list.filter(card => {
+      if (this.topic === 'Angular' && card.type === 'Angular' && card.id > -1 && card.id < 8) {
+        return true;
+      }
+      if (this.topic === 'NodeJS' && card.id > 7 && card.id < 12) {
+        return true;
+      }
+      return true;
+      // if(this.topic === 'Angular' && this.id < 8){
+      //   return true;
+      // }    
+      //card.type === 'angular' && card.pass !== true);
+    });
+    // this.flashcardlist = list;
+  }
+
   ngOnInit(): void {
 
 
@@ -50,17 +78,18 @@ setlist(list) {
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.pass = !this.flashcard.pass;
     this.CardSvc.pass(this.flashcard).subscribe(_ =>
-    this.router.navigate(['card/cards']));
+      this.router.navigate(['card/cards']));
     // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
     // this.rightArrow();
-}
+  }
 
   reset() {
 
-    this.CardSvc.getFlashcards().subscribe(list => list.forEach(card => {card.pass = false, card.front = false,
-      this.CardSvc.pass(card).subscribe(_ => {
-       this.flashcard = card;
-      });
+    this.CardSvc.getFlashcards().subscribe(list => list.forEach(card => {
+      card.pass = false, card.front = false,
+        this.CardSvc.pass(card).subscribe(_ => {
+          this.flashcard = card;
+        });
     })
     );
     window.location.reload();
@@ -70,24 +99,24 @@ setlist(list) {
       this.router.navigate(['/']);
 
 
-  });
-}
+    });
+  }
   deletecard(flashcard: Flashcard) {
     this.CardSvc.deleteBook(flashcard).subscribe(_ => {
-        this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
-        console.log(this.flashcardlist[0].id);
-        console.log(flashcard.id);
-        // this.router.navigate(['card/cards']);
-        window.location.reload();
+      this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
+      console.log(this.flashcardlist[0].id);
+      console.log(flashcard.id);
+      // this.router.navigate(['card/cards']);
+      window.location.reload();
     });
   }
 
   leftArrow() {
     if (this.index === 0) {
       this.index = this.flashcardlist.length - 1;
-       } else {
-        this.index--;
-       }
+    } else {
+      this.index--;
+    }
     // while (this.flashcardlist[this.index].pass === true) {
     //   if (this.index < 0) {
     //     this.index = this.flashcardlist.length;
