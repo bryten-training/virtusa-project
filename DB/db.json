@@ -6,7 +6,7 @@
       "title": "Effective Angular for Webpage",
       "image": "assets/pc1.jpg",
       "author": {
-        "name": "Author",
+        "name": "Joshua Bloch",
         "avatar": "assets/default_avatar.png"
       },
       "publish_date": "Mar 2, 2020",
@@ -41,7 +41,7 @@
       "title": "Effective Java for Android (cheatsheet).",
       "image": "assets/pc2.jpg",
       "author": {
-        "name": "Author",
+        "name": "Joshua Bloch",
         "avatar": "assets/default_avatar.png"
       },
       "publish_date": "Mar 2, 2020",

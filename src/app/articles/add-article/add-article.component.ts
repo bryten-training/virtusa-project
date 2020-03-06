@@ -26,14 +26,11 @@ export class AddArticleComponent implements OnInit {
   private subscription: Subscription = new Subscription();
   ngOnInit(): void {
     this.subscription = this.articlesService.getCurrentUser().subscribe((user: User) => {
+      console.log(user);
       if (user == undefined || user.userType != "content provider") {
         this.router.navigateByUrl(`/articles`);
       } else {
         this.user = user;
-        let sub2 = this.articleForm.valueChanges.subscribe((changes) => {
-          this.articlesService.isAddArticleFormDirty = true;
-        });
-        this.subscription.add(sub2);
       }
     });
   }
