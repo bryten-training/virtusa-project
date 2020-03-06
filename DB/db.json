@@ -135,7 +135,17 @@
         "custom"
       ],
       "likes": 0,
-      "comments": [],
+      "comments": [
+        {
+          "id": 2,
+          "authorinfo": {
+            "userType": null,
+            "name": "Guest"
+          },
+          "comment": "this is an amazing article",
+          "datetime": "2020-03-06T16:48:09.603Z"
+        }
+      ],
       "assessmentURL": ""
     },
     {
@@ -571,18 +581,42 @@
       "firstName": "mark",
       "lastName": "pawoski",
       "id": 13
+    },
+    {
+      "userName": "trivo",
+      "passWord": "cGFzcw==",
+      "userType": "content provider",
+      "email": "tri@gmail.com",
+      "firstName": "Tri",
+      "lastName": "Vo",
+      "id": 14
+    },
+    {
+      "userName": "aiko",
+      "passWord": "cGFzcw==",
+      "userType": "default",
+      "email": "aiko1@gmail.com",
+      "firstName": "Phuong",
+      "lastName": "Chu",
+      "id": 15
+    },
+    {
+      "userName": "aiko",
+      "passWord": "cGFzcw==",
+      "userType": "default",
+      "email": "aiko1@gmail.com",
+      "firstName": "Phuong",
+      "lastName": "Chu",
+      "id": 16
     }
   ],
   "flashCards": [
     {
-      "id": 1,
-      "question": "Name the building blocks of Angular.",
-      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
-      "body": "content",
       "pass": false,
       "front": false,
       "show": false,
-      "type": "Angular"
+      "ans": "aaa",
+      "id": 1
     },
     {
       "id": 2,
@@ -722,6 +756,13 @@
       "question": "What is === operator?",
       "id": 16,
       "type": "Javascript"
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "ans": "aaa",
+      "id": 17
     }
   ],
   "assessment": [
