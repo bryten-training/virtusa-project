@@ -3,10 +3,11 @@
     <mat-icon>arrow_back</mat-icon>
 </button>
 
+<div class="wrapper">
 <h2 class="courseName">{{courseNameStr}}</h2>
 
 <!-- Videos Display -->
-<mat-list *ngIf="videoData" style="margin-top:0;padding-top: 5%;">
+<mat-list *ngIf="videoData">
     <mat-list-item *ngFor="let x of videoData; index as i;"> 
         <div class="mat-list-item">
             <img width="240" [src]="'http://img.'+x.url.slice(12,23)+'/vi/'+x.url.slice(30)+'/0.jpg'" 
@@ -15,3 +16,4 @@
         </div>  
     </mat-list-item>
 </mat-list>
+</div>

@@ -28,7 +28,7 @@ export class VideoDisplayComponent implements OnInit {
       this.courseNameStr = params.course;
       this.videoSvc.getCourse(this.courseNameStr).subscribe(coursD => {
         if(coursD[0] !== undefined) {
-          console.log(coursD);
+          //console.log(coursD);
           this.videoData = coursD[0].videoData;
           this.courseNm = coursD[0];
         }
@@ -46,7 +46,7 @@ export class VideoDisplayComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result}`);
+      //console.log(`Dialog result: ${result}`);
     });
   }
 

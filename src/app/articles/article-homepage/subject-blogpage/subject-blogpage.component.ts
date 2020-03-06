@@ -1,7 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
-import { FormControl } from "@angular/forms";
-import { Observable } from "rxjs";
-import { map, startWith } from "rxjs/operators";
+import { Component, OnInit } from "@angular/core";
 import { ArticlesService } from "../../service/articles.service";
 import { Article } from "../../model/article";
 import { ActivatedRoute } from "@angular/router";
@@ -12,12 +9,12 @@ import { ActivatedRoute } from "@angular/router";
   styleUrls: ["./subject-blogpage.component.scss"]
 })
 export class SubjectBlogpageComponent implements OnInit {
+  searchInput: string;
   headerTitle: string;
-  articles: Article[];
-  markdownContent;
-  myControl = new FormControl();
-  options: string[] = ["One", "Two", "Three"];
-  filteredOptions: Observable<string[]>;
+  articles: Article[] = [];
+  filteredArticles: Article[] = [];
+  searchTag: string;
+  showUnfilteredArticles: boolean = true;
 
   constructor(
     private articlesService: ArticlesService,
@@ -31,27 +28,34 @@ export class SubjectBlogpageComponent implements OnInit {
       this.articlesService
         .get("api/articles", { params: { subject: param.type } })
         .subscribe((data: Article[]) => {
-          console.log("data " + data);
-          data.forEach(article => {
-            this.markdownContent = atob(article.content);
-            article.content = this.markdownContent;
-          });
-          //console.log
+          //console.log("data " + data);
+          // data.forEach(article => {
+          //   this.markdownContent = atob(article.content);
+          //   article.content = this.markdownContent;
+          // });
           this.articles = data;
+          //console.log(this.articles);
         });
     });
-
-    this.filteredOptions = this.myControl.valueChanges.pipe(
-      startWith(""),
-      map(value => this._filter(value))
-    );
   }
 
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
+  clearSearch() {
+    this.showUnfilteredArticles = !this.showUnfilteredArticles;
+    this.filteredArticles = [];
+    this.searchInput = "";
+  }
 
-    return this.options.filter(
-      option => option.toLowerCase().indexOf(filterValue) === 0
-    );
+  searchArticle(event) {
+    this.showUnfilteredArticles = !this.showUnfilteredArticles;
+    this.searchTag = event.target.value.toLowerCase();
+    this.articles.forEach(article => {
+      article.tags.forEach(tag => {
+        if (tag.toLowerCase() === this.searchTag) {
+          this.filteredArticles.push(article);
+        }
+      });
+    });
+    //console.log(this.filteredArticles);
+    //this.filteredArticles = [];
   }
 }
