@@ -563,14 +563,11 @@
   ],
   "flashCards": [
     {
-      "id": 1,
-      "question": "Name the building blocks of Angular.",
-      "ans": "Modules, Component, Template, Directives, Data Binding, Services, Dependency Injection, Routing",
-      "body": "content",
       "pass": false,
       "front": false,
       "show": false,
-      "type": "Angular"
+      "ans": "aaa",
+      "id": 1
     },
     {
       "id": 2,
@@ -710,6 +707,27 @@
       "question": "What is === operator?",
       "id": 16,
       "type": "Javascript"
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "ans": "aaa",
+      "id": 17
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "ans": "aaa",
+      "id": 18
+    },
+    {
+      "pass": false,
+      "front": false,
+      "show": false,
+      "ans": "aaa",
+      "id": 19
     }
   ],
   "assessment": [
