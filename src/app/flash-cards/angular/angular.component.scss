@@ -27,6 +27,7 @@ mat-card-actions{
   text-align: center;
   color: purple;
   font-style: bold;
+  font-size: 18px;
 }
 mat-card-content{
   justify-content: center;
@@ -36,7 +37,6 @@ mat-card-content{
 
 }
 .main-div{
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;

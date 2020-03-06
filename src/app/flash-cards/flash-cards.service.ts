@@ -23,10 +23,6 @@ export class FlashcardsService {
   getFlashcard(): Observable<Flashcard> {
     return this.http.get<Flashcard>(`http://localhost:3000/flashcards/${this.id}`);
   }
-  // getLoginFlashcards(): Observable <User> {
-  //   return this.http.get<User> (` /userdata`);
-  // }
-
   addCard(flashcard: Flashcard): Observable<any> {
     const cardCache = this.cardCache[flashcard.id];
 
@@ -35,17 +31,14 @@ export class FlashcardsService {
     );
   }
   pass(flashcard: Flashcard): Observable<any> {
-    const cardCache = this.cardCache[flashcard.id];
     console.log(flashcard);
-    const obs = this.http.put(`http://localhost:3000/flashcards/${flashcard.id}`, flashcard).pipe(
+    return this.http.put(`http://localhost:3000/flashcards/${flashcard.id}`, flashcard).pipe(
       tap(val => {
-        console.log(val);
-        this.cardCache[flashcard.id] = flashcard;
+        // this.cardCache[flashcard.id].pass = flashcard.pass;
       })
     );
-    return obs;
   }
-  deleteBook(flashcard: Flashcard): Observable<any> {
+  deleteCard(flashcard: Flashcard): Observable<any> {
     return this.http.delete(`http://localhost:3000/flashcards/${flashcard.id}`).pipe(
       tap(_ => delete this.cardCache[flashcard.id]));
   }

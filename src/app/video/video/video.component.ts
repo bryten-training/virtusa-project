@@ -62,7 +62,10 @@ export class VideoComponent implements OnInit {
     theName: new FormControl(''),
     theCourse: new FormControl('', Validators.required),
     theTitle: new FormControl('', Validators.required),
-    theUrl: new FormControl('', Validators.pattern(this.regExp))
+    theUrl: new FormControl('', Validators.compose([
+                            Validators.pattern(this.regExp), 
+                            Validators.minLength(48)
+    ]))
   })
   
   //show videos
@@ -140,6 +143,7 @@ export class VideoComponent implements OnInit {
       this.submitted = true;
     } else {
       this.newItemUrl = this.convertUrl(this.url);
+      console.log(this.newItemUrl+this.newItemUrl.length);
       this.submitted = true;
     }
     

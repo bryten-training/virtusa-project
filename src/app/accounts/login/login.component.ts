@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { AccountsService } from '../services/accounts.service';
+import { User } from '../models/user.model';
 
 @Component({
   selector: 'app-login',
@@ -29,7 +30,7 @@ export class LoginComponent implements OnInit {
   instantiateMyForm() {
     this.myForm = new FormGroup({
       userName: new FormControl(undefined, [Validators.required]),
-      email: new FormControl(undefined, [Validators.required]),
+      email: new FormControl(undefined, [Validators.required, Validators.pattern("[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$")]),
       passWord: new FormControl(undefined, [Validators.required])
     })
   }

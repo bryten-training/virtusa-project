@@ -23,13 +23,10 @@ export class ArticlesService {
     this.subscription = this.accountsService
       .getBehaviorSubject()
       .subscribe((auth: Auth) => {
-        //console.log(auth)
-        if (auth.currentUser != undefined) {
-          this.currentUserSubject.next(auth.currentUser);
-        }
+        console.log(auth);
+        this.currentUserSubject.next(auth.currentUser);
       });
   }
-  isAddArticleFormDirty = false;
 
   ngOnDestroy(): void {
     this.subscription.unsubscribe();

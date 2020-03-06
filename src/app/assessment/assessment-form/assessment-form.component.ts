@@ -27,9 +27,10 @@ export class AssessmentFormComponent implements OnInit {
 
   constructor(private Svc: AssessmentService,
               private router: Router,
-              private _snackBar: MatSnackBar) {}
+              private snackBar: MatSnackBar) {}
 
   ngOnInit(): void {
+    this.userAns = [];
     this.router.routerState.root.queryParams.subscribe(params => {
       this.courseNameStr = params.course;
       this.Svc.getCourse(this.courseNameStr).subscribe(coursD => {
@@ -48,13 +49,13 @@ export class AssessmentFormComponent implements OnInit {
         });
       },
       error => {
-        this._snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok', {
+        this.snackBar.open('Sorry. There was a problem getting Course data, please check the server and try again', 'Ok', {
           duration: 2000,
         });
       });
     },
     error => {
-      this._snackBar.open('Sorry. There was a problem getting root params, please check the server and try again', 'Ok', {
+      this.snackBar.open('Sorry. There was a problem getting root params, please check the server and try again', 'Ok', {
         duration: 2000,
       });
     });

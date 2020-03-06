@@ -6,7 +6,7 @@
             <img src="{{x.logo}}" mat-card-image alt="{{x.courseName}} icon" width="100px">
         </mat-card>
     </div>
-
+    <mat-card-title *ngIf="!currentUser" class="loginText">Please Log In to Upload Videos.</mat-card-title>
     <!-- Upload video -->
     <div class="upload" *ngIf="!flipped">
     <mat-card (click)="flipIt()" class="uploadMatCard" *ngIf="currentUser">
@@ -44,9 +44,12 @@
             <mat-label>OR</mat-label>
             <mat-form-field class="full-width" appearance="outline">
                 <mat-label>Enter URL*</mat-label>
-                <input matInput formControlName="theUrl" #theUrl>
+                <input matInput formControlName="theUrl" #theUrl minLength>
                 <mat-error *ngIf="uploadForm.controls.theUrl.hasError('pattern')">
                     Please enter a YouTube URL
+                </mat-error>
+                <mat-error *ngIf="uploadForm.controls.theUrl.hasError('minLength')">
+                    Incorrect URL
                 </mat-error>
             </mat-form-field>
             <button mat-raised-button color='primary' class="submit" [disabled]="uploadForm.invalid || submitted" (click)="onUpload()">Submit</button>
