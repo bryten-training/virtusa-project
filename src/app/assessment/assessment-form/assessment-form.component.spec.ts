@@ -29,9 +29,12 @@ describe('AssessmentFormComponent', () => {
     fixture.detectChanges();
   });
 
+  fit('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
   fit('form required', () => {
     const crsEl = fixture.debugElement.nativeElement;
-    console.log(crsEl.value);
     expect(crsEl.querySelector('h1').textContent).toContain('Sorry you hvae failed I am sorry try again later');
   });
 });
