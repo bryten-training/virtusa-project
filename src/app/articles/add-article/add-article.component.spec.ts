@@ -36,7 +36,7 @@ describe('AddArticleComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('test add-article component', () => {
+  it('test add-article component', () => {
     expect(component.articleForm.invalid).toBe(true);
     component.articleForm.setValue({
       subject: "Angular",

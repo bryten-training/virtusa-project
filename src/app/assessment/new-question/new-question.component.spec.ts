@@ -32,12 +32,12 @@ describe('NewQuestionComponent', () => {
     fixture.detectChanges();
   });
 
-  // fit('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 
-  // fit('new question required', () => {
-  //   const crsEl = fixture.debugElement.nativeElement;
-  //   expect(crsEl.querySelector('h1').textContent).toContain('Please add a question here');
-  // });
+  it('new question required', () => {
+    const crsEl = fixture.debugElement.nativeElement;
+    expect(crsEl.querySelector('h1').textContent).toContain('Please add a question here');
+  });
 });

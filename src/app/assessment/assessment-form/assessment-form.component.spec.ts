@@ -30,12 +30,12 @@ describe('AssessmentFormComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  // fit('form required', () => {
-  //   const crsEl = fixture.debugElement.nativeElement;
-  //   expect(crsEl.querySelector('h1').textContent).toContain('Congratulations you have passed your score: {{score}}');
-  // });
+  it('form required', () => {
+    const crsEl = fixture.debugElement.nativeElement;
+    expect(crsEl.querySelector('h1').textContent).toContain('Congratulations you have passed your score: {{score}}');
+  });
 });
