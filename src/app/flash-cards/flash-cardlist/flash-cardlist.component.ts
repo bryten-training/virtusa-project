@@ -12,19 +12,15 @@ import { Auth } from 'src/app/accounts/models/auth.model';
   styleUrls: ['./flash-cardlist.component.scss']
 })
 export class FlashCardlistComponent implements OnInit {
-  flipped = false;
-  imgSrc = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtkL8GlKZ775j3f0VVgS1rU8L2LoX5UEM6fKv_eGLzeza27WYH";
   index = 0;
   currentUser: User;
   flashcard: Flashcard;
   flashcardlist = [new Flashcard()];
+  read = 'unread';
   constructor(private CardSvc: FlashcardsService, private accountsService: AccountsService, private router: Router) {
   this.CardSvc.getFlashcard().subscribe(flashcard => {this.flashcard = flashcard; });
   this.CardSvc.getFlashcards().subscribe(list => {
-    console.log(list);
     this.setlist(list);
-
-    console.log(' ' + this.flashcardlist[this.index]);
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.front = false;
   });
@@ -53,6 +49,11 @@ setlist(list) {
   passcard() {
     this.flashcard = this.flashcardlist[this.index];
     this.flashcard.pass = !this.flashcard.pass;
+    if (this.flashcard.pass === true) {
+    this.read = 'read';
+    } else {
+      this.read = 'unread';
+    }
     this.CardSvc.pass(this.flashcard).subscribe(_ =>
     this.router.navigate(['card/cards']));
     // this.flashcardlist.splice(this.flashcardlist[this.index].id, 0);
@@ -77,7 +78,7 @@ setlist(list) {
   });
 }
   deletecard(flashcard: Flashcard) {
-    this.CardSvc.deleteBook(flashcard).subscribe(_ => {
+    this.CardSvc.deleteCard(flashcard).subscribe(_ => {
         this.flashcardlist = this.flashcardlist.filter(b => b.id !== this.flashcard.id);
         console.log(this.flashcardlist[0].id);
         console.log(flashcard.id);

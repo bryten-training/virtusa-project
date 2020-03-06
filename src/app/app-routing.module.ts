@@ -18,6 +18,7 @@ import { NewQuestionComponent } from './assessment/new-question/new-question.com
 import { AngularComponent } from './flash-cards/angular/angular.component';
 
 
+
 const routes: Routes = [
   { path: "", redirectTo: 'logIn', pathMatch: 'full', canActivate: [AlreadyAuthService] },
   { path: "account", component: HomeComponent, canActivate: [AuthGuardService], data: { state: 'home' } },
@@ -41,7 +42,7 @@ const routes: Routes = [
   },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
   { path: 'course', component: AssessmentFormComponent },
-  { path: 'addcard', component: AddcardComponent, data: { state: 'addcard' } },
+  { path: 'addcard', component: AddcardComponent },
   { path: 'card', component: FlashCardComponent, data: { state: 'card' } },
   { path: 'video', component: VideoComponent, data: { state: 'video' } },
   { path: 'videoList', component: VideoDisplayComponent },

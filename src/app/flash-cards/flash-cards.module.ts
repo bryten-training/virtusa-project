@@ -9,7 +9,6 @@ import { AddcardComponent } from './addcard/addcard.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { AngularComponent } from './angular/angular.component';
 
-
 @NgModule({
   declarations: [FlashCardlistComponent, FlashCardComponent, AddcardComponent, AngularComponent],
   imports: [
