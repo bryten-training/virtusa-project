@@ -9,12 +9,13 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DebugElement } from '@angular/core';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 describe('AssessmentComponent', () => {
   let component: AssessmentComponent;
   let fixture: ComponentFixture<AssessmentComponent>;
 
-beforeEach(async(() => {
+  beforeEach(async(() => {
     TestBed.configureTestingModule({
       // tslint:disable-next-line: max-line-length
       imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
@@ -23,11 +24,11 @@ beforeEach(async(() => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AssessmentComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AssessmentComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
   fit('should create', () => {
     expect(component).toBeTruthy();
   });

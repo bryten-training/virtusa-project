@@ -9,6 +9,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DebugElement } from '@angular/core';
 import { MaterialModule } from 'src/app/material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ComponentFixture, TestBed, async } from '@angular/core/testing';
 
 describe('AssessmentFormComponent', () => {
   let component: AssessmentFormComponent;
@@ -23,18 +24,18 @@ describe('AssessmentFormComponent', () => {
     .compileComponents();
   }));
 
-//   beforeEach(() => {
-//     fixture = TestBed.createComponent(AssessmentFormComponent);
-//     component = fixture.componentInstance;
-//     fixture.detectChanges();
-//   });
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AssessmentFormComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
   fit('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  fit('form required', () => {
-    const crsEl = fixture.debugElement.nativeElement;
-    expect(crsEl.querySelector('h1').textContent).toContain('Sorry you hvae failed I am sorry try again later');
-  });
+  // fit('form required', () => {
+  //   const crsEl = fixture.debugElement.nativeElement;
+  //   expect(crsEl.querySelector('h1').textContent).toContain('Congratulations you have passed your score: {{score}}');
+  // });
 });

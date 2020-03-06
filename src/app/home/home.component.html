@@ -1,19 +1,15 @@
-<mat-card>
+<mat-card >
   <div class="header">
-    <h1 class="mat-display-1">Welcome to your profile</h1>
+    <mat-card-title>WELCOME TO YOUR PROFILE</mat-card-title>
   </div>
-  <mat-card-header>
-    <div mat-card-avatar>
-      <i class="material-icons user-circle" [style.font-size]="'45px'">
-        account_circle &nbsp; &nbsp;
-      </i>
-    </div>
+  <div style="margin: 13px 35%;">
+    <img src="../../assets/avatar1.png" style="width: 200px;">
+  </div>
+  <mat-card-header style="justify-content: center;">
     <mat-card-title>{{ currentUser.firstName }} {{ currentUser.lastName }}</mat-card-title>
     <mat-card-subtitle>{{ currentUser.userName }} | {{ currentUser.email }}</mat-card-subtitle>
+    <mat-card-subtitle>Your role: &nbsp; <span style="color: green;">{{ currentUser.userType }}</span></mat-card-subtitle>
   </mat-card-header>
   <mat-card-content>
-    <p>
-      Your role: &nbsp; {{ currentUser.userType }}
-    </p>
   </mat-card-content>
 </mat-card>

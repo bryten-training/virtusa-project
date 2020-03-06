@@ -53,11 +53,8 @@ describe('AssessmentService', () => {
 
   fit('should try for put and get error', async((done: DoneFn) => {
     service.putQuestion(dataQ, 'HTML').subscribe(value => {
-      console.log('ashbdjabhs');
     },
     error => {
-      console.log('ashbdjabhs');
-      console.log(error + 'asdasdasdasd');
       expect(error).toBe('error');
       done();
     });

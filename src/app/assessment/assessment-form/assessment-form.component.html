@@ -23,7 +23,7 @@
             </button>
             <button matTooltip="Check your score" matTooltipPosition="right" class="submitButton"
                 (click)="showalert = !showalert" type="submit" 
-                [disabled]="myForm.invalid || myForm.submitted"
+                [disabled]="myForm.invalid"
                 mat-raised-button data-modal="#modal1">Submit</button>
         </mat-accordion>
     </form>
@@ -37,4 +37,4 @@
 
         <button class="closebutton" mat-raised-button (click)="showalert = !showalert" class="btn">Close</button>
     </app-alert>
-<br><br><br>
+<br><br>
