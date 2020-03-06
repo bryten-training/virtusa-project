@@ -9,32 +9,13 @@
   ><input
     type="text"
     placeholder="search"
-    (change)="searchArticle($event)"
+    (keyup)="searchArticle()"
     [(ngModel)]="searchInput"
   />
-  <button mat-stroked-button (click)="clearSearch()">Clear</button>
 </div>
 <div>
-  <div class="main-content" *ngIf="showUnfilteredArticles">
-    <div *ngFor="let article of articles" class="example-card">
-      <mat-card [routerLink]="[article.id]">
-        <mat-card-header>
-          <div
-            mat-card-avatar
-            class="example-header-image"
-            style="background-image: url({{ article.author.avatar }});"
-          ></div>
-          <mat-card-title>{{ article.title }}</mat-card-title>
-          <mat-card-subtitle>{{
-            article.publish_date | date
-          }}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="{{ article.image }}" alt="Person coding" />
-      </mat-card>
-    </div>
-  </div>
-  <div class="main-content" *ngIf="!showUnfilteredArticles">
-    <div *ngFor="let article of filteredArticles" class="example-card">
+  <div class="main-content">
+    <div *ngFor="let article of displayList" class="example-card">
       <mat-card [routerLink]="[article.id]">
         <mat-card-header>
           <div

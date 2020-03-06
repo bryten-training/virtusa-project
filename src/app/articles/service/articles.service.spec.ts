@@ -20,10 +20,10 @@ describe('ArticlesService', () => {
     service = TestBed.inject(ArticlesService);
   });
 
-  fit('should be created', () => {
+  it('should be created', () => {
     expect(service).toBeTruthy();
   });
-  fit('test articles service', (done) => {
+  it('test articles service', (done) => {
     service.get('api/articles').subscribe(articles => {
       expect(articles).toBeTruthy();
       done();

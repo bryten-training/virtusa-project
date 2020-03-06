@@ -19,9 +19,9 @@ describe('AssessmentFormComponent', () => {
     TestBed.configureTestingModule({
       // tslint:disable-next-line: max-line-length
       imports: [FormsModule, RouterTestingModule, MaterialModule, BrowserAnimationsModule, MatSnackBarModule, ReactiveFormsModule, HttpClientTestingModule],
-      declarations: [ AssessmentFormComponent ]
+      declarations: [AssessmentFormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -30,7 +30,7 @@ describe('AssessmentFormComponent', () => {
     fixture.detectChanges();
   });
 
-  fit('should create', () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 

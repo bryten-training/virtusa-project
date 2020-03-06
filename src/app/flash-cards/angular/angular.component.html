@@ -10,10 +10,10 @@
             <mat-card-content *ngIf="flashcardlist[index].front">
                 Ans:
                 {{ flashcardlist[index].ans }} <br>
-                <!-- <mat-card-actions>
+                <mat-card-actions>
                     <input type="checkbox" [checked]="flashcardlist[index].pass===true"
                         (change)="passcard()">Read
-                </mat-card-actions> -->
+                </mat-card-actions>
             </mat-card-content>
         </mat-card-content>
     </mat-card>
@@ -29,10 +29,9 @@
                 (click)='flashcardlist[index].front = false'>></button>
 
 </mat-card-actions>
-<br />
-<!-- <mat-card-actions>
+<mat-card-actions class="wrapper" style=" margin-right: 20px; margin-left: 0px">
     <div [hidden]="currentUser===undefined">
         <button mat-button (click)=reset()>Reset</button>
-        <button mat-button (click)="deletecard(flashcardlist[index])">DELETE</button>
+        <!-- <button mat-button (click)="deletecard(flashcardlist[index])">DELETE</button> -->
     </div>
-</mat-card-actions> -->
+</mat-card-actions>
