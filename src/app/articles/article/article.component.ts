@@ -62,7 +62,7 @@ export class ArticleComponent implements OnInit {
     this.router.navigate(['course'], {
       queryParams:
       {
-        course: this.prevType,
+        course: this.prevType == 'NodeJS' ? "NodeJs" : this.prevType,
       }
     })
   }
