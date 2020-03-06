@@ -1,3 +1,4 @@
+<h1 style='text-align:center'>{{topic}}</h1>
 <div class="main-div" style="height:auto">
   <mat-card class="example-card" [ngStyle]="changeColorQuesAns(flashcardlist[index])">
       <mat-card-header>
@@ -11,7 +12,7 @@
               {{ flashcardlist[index].ans }} <br>
               <mat-card-actions>
                   <input type="checkbox" [checked]="flashcardlist[index].pass===true"
-                      (change)="passcard()">{{flashcardlist[index].pass}}
+                      (change)="passcard()">{{read}}
               </mat-card-actions>
           </mat-card-content>
 

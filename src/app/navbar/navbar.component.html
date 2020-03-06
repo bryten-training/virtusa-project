@@ -30,13 +30,22 @@
       </div>
     </mat-menu>
   </button> -->
-
+<div  [hidden]="currentUser!==undefined">
+  <button mat-button [routerLink]="['card/cards']" routerLinkActive="active">
+        <span [style.font-weight]="'lighter'">Flash Card</span>
+</button>
+</div>
+<div  [hidden]="currentUser===undefined">
   <button mat-button [routerLink]="['/card']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Flash Card</span>
   </button>
+</div>
+
+
   <button mat-button [routerLink]="['/video']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Videos</span>
   </button>
+
 
   <button mat-button *ngIf="isAuthenticated" [routerLink]="['/account']" routerLinkActive="active">
     <span [style.font-weight]="'lighter'">Profile</span>

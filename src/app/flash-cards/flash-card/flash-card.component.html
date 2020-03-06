@@ -1,9 +1,9 @@
 
-  <div id="subjectDiv">
+  <div class="wrapper">
     <mat-card
       class="subject-card"
       *ngFor="let subject of subjects"
-      [routerLink]="[subject.uri]">
+      [routerLink]="['/card' , subject.uri]">
       <mat-card-content>
         <h1>{{ subject.name }}</h1>
         <img
