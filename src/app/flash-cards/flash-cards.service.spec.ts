@@ -66,15 +66,12 @@ fdescribe('FlashcardsService', () => {
      );
     let card= new Flashcard();
     card.ans = 'aaa';
+    card.id= 1;
     // expect(service.addCard(card)).toBeTruthy();
     service.pass(card).subscribe();
     service.getFlashcards().subscribe((l) => {
-            expect(l[l.length - 1].ans).toEqual(card.ans);
-            expect(l[l.length - 1].pass).toEqual(card.pass);
-            expect(l[l.length - 1].front).toEqual(card.front);
-            expect(l[l.length - 1].show).toEqual(card.show);
-            expect(l[l.length - 1].question).toEqual(card.question);
-            expect(l[l.length - 1].type).toEqual(card.type);
+            expect(l[0].ans).toEqual(card.ans);
+            expect(l[0].pass).toEqual(card.pass);
             done();
           });
         });

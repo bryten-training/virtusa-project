@@ -42,7 +42,7 @@ const routes: Routes = [
   },
   { path: 'assessment', component: AssessmentComponent, data: { state: 'assessment' } },
   { path: 'course', component: AssessmentFormComponent },
-  { path: 'card/addcard', component: AddcardComponent, data: { state: 'addcard' } },
+  { path: 'addcard', component: AddcardComponent },
   { path: 'card', component: FlashCardComponent, data: { state: 'card' } },
   { path: 'video', component: VideoComponent, data: { state: 'video' } },
   { path: 'videoList', component: VideoDisplayComponent },

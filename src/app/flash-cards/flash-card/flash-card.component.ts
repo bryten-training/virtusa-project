@@ -10,7 +10,7 @@ export class FlashCardComponent implements OnInit {
     { name: 'Angular', uri: 'Angular', imagePath: '/assets/img/angular.jpg' },
     { name: 'JavaScript', uri: 'JavaScript',  imagePath: '/assets/img/js.jpg' },
     { name: 'NodeJS',  uri: 'NodeJS', imagePath: '/assets/img/nodejs.jpg' },
-    { name: 'Add',  uri: 'addcard', imagePath: '/assets/img/upload.jpeg' }
+    // { name: 'Add',  uri: 'addcard', imagePath: '/assets/img/upload.jpeg' }
   ];
   constructor() { }
 

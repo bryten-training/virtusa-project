@@ -34,8 +34,7 @@ export class FlashcardsService {
     console.log(flashcard);
     return this.http.put(`http://localhost:3000/flashcards/${flashcard.id}`, flashcard).pipe(
       tap(val => {
-        console.log(val);
-        this.cardCache[flashcard.id].pass = flashcard.pass;
+        // this.cardCache[flashcard.id].pass = flashcard.pass;
       })
     );
   }
