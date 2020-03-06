@@ -55,14 +55,6 @@ describe('AccountsService', () => {
     service.loadAllUsers().subscribe((data: any) => {
       expect(data.length > 0).toBeTruthy();
     });
-
-    const req = httpMock.expectOne(`api/accounts`, 'call to api');
-    expect(req.request.method).toBe('GET');
-
-    req.flush(["1", "2"]);
-
-    httpMock.verify();
-
   });
 
 });
