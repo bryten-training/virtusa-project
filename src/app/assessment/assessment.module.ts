@@ -11,6 +11,7 @@ import { NewAssessmentComponent } from './new-assessment/new-assessment.componen
 import { NewQuestionComponent } from './new-question/new-question.component';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatStepperModule} from '@angular/material/stepper';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     RouterModule,
     FormsModule,
     MatSnackBarModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatStepperModule
   ]
 })
 export class AssessmentModule { }

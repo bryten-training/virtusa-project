@@ -971,58 +971,6 @@
               "optAns": false
             }
           ]
-        },
-        {
-          "id": 5,
-          "q": "What is JavaScript",
-          "options": [
-            {
-              "id": 1,
-              "opt": "Framwork",
-              "optAns": false
-            },
-            {
-              "id": 2,
-              "opt": "Scripting",
-              "optAns": true
-            },
-            {
-              "id": 3,
-              "opt": "Hypertext",
-              "optAns": false
-            },
-            {
-              "id": 4,
-              "opt": "All the above",
-              "optAns": false
-            }
-          ]
-        },
-        {
-          "id": 6,
-          "q": "kaaksdajbhsdahbshb",
-          "options": [
-            {
-              "id": 1,
-              "opt": "kaaksdajbhsdahbshb",
-              "optAns": false
-            },
-            {
-              "id": 2,
-              "opt": "kaaksdajbhsdahbshb",
-              "optAns": false
-            },
-            {
-              "id": 3,
-              "opt": "kaaksdajbhsdahbshb",
-              "optAns": true
-            },
-            {
-              "id": 4,
-              "opt": "kaaksdajbhsdahbshb",
-              "optAns": true
-            }
-          ]
         }
       ]
     },
@@ -1162,7 +1110,7 @@
           ]
         },
         {
-          "id": 6,
+          "id": 5,
           "q": "for what is npm is used?",
           "options": [
             {
