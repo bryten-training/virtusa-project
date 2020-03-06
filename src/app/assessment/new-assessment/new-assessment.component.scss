@@ -5,7 +5,7 @@ mat-horizontal-stepper{
   margin: auto;
   padding: 40px;
   border: 2px solid $border-color;
-  
+  border-radius: 5px;  
 }
 .add-article-form {
   margin: auto;
@@ -15,6 +15,7 @@ mat-horizontal-stepper{
   font-size: larger;
   .submitButton {
     margin-top: 20px;
+    font-size: 40px;
   }
 }
 .full-width {
