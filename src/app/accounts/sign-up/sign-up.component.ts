@@ -61,15 +61,15 @@ export class SignUpComponent implements OnInit {
   onRegister() {
 
     let data = new User();
-    data.userName = this.formCredentials.value.userName;
-    data.passWord = this.formCredentials.value.passWord;
-    data.userType = this.formInfo.value.userType;
-    data.email = this.formCredentials.value.email;
-    data.firstName = this.formInfo.value.firstName;
-    data.lastName = this.formInfo.value.lastName;
+    data.userName = this.formCredentials.controls.userName.value;
+    data.passWord = this.formCredentials.controls.passWord.value;
+    data.userType = this.formInfo.controls.userType.value;
+    data.email = this.formCredentials.controls.email.value;
+    data.firstName = this.formInfo.controls.firstName.value;
+    data.lastName = this.formInfo.controls.lastName.value;
     console.log(data);
 
-    if (this.formInfo.valid) {
+    if (this.formCredentials.valid) {
       this.accountsService.register(data);
     }
   }
